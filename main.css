@@ -1,0 +1,63 @@
+@import url('assets/fonts/neue-plak-webfont/style.css');
+
+:root {
+    /* Background Colors */
+    --dark-background: #1B1B1C;
+    --light-background: #FFFFFF;
+
+    /* Useable Colors */
+    --chapman-red: #a50034;
+    --mint: #DAFFED;
+    --ice-blue: #9BF3F0;
+    --poiple: #473198;
+    --light-green: #7A7CFA;
+}
+
+h1 {
+    font-family: 'Neue Plak Extended Bold', sans-serif;
+}
+
+h2 {
+    font-family: 'Neue Plak Extended Semi Bold', sans-serif;
+}
+
+p {
+    font-family: 'Neue Plak Extended', sans-serif;
+}
+
+body {
+    background-color: var(--dark-background);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    background-color: rgba(165, 0, 52, 0.4);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 60%;
+    width: 60%;
+    text-align: center;
+}
+
+.content img {
+    max-width: 60%;
+    height: auto;
+    width: 70%;
+}
+
+.content h1 {
+    color: var(--light-background);
+    font-size: 4vw;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.content h2 {
+    color: var(--light-background);
+    font-size: 2vw;
+}
