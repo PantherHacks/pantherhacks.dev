@@ -39,8 +39,8 @@ body {
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 60%;
-    width: 60%;
+    max-width: 50%;
+    width: 50%;
     text-align: center;
 }
 
@@ -48,6 +48,11 @@ body {
     max-width: 60%;
     height: auto;
     width: 70%;
+    transition: transform 0.3s ease;
+}
+
+.content img:hover {
+    transform: scale(1.05);
 }
 
 .content h1 {
@@ -55,9 +60,19 @@ body {
     font-size: 4vw;
     margin-top: 10px;
     margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.content h1:hover {
+    transform: scale(1.05);
 }
 
 .content h2 {
     color: var(--light-background);
     font-size: 2vw;
+    transition: transform 0.3s ease;
+}
+
+.content h2:hover {
+    transform: scale(1.05);
 }
