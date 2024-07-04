@@ -154,6 +154,7 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 0 10px 10px 0;
+    cursor: pointer;
 }
 
 .navbar .mobile-nav-menu i {
