@@ -3,23 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="main.css" rel="stylesheet" />
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/branding/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/branding/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/branding/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/branding/favicon/site.webmanifest">
-    <link rel="mask-icon" href="assets/branding/favicon/safari-pinned-tab.svg" color="#a50034">
-    <link rel="shortcut icon" href="assets/branding/favicon/favicon.ico">
+    <link href="src/styling/main.css" rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="180x180" href="src/resources/branding/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/resources/branding/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/resources/branding/favicon/favicon-16x16.png">
+    <link rel="manifest" href="src/resources/branding/favicon/site.webmanifest">
+    <link rel="mask-icon" href="src/resources/branding/favicon/safari-pinned-tab.svg" color="#a50034">
+    <link rel="shortcut icon" href="src/resources/branding/favicon/favicon.ico">
+
+    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
+
+    <script src="https://kit.fontawesome.com/5792883fb8.js" crossorigin="anonymous"></script>
     <meta name="msapplication-TileColor" content="#a50034">
-    <meta name="msapplication-config" content="assets/branding/favicon/browserconfig.xml">
+    <meta name="msapplication-config" content="src/resources/branding/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <title>PantherHacks - Home</title>
 </head>
 <body>
-    <div class="content">
-        <img class="main-logo" src="assets/branding/logos/full_width_light.png" />
-        <h1>PantherHacks 2025</h1>
-        <h2>[ Coming This Spring ]</h2>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="/">
+                <img src="src/resources/branding/logos/cs_key_light.png" alt="logo">
+            </a>
+        </div>
+
+        <div class="navbar-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#tracks">Tracks</a>
+            <a href="#faqs">FAQs</a>
+            <a href="#contact">Contact</a>
+            <a class="deactivated">Apply</a>
+        </div>
+
+        <div class="navbar-social">
+            <a href="https://discord.com/invite/hTqTp2qkJz"><i class="fab fa-discord"></i></a>
+            <a href="https://www.instagram.com/chapmancsclub/"><i class="fab fa-instagram"></i></a>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <section id="home">
+            <h2>Home</h2>
+            <p>Welcome to our homepage!</p>
+        </section>
+    
+        <section id="about">
+            <h2>About</h2>
+            <p>Learn more about us.</p>
+        </section>
+    
+        <section id="tracks">
+            <h2>Tracks</h2>
+            <p>Explore the different tracks we offer.</p>
+            <p>Explore the different tracks we offer.</p>
+            <p>Explore the different tracks we offer.</p>
+            <p>Explore the different tracks we offer.</p>
+            <p>Explore the different tracks we offer.</p>
+            <p>Explore the different tracks we offer.</p>
+            <p>Explore the different tracks we offer.</p>
+            <p>Explore the different tracks we offer.</p>
+            <p>Explore the different tracks we offer.</p>
+            <p>Explore the different tracks we offer.</p>
+        </section>
+    
+        <section id="faqs">
+            <h2>FAQs</h2>
+            <p>Frequently Asked Questions.</p>
+        </section>
+    
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Get in touch with us.</p>
+            <form action="https://send.pageclip.co/Wj8km9O0f9sgzEPAU7AA5xRidRJ4FXYw" class="pageclip-form" method="post">
+                <!-- Replace these inputs with your own. Make sure they have a "name" attribute! -->
+                <input type="text" name="name" value="Roscoe Jones" />
+                <input type="email" name="email" value="roscoe@example.com" />
+              
+                <!-- This button will have a loading spinner. Keep the inner span for best results. -->
+                <button type="submit" class="pageclip-form__submit">
+                  <span>Send</span>
+                </button>
+            </form>
+        </section>
     </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Made with ❤️ by the PantherHacks Team</p>
+            <div class="footer-social">
+                <a href="https://discord.com/invite/hTqTp2qkJz"><i class="fab fa-discord"></i></a>
+                <a href="https://www.instagram.com/chapmancsclub/"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/scripts/navbar.js"></script>
 </body>
 </html>

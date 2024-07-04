@@ -1,0 +1,208 @@
+@import url('src/resources/fonts/neue-plak-webfont/style.css');
+
+:root {
+    /* Background Colors */
+    --dark-background: #1B1B1C;
+    --light-background: #FFFFFF;
+
+    /* Useable Colors */
+    --chapman-red: #a50034;
+    --mint: #DAFFED;
+    --ice-blue: #9BF3F0;
+    --poiple: #473198;
+    --light-green: #ADFC92;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-family: 'Neue Plak Extended Bold', sans-serif;
+}
+
+h2 {
+    font-family: 'Neue Plak Extended Semi Bold', sans-serif;
+}
+
+p {
+    font-family: 'Neue Plak Extended', sans-serif;
+}
+
+body {
+    background-color: var(--light-background);
+    margin: 0;
+}
+
+
+/* NAVBAR */
+.navbar {
+    margin: 20px;
+    width: calc(100% - 40px);
+    border-radius: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--chapman-red);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease;
+}
+
+.navbar.opaque {
+    opacity: 0.5;
+}
+
+.navbar.opaque:hover {
+    opacity: 1;
+}
+
+.navbar a {
+    text-align: center;
+    padding: 0 16px;
+    text-decoration: none;
+    font-family: 'Neue Plak Extended', sans-serif;
+    font-size: 20px;
+    color: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar a:hover {
+    background-color: #83022b;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.navbar-logo:hover {
+    border-radius: 10px 0 0 10px;
+}
+
+.navbar-logo a {
+    height: 70px;
+}
+
+.navbar-logo img {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-logo img:hover {
+    transform: scale(1.05);
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.navbar-links a {
+    height: 70px;
+}
+
+.navbar-links a.deactivated {
+    background-color: rgb(75, 0, 0);
+}
+
+.navbar-links a.deactivated:hover {
+    cursor: not-allowed;
+}
+
+.navbar-social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.navbar-social a {
+    height: 70px;
+    font-size: 25px;
+}
+
+.navbar-social a:last-child {
+    border-radius: 0 10px 10px 0;
+}
+
+
+/* MAIN CONTENT */
+.main-content {
+    color: var(--dark-background);
+}
+
+.main-content section {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Ensure content stacks vertically */
+    text-align: center; /* Center text within the section */
+    padding: 20px; /* Add some padding for spacing */
+    min-height: 100vh; /* Ensure sections take up full viewport height */
+}
+
+#home {
+    background-image: url('../resources/artwork/patterns/backgrounds/hexagon_mint_highlight_pattern.svg'); /* Set SVG as background */
+    background-size: 50px 75px; /* Ensure the background covers the entire section */
+    background-repeat: repeat; /* Prevent the background from repeating */
+    background-position: center; /* Center the background image */
+}
+
+#about {
+    background-color: var(--mint); /* Example color */
+}
+
+#tracks {
+    background-color: var(--ice-blue); /* Example color */
+}
+
+#faqs {
+    background-color: var(--poiple); /* Example color */
+}
+
+#contact {
+    background-color: var(--light-green); /* Example color */
+}
+
+
+/* FOOTER */
+.footer {
+    background-color: var(--chapman-red);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-social {
+    margin-top: 10px;
+}
+
+.footer-social a {
+    color: white;
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    color: var(--light-gray); /* Adjust this color as needed */
+}
