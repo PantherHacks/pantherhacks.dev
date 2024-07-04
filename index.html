@@ -10,9 +10,6 @@
     <link rel="manifest" href="src/resources/branding/favicon/site.webmanifest">
     <link rel="mask-icon" href="src/resources/branding/favicon/safari-pinned-tab.svg" color="#a50034">
     <link rel="shortcut icon" href="src/resources/branding/favicon/favicon.ico">
-
-    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
-
     <script src="https://kit.fontawesome.com/5792883fb8.js" crossorigin="anonymous"></script>
     <meta name="msapplication-TileColor" content="#a50034">
     <meta name="msapplication-config" content="src/resources/branding/favicon/browserconfig.xml">
@@ -40,56 +37,95 @@
             <a href="https://discord.com/invite/hTqTp2qkJz"><i class="fab fa-discord"></i></a>
             <a href="https://www.instagram.com/chapmancsclub/"><i class="fab fa-instagram"></i></a>
         </div>
+
+        <div class="mobile-nav-menu">
+            <a><i class="fas fa-bars"></i></a>
+        </div>
+        <div class="mobile-menu-box">
+            <div class="navbar-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#tracks">Tracks</a>
+                <a href="#faqs">FAQs</a>
+                <a href="#contact">Contact</a>
+                <a class="deactivated">Apply</a>
+            </div>
+            <div class="navbar-social">
+                <a href="https://discord.com/invite/hTqTp2qkJz"><i class="fab fa-discord"></i></a>
+                <a href="https://www.instagram.com/chapmancsclub/"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
     </nav>
 
     <div class="main-content">
         <section id="home">
-            <h2>Home</h2>
+            <h1>Home</h1>
             <p>Welcome to our homepage!</p>
         </section>
     
         <section id="about">
-            <h2>About</h2>
+            <h1>About</h1>
             <p>Learn more about us.</p>
         </section>
     
         <section id="tracks">
-            <h2>Tracks</h2>
-            <p>Explore the different tracks we offer.</p>
-            <p>Explore the different tracks we offer.</p>
-            <p>Explore the different tracks we offer.</p>
-            <p>Explore the different tracks we offer.</p>
-            <p>Explore the different tracks we offer.</p>
-            <p>Explore the different tracks we offer.</p>
-            <p>Explore the different tracks we offer.</p>
-            <p>Explore the different tracks we offer.</p>
-            <p>Explore the different tracks we offer.</p>
+            <h1>Tracks</h1>
             <p>Explore the different tracks we offer.</p>
         </section>
     
         <section id="faqs">
-            <h2>FAQs</h2>
+            <h1>FAQs</h1>
             <p>Frequently Asked Questions.</p>
         </section>
     
         <section id="contact">
-            <h2>Contact</h2>
+            <h1>Contact</h1>
             <p>Get in touch with us.</p>
-            <form action="https://send.pageclip.co/Wj8km9O0f9sgzEPAU7AA5xRidRJ4FXYw" class="pageclip-form" method="post">
-                <!-- Replace these inputs with your own. Make sure they have a "name" attribute! -->
-                <input type="text" name="name" value="Roscoe Jones" />
-                <input type="email" name="email" value="roscoe@example.com" />
-              
-                <!-- This button will have a loading spinner. Keep the inner span for best results. -->
-                <button type="submit" class="pageclip-form__submit">
-                  <span>Send</span>
-                </button>
-            </form>
         </section>
     </div>
 
+    <!-- Working on making this display well: -->
+    <!-- <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <form action="https://formspree.io/f/moqovbqk" method="POST">
+                    <label>
+                        Interested in PantherHacks? Enter your email:
+                        <input type="email" name="email" placeholder="example@example.com">
+                    </label>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+            <div class="footer-right">
+                <h3>Sitemap</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#tracks">Tracks</a></li>
+                    <li><a href="#faqs">FAQs</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>Made with ❤️ by the PantherHacks Team</p>
+                <div class="footer-social">
+                    <a href="https://discord.com/invite/hTqTp2qkJz"><i class="fab fa-discord"></i></a>
+                    <a href="https://www.instagram.com/chapmancsclub/"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer> -->
+
     <footer class="footer">
         <div class="footer-content">
+            <form action="ENDPOINT_URL_HERE" method="POST">
+                <label>
+                    Want to know what we are up to? Enter your email to be informed!
+                    <input type="email" name="email">
+                </label>
+
+                <button type="submit">Submit</button>
+                </form>
             <p>Made with ❤️ by the PantherHacks Team</p>
             <div class="footer-social">
                 <a href="https://discord.com/invite/hTqTp2qkJz"><i class="fab fa-discord"></i></a>

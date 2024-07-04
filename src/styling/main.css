@@ -1,4 +1,6 @@
-@import url('src/resources/fonts/neue-plak-webfont/style.css');
+@import url('../resources/fonts/neue-plak-webfont/style.css');
+
+/* || General styles */
 
 :root {
     /* Background Colors */
@@ -15,6 +17,7 @@
 
 html {
     scroll-behavior: smooth;
+    font-family: 'Neue Plak Regular', sans-serif;
 }
 
 h1 {
@@ -34,8 +37,12 @@ body {
     margin: 0;
 }
 
+/* … */
 
-/* NAVBAR */
+
+
+/* || NAVBAR */
+
 .navbar {
     margin: 20px;
     width: calc(100% - 40px);
@@ -133,47 +140,160 @@ body {
     border-radius: 0 10px 10px 0;
 }
 
+.navbar .mobile-nav-menu {
+    display: none;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+}
 
-/* MAIN CONTENT */
+.navbar .mobile-nav-menu a {
+    height: 70px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 10px 10px 0;
+}
+
+.navbar .mobile-nav-menu i {
+    font-size: 24px;
+    color: white;
+}
+
+@media (max-width: 802px) {
+    .navbar-links,
+    .navbar-social {
+        display: none;
+    }
+
+    .navbar .mobile-nav-menu {
+        display: flex;
+    }
+}
+
+.mobile-menu-box {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 40%;
+    height: 100%;
+    background-color: var(--chapman-red);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border-top-right-radius: 30px !important;
+    border-bottom-right-radius: 30px !important;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.mobile-menu-box.open {
+    left: 0;
+}
+
+.mobile-menu-box .navbar-links,
+.mobile-menu-box .navbar-social {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu-box .navbar-links a,
+.mobile-menu-box .navbar-social a {
+    height: 50px;
+    margin: 10px;
+}
+
+.mobile-menu-box .navbar-social {
+    margin-top: auto;
+    padding-bottom: 50px;
+}
+
+.mobile-menu-box .navbar-social a {
+    border-radius: 20px;
+}
+
+/* … */
+
+
+
+/* || MAIN CONTENT */
+
 .main-content {
     color: var(--dark-background);
 }
 
 .main-content section {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    flex-direction: column; /* Ensure content stacks vertically */
-    text-align: center; /* Center text within the section */
-    padding: 20px; /* Add some padding for spacing */
-    min-height: 100vh; /* Ensure sections take up full viewport height */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    min-height: 100vh;
 }
 
-#home {
-    background-image: url('../resources/artwork/patterns/backgrounds/hexagon_mint_highlight_pattern.svg'); /* Set SVG as background */
-    background-size: 50px 75px; /* Ensure the background covers the entire section */
-    background-repeat: repeat; /* Prevent the background from repeating */
-    background-position: center; /* Center the background image */
-}
+    /* || HOME */
 
-#about {
-    background-color: var(--mint); /* Example color */
-}
+    #home {
+        background-image: url('../resources/artwork/patterns/backgrounds/hexagon_mint_highlight_pattern.svg');
+        background-size: 50px 75px;
+        background-repeat: repeat;
+        background-position: center;
+    }
 
-#tracks {
-    background-color: var(--ice-blue); /* Example color */
-}
-
-#faqs {
-    background-color: var(--poiple); /* Example color */
-}
-
-#contact {
-    background-color: var(--light-green); /* Example color */
-}
+    /* … */
 
 
-/* FOOTER */
+
+    /* || ABOUT */
+
+    #about {
+        background-color: var(--mint);
+    }
+
+    /* … */
+
+
+
+    /* || Tracks */
+
+    #tracks {
+        background-color: var(--ice-blue);
+    }
+
+    /* .. */
+
+
+
+    /* || FAQs */
+
+    #faqs {
+        background-color: var(--poiple);
+    }
+
+    /* .. */
+
+
+
+    /* || CONTACT */
+
+    #contact {
+        background-color: var(--light-green);
+    }
+
+    /* … */
+
+/* … */
+
+
+
+/* || FOOTER */
+
 .footer {
     background-color: var(--chapman-red);
     color: white;
@@ -204,5 +324,7 @@ body {
 }
 
 .footer-social a:hover {
-    color: var(--light-gray); /* Adjust this color as needed */
+    color: #e4e4e4;
 }
+
+/* … */
