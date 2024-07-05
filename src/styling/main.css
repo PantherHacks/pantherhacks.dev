@@ -50,7 +50,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: var(--chapman-red);
+    background: linear-gradient(45deg, #a50034, #980030);
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -103,7 +103,7 @@ body {
     transition: transform 0.3s ease;
 }
 
-.navbar-logo img:hover {
+.navbar-logo a:hover img {
     transform: scale(1.05);
 }
 
@@ -179,7 +179,7 @@ body {
     left: -100%;
     width: 40%;
     height: 100%;
-    background-color: var(--chapman-red);
+    background: linear-gradient(#a50034, #980030);
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     transition: left 0.3s ease;
     z-index: 1000;
@@ -296,7 +296,7 @@ body {
 /* || FOOTER */
 
 .footer {
-    background-color: var(--chapman-red);
+    background: linear-gradient(45deg, #a50034, #980030);
     color: white;
     text-align: center;
     padding: 20px;
@@ -313,8 +313,49 @@ body {
     align-items: center;
 }
 
-.footer-social {
-    margin-top: 10px;
+.footer form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer form label {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: white;
+}
+
+.footer form .input-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+}
+
+.footer form input[type="email"] {
+    flex: 1;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid var(--ice-blue);
+    border-radius: 5px 0 0 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.footer form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid var(--ice-blue);
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.footer form button[type="submit"]:hover {
+    background-color: var(--ice-blue);
 }
 
 .footer-social a {

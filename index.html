@@ -11,6 +11,7 @@
     <link rel="mask-icon" href="src/resources/branding/favicon/safari-pinned-tab.svg" color="#a50034">
     <link rel="shortcut icon" href="src/resources/branding/favicon/favicon.ico">
     <script src="https://kit.fontawesome.com/5792883fb8.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <meta name="msapplication-TileColor" content="#a50034">
     <meta name="msapplication-config" content="src/resources/branding/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
@@ -34,6 +35,7 @@
         </div>
 
         <div class="navbar-social">
+            <a href="https://github.com/PantherHacks"><i class="fab fab fa-github"></i></a>
             <a href="https://discord.com/invite/hTqTp2qkJz"><i class="fab fa-discord"></i></a>
             <a href="https://www.instagram.com/chapmancsclub/"><i class="fab fa-instagram"></i></a>
         </div>
@@ -51,6 +53,7 @@
                 <a class="deactivated">Apply</a>
             </div>
             <div class="navbar-social">
+                <a href="https://github.com/PantherHacks"><i class="fab fab fa-github"></i></a>
                 <a href="https://discord.com/invite/hTqTp2qkJz"><i class="fab fa-discord"></i></a>
                 <a href="https://www.instagram.com/chapmancsclub/"><i class="fab fa-instagram"></i></a>
             </div>
@@ -84,50 +87,19 @@
         </section>
     </div>
 
-    <!-- Working on making this display well: -->
-    <!-- <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-left">
-                <form action="https://formspree.io/f/moqovbqk" method="POST">
-                    <label>
-                        Interested in PantherHacks? Enter your email:
-                        <input type="email" name="email" placeholder="example@example.com">
-                    </label>
-                    <button type="submit">Send</button>
-                </form>
-            </div>
-            <div class="footer-right">
-                <h3>Sitemap</h3>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#tracks">Tracks</a></li>
-                    <li><a href="#faqs">FAQs</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-bottom">
-                <p>Made with ❤️ by the PantherHacks Team</p>
-                <div class="footer-social">
-                    <a href="https://discord.com/invite/hTqTp2qkJz"><i class="fab fa-discord"></i></a>
-                    <a href="https://www.instagram.com/chapmancsclub/"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer> -->
-
     <footer class="footer">
         <div class="footer-content">
-            <form action="ENDPOINT_URL_HERE" method="POST">
-                <label>
-                    Want to know what we are up to? Enter your email to be informed!
-                    <input type="email" name="email">
-                </label>
-
-                <button type="submit">Submit</button>
-                </form>
+            <h1>PantherHacks 2025</h1>
+            <form action="ENTER_ENDPOINT_URL_HERE" method="POST" id="interest-form">
+                <label>Let us you are interested by submitting your email!</label>
+                <div class="input-group">
+                    <input type="email" name="email" id="interested-email" placeholder="example@example.com">
+                    <button type="submit" id="interested-submit">Submit</button>
+                </div>
+            </form>
             <p>Made with ❤️ by the PantherHacks Team</p>
             <div class="footer-social">
+                <a href="https://github.com/pantherhacks"><i class="fab fab fa-github"></i></a>
                 <a href="https://discord.com/invite/hTqTp2qkJz"><i class="fab fa-discord"></i></a>
                 <a href="https://www.instagram.com/chapmancsclub/"><i class="fab fa-instagram"></i></a>
             </div>
@@ -135,5 +107,6 @@
     </footer>
 
     <script src="src/scripts/navbar.js"></script>
+    <script src="src/scripts/footer.js"></script>
 </body>
 </html>
