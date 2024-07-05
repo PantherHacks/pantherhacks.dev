@@ -1,3 +1,11 @@
+/**
+ * File Name: main.css
+ * File Location: src/styling/main.css
+ * Date Created: June 4th, 2024
+ * Date Modified: June 5th, 2024
+ * Purpose: Provides styling to the index.html file.
+ */
+
 @import url('../resources/fonts/neue-plak-webfont/style.css');
 
 /* || General styles */
@@ -162,7 +170,7 @@ body {
     color: white;
 }
 
-@media (max-width: 802px) {
+@media (max-width: 841px) {
     .navbar-links,
     .navbar-social {
         display: none;

@@ -1,3 +1,15 @@
+/**
+ * File Name: navbar.js
+ * File Location: src/scripts/navbar.js
+ * Date Created: June 4th, 2024
+ * Date Modified: June 5th, 2024
+ * Purpose: Provides functionality to the navigation bar.
+ */
+
+/**
+ * Adjusts opacity of navigation bar depending on scroll on y axis
+ * and mouse position.
+ */
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
     const mobileMenu = document.querySelector('.mobile-menu-box');
@@ -8,6 +20,10 @@ window.addEventListener('scroll', function() {
     }
 });
 
+/**
+ * Toggles the mobile menu bar open and closed when the mobile nav menu
+ * is clicked.
+ */
 document.querySelector('.mobile-nav-menu').addEventListener('click', function() {
     const mobileMenu = document.querySelector('.mobile-menu-box');
     mobileMenu.classList.toggle('open');
@@ -17,6 +33,9 @@ document.querySelector('.mobile-nav-menu').addEventListener('click', function() 
     }
 });
 
+/**
+ * Closes the mobile menu when any link inside of it is clicked.
+ */
 document.querySelectorAll('.mobile-menu-box a').forEach(link => {
     link.addEventListener('click', function() {
         const mobileMenu = document.querySelector('.mobile-menu-box');
@@ -24,13 +43,21 @@ document.querySelectorAll('.mobile-menu-box a').forEach(link => {
     });
 });
 
+/**
+ * Closes the mobile menu if the window is resized to be wider than
+ * the minimum navbar desktop width.
+ */
 window.addEventListener('resize', function() {
     const mobileMenu = document.querySelector('.mobile-menu-box');
-    if (window.innerWidth > 801) {
+    if (window.innerWidth > 840) {
         mobileMenu.classList.remove('open');
     }
 });
 
+/**
+ * Closes the mobile menu if a click occurs outside of the mobile
+ * menu or mobile nav menu.
+ */
 document.addEventListener('click', function(event) {
     const mobileMenu = document.querySelector('.mobile-menu-box');
     const mobileNavMenu = document.querySelector('.mobile-nav-menu');
