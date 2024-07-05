@@ -3,12 +3,10 @@
 </p>
 
 ## PantherHacks Website
-This is the GitHub repository that contains the source code for the PantherHacks hackathon.
+The GitHub repository contains the source code for the PantherHacks hackathon event website.
 
 ## Disclaimer
 This website is in progress and is currently unfinished.
-
-
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
