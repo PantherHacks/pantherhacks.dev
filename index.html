@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="src/styling/main.css" rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="180x180" href="src/resources/branding/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/resources/branding/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/resources/branding/favicon/favicon-16x16.png">
+    <link rel="manifest" href="src/resources/branding/favicon/site.webmanifest">
+    <link rel="mask-icon" href="src/resources/branding/favicon/safari-pinned-tab.svg" color="#a50034">
+    <link rel="shortcut icon" href="src/resources/branding/favicon/favicon.ico">
+    <script src="https://kit.fontawesome.com/5792883fb8.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <meta name="msapplication-TileColor" content="#a50034">
+    <meta name="msapplication-config" content="src/resources/branding/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <title>PantherHacks 2025</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="/">
+                <img src="src/resources/branding/logos/cs_key_light.png" alt="logo">
+            </a>
+        </div>
+
+        <div class="navbar-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#tracks">Tracks</a>
+            <a href="#faqs">FAQs</a>
+            <a href="#contact">Contact</a>
+            <a class="deactivated">Apply</a>
+        </div>
+
+        <div class="navbar-social">
+            <a href="https://github.com/PantherHacks"><i class="fab fab fa-github"></i></a>
+            <a href="https://discord.com/invite/hTqTp2qkJz"><i class="fab fa-discord"></i></a>
+            <a href="https://www.instagram.com/chapmancsclub/"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <div class="mobile-nav-menu">
+            <a><i class="fas fa-bars"></i></a>
+        </div>
+        <div class="mobile-menu-box">
+            <div class="navbar-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#tracks">Tracks</a>
+                <a href="#faqs">FAQs</a>
+                <a href="#contact">Contact</a>
+                <a class="deactivated">Apply</a>
+            </div>
+            <div class="navbar-social">
+                <a href="https://github.com/PantherHacks"><i class="fab fab fa-github"></i></a>
+                <a href="https://discord.com/invite/hTqTp2qkJz"><i class="fab fa-discord"></i></a>
+                <a href="https://www.instagram.com/chapmancsclub/"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <section id="home">
+            <img src="src/resources/branding/logos/full_width_dark.png" width="60%">
+            <h1>PantherHacks 2025</h1>
+            <p>Welcome to our homepage!</p>
+        </section>
+    
+        <section id="about">
+            <h1>About</h1>
+            <p>Learn more about us.</p>
+        </section>
+    
+        <section id="tracks">
+            <h1>Tracks</h1>
+            <p>Explore the different tracks we offer.</p>
+        </section>
+    
+        <section id="faqs">
+            <h1>FAQs</h1>
+            <p>Frequently Asked Questions.</p>
+        </section>
+    
+        <section id="contact">
+            <h1>Contact</h1>
+            <p>Get in touch with us.</p>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h1>PantherHacks 2025</h1>
+            <form action="ENTER_ENDPOINT_URL_HERE" method="POST" id="interest-form">
+                <label>Let us you are interested by submitting your email!</label>
+                <div class="input-group">
+                    <input type="email" name="email" id="interested-email" placeholder="example@example.com">
+                    <button type="submit" id="interested-submit">Submit</button>
+                </div>
+            </form>
+            <p>Made with ❤️ by the PantherHacks Team</p>
+            <div class="footer-social">
+                <a href="https://github.com/pantherhacks"><i class="fab fab fa-github"></i></a>
+                <a href="https://discord.com/invite/hTqTp2qkJz"><i class="fab fa-discord"></i></a>
+                <a href="https://www.instagram.com/chapmancsclub/"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/scripts/navbar.js"></script>
+    <script src="src/scripts/footer.js"></script>
+</body>
+</html>
