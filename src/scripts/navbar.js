@@ -45,7 +45,6 @@ document.querySelector('.mobile-nav-menu').addEventListener('click', function() 
  */
 document.querySelectorAll('.mobile-menu-box a').forEach(link => {
     link.addEventListener('click', function() {
-        if(target.classList.contains('deactivated')) return;
         const mobileMenu = document.querySelector('.mobile-menu-box');
         mobileMenu.classList.remove('open');
     });
