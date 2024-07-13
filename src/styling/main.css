@@ -170,7 +170,13 @@ body {
     color: white;
 }
 
-@media (max-width: 841px) {
+/*
+    Note from Dylan:
+    When changing the max-width variable, make sure
+    you go to "src\scripts\navbar.js" and adjust the
+    value of the "NAVBAR_MAX_SCREEN_WIDTH" there as well.
+*/
+@media (max-width: 860px) {
     .navbar-links,
     .navbar-social {
         display: none;

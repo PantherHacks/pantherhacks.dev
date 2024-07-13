@@ -7,6 +7,13 @@
  */
 
 /**
+ * Note from Dylan:
+ * Maximum screen width before forcing mobile navbar in pixels (px)
+ * Make sure you adjust in "src\styling\main.css" as well.
+*/
+const NAVBAR_MAX_SCREEN_WIDTH = 860;
+
+/**
  * Adjusts opacity of navigation bar depending on scroll on y axis
  * and mouse position.
  */
@@ -38,6 +45,7 @@ document.querySelector('.mobile-nav-menu').addEventListener('click', function() 
  */
 document.querySelectorAll('.mobile-menu-box a').forEach(link => {
     link.addEventListener('click', function() {
+        if(target.classList.contains('deactivated')) return;
         const mobileMenu = document.querySelector('.mobile-menu-box');
         mobileMenu.classList.remove('open');
     });
@@ -49,7 +57,7 @@ document.querySelectorAll('.mobile-menu-box a').forEach(link => {
  */
 window.addEventListener('resize', function() {
     const mobileMenu = document.querySelector('.mobile-menu-box');
-    if (window.innerWidth > 840) {
+    if (window.innerWidth > (NAVBAR_MAX_SCREEN_WIDTH - 1)) {
         mobileMenu.classList.remove('open');
     }
 });
