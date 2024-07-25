@@ -1,8 +1,8 @@
 /**
  * File Name: footer.js
  * File Location: src/scripts/footer.js
- * Date Created: June 5th, 2024
- * Date Modified: June 5th, 2024
+ * Date Created: July 5th, 2024
+ * Date Modified: July 25th, 2024
  * Purpose: Provides functionality to the footer.
  */
 
@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Creates a form data variable
             const formData = new FormData(emailForm);
+            formData.append(emailInput.name, emailValue);
 
             // Submits form payload to endpoint url
             fetch(emailForm.action, {
@@ -64,17 +65,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (!response.ok) {
                     console.error('Form submission failed:', response);
                 }
-                setTimeout(() => {
-                    // Returns the submission field to normal after some time
-                    emailInput.style.boxShadow = 'none';
-                    submitButton.style.boxShadow = 'none';
-                    emailInput.placeholder = originalPlaceholder;
-                    emailInput.disabled = false;
-                    submitButton.disabled = false;
-                }, 3000);
             }).catch(error => {
                 console.error('Form submission error:', error);
             });
+
+            setTimeout(() => {
+                // Returns the submission field to normal after some time
+                emailInput.style.boxShadow = 'none';
+                submitButton.style.boxShadow = 'none';
+                emailInput.placeholder = originalPlaceholder;
+                emailInput.disabled = false;
+                submitButton.disabled = false;
+            }, 3000);
         } else {
             // Flashes red around the submission field
             emailInput.style.boxShadow = '0 0 0 5px red';

@@ -1,8 +1,8 @@
 /**
  * File Name: navbar.js
  * File Location: src/scripts/navbar.js
- * Date Created: June 4th, 2024
- * Date Modified: June 5th, 2024
+ * Date Created: July 4th, 2024
+ * Date Modified: July 5th, 2024
  * Purpose: Provides functionality to the navigation bar.
  */
 
