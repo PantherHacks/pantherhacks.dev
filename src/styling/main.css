@@ -254,6 +254,10 @@ p {
   color: var(--dark-background);
 }
 
+.main-content section:first-child {
+  padding: 100px
+}
+
 .main-content section {
   display: flex;
   justify-content: center;
@@ -297,6 +301,14 @@ p {
   background-color: var(--poiple);
 }
 
+#faqs h1 {
+  color: white;
+}
+
+#faqs p {
+  color: white;
+}
+
 .faq {
   display: grid;
   place-items: center;
@@ -304,26 +316,30 @@ p {
   padding: 0.5rem;
   background-color: white;
   border-radius: 1rem;
+  margin-bottom: 10px;
 }
 
 .faq hr {
   width: 3ch;
 }
 
-summary {
+.faq summary {
   font-style: normal;
   font-weight: bold;
+  cursor: pointer;
+  transition: margin-bottom 300ms ease-out;
 }
 
-details {
+.faq details {
   padding: 1rem;
   background-color: white;
   border-radius: 1rem;
   font-style: italic;
+  transition: margin-bottom 300ms ease-out;
 }
 
-summary:hover {
-  cursor: pointer;
+.faq details[open] summary {
+  margin-bottom: 10px;
 }
 
 /* .. */
@@ -412,8 +428,4 @@ summary:hover {
 
 .footer-social a:hover {
   color: #e4e4e4;
-}
-
-::selection {
-  background-color: var(--chapman-red);
 }
