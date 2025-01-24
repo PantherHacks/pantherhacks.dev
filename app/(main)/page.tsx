@@ -4,9 +4,11 @@ import Header from "./_components/header";
 
 export default function Home() {
   return (
-    <div className="w-full h-full min-h-screen flex flex-col items-center justify-center">
+    <div className="flex flex-col justify-center items-center min-h-screen">
       <Navbar />
-      <Header />
+      <main className="flex flex-1 justify-center items-center">
+        <Header />
+      </main>
       <Footer />
     </div>
   );
