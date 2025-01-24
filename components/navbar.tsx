@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Button } from "@/components/ui/button";
-
 const Navbar = () => {
   return (
     <nav className="m-[20px] w-[calc(100%_-_40px)] rounded-[10px] fixed top-0 left-0 bg-primary z-[1000] flex items-center h-[70px] box-border">
@@ -19,7 +17,7 @@ const Navbar = () => {
           />
         </Link>
       </div>
-      <div className="flex items-center flex-grow font-TangoSans text-white">
+      <div className="flex items-center flex-grow font-TangoSans text-white text-lg">
         <Link href="#home" className="flex items-center justify-center h-[70px] px-[16px] hover:bg-[#83022b]">
           Home
         </Link>
