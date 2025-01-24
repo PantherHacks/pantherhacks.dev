@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 @font-face {
+  font-family: "Tango Sans";
+  src: url("./fonts/Tango_Sans/TangoSans.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Tango Sans Bold";
   src: url("./fonts/Tango_Sans/TangoSans_Bold.ttf") format("opentype");
   font-weight: bold;
