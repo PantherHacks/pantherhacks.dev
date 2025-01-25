@@ -15,7 +15,7 @@ const Navbar = () => {
     <nav className="w-[100vw] rounded-b-[10px] md:m-[20px] md:w-[calc(100%_-_40px)] md:rounded-[10px] fixed top-0 left-0 bg-primary z-[1000] flex items-center box-border">
       <div className="hidden md:flex">
         <div className="flex items-center overflow-hidden">
-          <NavLink href="/" variant={"icon"} className="h-[70px] rounded-l-[10px]">
+          <NavLink href="/" variant={"icon"} className="h-[70px] rounded-l-[10px]" aria-label="Home">
             <Image
               src="/logos/pantherhacks/pantherhacks_mascot_light.png"
               alt="Panther Hacks Logo"
@@ -93,6 +93,7 @@ const Navbar = () => {
             href="/"
             variant={"icon"}
             className={cn("h-[70px]", isMobileOpen ? "rounded-br-[10px]" : "rounded-bl-[10px]")}
+            aria-label="Home"
           >
             <Image
               src="/logos/pantherhacks/pantherhacks_mascot_light.png"
@@ -107,6 +108,7 @@ const Navbar = () => {
               isMobileOpen ? "rounded-tl-none rounded-br-none" : "rounded-l-none"
             )}
             onClick={() => setIsMobileOpen(!isMobileOpen)}
+            aria-label="Mobile Navigation Dropdown"
           >
             <Menu />
           </Button>
