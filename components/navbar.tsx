@@ -39,7 +39,13 @@ const Navbar = () => {
           </NavLink>
         </div>
         <div className="flex items-center justify-center">
-          <NavLink href="https://github.com/pantherhacks" target="_blank" variant={"icon"}>
+          <NavLink
+            href="https://github.com/pantherhacks"
+            target="_blank"
+            variant={"icon"}
+            title={"PantherHacks GitHub Link"}
+            aria-label={"PantherHacks GitHub Link"}
+          >
             <Image
               src="./icons/github.svg"
               alt="GitHub Icon"
@@ -48,7 +54,13 @@ const Navbar = () => {
               className="filter invert h-[70px]"
             />
           </NavLink>
-          <NavLink href="https://discord.gg/9NSwX5PxqC" target="_blank" variant={"icon"}>
+          <NavLink
+            href="https://discord.gg/9NSwX5PxqC"
+            target="_blank"
+            variant={"icon"}
+            title={"PantherHacks Discord Link"}
+            aria-label={"PantherHacks Discord Link"}
+          >
             <Image
               src="./icons/discord.svg"
               alt="Discord Icon"
@@ -62,6 +74,8 @@ const Navbar = () => {
             target="_blank"
             variant="icon"
             className="rounded-r-[10px]"
+            title={"PantherHacks Instagram Link"}
+            aria-label={"PantherHacks Instagram Link"}
           >
             <Image
               src="./icons/instagram.svg"
@@ -126,7 +140,13 @@ const Navbar = () => {
             APPLICATION OPEN SOON
           </NavLink>
           <div className="flex items-center justify-center">
-            <NavLink href="https://github.com/pantherhacks" target="_blank" variant={"icon"}>
+            <NavLink
+              href="https://github.com/pantherhacks"
+              target="_blank"
+              variant={"mobile_icon"}
+              title={"PantherHacks GitHub Link"}
+              aria-label={"PantherHacks GitHub Link"}
+            >
               <Image
                 src="./icons/github.svg"
                 alt="GitHub Icon"
@@ -135,7 +155,13 @@ const Navbar = () => {
                 className="filter invert h-[70px]"
               />
             </NavLink>
-            <NavLink href="https://discord.gg/9NSwX5PxqC" target="_blank" variant={"icon"}>
+            <NavLink
+              href="https://discord.gg/9NSwX5PxqC"
+              target="_blank"
+              variant={"mobile_icon"}
+              title={"PantherHacks Discord Link"}
+              aria-label={"PantherHacks Discord Link"}
+            >
               <Image
                 src="./icons/discord.svg"
                 alt="Discord Icon"
@@ -144,7 +170,13 @@ const Navbar = () => {
                 className="filter invert h-[70px]"
               />
             </NavLink>
-            <NavLink href="https://www.instagram.com/chapmancsclub/" target="_blank" variant="icon">
+            <NavLink
+              href="https://www.instagram.com/chapmancsclub/"
+              title={"PantherHacks Instagram Link"}
+              aria-label={"PantherHacks Instagram Link"}
+              target="_blank"
+              variant={"mobile_icon"}
+            >
               <Image
                 src="./icons/instagram.svg"
                 alt="Discord Icon"
