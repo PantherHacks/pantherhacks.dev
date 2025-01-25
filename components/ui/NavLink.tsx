@@ -12,6 +12,9 @@ const navLinkVariants = cva("flex items-center justify-center transition-colors 
       default: "h-[70px] px-[16px] hover:bg-[#83022b]",
       bold: "h-[70px] px-[16px] hover:bg-[#83022b] font-TangoSansBold text-xl",
       icon: "px-[10px] hover:bg-[#83022b]",
+      mobile: "w-full h-12 py-[12px] hover:bg-[#83022b]",
+      mobile_bold: "w-full h-12 py-[12px] hover:bg-[#83022b] font-TangoSansBold text-xl",
+      mobile_icon: "px-[20px] hover:bg-[#83022b]",
     },
   },
   defaultVariants: {
