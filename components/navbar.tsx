@@ -12,31 +12,33 @@ const Navbar = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   return (
-    <nav className="w-[100vw] rounded-b-[10px] md:m-[20px] md:w-[calc(100%_-_40px)] md:rounded-[10px] fixed top-0 left-0 bg-primary z-[1000] flex items-center box-border">
-      <div className="hidden md:flex">
-        <div className="flex items-center overflow-hidden">
-          <NavLink href="/" variant={"icon"} className="h-[70px] rounded-l-[10px]" aria-label="Home">
-            <Image
-              src="/logos/pantherhacks/pantherhacks_mascot_light.png"
-              alt="Panther Hacks Logo"
-              width={50}
-              height={50}
-            />
-          </NavLink>
-        </div>
-        <div className="flex items-center flex-grow font-TangoSans text-white text-lg">
-          <NavLink href="#home">Home</NavLink>
-          <NavLink href="#about">About</NavLink>
-          <NavLink href="#tracks">Tracks</NavLink>
-          <NavLink href="#faqs">FAQs</NavLink>
-          <NavLink href="#contact">Contact</NavLink>
-          <NavLink
-            href="#"
-            variant={"bold"}
-            className="bg-[rgb(75,0,0)] cursor-not-allowed" // TODO: Update this when we get applying working
-          >
-            APPLY
-          </NavLink>
+    <nav className="m-[20px] w-[calc(100vw_-_40px)] rounded-[10px] fixed top-0 left-0 bg-primary z-[1000] flex items-center box-border">
+      <div className="hidden md:flex justify-between items-center w-full">
+        <div className="flex flex-row items-center">
+          <div className="flex items-center overflow-hidden">
+            <NavLink href="/" variant={"icon"} className="h-[70px] rounded-l-[10px]" aria-label="Home">
+              <Image
+                src="/logos/pantherhacks/pantherhacks_mascot_light.png"
+                alt="Panther Hacks Logo"
+                width={50}
+                height={50}
+              />
+            </NavLink>
+          </div>
+          <div className="flex items-center flex-grow font-TangoSans text-white text-lg">
+            <NavLink href="#home">Home</NavLink>
+            <NavLink href="#about">About</NavLink>
+            <NavLink href="#tracks">Tracks</NavLink>
+            <NavLink href="#faqs">FAQs</NavLink>
+            <NavLink href="#contact">Contact</NavLink>
+            <NavLink
+              href="#"
+              variant={"bold"}
+              className="bg-[rgb(75,0,0)] cursor-not-allowed" // TODO: Update this when we get applying working
+            >
+              APPLY
+            </NavLink>
+          </div>
         </div>
         <div className="flex items-center justify-center">
           <NavLink
@@ -92,7 +94,7 @@ const Navbar = () => {
           <NavLink
             href="/"
             variant={"icon"}
-            className={cn("h-[70px]", isMobileOpen ? "rounded-br-[10px]" : "rounded-bl-[10px]")}
+            className={cn("h-[70px]", isMobileOpen ? "rounded-tl-[10px]" : "rounded-l-[10px]")}
             aria-label="Home"
           >
             <Image
@@ -104,8 +106,8 @@ const Navbar = () => {
           </NavLink>
           <Button
             className={cn(
-              "h-[70px] px-[16px] hover:bg-[#83022b] [&_svg]:size-6 rounded-tr-none",
-              isMobileOpen ? "rounded-tl-none rounded-br-none" : "rounded-l-none"
+              "h-[70px] px-[16px] hover:bg-[#83022b] [&_svg]:size-6 rounded-l-none rounded-tr-[10px]",
+              isMobileOpen ? "rounded-br-none" : "rounded-r-[10px]"
             )}
             onClick={() => setIsMobileOpen(!isMobileOpen)}
             aria-label="Mobile Navigation Dropdown"
