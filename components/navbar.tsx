@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Menu } from "lucide-react";
 
@@ -10,9 +10,32 @@ import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const navRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      // If the navbar is open and the click is outside the navbar, close it
+      if (isMobileOpen && navRef.current && !navRef.current.contains(e.target as Node)) {
+        setIsMobileOpen(false);
+      }
+    }
+
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [isMobileOpen]);
+
+  // Close mobile menu when a mobile nav link is clicked
+  const handleMobileLinkClick = () => {
+    setIsMobileOpen(false);
+  };
 
   return (
-    <nav className="m-[20px] w-[calc(100vw_-_40px)] rounded-[10px] fixed top-0 left-0 bg-primary z-[1000] flex items-center box-border">
+    <nav
+      ref={navRef}
+      className="m-[20px] w-[calc(100vw_-_40px)] rounded-[10px] fixed top-0 left-0 bg-primary z-[1000] flex items-center box-border"
+    >
       <div className="hidden md:flex justify-between items-center w-full">
         <div className="flex flex-row items-center">
           <div className="flex items-center overflow-hidden">
@@ -96,6 +119,7 @@ const Navbar = () => {
             variant={"icon"}
             className={cn("h-[70px]", isMobileOpen ? "rounded-tl-[10px]" : "rounded-l-[10px]")}
             aria-label="Home"
+            onClick={handleMobileLinkClick}
           >
             <Image
               src="/logos/pantherhacks/pantherhacks_mascot_light.png"
@@ -121,25 +145,26 @@ const Navbar = () => {
             isMobileOpen ? "flex" : "hidden"
           )}
         >
-          <NavLink variant="mobile" href="#home">
+          <NavLink variant="mobile" href="#home" onClick={handleMobileLinkClick}>
             Home
           </NavLink>
-          <NavLink variant="mobile" href="#about">
+          <NavLink variant="mobile" href="#about" onClick={handleMobileLinkClick}>
             About
           </NavLink>
-          <NavLink variant="mobile" href="#tracks">
+          <NavLink variant="mobile" href="#tracks" onClick={handleMobileLinkClick}>
             Tracks
           </NavLink>
-          <NavLink variant="mobile" href="#faqs">
+          <NavLink variant="mobile" href="#faqs" onClick={handleMobileLinkClick}>
             FAQs
           </NavLink>
-          <NavLink variant="mobile" href="#contact">
+          <NavLink variant="mobile" href="#contact" onClick={handleMobileLinkClick}>
             Contact
           </NavLink>
           <NavLink
             href="#"
             variant={"mobile_bold"}
             className="bg-[rgb(75,0,0)] cursor-not-allowed" // TODO: Update this when we get applying working
+            // onClick={handleMobileLinkClick}
           >
             APPLICATION OPEN SOON
           </NavLink>
@@ -150,6 +175,7 @@ const Navbar = () => {
               variant={"mobile_icon"}
               title={"PantherHacks GitHub Link"}
               aria-label={"PantherHacks GitHub Link"}
+              onClick={handleMobileLinkClick}
             >
               <Image
                 src="./icons/github.svg"
@@ -165,6 +191,7 @@ const Navbar = () => {
               variant={"mobile_icon"}
               title={"PantherHacks Discord Link"}
               aria-label={"PantherHacks Discord Link"}
+              onClick={handleMobileLinkClick}
             >
               <Image
                 src="./icons/discord.svg"
@@ -180,6 +207,7 @@ const Navbar = () => {
               aria-label={"PantherHacks Instagram Link"}
               target="_blank"
               variant={"mobile_icon"}
+              onClick={handleMobileLinkClick}
             >
               <Image
                 src="./icons/instagram.svg"
