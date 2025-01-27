@@ -2,7 +2,7 @@ import Heading from "@/app/(main)/_components/heading";
 
 const MainContent = () => {
   return (
-    <div>
+    <div className={"overflow-x-hidden max-w-[100vw]"}>
       <Heading />
     </div>
   );
