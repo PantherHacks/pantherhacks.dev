@@ -1,8 +1,227 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import { Menu } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
+import { NavLink } from "@/components/ui/NavLink";
+import { cn } from "@/lib/utils";
+
 const Navbar = () => {
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const navRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      // If the navbar is open and the click is outside the navbar, close it
+      if (isMobileOpen && navRef.current && !navRef.current.contains(e.target as Node)) {
+        setIsMobileOpen(false);
+      }
+    }
+
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [isMobileOpen]);
+
+  // Close mobile menu when a mobile nav link is clicked
+  const handleMobileLinkClick = () => {
+    setIsMobileOpen(false);
+  };
+
   return (
-    <div className="w-full">
-      <h1>NAVBAR</h1>
-    </div>
+    <nav
+      ref={navRef}
+      className="m-[20px] w-[calc(100vw_-_40px)] rounded-[10px] fixed top-0 left-0 bg-primary z-[1000] flex items-center box-border"
+    >
+      <div className="hidden md:flex justify-between items-center w-full">
+        <div className="flex flex-row items-center">
+          <div className="flex items-center overflow-hidden">
+            <NavLink href="/" variant={"icon"} className="h-[70px] rounded-l-[10px] group" aria-label="Home">
+              <Image
+                src="/logos/pantherhacks/pantherhacks_mascot_light.png"
+                alt="Panther Hacks Logo"
+                width={50}
+                height={50}
+                className="transition-transform duration-300 ease-in-out transform group-hover:scale-105"
+              />
+            </NavLink>
+          </div>
+          <div className="flex items-center flex-grow font-TangoSans text-white text-lg">
+            <NavLink href="#home">Home</NavLink>
+            <NavLink href="#about">About</NavLink>
+            <NavLink href="#tracks">Tracks</NavLink>
+            <NavLink href="#faqs">FAQs</NavLink>
+            <NavLink href="#contact">Contact</NavLink>
+            <NavLink
+              href="#"
+              variant={"bold"}
+              className="bg-[rgb(75,0,0)] cursor-not-allowed" // TODO: Update this when we get applying working
+            >
+              APPLY
+            </NavLink>
+          </div>
+        </div>
+        <div className="flex items-center justify-center">
+          <NavLink
+            href="https://github.com/pantherhacks"
+            target="_blank"
+            variant={"icon"}
+            title={"PantherHacks GitHub Link"}
+            aria-label={"PantherHacks GitHub Link"}
+          >
+            <Image
+              src="./icons/github.svg"
+              alt="GitHub Icon"
+              width={24}
+              height={24}
+              className="filter invert h-[70px]"
+            />
+          </NavLink>
+          <NavLink
+            href="https://discord.gg/9NSwX5PxqC"
+            target="_blank"
+            variant={"icon"}
+            title={"PantherHacks Discord Link"}
+            aria-label={"PantherHacks Discord Link"}
+          >
+            <Image
+              src="./icons/discord.svg"
+              alt="Discord Icon"
+              width={24}
+              height={24}
+              className="filter invert h-[70px]"
+            />
+          </NavLink>
+          <NavLink
+            href="https://www.instagram.com/chapmancsclub/"
+            target="_blank"
+            variant="icon"
+            className="rounded-r-[10px]"
+            title={"PantherHacks Instagram Link"}
+            aria-label={"PantherHacks Instagram Link"}
+          >
+            <Image
+              src="./icons/instagram.svg"
+              alt="Discord Icon"
+              width={24}
+              height={24}
+              className="filter invert h-[70px]"
+            />
+          </NavLink>
+        </div>
+      </div>
+      <div className="flex flex-col w-full md:hidden">
+        <div className="flex items-center justify-between w-full overflow-hidden">
+          <NavLink
+            href="/"
+            variant={"icon"}
+            className={cn("h-[70px]", isMobileOpen ? "rounded-tl-[10px]" : "rounded-l-[10px]")}
+            aria-label="Home"
+            onClick={handleMobileLinkClick}
+          >
+            <Image
+              src="/logos/pantherhacks/pantherhacks_mascot_light.png"
+              alt="Panther Hacks Logo"
+              width={50}
+              height={50}
+            />
+          </NavLink>
+          <Button
+            className={cn(
+              "h-[70px] px-[16px] hover:bg-[#83022b] [&_svg]:size-6 rounded-l-none rounded-tr-[10px]",
+              isMobileOpen ? "rounded-br-none" : "rounded-r-[10px]"
+            )}
+            onClick={() => setIsMobileOpen(!isMobileOpen)}
+            aria-label="Mobile Navigation Dropdown"
+          >
+            <Menu />
+          </Button>
+        </div>
+        <div
+          className={cn(
+            "flex flex-col w-full bg-primary font-TangoSans text-white text-lg rounded-b-[10px]",
+            isMobileOpen ? "flex" : "hidden"
+          )}
+        >
+          <NavLink variant="mobile" href="#home" onClick={handleMobileLinkClick}>
+            Home
+          </NavLink>
+          <NavLink variant="mobile" href="#about" onClick={handleMobileLinkClick}>
+            About
+          </NavLink>
+          <NavLink variant="mobile" href="#tracks" onClick={handleMobileLinkClick}>
+            Tracks
+          </NavLink>
+          <NavLink variant="mobile" href="#faqs" onClick={handleMobileLinkClick}>
+            FAQs
+          </NavLink>
+          <NavLink variant="mobile" href="#contact" onClick={handleMobileLinkClick}>
+            Contact
+          </NavLink>
+          <NavLink
+            href="#"
+            variant={"mobile_bold"}
+            className="bg-[rgb(75,0,0)] cursor-not-allowed" // TODO: Update this when we get applying working
+            // onClick={handleMobileLinkClick}
+          >
+            APPLICATION OPEN SOON
+          </NavLink>
+          <div className="flex items-center justify-center">
+            <NavLink
+              href="https://github.com/pantherhacks"
+              target="_blank"
+              variant={"mobile_icon"}
+              title={"PantherHacks GitHub Link"}
+              aria-label={"PantherHacks GitHub Link"}
+              onClick={handleMobileLinkClick}
+            >
+              <Image
+                src="./icons/github.svg"
+                alt="GitHub Icon"
+                width={24}
+                height={24}
+                className="filter invert h-[70px]"
+              />
+            </NavLink>
+            <NavLink
+              href="https://discord.gg/9NSwX5PxqC"
+              target="_blank"
+              variant={"mobile_icon"}
+              title={"PantherHacks Discord Link"}
+              aria-label={"PantherHacks Discord Link"}
+              onClick={handleMobileLinkClick}
+            >
+              <Image
+                src="./icons/discord.svg"
+                alt="Discord Icon"
+                width={24}
+                height={24}
+                className="filter invert h-[70px]"
+              />
+            </NavLink>
+            <NavLink
+              href="https://www.instagram.com/chapmancsclub/"
+              title={"PantherHacks Instagram Link"}
+              aria-label={"PantherHacks Instagram Link"}
+              target="_blank"
+              variant={"mobile_icon"}
+              onClick={handleMobileLinkClick}
+            >
+              <Image
+                src="./icons/instagram.svg"
+                alt="Discord Icon"
+                width={24}
+                height={24}
+                className="filter invert h-[70px]"
+              />
+            </NavLink>
+          </div>
+        </div>
+      </div>
+    </nav>
   );
 };
 

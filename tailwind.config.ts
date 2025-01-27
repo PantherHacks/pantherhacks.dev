@@ -57,6 +57,7 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
+        TangoSans: "Tango Sans",
         TangoSansBold: "Tango Sans Bold",
         NeuePlak: "Neue Plak",
       },
