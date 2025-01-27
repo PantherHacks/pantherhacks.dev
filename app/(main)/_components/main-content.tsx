@@ -1,7 +1,9 @@
+import Heading from "@/app/(main)/_components/heading";
+
 const MainContent = () => {
   return (
     <div>
-      <h1 className="font-TangoSansBold text-6xl">PANTHERHACKS</h1>
+      <Heading />
     </div>
   );
 };
