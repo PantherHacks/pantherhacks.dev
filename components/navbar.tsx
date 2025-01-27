@@ -39,12 +39,13 @@ const Navbar = () => {
       <div className="hidden md:flex justify-between items-center w-full">
         <div className="flex flex-row items-center">
           <div className="flex items-center overflow-hidden">
-            <NavLink href="/" variant={"icon"} className="h-[70px] rounded-l-[10px]" aria-label="Home">
+            <NavLink href="/" variant={"icon"} className="h-[70px] rounded-l-[10px] group" aria-label="Home">
               <Image
                 src="/logos/pantherhacks/pantherhacks_mascot_light.png"
                 alt="Panther Hacks Logo"
                 width={50}
                 height={50}
+                className="transition-transform duration-300 ease-in-out transform group-hover:scale-105"
               />
             </NavLink>
           </div>
