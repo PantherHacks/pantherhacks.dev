@@ -16,6 +16,20 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "PantherHacks",
   description: "PantherHacks is a hackathon hosted by Chapman University's Fowler School of Engineering.",
+  icons: {
+    icon: [
+      {
+        media: "(prefers-color-scheme: light)",
+        url: "/logos/pantherhacks/pantherhacks_red_mascot.png",
+        href: "/logos/pantherhacks/pantherhacks_red_mascot.png",
+      },
+      {
+        media: "(prefers-color-scheme: dark)",
+        url: "/logos/pantherhacks/pantherhacks_mascot_light.png",
+        href: "/logos/pantherhacks/pantherhacks_mascot_light.png",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
