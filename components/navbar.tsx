@@ -39,7 +39,7 @@ const Navbar = () => {
       <div className="hidden md:flex justify-between items-center w-full">
         <div className="flex flex-row items-center">
           <div className="flex items-center overflow-hidden">
-            <NavLink href="/" variant={"icon"} className="h-[70px] rounded-l-[10px] group" aria-label="Home">
+            <NavLink href="/" variant={"logo"} className="h-[70px] rounded-l-[10px] group" aria-label="Home">
               <Image
                 src="/logos/pantherhacks/pantherhacks_mascot_light.png"
                 alt="Panther Hacks Logo"
@@ -117,7 +117,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between w-full overflow-hidden">
           <NavLink
             href="/"
-            variant={"icon"}
+            variant={"logo"}
             className={cn("h-[70px]", isMobileOpen ? "rounded-tl-[10px]" : "rounded-l-[10px]")}
             aria-label="Home"
             onClick={handleMobileLinkClick}
@@ -167,7 +167,7 @@ const Navbar = () => {
             className="bg-[rgb(75,0,0)] cursor-not-allowed" // TODO: Update this when we get applying working
             // onClick={handleMobileLinkClick}
           >
-            APPLICATION OPEN SOON
+            APPLY
           </NavLink>
           <div className="flex items-center justify-center">
             <NavLink
@@ -212,7 +212,7 @@ const Navbar = () => {
             >
               <Image
                 src="./icons/instagram.svg"
-                alt="Discord Icon"
+                alt="Instagram Icon"
                 width={24}
                 height={24}
                 className="filter invert h-[70px]"
