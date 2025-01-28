@@ -6,10 +6,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import "./parallax.css";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Heading = () => {
   gsap.registerPlugin(ScrollTrigger);
+  const [backgroundPercentage, setBackgroundPercentage] = useState(0);
 
   const parallaxRef = useRef(null);
   const titleTextRef = useRef(null);
@@ -30,6 +31,9 @@ const Heading = () => {
           end: "1500 bottom",
           scrub: true,
           pin: true,
+          onUpdate: (self) => {
+            setBackgroundPercentage(Math.ceil(40 + self.progress * 20));
+          },
         },
       });
       tl.to(
@@ -80,20 +84,19 @@ const Heading = () => {
       );
     });
     return () => ctx.revert();
-  }, []);
+  }, [setBackgroundPercentage]);
 
   return (
-    <div className={"parallax"} ref={parallaxRef}>
-      <Image
-        className={"parallax_img"}
-        src={"/images/main-background/skybackground.png"}
-        alt={"Keck Center Background Image"}
-        width={0}
-        height={0}
-      />
+    <div
+      className={"parallax"}
+      ref={parallaxRef}
+      style={{
+        background: `linear-gradient(#195B7B 0%, #4DC9CC ${backgroundPercentage}%, #BEFCFD 100%)`,
+      }}
+    >
       <Image
         className={"parallax_img mountain-1"}
-        src={"/images/main-background/mountain-1.png"}
+        src={"/images/main-background/mountain-1.svg"}
         alt={"Mountain"}
         width={0}
         height={0}
@@ -101,7 +104,7 @@ const Heading = () => {
       />
       <Image
         className={"parallax_img mountain-2"}
-        src={"/images/main-background/mountain-2.png"}
+        src={"/images/main-background/mountain-2.svg"}
         alt={"Mountain"}
         width={0}
         height={0}
@@ -109,7 +112,7 @@ const Heading = () => {
       />
       <Image
         className={"parallax_img keck"}
-        src={"/images/main-background/keck.png"}
+        src={"/images/main-background/keck.svg"}
         alt={"Keck Center"}
         width={0}
         height={0}
@@ -117,7 +120,7 @@ const Heading = () => {
       />
       <div ref={redSquareRef} className="w-full bg-[#3F1324] redSquare parallax_img" />
       <div ref={titleTextRef} className="w-full justify-center items-center text-center z-1 pantherhacks-title">
-        <h1 className="font-TangoSansBold text-2xl sm:text-4xl md:text-7xl lg:text-8xl text-[#befcfd]">
+        <h1 className="font-TangoSansBold text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-[#befcfd]">
           PANTHERHACKS 2025
         </h1>
       </div>
