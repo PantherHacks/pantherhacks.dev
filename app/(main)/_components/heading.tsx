@@ -117,7 +117,9 @@ const Heading = () => {
       />
       <div ref={redSquareRef} className="w-full bg-[#3F1324] redSquare parallax_img" />
       <div ref={titleTextRef} className="w-full justify-center items-center text-center z-1 pantherhacks-title">
-        <h1 className="font-TangoSansBold text-2xl sm:text-4xl md:text-7xl lg:text-8xl text-[#befcfd]">PANTHERHACKS</h1>
+        <h1 className="font-TangoSansBold text-2xl sm:text-4xl md:text-7xl lg:text-8xl text-[#befcfd]">
+          PANTHERHACKS 2025
+        </h1>
       </div>
       <div ref={secondaryTitleRef} className="flex w-full justify-center items-center text-center z-10 secondary-title">
         <h1 className="font-TangoSansBold text-2xl sm:text-4xl md:text-6xl text-white">COMING APRIL 2025</h1>
