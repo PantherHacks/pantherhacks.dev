@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 
 import { Button } from "@/components/ui/button";
@@ -12,6 +13,68 @@ const InterestForm = () => {
       "entry.1151823529": "",
     },
   });
+
+  useEffect(() => {
+    const emailInput = document.getElementById("interested-email") as HTMLInputElement;
+    const submitButton = document.getElementById("interested-submit") as HTMLButtonElement;
+    const emailForm = document.getElementById("interest-form") as HTMLFormElement;
+
+    const handleSubmit = async (event: Event) => {
+      event.preventDefault();
+
+      const emailValue = emailInput.value;
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (emailPattern.test(emailValue)) {
+        const formData = new FormData(emailForm);
+
+        try {
+          const response = await fetch(emailForm.action, {
+            method: emailForm.method,
+            body: formData,
+          });
+
+          if (!response.ok) {
+            console.error("Form submission failed:", response.statusText);
+            alert("Form submission failed. Please try again later.");
+          } else {
+            // Clear the input field
+            emailInput.value = "";
+
+            // Disable the input field and button
+            emailInput.disabled = true;
+            submitButton.disabled = true;
+
+            // Change the placeholder text
+            const originalPlaceholder = emailInput.placeholder;
+            emailInput.placeholder = "Email has been submitted!";
+
+            // Revert the placeholder text after 3 seconds
+            setTimeout(() => {
+              emailInput.placeholder = originalPlaceholder;
+            }, 3000);
+
+            // Re-enable the input field and button after 5 seconds
+            setTimeout(() => {
+              emailInput.disabled = false;
+              submitButton.disabled = false;
+            }, 5000);
+          }
+        } catch (error) {
+          console.error("Form submission error:", error);
+          alert("Form submission error. Please check your network connection and try again.");
+        }
+      } else {
+        alert("Invalid email address. Please try again.");
+      }
+    };
+
+    submitButton.addEventListener("click", handleSubmit);
+
+    return () => {
+      submitButton.removeEventListener("click", handleSubmit);
+    };
+  }, []);
 
   return (
     <Form {...form}>
