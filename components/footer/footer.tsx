@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 import { FooterSocialLink } from "@/components/footer/footer-social-link";
-import InterestForm from "@/components/footer/interest-form";
 
 const Footer = () => {
   return (
