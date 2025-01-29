@@ -10,7 +10,7 @@ import { Input } from "@/components/ui/input";
 const InterestForm = () => {
   const form = useForm({
     defaultValues: {
-      "entry.1151823529": "",
+      Email: "",
     },
   });
 
@@ -47,15 +47,11 @@ const InterestForm = () => {
 
             // Change the placeholder text
             const originalPlaceholder = emailInput.placeholder;
-            emailInput.placeholder = "Email has been submitted!";
+            emailInput.placeholder = "Thank you for interest!";
 
             // Revert the placeholder text after 3 seconds
             setTimeout(() => {
               emailInput.placeholder = originalPlaceholder;
-            }, 3000);
-
-            // Re-enable the input field and button after 5 seconds
-            setTimeout(() => {
               emailInput.disabled = false;
               submitButton.disabled = false;
             }, 5000);
@@ -78,15 +74,10 @@ const InterestForm = () => {
 
   return (
     <Form {...form}>
-      <form
-        className="space-y-1"
-        action="https://docs.google.com/forms/d/e/1FAIpQLScpo8Qdgw7JEfkUIkdF6MYeCDvTN6BazTramPzIo8lx66rP5A/formResponse"
-        method="POST"
-        id="interest-form"
-      >
+      <form name="Interest Form" className="space-y-1" method="POST" id="interest-form" data-netlify="true">
         <FormField
           control={form.control}
-          name="entry.1151823529"
+          name="Email"
           render={({ field }) => (
             <FormItem className="flex flex-col items-center">
               <FormLabel className="text-white text-center">
