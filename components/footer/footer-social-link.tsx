@@ -14,7 +14,10 @@ export function FooterSocialLink({ href, className, children, ...props }: Footer
   return (
     <Link
       href={href}
-      className={cn("flex justify-center items-center hover:bg-[#83022b] h-[48px] w-[48px] rounded-full", className)}
+      className={cn(
+        "flex justify-center items-center transition-colors duration-300 hover:bg-[#83022b] h-[48px] w-[48px] rounded-full",
+        className
+      )}
       target="_blank"
       {...props}
     >
