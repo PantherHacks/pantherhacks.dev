@@ -12,6 +12,10 @@ const Navbar = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
 
+  const gitHubLink = "https://github.com/PantherHacks/pantherhacks.dev";
+  const discordLink = "https://discord.gg/9NSwX5PxqC";
+  const instagramLink = "https://www.instagram.com/chapmancsclub/";
+
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       // If the navbar is open and the click is outside the navbar, close it
@@ -66,7 +70,7 @@ const Navbar = () => {
         </div>
         <div className="flex items-center justify-center">
           <NavLink
-            href="https://github.com/pantherhacks"
+            href={gitHubLink}
             target="_blank"
             variant={"icon"}
             title={"PantherHacks GitHub Link"}
@@ -81,7 +85,7 @@ const Navbar = () => {
             />
           </NavLink>
           <NavLink
-            href="https://discord.gg/9NSwX5PxqC"
+            href={discordLink}
             target="_blank"
             variant={"icon"}
             title={"PantherHacks Discord Link"}
@@ -96,7 +100,7 @@ const Navbar = () => {
             />
           </NavLink>
           <NavLink
-            href="https://www.instagram.com/chapmancsclub/"
+            href={instagramLink}
             target="_blank"
             variant="icon"
             className="rounded-r-[10px]"
@@ -171,7 +175,7 @@ const Navbar = () => {
           </NavLink>
           <div className="flex items-center justify-center">
             <NavLink
-              href="https://github.com/pantherhacks"
+              href={gitHubLink}
               target="_blank"
               variant={"mobile_icon"}
               title={"PantherHacks GitHub Link"}
@@ -187,7 +191,7 @@ const Navbar = () => {
               />
             </NavLink>
             <NavLink
-              href="https://discord.gg/9NSwX5PxqC"
+              href={discordLink}
               target="_blank"
               variant={"mobile_icon"}
               title={"PantherHacks Discord Link"}
@@ -203,7 +207,7 @@ const Navbar = () => {
               />
             </NavLink>
             <NavLink
-              href="https://www.instagram.com/chapmancsclub/"
+              href={instagramLink}
               title={"PantherHacks Instagram Link"}
               aria-label={"PantherHacks Instagram Link"}
               target="_blank"

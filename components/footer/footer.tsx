@@ -9,7 +9,7 @@ const Footer = () => {
       {/* <InterestForm /> */}
       <h1 className="text-white text-center pt-2">Made with ❤️ by the PantherHacks Team</h1>
       <div className="flex flex-row justify-center items-center space-x-1" aria-label="Social Links">
-        <FooterSocialLink href="https://github.com/pantherhacks" aria-label="PantherHacks GitHub">
+        <FooterSocialLink href="https://github.com/PantherHacks/pantherhacks.dev" aria-label="PantherHacks GitHub">
           <Image src="/icons/github.svg" alt="GitHub Icon" width={24} height={24} className="filter invert" />
         </FooterSocialLink>
         <FooterSocialLink href="https://discord.gg/9NSwX5PxqC" aria-label="PantherHacks Discord">
