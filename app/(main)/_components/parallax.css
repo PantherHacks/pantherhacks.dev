@@ -1,59 +1,57 @@
+
+
 .parallax {
-    min-height: 100vh;
-    width: 200vw;
-    transform: translateX(-25%);
+    height: 100vh;
+    width: 100vw;
     display: grid;
     overflow: hidden;
     grid-template-areas: "stack";
 }
 
-.parallax > .parallax_img {
+.parallax>.parallax_img {
     position: absolute;
-    width: 100%;
-    overflow-x:hidden;
+    width: 200%;
+    overflow-x: hidden;
 }
 
-.parallax > .mountain-1 {
+.parallax>.mountain-1 {
     top: 300px;
-    width: 80%;
-    left: 20%;
     z-index: 1;
 }
 
-.parallax > .mountain-2 {
+.parallax>.mountain-2 {
     top: 400px;
     z-index: 2;
-    width: 80%;
-    left: 20%;
 }
 
-.parallax > .keck {
+.parallax>.keck {
     top: 475px;
     z-index: 4;
-    width: 65%;
-    left: 15%;
 }
 
-.parallax > .redSquare {
-    @media (width <= 500px) {
-        top: 530px;
-        height: 700px;
-    }
+.parallax>.redSquare {
     top: 650px;
-    height: 600px;
+    height: 60vh;
     z-index: 3;
-    left: 20%;
 }
 
-.parallax > .pantherhacks-title {
+.parallax>.pantherhacks-title {
     position: absolute;
     top: 150px;
 }
 
-.parallax > .secondary-title {
+.parallax>.secondary-title {
     position: absolute;
-    top: 900px;
+    top: 860px;
     opacity: 0;
 }
-
-
+@media (max-width: 1200px) {
+    .parallax>.secondary-title {
+        top: 825px;
+    }
+}
+@media (max-width: 1000px) {
+    .parallax>.secondary-title {
+        top: 750px;
+    }
+}

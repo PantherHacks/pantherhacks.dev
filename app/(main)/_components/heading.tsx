@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./parallax.css";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
 const Heading = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -28,7 +29,7 @@ const Heading = () => {
         scrollTrigger: {
           trigger: parallaxRef.current,
           start: "top top",
-          end: "1500 bottom",
+          end: "1500px bottom", // Using vh instead of fixed px
           scrub: true,
           pin: true,
           onUpdate: (self) => {
@@ -39,7 +40,7 @@ const Heading = () => {
       tl.to(
         titleTextRef.current,
         {
-          y: "+=100",
+          y: "+=10vh", // 10vh instead of 100px
           opacity: 0,
           duration: 0.75,
         },
@@ -48,35 +49,35 @@ const Heading = () => {
       tl.to(
         mountain1Ref.current,
         {
-          y: "-=100",
+          y: "-=100px",
         },
         0
       );
       tl.to(
         mountain2Ref.current,
         {
-          y: "-=150",
+          y: "-=150px",
         },
         0
       );
       tl.to(
         redSquareRef.current,
         {
-          y: "-=200",
+          y: "-=200px",
         },
         0
       );
       tl.to(
         keckRef.current,
         {
-          y: "-=220",
+          y: "-=240px",
         },
         0
       );
       tl.to(
         secondaryTitleRef.current,
         {
-          y: "-=150",
+          y: "-=150px",
           opacity: 1,
           delay: 0.5,
         },
@@ -96,7 +97,7 @@ const Heading = () => {
     >
       <Image
         className={"parallax_img mountain-1"}
-        src={"/images/main-background/mountain-1.svg"}
+        src={"/images/main-background/mountain-1-cropped.svg"}
         alt={"Mountain"}
         width={0}
         height={0}
@@ -104,7 +105,7 @@ const Heading = () => {
       />
       <Image
         className={"parallax_img mountain-2"}
-        src={"/images/main-background/mountain-2.svg"}
+        src={"/images/main-background/mountain-2-cropped.svg"}
         alt={"Mountain"}
         width={0}
         height={0}
@@ -112,20 +113,28 @@ const Heading = () => {
       />
       <Image
         className={"parallax_img keck"}
-        src={"/images/main-background/keck.svg"}
+        src={"/images/main-background/keck-cropped-cropped.svg"}
         alt={"Keck Center"}
         width={0}
         height={0}
         ref={keckRef}
       />
       <div ref={redSquareRef} className="w-full bg-[#3F1324] redSquare parallax_img" />
-      <div ref={titleTextRef} className="w-full justify-center items-center text-center z-1 pantherhacks-title">
-        <h1 className="font-TangoSansBold text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-[#befcfd]">
+      <div ref={titleTextRef} className="flex w-full justify-center items-center text-center z-1 pantherhacks-title">
+        <h1 className="font-TangoSansBold text-3xl sm:text-6xl lg:text-7xl xl:text-8xl text-[#befcfd] max-w-[calc(100vw-4rem)]">
           PANTHERHACKS 2025
         </h1>
       </div>
-      <div ref={secondaryTitleRef} className="flex w-full justify-center items-center text-center z-10 secondary-title">
-        <h1 className="font-TangoSansBold text-2xl sm:text-4xl md:text-6xl text-white">COMING APRIL 2025</h1>
+      <div
+        ref={secondaryTitleRef}
+        className="flex flex-col w-full justify-center items-center text-center z-10 gap-y-8 secondary-title"
+      >
+        <h2 className="font-TangoSansBold text-xl sm:text-5xl text-white cursor-default">April X-X, 2025</h2>
+        <Link href="/apply">
+          <h1 className="font-TangoSansBold text-2xl sm:text-6xl text-white cursor-pointer hover:text-[#fe8e8e] transition-colors duration-300">
+            APPLY NOW
+          </h1>
+        </Link>
       </div>
     </div>
   );
