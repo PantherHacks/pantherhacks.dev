@@ -6,16 +6,12 @@ import { Menu } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/ui/NavLink";
+import { applicationLink, discordLink, gitHubLink, instagramLink } from "@/lib/links";
 import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
-
-  const gitHubLink = "https://github.com/PantherHacks/pantherhacks.dev";
-  const discordLink = "https://discord.gg/9NSwX5PxqC";
-  const instagramLink = "https://www.instagram.com/chapmancsclub/";
-  const applicationLink = "https://forms.gle/pg198Dya3wzJEYo5A";
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
@@ -163,10 +159,11 @@ const Navbar = () => {
             Contact
           </NavLink>
           <NavLink
-            href="#"
+            href={applicationLink}
             variant={"mobile_bold"}
-            className="bg-[rgb(75,0,0)] cursor-not-allowed" // TODO: Update this when we get applying working
-            // onClick={handleMobileLinkClick}
+            className="bg-[rgb(75,0,0)]"
+            onClick={handleMobileLinkClick}
+            target="_blank"
           >
             APPLY
           </NavLink>
