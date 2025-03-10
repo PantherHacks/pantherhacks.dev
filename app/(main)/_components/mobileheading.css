@@ -1,0 +1,11 @@
+@media screen and (max-width: 450px) {
+  .pantherhacks-title {
+    font-size: 2.25rem;
+  }
+}
+
+@media screen and (min-width: 751px) {
+  .mobile-heading {
+    display: none;
+  }
+}
