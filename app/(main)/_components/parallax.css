@@ -1,0 +1,60 @@
+.parallax {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    overflow: hidden;
+    grid-template-areas: "stack";
+}
+
+.parallax>.parallax_img {
+    position: absolute;
+    width: 200%;
+    overflow-x: hidden;
+}
+
+.parallax>.mountain-1 {
+    top: 300px;
+    z-index: 1;
+}
+
+.parallax>.mountain-2 {
+    top: 400px;
+    z-index: 2;
+}
+
+.parallax>.keck {
+    top: 475px;
+    z-index: 4;
+}
+
+.parallax>.redSquare {
+    top: 650px;
+    height: 60vh;
+    z-index: 3;
+}
+
+.parallax>.pantherhacks-title {
+    position: absolute;
+    top: 150px;
+}
+
+.parallax>.secondary-title {
+    position: absolute;
+    top: 860px;
+    opacity: 0;
+}
+@media (max-width: 1200px) {
+    .parallax>.secondary-title {
+        top: 825px;
+    }
+}
+@media (max-width: 1000px) {
+    .parallax>.secondary-title {
+        top: 750px;
+    }
+}
+@media screen and (max-width: 750px) {
+    .parallax {
+        display: none;
+    }
+}

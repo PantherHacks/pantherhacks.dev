@@ -1,7 +1,14 @@
+"use client";
+
+import Heading from "@/app/(main)/_components/heading";
+import MobileHeading from "./mobileheading";
+
 const MainContent = () => {
   return (
-    <div>
-      <h1 className="font-TangoSansBold text-6xl">PANTHERHACKS</h1>
+    <div className="overflow-x-hidden max-w-[100vw]">
+      <Heading />
+      <MobileHeading />
+      <div className="flex flex-col items-center justify-center w-full py-40 bg-[#ffffff]">Main Content Example</div>
     </div>
   );
 };

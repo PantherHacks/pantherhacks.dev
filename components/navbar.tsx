@@ -15,6 +15,7 @@ const Navbar = () => {
   const gitHubLink = "https://github.com/PantherHacks/pantherhacks.dev";
   const discordLink = "https://discord.gg/9NSwX5PxqC";
   const instagramLink = "https://www.instagram.com/chapmancsclub/";
+  const applicationLink = "https://forms.gle/pg198Dya3wzJEYo5A";
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
@@ -59,11 +60,7 @@ const Navbar = () => {
             <NavLink href="#tracks">Tracks</NavLink>
             <NavLink href="#faqs">FAQs</NavLink>
             <NavLink href="#contact">Contact</NavLink>
-            <NavLink
-              href="#"
-              variant={"bold"}
-              className="bg-[rgb(75,0,0)] cursor-not-allowed" // TODO: Update this when we get applying working
-            >
+            <NavLink href={applicationLink} variant="bold" className="bg-[rgb(75,0,0)]" target="_blank">
               APPLY
             </NavLink>
           </div>
