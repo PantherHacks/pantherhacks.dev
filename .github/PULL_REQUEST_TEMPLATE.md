@@ -11,4 +11,3 @@ Checklist:
 Closes #XXXXX
 
 <!-- Feel free to add any additional description of changes below this line -->
-
