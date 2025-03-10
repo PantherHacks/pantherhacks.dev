@@ -163,6 +163,7 @@ const Navbar = () => {
             variant={"mobile_bold"}
             className="bg-[rgb(75,0,0)]"
             onClick={handleMobileLinkClick}
+            target="_blank"
           >
             APPLY
           </NavLink>
