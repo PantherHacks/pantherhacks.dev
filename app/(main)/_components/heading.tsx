@@ -130,7 +130,7 @@ const Heading = () => {
         ref={secondaryTitleRef}
         className="flex flex-col w-full justify-center items-center text-center z-10 gap-y-8 secondary-title"
       >
-        <h2 className="font-TangoSansBold text-xl sm:text-5xl text-white cursor-default">
+        <h2 className="font-TangoSansBold text-xl sm:text-5xl text-white cursor-default drop-shadow-md">
           {hackathonDateInfo.dateString}
         </h2>
       </div>
