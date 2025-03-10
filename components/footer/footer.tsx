@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <>
       <Image
-        src="/images/arch/arch.svg"
+        src="/images/arch/Arch.svg"
         alt="The Schmid Gate"
         width={100000}
         height={10000}
