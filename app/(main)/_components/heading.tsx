@@ -8,6 +8,8 @@ import "./parallax.css";
 
 import { useEffect, useRef, useState } from "react";
 
+import { hackathonDateInfo } from "@/lib/dates";
+
 const Heading = () => {
   gsap.registerPlugin(ScrollTrigger);
   const [backgroundPercentage, setBackgroundPercentage] = useState(0);
@@ -121,14 +123,16 @@ const Heading = () => {
       <div ref={redSquareRef} className="w-full bg-[#3F1324] redSquare parallax_img" />
       <div ref={titleTextRef} className="flex w-full justify-center items-center text-center z-1 pantherhacks-title">
         <h1 className="font-TangoSansBold text-3xl sm:text-6xl lg:text-7xl xl:text-8xl text-[#befcfd] max-w-[calc(100vw-4rem)]">
-          PANTHERHACKS 2025
+          PANTHERHACKS {hackathonDateInfo.year}
         </h1>
       </div>
       <div
         ref={secondaryTitleRef}
         className="flex flex-col w-full justify-center items-center text-center z-10 gap-y-8 secondary-title"
       >
-        <h2 className="font-TangoSansBold text-xl sm:text-5xl text-white cursor-default">April X-X, 2025</h2>
+        <h2 className="font-TangoSansBold text-xl sm:text-5xl text-white cursor-default">
+          {hackathonDateInfo.dateString}
+        </h2>
       </div>
     </div>
   );
