@@ -20,6 +20,7 @@ const MobileHeading = () => {
           alt="Keck Center"
           width={0}
           height={0}
+          unoptimized
         />
       </div>
       <div className="flex flex-col w-full justify-center items-center text-center z-10 gap-y-8 pt-5 pb-10 secondary-title">
