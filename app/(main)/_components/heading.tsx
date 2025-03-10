@@ -7,7 +7,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./parallax.css";
 
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
 
 const Heading = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -130,11 +129,6 @@ const Heading = () => {
         className="flex flex-col w-full justify-center items-center text-center z-10 gap-y-8 secondary-title"
       >
         <h2 className="font-TangoSansBold text-xl sm:text-5xl text-white cursor-default">April X-X, 2025</h2>
-        <Link href="/apply">
-          <h1 className="font-TangoSansBold text-2xl sm:text-6xl text-white cursor-pointer hover:text-[#fe8e8e] transition-colors duration-300">
-            APPLY NOW
-          </h1>
-        </Link>
       </div>
     </div>
   );

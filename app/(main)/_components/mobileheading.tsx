@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 import "./mobileheading.css";
 
@@ -23,11 +22,6 @@ const MobileHeading = () => {
       </div>
       <div className="flex flex-col w-full justify-center items-center text-center z-10 gap-y-8 pt-5 pb-10 secondary-title">
         <h2 className="font-TangoSansBold text-3xl text-white cursor-default">April X-X, 2025</h2>
-        <Link href="/apply">
-          <h1 className="font-TangoSansBold text-4xl text-white cursor-pointer hover:text-[#fe8e8e] transition-colors duration-300">
-            APPLY NOW
-          </h1>
-        </Link>
       </div>
     </div>
   );
