@@ -11,9 +11,11 @@ import TracksSection from "./tracks-section";
 const MainContent = () => {
   return (
     <div className="flex flex-grow flex-col w-full">
-      <ParallaxProvider>
-        <Heading />
-      </ParallaxProvider>
+      <div className="hidden [@media(min-width:750px)]:block">
+        <ParallaxProvider>
+          <Heading />
+        </ParallaxProvider>
+      </div>
       <MobileHeading />
       <AboutSection />
       <TracksSection />
