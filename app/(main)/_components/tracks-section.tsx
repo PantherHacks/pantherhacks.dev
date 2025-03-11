@@ -4,7 +4,7 @@ import Track from "./track";
 
 const TracksSection = () => {
   return (
-    <div id="tracks" className="flex flex-col items-center justify-center w-full py-40 relative">
+    <div id="tracks" className="flex flex-col items-center justify-center w-full py-40 relative overflow-x-clip">
       <Image
         src="/images/oranges/orange-branch-1.svg"
         alt="An orange branch."
