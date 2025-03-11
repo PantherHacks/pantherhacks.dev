@@ -1,25 +1,25 @@
 .parallax {
-    height: 100vh;
-    width: 100vw;
-    display: grid;
-    overflow: hidden;
-    grid-template-areas: "stack";
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  overflow: hidden;
+  grid-template-areas: "stack";
 }
 
-.parallax>.parallax_img {
-    position: absolute;
-    width: 200%;
-    overflow-x: hidden;
+.parallax > .parallax_img {
+  position: absolute;
+  width: 200%;
+  overflow-x: hidden;
 }
 
-.parallax>.mountain-1 {
-    top: 300px;
-    z-index: 1;
+.parallax > .mountain-1 {
+  top: 300px;
+  z-index: 1;
 }
 
-.parallax>.mountain-2 {
-    top: 400px;
-    z-index: 2;
+.parallax > .mountain-2 {
+  top: 400px;
+  z-index: 2;
 }
 
 .parallax>.keck {
@@ -36,9 +36,9 @@
     z-index: 3;
 }
 
-.parallax>.pantherhacks-title {
-    position: absolute;
-    top: 150px;
+.parallax > .pantherhacks-title {
+  position: absolute;
+  top: 150px;
 }
 
 .parallax>.secondary-title {
@@ -60,7 +60,7 @@
     }
 }
 @media screen and (max-width: 750px) {
-    .parallax {
-        display: none;
-    }
+  .parallax {
+    display: none;
+  }
 }
