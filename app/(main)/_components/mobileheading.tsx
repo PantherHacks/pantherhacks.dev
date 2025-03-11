@@ -11,7 +11,7 @@ const MobileHeading = () => {
         className="flex flex-col flex-1 items-center justify-center w-full pt-44"
         style={{ background: "linear-gradient(#195B7B 0%, #4DC9CC 50%, #BEFCFD 100%)" }}
       >
-        <h1 className="flex flex-wrap font-TangoSansBold pantherhacks-title text-5xl sm:text-6xl text-[#befcfd] w-full px-4 sm:px-16">
+        <h1 className="flex flex-wrap font-TangoSansBold pantherhacks-title text-5xl sm:text-6xl text-[#befcfd] w-full px-4 sm:px-16 drop-shadow-lg">
           PANTHERHACKS {hackathonDateInfo.year}
         </h1>
         <Image
