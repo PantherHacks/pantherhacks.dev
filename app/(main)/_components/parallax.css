@@ -31,7 +31,7 @@
 }
 
 .parallax>.redSquare {
-    top: calc(550px + 100vw/6);
+    top: calc(550px + 100vw/7);
     height: 100vh;
     z-index: 3;
 }
@@ -49,6 +49,9 @@
 @media screen and (max-width: 1200px) {
     .parallax>.secondary-title {
         top: 825px;
+    }
+    .parallax>.keck {
+        top: 525px;
     }
 }
 @media screen and (max-width: 1000px) {
