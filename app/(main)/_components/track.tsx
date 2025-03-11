@@ -8,7 +8,7 @@ interface ITrackProps {
 
 const Track: React.FC<ITrackProps> = ({ name }) => {
   return (
-    <div className="flex flex-col items-center space-y-4 md:hover:scale-105 transition-transform duration-300 md:cursor-pointer">
+    <div className="flex flex-col items-center space-y-4 md:hover:scale-105 transition-transform duration-300">
       <Image
         src={`/images/tracks/${name.toLowerCase()}.svg`}
         width={300}
