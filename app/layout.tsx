@@ -30,6 +30,12 @@ export const metadata: Metadata = {
       },
     ],
   },
+  openGraph: {
+    images: "/social-images/opengraph-image.png",
+  },
+  twitter: {
+    images: "/social-images/opengraph-image.png",
+  },
 };
 
 export default function RootLayout({
