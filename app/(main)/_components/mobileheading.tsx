@@ -20,6 +20,7 @@ const MobileHeading = () => {
           alt="Keck Center"
           width={0}
           height={0}
+          draggable={false}
           unoptimized
         />
       </div>
