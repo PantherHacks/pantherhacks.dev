@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ParallaxProvider } from "react-scroll-parallax";
 
 import Heading from "@/app/(main)/_components/heading";
@@ -17,6 +18,14 @@ const MainContent = () => {
         </ParallaxProvider>
       </div>
       <MobileHeading />
+      <Image
+        src="/images/main-background/main-header-transition.svg"
+        width={100}
+        height={100}
+        alt=""
+        aria-hidden
+        className="w-[100%] -translate-y-1"
+      />
       <AboutSection />
       <TracksSection />
       <FaqsSection />

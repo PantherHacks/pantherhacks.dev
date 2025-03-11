@@ -1,15 +1,49 @@
+import Image from "next/image";
+
 import Track from "./track";
 
 const TracksSection = () => {
   return (
-    <div id="tracks" className="flex flex-col items-center justify-center w-full py-40">
+    <div id="tracks" className="flex flex-col items-center justify-center w-full py-40 relative overflow-x-clip">
+      <Image
+        src="/images/oranges/orange-branch-1.svg"
+        alt="An orange branch."
+        width={100}
+        height={100}
+        className="hidden md:block w-96 h-96 absolute -left-2 top-0 -translate-y-1/2 select-none"
+        draggable={false}
+      />
+      <Image
+        src="/images/oranges/orange-branch-mobile-divider.svg"
+        alt="An orange branch divider."
+        width={100}
+        height={100}
+        className="block md:hidden w-80 h-80 sm:w-96 sm:h-96 absolute top-0 -translate-y-1/2 select-none"
+        draggable={false}
+      />
       <h2 className="font-TangoSansBold text-6xl text-[#EE5000] pb-10">Tracks</h2>
-      <div className="md:grid md:grid-cols-2 md:gap-16">
-        <Track name="AI" imageSrc="/tracks/ai.svg" />
-        <Track name="Cybersecurity" imageSrc="/tracks/cybersecurity.svg" />
-        <Track name="Healthcare" imageSrc="/tracks/healthcare.svg" />
-        <Track name="Sustainability" imageSrc="/tracks/sustainability.svg" />
+      <div className="md:grid md:grid-cols-2 space-y-16 md:space-y-0 md:gap-16">
+        <Track name="AI" />
+        <Track name="Cybersecurity" />
+        <Track name="Healthcare" />
+        <Track name="Sustainability" />
       </div>
+      <Image
+        src="/images/oranges/orange-branch-2.svg"
+        alt="An orange branch."
+        width={100}
+        height={100}
+        className="hidden md:block w-96 h-96 absolute -right-2 bottom-0 translate-y-1/2 select-none"
+        draggable={false}
+      />
+      <Image
+        src="/images/oranges/orange-branch-mobile-divider.svg"
+        alt="An orange branch divider."
+        width={100}
+        height={100}
+        className="block md:hidden w-80 h-80 sm:w-96 sm:h-96 absolute bottom-0 translate-y-1/2 select-none"
+        draggable={false}
+      />
     </div>
   );
 };

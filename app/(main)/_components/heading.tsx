@@ -50,7 +50,7 @@ const Heading = () => {
 
         <ParallaxBannerLayer speed={20}>
           <div className="absolute w-full flex justify-center items-center text-center top-[26rem] z-50">
-            <h1 className="font-TangoSansBold text-3xl sm:text-6xl lg:text-7xl xl:text-8xl text-[#befcfd] max-w-[calc(100vw-4rem)]">
+            <h1 className="font-TangoSansBold text-3xl sm:text-6xl lg:text-7xl xl:text-8xl text-[#befcfd] max-w-[calc(100vw-4rem)] drop-shadow-lg">
               PANTHERHACKS {hackathonDateInfo.year}
             </h1>
           </div>
