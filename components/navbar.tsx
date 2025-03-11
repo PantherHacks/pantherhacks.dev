@@ -55,7 +55,6 @@ const Navbar = () => {
             <NavLink href="#about">About</NavLink>
             <NavLink href="#tracks">Tracks</NavLink>
             <NavLink href="#faqs">FAQs</NavLink>
-            <NavLink href="#contact">Contact</NavLink>
             <NavLink href={applicationLink} variant="bold" className="bg-[rgb(75,0,0)]" target="_blank">
               APPLY
             </NavLink>
@@ -154,9 +153,6 @@ const Navbar = () => {
           </NavLink>
           <NavLink variant="mobile" href="#faqs" onClick={handleMobileLinkClick}>
             FAQs
-          </NavLink>
-          <NavLink variant="mobile" href="#contact" onClick={handleMobileLinkClick}>
-            Contact
           </NavLink>
           <NavLink
             href={applicationLink}
