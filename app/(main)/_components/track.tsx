@@ -10,7 +10,14 @@ interface ITrackProps {
 const Track: React.FC<ITrackProps> = ({ name, imageSrc }) => {
   return (
     <div className="flex flex-col items-center space-y-4 md:hover:scale-105 transition-transform duration-300 md:cursor-pointer">
-      <Image src={imageSrc} width={300} height={300} alt={`${name} Track`} className="track-image" />
+      <Image
+        src={imageSrc}
+        width={300}
+        height={300}
+        alt={`${name} Track`}
+        className="track-image select-none"
+        draggable={false}
+      />
       <p className="font-TangoSansBold text-[#FC8332] text-3xl text-center">{name}</p>
     </div>
   );
