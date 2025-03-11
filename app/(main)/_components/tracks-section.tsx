@@ -15,10 +15,10 @@ const TracksSection = () => {
       />
       <h2 className="font-TangoSansBold text-6xl text-[#EE5000] pb-10">Tracks</h2>
       <div className="md:grid md:grid-cols-2 space-y-16 md:space-y-0 md:gap-16">
-        <Track name="AI" imageSrc="/tracks/ai.svg" />
-        <Track name="Cybersecurity" imageSrc="/tracks/cybersecurity.svg" />
-        <Track name="Healthcare" imageSrc="/tracks/healthcare.svg" />
-        <Track name="Sustainability" imageSrc="/tracks/sustainability.svg" />
+        <Track name="AI" />
+        <Track name="Cybersecurity" />
+        <Track name="Healthcare" />
+        <Track name="Sustainability" />
       </div>
       <Image
         src="/images/oranges/orange-branch-2.svg"
