@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/PantherHacks/pantherhacks.dev/assets/48571264/41aa4294-12e3-41d4-bb5e-f80b10405586" width="70%">
+  <img src="https://github.com/user-attachments/assets/095d2b8a-b6ad-4477-beb9-6c01b2f4ae14" width="70%">
 </p>
 
 ## PantherHacks Website

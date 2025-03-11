@@ -46,7 +46,8 @@ const Navbar = () => {
                 alt="Panther Hacks Logo"
                 width={50}
                 height={50}
-                className="transition-transform duration-300 ease-in-out transform group-hover:scale-105"
+                className="transition-transform duration-300 ease-in-out transform group-hover:scale-105 select-none"
+                draggable={false}
               />
             </NavLink>
           </div>
@@ -73,7 +74,8 @@ const Navbar = () => {
               alt="GitHub Icon"
               width={24}
               height={24}
-              className="filter invert h-[70px]"
+              className="filter invert h-[70px] select-none"
+              draggable={false}
             />
           </NavLink>
           <NavLink
@@ -88,7 +90,8 @@ const Navbar = () => {
               alt="Discord Icon"
               width={24}
               height={24}
-              className="filter invert h-[70px]"
+              className="filter invert h-[70px] select-none"
+              draggable={false}
             />
           </NavLink>
           <NavLink
@@ -104,7 +107,8 @@ const Navbar = () => {
               alt="Discord Icon"
               width={24}
               height={24}
-              className="filter invert h-[70px]"
+              className="filter invert h-[70px] select-none"
+              draggable={false}
             />
           </NavLink>
         </div>
@@ -123,6 +127,8 @@ const Navbar = () => {
               alt="Panther Hacks Logo"
               width={50}
               height={50}
+              className="select-none"
+              draggable={false}
             />
           </NavLink>
           <Button
@@ -177,7 +183,8 @@ const Navbar = () => {
                 alt="GitHub Icon"
                 width={24}
                 height={24}
-                className="filter invert h-[70px]"
+                className="filter invert h-[70px] select-none"
+                draggable={false}
               />
             </NavLink>
             <NavLink
@@ -193,7 +200,8 @@ const Navbar = () => {
                 alt="Discord Icon"
                 width={24}
                 height={24}
-                className="filter invert h-[70px]"
+                className="filter invert h-[70px] select-none"
+                draggable={false}
               />
             </NavLink>
             <NavLink
@@ -209,7 +217,8 @@ const Navbar = () => {
                 alt="Instagram Icon"
                 width={24}
                 height={24}
-                className="filter invert h-[70px]"
+                className="filter invert h-[70px] select-none"
+                draggable={false}
               />
             </NavLink>
           </div>
