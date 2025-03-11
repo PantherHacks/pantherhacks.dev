@@ -9,7 +9,7 @@ const Heading = () => {
   return (
     <>
       <ParallaxBanner
-        className="h-[60rem] [@media(min-width:1000px)]:h-[70rem] [@media(min-width:1800px)]:h-[80rem] parallax-banner"
+        className="h-[60rem] [@media(min-width:1000px)]:h-[70rem] [@media(min-width:1800px)]:h-[80rem] [@media(min-width:3000px)]:h-[90rem] parallax-banner"
         style={{
           background: `linear-gradient(#195B7B 0%, #4DC9CC 30%, #BEFCFD 100%)`,
         }}
