@@ -20,13 +20,34 @@ const Footer = () => {
         <p className="text-white text-center pt-2">Made with ❤️ by the PantherHacks Team</p>
         <div className="flex flex-row justify-center items-center space-x-1" aria-label="Social Links">
           <FooterSocialLink href={gitHubLink} aria-label="PantherHacks GitHub">
-            <Image src="/icons/github.svg" alt="GitHub Icon" width={24} height={24} className="filter invert" />
+            <Image
+              src="/icons/github.svg"
+              alt="GitHub Icon"
+              width={24}
+              height={24}
+              className="filter invert select-none"
+              draggable={false}
+            />
           </FooterSocialLink>
           <FooterSocialLink href={discordLink} aria-label="PantherHacks Discord">
-            <Image src="/icons/discord.svg" alt="Discord Icon" width={24} height={24} className="filter invert" />
+            <Image
+              src="/icons/discord.svg"
+              alt="Discord Icon"
+              width={24}
+              height={24}
+              className="filter invert select-none"
+              draggable={false}
+            />
           </FooterSocialLink>
           <FooterSocialLink href={instagramLink} aria-label="PantherHacks Instagram">
-            <Image src="/icons/instagram.svg" alt="Instagram Icon" width={24} height={24} className="filter invert" />
+            <Image
+              src="/icons/instagram.svg"
+              alt="Instagram Icon"
+              width={24}
+              height={24}
+              className="filter invert select-none"
+              draggable={false}
+            />
           </FooterSocialLink>
           <FooterSocialLink href={contactEmail} aria-label="Chapman Computer Science Club Email">
             <Mail className="w-[24px] h-[24px] filter invert" />
