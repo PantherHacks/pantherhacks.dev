@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="flex flex-col justify-center items-center min-h-screen">
       <Navbar />
-      <main className="flex flex-1 overflow-x-hidden">
+      <main className="flex flex-1 w-[100vw]">
         <MainContent />
       </main>
       <Footer />
