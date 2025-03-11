@@ -43,7 +43,7 @@
 
 .parallax>.secondary-title {
     position: absolute;
-    top: calc(825px + 100vw/6);
+    top: calc(800px + 100vw/6 - 100vh/8);
     opacity: 0;
 }
 @media screen and (max-width: 1200px) {
