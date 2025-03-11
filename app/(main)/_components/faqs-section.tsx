@@ -60,9 +60,7 @@ const FaqsSection = () => {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-8">
-            <AccordionTrigger className="text-start">
-              Can I still attend even if I don't know how to code?
-            </AccordionTrigger>
+            <AccordionTrigger>Can I still attend even if I don't know how to code?</AccordionTrigger>
             <AccordionContent>
               Yes! Prior experience is not required to participate. Mentors will be available to help you if you get
               stuck.
