@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 
 import "./globals.css";
 
+import { mainWebsiteLink } from "@/lib/links";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -30,6 +32,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  metadataBase: new URL(mainWebsiteLink),
   openGraph: {
     images: "/social-images/opengraph-image.png",
   },
