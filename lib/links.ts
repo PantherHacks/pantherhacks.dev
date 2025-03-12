@@ -1,4 +1,5 @@
 // Description: This file contains all the links used in the website.
+export const mainWebsiteLink = "https://pantherhacks.dev";
 export const gitHubLink = "https://github.com/PantherHacks/pantherhacks.dev";
 export const discordLink = "https://discord.gg/9NSwX5PxqC";
 export const instagramLink = "https://www.instagram.com/chapmancsclub/";
