@@ -1,6 +1,6 @@
 name: New Feature - Request a New Feature for our Website
 description: Suggest an idea that you would like implemented on our website.
-labels: ["type: feature request", "status: waiting triage"]
+type: "Feature"
 body:
   - type: textarea
     attributes:
