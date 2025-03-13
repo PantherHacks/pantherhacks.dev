@@ -1,6 +1,6 @@
 name: Issue - Issue With Website
 description: Report a software bug on our website.
-type: ["Bug"]
+type: "Bug"
 body:
   - type: textarea
     attributes:
