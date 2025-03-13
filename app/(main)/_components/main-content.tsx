@@ -18,14 +18,16 @@ const MainContent = () => {
         </ParallaxProvider>
       </div>
       <MobileHeading />
-      <Image
-        src="/images/main-background/main-header-transition.svg"
-        width={100}
-        height={100}
-        alt=""
-        aria-hidden
-        className="w-[100%] -translate-y-1"
-      />
+      <div className="flex w-100vw overflow-x-hidden">
+        <Image
+          src="/images/main-background/main-header-transition.svg"
+          width={100}
+          height={100}
+          alt=""
+          aria-hidden
+          className="w-full scale-105 translate-x-2 h-auto -translate-y-2"
+        />
+      </div>
       <AboutSection />
       <TracksSection />
       <FaqsSection />
