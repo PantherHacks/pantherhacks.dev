@@ -20,7 +20,7 @@ const Track: React.FC<ITrackProps> = ({ name, popupNameOverride, popupDescriptio
             width={0}
             height={0}
             alt={`${name} Track`}
-            className="track-image w-48 h-48 sm:w-64 sm:h-64 select-none hidden md:block"
+            className="track-image w-48 h-48 sm:w-64 sm:h-64 select-none hidden md:block transform-gpu"
             draggable={false}
           />
           <Image
@@ -28,7 +28,7 @@ const Track: React.FC<ITrackProps> = ({ name, popupNameOverride, popupDescriptio
             width={0}
             height={0}
             alt={`${name} Track`}
-            className="track-image w-48 h-48 sm:w-64 sm:h-64 select-none block md:hidden"
+            className="track-image w-48 h-48 sm:w-64 sm:h-64 select-none block md:hidden transform-gpu"
             draggable={false}
           />
           <p className="font-TangoSansBold text-[#FC8332] text-3xl text-center">{name}</p>
