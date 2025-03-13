@@ -1,6 +1,7 @@
 name: New Feature - Request a New Feature for our Website
 description: Suggest an idea that you would like implemented on our website.
 type: "Feature"
+labels: ["status: awaiting triage"]
 body:
   - type: textarea
     attributes:
