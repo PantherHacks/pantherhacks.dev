@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { ParallaxProvider } from "react-scroll-parallax";
 
+import PrizesSection from "@/app/(main)/_components/_prizes/prizes-section";
 import Heading from "@/app/(main)/_components/heading";
 import AboutSection from "./about-section";
 import FaqsSection from "./faqs-section";
@@ -31,6 +32,7 @@ const MainContent = () => {
       </div>
       <AboutSection />
       <TracksSection />
+      <PrizesSection />
       <FaqsSection />
     </div>
   );
