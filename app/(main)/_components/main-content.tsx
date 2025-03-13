@@ -26,6 +26,7 @@ const MainContent = () => {
           alt=""
           aria-hidden
           className="w-full scale-105 translate-x-2 h-auto -translate-y-2"
+          loading="eager"
         />
       </div>
       <AboutSection />

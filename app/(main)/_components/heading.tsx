@@ -21,6 +21,7 @@ const Heading = () => {
             alt="Mountain"
             width={0}
             height={0}
+            loading="eager"
           />
         </ParallaxBannerLayer>
 
@@ -31,6 +32,7 @@ const Heading = () => {
             alt="Mountain"
             width={0}
             height={0}
+            loading="eager"
           />
         </ParallaxBannerLayer>
 
@@ -45,6 +47,7 @@ const Heading = () => {
             alt="Keck Center"
             width={0}
             height={0}
+            loading="eager"
           />
         </ParallaxBannerLayer>
 

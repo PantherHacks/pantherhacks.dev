@@ -21,6 +21,7 @@ const MobileHeading = () => {
           width={0}
           height={0}
           draggable={false}
+          loading="eager"
           unoptimized
         />
       </div>
