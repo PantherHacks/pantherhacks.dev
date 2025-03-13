@@ -41,8 +41,8 @@ const Track: React.FC<ITrackProps> = ({
           />
           <p
             className={`pt-4 md:pt-0 font-TangoSansBold text-[#FC8332] text-3xl text-center${
-              leftOffset ? ` md:translate-x-[1.425rem]` : ""
-            }${rightOffset ? ` md:-translate-x-[1.45rem]` : ""}`}
+              leftOffset ? ` md:translate-x-[1.5rem]` : ""
+            }${rightOffset ? ` md:-translate-x-[1.5rem]` : ""}`}
           >
             {name}
           </p>
