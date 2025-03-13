@@ -23,7 +23,7 @@ const TracksSection = () => {
       />
       <h2 className="font-TangoSansBold text-6xl text-[#EE5000] pb-10">Tracks</h2>
       <p className="">Learn more about the tracks we offer.</p>
-      <div className="py-4 md:grid md:grid-cols-2 space-y-16 md:space-y-0 md:gap-16">
+      <div className="flex flex-col pt-8 pb-4 md:grid md:grid-cols-2 space-y-16 md:space-y-0 md:gap-16">
         <Track
           name="AI"
           popupNameOverride="Artificial Intelligence"
