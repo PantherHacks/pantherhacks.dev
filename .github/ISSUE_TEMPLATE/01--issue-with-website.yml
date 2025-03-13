@@ -1,6 +1,6 @@
 name: Issue - Issue With Website
 description: Report a software bug on our website.
-labels: ["type: bug", "status: waiting triage"]
+type: ["Bug"]
 body:
   - type: textarea
     attributes:
