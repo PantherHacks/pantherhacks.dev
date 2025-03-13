@@ -8,9 +8,17 @@ interface ITrackProps {
   name: string;
   popupNameOverride?: string;
   popupDescription: string;
+  leftOffset?: boolean;
+  rightOffset?: boolean;
 }
 
-const Track: React.FC<ITrackProps> = ({ name, popupNameOverride, popupDescription }) => {
+const Track: React.FC<ITrackProps> = ({
+  name,
+  popupNameOverride,
+  popupDescription,
+  leftOffset = false,
+  rightOffset = false,
+}) => {
   return (
     <div className="flex flex-col items-center space-y-4 md:hover:scale-105 transition-transform duration-300">
       <Dialog>
@@ -28,10 +36,16 @@ const Track: React.FC<ITrackProps> = ({ name, popupNameOverride, popupDescriptio
             width={0}
             height={0}
             alt={`${name} Track`}
-            className="track-image w-48 h-48 sm:w-64 sm:h-64 select-none block md:hidden transform-gpu"
+            className="track-image mx-auto w-48 h-48 sm:w-64 sm:h-64 select-none block md:hidden transform-gpu"
             draggable={false}
           />
-          <p className="font-TangoSansBold text-[#FC8332] text-3xl text-center">{name}</p>
+          <p
+            className={`pt-4 md:pt-0 font-TangoSansBold text-[#FC8332] text-3xl text-center${
+              leftOffset ? ` md:translate-x-[1.5rem]` : ""
+            }${rightOffset ? ` md:-translate-x-[1.5rem]` : ""}`}
+          >
+            {name}
+          </p>
         </DialogTrigger>
         <DialogContent>
           <DialogHeader>
