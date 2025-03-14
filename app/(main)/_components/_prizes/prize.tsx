@@ -18,7 +18,7 @@ const Prize: FC<PrizeProps> = ({ title, description, imageSrc, imageSide = "left
     >
       <Image
         src={"/images/prizes/" + imageSrc}
-        alt={title}
+        alt={description}
         width={0}
         height={0}
         className={`w-28 sm:w-40 md:w-44 max-w-64 prize-image transform-gpu transition-transform duration-300 hover:scale-105 ${imageSide == "left" ? "hover:-rotate-6" : "hover:rotate-6"}`}
