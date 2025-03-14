@@ -12,14 +12,23 @@ const PrizesSection = () => {
       <Prize
         title="HACKER'S CHOICE AWARD"
         description="Portable Retro Handheld Gaming Console"
-        imageSrc="/images/prizes/retro-console.png"
+        imageSrc="retro-console.png"
         imageSide="left"
       />
+      <Prize title="AI TRACK WINNER" description="1 TB Portable SSD" imageSrc="crucial-ssd.png" imageSide="right" />
+      <Prize title="CYBER TRACK WINNER" description="8GB Raspberry Pi 5" imageSrc="raspberry-pi.png" imageSide="left" />
       <Prize
-        title="AI TRACK WINNER"
-        description="1 TB Portable SSD"
-        imageSrc="/images/prizes/crucial-ssd.png"
+        title="HEALTH TRACK WINNER"
+        description="Keychron K4 Wireless Keyboard"
+        imageSrc="keychron-k4.png"
         imageSide="right"
+        className="py-6"
+      />
+      <Prize
+        title="SUSTAINABILITY TRACK WINNER"
+        description="Lego Piranha Plant"
+        imageSrc="piranha-plant.png"
+        imageSide="left"
       />
     </div>
   );

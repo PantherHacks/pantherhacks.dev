@@ -8,15 +8,16 @@ interface PrizeProps {
   description: string;
   imageSrc: string;
   imageSide?: "left" | "right";
+  className?: string;
 }
 
-const Prize: FC<PrizeProps> = ({ title, description, imageSrc, imageSide = "left" }) => {
+const Prize: FC<PrizeProps> = ({ title, description, imageSrc, imageSide = "left", className }) => {
   return (
     <div
-      className={`flex ${imageSide == "left" ? "flex-row" : "flex-row-reverse"} justify-center items-center gap-x-2 w-full`}
+      className={`flex ${imageSide == "left" ? "flex-row" : "flex-row-reverse"} justify-center items-center gap-x-2 md:gap-x-8 w-full ${className ?? ""}`}
     >
       <Image
-        src={imageSrc}
+        src={"/images/prizes/" + imageSrc}
         alt={title}
         width={0}
         height={0}
