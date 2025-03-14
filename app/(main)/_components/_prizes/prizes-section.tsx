@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 
 import Prize from "@/app/(main)/_components/_prizes/prize";
 
 const PrizesSection = () => {
+  const [pantherHovered, setPantherHovered] = useState(false);
   return (
     <div
       id="prizes"
-      className="flex flex-col w-full items-center justify-end gap-y-8 sm:gap-y-6 md:gap-y-4 pt-40 px-8 md:px-20 lg:w-1/2 md:mx-auto overflow-x-clip"
+      className="relative flex flex-col w-full items-center justify-end gap-y-8 sm:gap-y-6 md:gap-y-4 pt-40 px-8 md:px-20 lg:px-32 overflow-x-clip"
     >
       <div className="flex flex-col items-center justify-center text-center gap-y-4">
         <h2 className="font-TangoSansBold text-6xl  text-primary pb-10">Prizes</h2>
@@ -39,15 +40,22 @@ const PrizesSection = () => {
         alt="A panther with a Chapman bandana."
         width={100}
         height={100}
-        className="hidden md:block w-96 h-96 absolute -right-24 translate-y-[15rem] select-none overflow-x-clip"
+        className={`hidden md:block w-96 h-96 absolute -right-10 translate-y-[15rem] select-none overflow-x-clip drop-shadow-md ${pantherHovered ? "scale-105" : "scale-100"} transition-transform duration-150`}
         draggable={false}
+        onMouseEnter={() => setPantherHovered(true)}
+        onMouseLeave={() => setPantherHovered(false)}
       />
+      <p
+        className={`hidden md:block absolute right-56 font-bold italic transition-opacity duration-150 select-none ${pantherHovered ? "opacity-100" : "opacity-0"}`}
+      >
+        Meow!
+      </p>
       <Image
         src="/images/panther/panther.svg"
         alt="A panther with a Chapman bandana."
         width={100}
         height={100}
-        className="md:hidden block w-48 h-48 absolute translate-y-[12rem] select-none overflow-x-clip"
+        className="md:hidden block w-48 h-48 absolute translate-y-[12rem] select-none overflow-x-clip drop-shadow-md"
         draggable={false}
       />
     </div>
