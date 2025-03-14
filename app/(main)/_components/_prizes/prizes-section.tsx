@@ -4,7 +4,7 @@ import Prize from "@/app/(main)/_components/_prizes/prize";
 
 const PrizesSection = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-y-4 pt-40 px-4 md:w-1/2 md:mx-auto">
+    <div className="flex flex-col items-center justify-center gap-y-8 sm:gap-y-6 md:gap-y-4 pt-40 px-8 md:w-1/2 md:mx-auto">
       <div className="flex flex-col items-center justify-center text-center gap-y-4">
         <h2 className="font-TangoSansBold text-6xl  text-primary pb-10">Prizes</h2>
         <p className="">One per winning team member!</p>
