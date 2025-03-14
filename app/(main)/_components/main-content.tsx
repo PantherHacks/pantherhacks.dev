@@ -18,7 +18,7 @@ const MainContent = () => {
         </ParallaxProvider>
       </div>
       <MobileHeading />
-      <div className="flex w-100vw overflow-x-hidden">
+      <div className="flex w-100vw overflow-x-hidden overflow-y-hidden">
         <Image
           src="/images/main-background/main-header-transition.svg"
           width={100}
