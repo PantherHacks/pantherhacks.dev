@@ -25,7 +25,7 @@ const MainContent = () => {
           height={100}
           alt=""
           aria-hidden
-          className="w-full scale-x-[125%] -translate-x-14 h-auto -translate-y-2"
+          className="w-full scale-x-[125%] -translate-x-[1rem] h-auto -translate-y-2"
           loading="eager"
         />
       </div>
