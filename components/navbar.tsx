@@ -55,6 +55,7 @@ const Navbar = () => {
             <NavLink href="#home">Home</NavLink>
             <NavLink href="#about">About</NavLink>
             <NavLink href="#tracks">Tracks</NavLink>
+            <NavLink href="#prizes">Prizes</NavLink>
             <NavLink href="#faqs">FAQs</NavLink>
             <NavLink href={applicationLink} variant="bold" className="bg-[rgb(75,0,0)]" target="_blank">
               APPLY
@@ -156,6 +157,9 @@ const Navbar = () => {
           </NavLink>
           <NavLink variant="mobile" href="#tracks" onClick={handleMobileLinkClick}>
             Tracks
+          </NavLink>
+          <NavLink variant="mobile" href="#prizes" onClick={handleMobileLinkClick}>
+            Prizes
           </NavLink>
           <NavLink variant="mobile" href="#faqs" onClick={handleMobileLinkClick}>
             FAQs
