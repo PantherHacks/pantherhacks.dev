@@ -2,13 +2,57 @@
   <img src="https://github.com/user-attachments/assets/095d2b8a-b6ad-4477-beb9-6c01b2f4ae14" width="70%">
 </p>
 
-## PantherHacks Website
+<div align="center">
 
-The GitHub repository contains the source code for the PantherHacks hackathon event website.
+# [PantherHacks.dev](https://pantherhacks.dev)
 
-## Disclaimer
+</div>
 
-This website is in progress and is currently unfinished.
+[PantherHacks.dev](https://pantherhacks.dev) is an open-source [Next.js](https://nextjs.org/) website. It is written in [TypeScript](https://www.typescriptlang.org) and
+uses [React](https://reactjs.org/).
+
+## Installation
+
+1. **Install Node**: Install the correct version of node (v22.5.1) for the project.
+
+> ### Note About Node
+>
+> If you are using [nvm (Node Version Manager)](https://github.com/nvm-sh/nvm), you can run:
+>
+> ```sh
+> nvm install
+> nvm use
+> ```
+
+Run the follow command to make sure that you are on the correct version of node:
+
+```sh
+node -v # Should be v22.5.1
+```
+
+2. **Install Node Dependencies**: Install all the dependencies that the project uses by running the following command in the project's root directory:
+
+```sh
+npm install
+```
+
+3. **Start the Development Server**: Start the development server to see your changes live:
+
+```sh
+npx run dev
+```
+
+4. Open the website by visiting <http://localhost:3000> with your browser. When you make changes to a code file and save the file, the live preview will update on the url automatically.
+
+## Contributing
+
+Contributions are always welcome though will be reviewed by our team!
+
+Please adhere to this project's [code of conduct](./CODE_OF_CONDUCT.md).
+
+## Feedback
+
+If you have any feedback, bug reports, or anything else, please create an [issue](https://github.com/pantherhacks/pantherhacks.dev/issues).
 
 ## License
 
