@@ -1,5 +1,5 @@
 .team-member {
-  box-shadow: -6px 6px 10px 1px #FFF;
+  box-shadow: -4px 4px 15px 1px rgba(0, 0, 0, 0.25);
 }
 
 .team-member-name {
@@ -7,5 +7,5 @@
 }
 
 .team-member-role {
-  
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }

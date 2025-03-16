@@ -26,19 +26,37 @@ const TeamSection = () => {
       <p className="mx-8 sm:mx-20 md:mx-24 text-center">
         Meet the people who made PantherHacks {hackathonDateInfo.year} possible.
       </p>
-      <div className="pt-8 pb-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        <TeamMember name="Nataniel Farzan" teamRole="Executive Team" linkedinLink="https://www.linkedin.com" />
-        <TeamMember name="Kalin Richardson" teamRole="Executive Team" linkedinLink="https://www.linkedin.com" />
-        <TeamMember name="Owen Lucas" teamRole="Executive Team" linkedinLink="https://www.linkedin.com" />
-        <TeamMember name="Dylan Ravel" teamRole="Software Team" linkedinLink="https://www.linkedin.com" />
-        <TeamMember name="Daniel Tsivkovski" teamRole="Software Team" linkedinLink="https://www.linkedin.com" />
-        <TeamMember name="Sam Fago" teamRole="Design Team" linkedinLink="https://www.linkedin.com" />
-        <TeamMember name="First Last" teamRole="Team Member" linkedinLink="https://www.linkedin.com" />
-        <TeamMember name="First Last" teamRole="Team Member" linkedinLink="https://www.linkedin.com" />
-        <TeamMember name="First Last" teamRole="Team Member" linkedinLink="https://www.linkedin.com" />
-        <TeamMember name="First Last" teamRole="Team Member" linkedinLink="https://www.linkedin.com" />
-        <TeamMember name="First Last" teamRole="Team Member" linkedinLink="https://www.linkedin.com" />
-        <TeamMember name="First Last" teamRole="Team Member" linkedinLink="https://www.linkedin.com" />
+      <div className="pt-8 pb-4 grid grid-cols-2 gap-2 md:gap-6 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4">
+        <TeamMember
+          name="Nataniel Farzan"
+          teamRole="Executive Team"
+          linkedinLink="https://www.linkedin.com/in/natanielfarzan/"
+        />
+        <TeamMember
+          name="Kalin Richardson"
+          teamRole="Executive Team"
+          linkedinLink="https://www.linkedin.com/in/kalin-richardson/"
+        />
+        <TeamMember
+          name="Owen Agbayani"
+          teamRole="Executive Team"
+          linkedinLink="https://www.linkedin.com/in/agbayani/"
+        />
+        <TeamMember
+          name="Dylan Ravel"
+          teamRole="Software Team"
+          linkedinLink="https://www.linkedin.com/in/dylanravel/"
+        />
+        <TeamMember
+          name="Daniel Tsivkovski"
+          teamRole="Software Team"
+          linkedinLink="https://www.linkedin.com/in/danieltsivkovski/"
+        />
+        <TeamMember
+          name="Sam Fago"
+          teamRole="Design Team"
+          linkedinLink="https://www.linkedin.com/in/samantha-fago-08b4072ab/"
+        />
       </div>
     </div>
   );
