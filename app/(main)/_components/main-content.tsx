@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ParallaxProvider } from "react-scroll-parallax";
 
 import Heading from "@/app/(main)/_components/heading";
+import TeamSection from "./_team/team-section";
 import AboutSection from "./about-section";
 import FaqsSection from "./faqs-section";
 import MobileHeading from "./mobileheading";
@@ -32,6 +33,7 @@ const MainContent = () => {
       <AboutSection />
       <TracksSection />
       <FaqsSection />
+      <TeamSection />
     </div>
   );
 };
