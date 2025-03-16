@@ -39,7 +39,7 @@ npm install
 3. **Start the Development Server**: Start the development server to see your changes live:
 
 ```sh
-npx run dev
+npm run dev
 ```
 
 4. Open the website by visiting <http://localhost:3000> with your browser. When you make changes to a code file and save the file, the live preview will update on the url automatically.
