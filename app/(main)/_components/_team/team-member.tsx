@@ -22,7 +22,9 @@ const TeamMember: React.FC<ITeamMemberProps> = ({ name, teamRole, linkedinLink }
           draggable={false}
         />
         <div>
-          <p className="team-member-name md:pt-0 font-TangoSansBold text-base sm:text-xl text-center">{name}</p>
+          <p className="team-member-name md:pt-0 font-TangoSansBold text-primary text-base sm:text-xl text-center">
+            {name}
+          </p>
           <p className="team-member-role pb-4 font-NeuePlak text-base sm:text-lg text-center">{teamRole}</p>
         </div>
       </Link>
