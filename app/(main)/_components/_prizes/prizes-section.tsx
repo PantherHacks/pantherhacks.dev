@@ -8,7 +8,7 @@ const PrizesSection = () => {
   return (
     <div
       id="prizes"
-      className="relative flex flex-col w-full items-center justify-end gap-y-8 sm:gap-y-6 md:gap-y-4 pt-40 px-8 md:px-20 lg:px-32 overflow-x-clip"
+      className="relative flex flex-col w-full items-center justify-end gap-y-8 sm:gap-y-6 md:gap-y-4 pt-40 px-8 md:px-20 lg:px-32 overflow-x-clip py-40"
     >
       <div className="flex flex-col items-center justify-center text-center gap-y-4">
         <h2 className="font-TangoSansBold text-6xl  text-primary pb-10">Prizes</h2>
