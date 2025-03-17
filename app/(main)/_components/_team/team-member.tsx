@@ -20,6 +20,7 @@ const TeamMember: React.FC<ITeamMemberProps> = ({ name, teamRole, linkedinLink }
           alt={`${name}`}
           className="team-member w-24 h-24 sm:w-32 sm:h-32 select-none transform-gpu rounded-3xl"
           draggable={false}
+          unoptimized
         />
         <div>
           <p className="team-member-name md:pt-0 font-TangoSansBold text-primary text-base sm:text-xl text-center">
