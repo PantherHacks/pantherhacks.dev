@@ -48,6 +48,7 @@ const Navbar = () => {
                 height={50}
                 className="transition-transform duration-300 ease-in-out transform group-hover:scale-105 select-none"
                 draggable={false}
+                loading="eager"
               />
             </NavLink>
           </div>
@@ -78,6 +79,7 @@ const Navbar = () => {
               height={24}
               className="filter invert h-[70px] select-none"
               draggable={false}
+              loading="eager"
             />
           </NavLink>
           <NavLink
@@ -94,6 +96,7 @@ const Navbar = () => {
               height={24}
               className="filter invert h-[70px] select-none"
               draggable={false}
+              loading="eager"
             />
           </NavLink>
           <NavLink
@@ -111,6 +114,7 @@ const Navbar = () => {
               height={24}
               className="filter invert h-[70px] select-none"
               draggable={false}
+              loading="eager"
             />
           </NavLink>
         </div>
@@ -131,6 +135,7 @@ const Navbar = () => {
               height={50}
               className="select-none"
               draggable={false}
+              loading="eager"
             />
           </NavLink>
           <Button
@@ -193,6 +198,7 @@ const Navbar = () => {
                 height={24}
                 className="filter invert h-[70px] select-none"
                 draggable={false}
+                loading="eager"
               />
             </NavLink>
             <NavLink
@@ -210,6 +216,7 @@ const Navbar = () => {
                 height={24}
                 className="filter invert h-[70px] select-none"
                 draggable={false}
+                loading="eager"
               />
             </NavLink>
             <NavLink
@@ -227,6 +234,7 @@ const Navbar = () => {
                 height={24}
                 className="filter invert h-[70px] select-none"
                 draggable={false}
+                loading="eager"
               />
             </NavLink>
           </div>
