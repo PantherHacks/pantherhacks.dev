@@ -5,7 +5,7 @@ import TeamMember from "./team-member";
 
 const TeamSection = () => {
   return (
-    <div id="team" className="flex flex-col items-center justify-center w-full py-40 relative overflow-x-clip">
+    <div id="team" className="flex flex-col items-center justify-center w-full pt-40 relative overflow-x-clip">
       <Image
         src="/images/oranges/orange-branch-2.svg"
         alt="An orange branch."
