@@ -3,7 +3,9 @@
 import Image from "next/image";
 import { ParallaxProvider } from "react-scroll-parallax";
 
+import PrizesSection from "@/app/(main)/_components/_prizes/prizes-section";
 import Heading from "@/app/(main)/_components/heading";
+import TeamSection from "./_team/team-section";
 import AboutSection from "./about-section";
 import FaqsSection from "./faqs-section";
 import MobileHeading from "./mobileheading";
@@ -25,13 +27,15 @@ const MainContent = () => {
           height={100}
           alt=""
           aria-hidden
-          className="w-full scale-105 translate-x-2 h-auto -translate-y-2"
+          className="w-full scale-x-[125%] -translate-x-[1rem] h-auto -translate-y-2"
           loading="eager"
         />
       </div>
       <AboutSection />
       <TracksSection />
+      <PrizesSection />
       <FaqsSection />
+      <TeamSection />
     </div>
   );
 };
