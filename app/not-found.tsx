@@ -18,6 +18,7 @@ export default function NotFound() {
               alt="A confused panther."
               className="select-none w-32 h-32 sm:w-64 sm:h-64"
               draggable={false}
+              unoptimized
             />
             <h2 className="font-TangoSansBold text-6xl sm:text-9xl text-primary">404</h2>
             <p className="mx-8 sm:mx-20 md:mx-24 text-center">

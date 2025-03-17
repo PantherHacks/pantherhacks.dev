@@ -45,6 +45,7 @@ const PrizesSection = () => {
         height={100}
         className={`hidden md:block w-64 h-64 absolute right-0 translate-y-[15rem] select-none overflow-x-clip drop-shadow-md ${pantherHovered ? "scale-105" : "scale-100"} transition-transform duration-150`}
         draggable={false}
+        unoptimized
         onMouseEnter={() => setPantherHovered(true)}
         onMouseLeave={() => setPantherHovered(false)}
       />
