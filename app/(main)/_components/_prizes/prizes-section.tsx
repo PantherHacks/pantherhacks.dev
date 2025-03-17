@@ -12,7 +12,10 @@ const PrizesSection = () => {
     >
       <div className="flex flex-col items-center justify-center text-center gap-y-4">
         <h2 className="font-TangoSansBold text-6xl  text-primary pb-10">Prizes</h2>
-        <p>Learn more about the prizes we offer.</p>
+        <p>
+          Check out the prizes we offer! Each member of the winning teams will receive a prize (each team consists of
+          1-4 people).
+        </p>
       </div>
       <Prize
         title="HACKER'S CHOICE AWARD"
