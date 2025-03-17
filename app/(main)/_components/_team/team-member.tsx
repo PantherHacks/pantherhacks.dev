@@ -11,7 +11,7 @@ interface ITeamMemberProps {
 
 const TeamMember: React.FC<ITeamMemberProps> = ({ name, teamRole, linkedinLink }) => {
   return (
-    <div className="flex flex-col items-center space-y-4 md:hover:scale-105 transition-transform duration-300">
+    <div className="flex flex-col items-center space-y-4 md:hover:scale-105 transition-transform duration-300 w-36 sm:w-44">
       <Link href={linkedinLink} target="_blank" className="flex flex-col items-center space-y-3">
         <Image
           src={`/images/team-members/${name.toLowerCase().replace(" ", "-")}.png`}
