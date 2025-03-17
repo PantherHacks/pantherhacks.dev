@@ -39,11 +39,11 @@ const PrizesSection = () => {
         imageSide="left"
       />
       <Image
-        src="/images/panther/panther.svg"
+        src="/images/panther/panther.png"
         alt="A panther with a Chapman bandana."
         width={100}
         height={100}
-        className={`hidden md:block w-96 h-96 absolute -right-10 translate-y-[15rem] select-none overflow-x-clip drop-shadow-md ${pantherHovered ? "scale-105" : "scale-100"} transition-transform duration-150`}
+        className={`hidden md:block w-64 h-64 absolute right-0 translate-y-[15rem] select-none overflow-x-clip drop-shadow-md ${pantherHovered ? "scale-105" : "scale-100"} transition-transform duration-150`}
         draggable={false}
         onMouseEnter={() => setPantherHovered(true)}
         onMouseLeave={() => setPantherHovered(false)}
