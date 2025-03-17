@@ -33,7 +33,7 @@ export interface NavLinkProps
 
 export function NavLink({ href, children, variant, className, ...props }: NavLinkProps) {
   return (
-    <Link href={href} className={cn("select-none", navLinkVariants({ variant }), className)} {...props}>
+    <Link href={`/${href}`} className={cn("select-none", navLinkVariants({ variant }), className)} {...props}>
       {children}
     </Link>
   );
