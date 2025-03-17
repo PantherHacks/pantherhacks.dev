@@ -50,14 +50,6 @@ const PrizesSection = () => {
       >
         Meow!
       </p>
-      <Image
-        src="/images/panther/panther.svg"
-        alt="A panther with a Chapman bandana."
-        width={100}
-        height={100}
-        className="md:hidden block w-48 h-48 absolute translate-y-[12rem] select-none overflow-x-clip drop-shadow-md"
-        draggable={false}
-      />
     </div>
   );
 };
