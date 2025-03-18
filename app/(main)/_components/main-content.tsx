@@ -3,13 +3,13 @@
 import Image from "next/image";
 import { ParallaxProvider } from "react-scroll-parallax";
 
+import Heading from "@/app/(main)/_components/_headings/heading";
 import PrizesSection from "@/app/(main)/_components/_prizes/prizes-section";
-import Heading from "@/app/(main)/_components/heading";
+import MobileHeading from "./_headings/mobileheading";
 import TeamSection from "./_team/team-section";
+import TracksSection from "./_tracks/tracks-section";
 import AboutSection from "./about-section";
 import FaqsSection from "./faqs-section";
-import MobileHeading from "./mobileheading";
-import TracksSection from "./tracks-section";
 
 const MainContent = () => {
   return (
