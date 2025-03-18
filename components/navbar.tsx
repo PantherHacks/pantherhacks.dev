@@ -128,7 +128,7 @@ const Navbar = () => {
           </NavLink>
         </div>
       </div>
-      <div className="flex flex-col w-full lg:hidden">
+      <div className="flex flex-col w-full [@media(min-width:805px)]:hidden">
         <div className="flex items-center justify-between w-full overflow-hidden">
           <NavLink
             href="/"
