@@ -37,7 +37,7 @@ const Navbar = () => {
       ref={navRef}
       className="m-[20px] w-[calc(100vw_-_40px)] rounded-[10px] fixed top-0 left-0 bg-primary z-[49] flex items-center box-border drop-shadow-lg"
     >
-      <div className="hidden [@media(min-width:805px)]:flex justify-between items-center w-full">
+      <div className="hidden [@media(min-width:850px)]:flex justify-between items-center w-full">
         <div className="flex flex-row items-center">
           <div className="flex items-center overflow-hidden">
             <NavLink href="/" variant={"logo"} className="h-[70px] rounded-l-[10px] group" aria-label="Home">
@@ -59,7 +59,7 @@ const Navbar = () => {
             <NavLink href="/#prizes">Prizes</NavLink>
             <NavLink href="/#faqs">FAQs</NavLink>
             <NavLink href="/#team">Team</NavLink>
-            <NavLink href={applicationLink} variant="bold" className="bg-[rgb(75,0,0)]">
+            <NavLink href={applicationLink} variant="bold" className="bg-[rgb(75,0,0)]" target="_blank">
               APPLY
             </NavLink>
           </div>
@@ -119,7 +119,7 @@ const Navbar = () => {
           </NavLink>
         </div>
       </div>
-      <div className="flex flex-col w-full [@media(min-width:805px)]:hidden">
+      <div className="flex flex-col w-full [@media(min-width:850px)]:hidden">
         <div className="flex items-center justify-between w-full overflow-hidden">
           <NavLink
             href="/"
@@ -138,6 +138,7 @@ const Navbar = () => {
               loading="eager"
             />
           </NavLink>
+          <h1 className="hidden sm:block font-TangoSansBold text-2xl text-white">PANTHERHACKS</h1>
           <Button
             className={cn(
               "h-[70px] px-[16px] hover:bg-[#83022b] [&_svg]:size-6 rounded-l-none rounded-tr-[10px]",
