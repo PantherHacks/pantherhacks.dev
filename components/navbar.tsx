@@ -59,7 +59,7 @@ const Navbar = () => {
             <NavLink href="/#prizes">Prizes</NavLink>
             <NavLink href="/#faqs">FAQs</NavLink>
             <NavLink href="/#team">Team</NavLink>
-            <NavLink href={applicationLink} variant="bold" className="bg-[rgb(75,0,0)]">
+            <NavLink href={applicationLink} variant="bold" className="bg-[rgb(75,0,0)]" target="_blank">
               APPLY
             </NavLink>
           </div>
