@@ -37,7 +37,7 @@ const Navbar = () => {
       ref={navRef}
       className="m-[20px] w-[calc(100vw_-_40px)] rounded-[10px] fixed top-0 left-0 bg-primary z-[49] flex items-center box-border drop-shadow-lg"
     >
-      <div className="hidden md:flex justify-between items-center w-full">
+      <div className="hidden lg:flex justify-between items-center w-full">
         <div className="flex flex-row items-center">
           <div className="flex items-center overflow-hidden">
             <NavLink
@@ -128,7 +128,7 @@ const Navbar = () => {
           </NavLink>
         </div>
       </div>
-      <div className="flex flex-col w-full md:hidden">
+      <div className="flex flex-col w-full lg:hidden">
         <div className="flex items-center justify-between w-full overflow-hidden">
           <NavLink
             href="/"
