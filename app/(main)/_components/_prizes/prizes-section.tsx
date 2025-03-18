@@ -12,7 +12,10 @@ const PrizesSection = () => {
     >
       <div className="flex flex-col items-center justify-center text-center gap-y-4">
         <h2 className="font-TangoSansBold text-6xl  text-primary pb-10">Prizes</h2>
-        <p>Learn more about the prizes we offer.</p>
+        <p>
+          Check out the prizes we offer! Each member of the winning teams will receive a prize (each team consists of
+          1-4 people).
+        </p>
       </div>
       <Prize
         title="HACKER'S CHOICE AWARD"
@@ -36,12 +39,13 @@ const PrizesSection = () => {
         imageSide="left"
       />
       <Image
-        src="/images/panther/panther.svg"
+        src="/images/panther/panther.png"
         alt="A panther with a Chapman bandana."
         width={100}
         height={100}
-        className={`hidden md:block w-96 h-96 absolute -right-10 translate-y-[15rem] select-none overflow-x-clip drop-shadow-md ${pantherHovered ? "scale-105" : "scale-100"} transition-transform duration-150`}
+        className={`hidden md:block w-64 h-64 absolute right-0 translate-y-[15rem] select-none overflow-x-clip drop-shadow-md ${pantherHovered ? "scale-105" : "scale-100"} transition-transform duration-150`}
         draggable={false}
+        unoptimized
         onMouseEnter={() => setPantherHovered(true)}
         onMouseLeave={() => setPantherHovered(false)}
       />

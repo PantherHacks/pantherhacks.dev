@@ -37,13 +37,13 @@ const Navbar = () => {
       ref={navRef}
       className="m-[20px] w-[calc(100vw_-_40px)] rounded-[10px] fixed top-0 left-0 bg-primary z-[49] flex items-center box-border drop-shadow-lg"
     >
-      <div className="hidden md:flex justify-between items-center w-full">
+      <div className="hidden [@media(min-width:850px)]:flex justify-between items-center w-full">
         <div className="flex flex-row items-center">
           <div className="flex items-center overflow-hidden">
             <NavLink href="/" variant={"logo"} className="h-[70px] rounded-l-[10px] group" aria-label="Home">
               <Image
                 src="/logos/pantherhacks/pantherhacks_mascot_light.png"
-                alt="Panther Hacks Logo"
+                alt="PantherHacks Logo"
                 width={50}
                 height={50}
                 className="transition-transform duration-300 ease-in-out transform group-hover:scale-105 select-none"
@@ -53,12 +53,12 @@ const Navbar = () => {
             </NavLink>
           </div>
           <div className="flex items-center flex-grow font-TangoSans text-white text-lg">
-            <NavLink href="#home">Home</NavLink>
-            <NavLink href="#about">About</NavLink>
-            <NavLink href="#tracks">Tracks</NavLink>
-            <NavLink href="#prizes">Prizes</NavLink>
-            <NavLink href="#faqs">FAQs</NavLink>
-            <NavLink href="#team">Team</NavLink>
+            <NavLink href="/#home">Home</NavLink>
+            <NavLink href="/#about">About</NavLink>
+            <NavLink href="/#tracks">Tracks</NavLink>
+            <NavLink href="/#prizes">Prizes</NavLink>
+            <NavLink href="/#faqs">FAQs</NavLink>
+            <NavLink href="/#team">Team</NavLink>
             <NavLink href={applicationLink} variant="bold" className="bg-[rgb(75,0,0)]" target="_blank">
               APPLY
             </NavLink>
@@ -119,7 +119,7 @@ const Navbar = () => {
           </NavLink>
         </div>
       </div>
-      <div className="flex flex-col w-full md:hidden">
+      <div className="flex flex-col w-full [@media(min-width:850px)]:hidden">
         <div className="flex items-center justify-between w-full overflow-hidden">
           <NavLink
             href="/"
@@ -138,6 +138,7 @@ const Navbar = () => {
               loading="eager"
             />
           </NavLink>
+          <h1 className="hidden sm:block font-TangoSansBold text-2xl text-white">PANTHERHACKS</h1>
           <Button
             className={cn(
               "h-[70px] px-[16px] hover:bg-[#83022b] [&_svg]:size-6 rounded-l-none rounded-tr-[10px]",
@@ -155,22 +156,22 @@ const Navbar = () => {
             isMobileOpen ? "flex" : "hidden"
           )}
         >
-          <NavLink variant="mobile" href="#home" onClick={handleMobileLinkClick}>
+          <NavLink variant="mobile" href="/#home" onClick={handleMobileLinkClick}>
             Home
           </NavLink>
-          <NavLink variant="mobile" href="#about" onClick={handleMobileLinkClick}>
+          <NavLink variant="mobile" href="/#about" onClick={handleMobileLinkClick}>
             About
           </NavLink>
-          <NavLink variant="mobile" href="#tracks" onClick={handleMobileLinkClick}>
+          <NavLink variant="mobile" href="/#tracks" onClick={handleMobileLinkClick}>
             Tracks
           </NavLink>
-          <NavLink variant="mobile" href="#prizes" onClick={handleMobileLinkClick}>
+          <NavLink variant="mobile" href="/#prizes" onClick={handleMobileLinkClick}>
             Prizes
           </NavLink>
-          <NavLink variant="mobile" href="#faqs" onClick={handleMobileLinkClick}>
+          <NavLink variant="mobile" href="/#faqs" onClick={handleMobileLinkClick}>
             FAQs
           </NavLink>
-          <NavLink variant="mobile" href="#team" onClick={handleMobileLinkClick}>
+          <NavLink variant="mobile" href="/#team" onClick={handleMobileLinkClick}>
             Team
           </NavLink>
           <NavLink

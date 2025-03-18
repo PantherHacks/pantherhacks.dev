@@ -13,7 +13,10 @@ const Footer = () => {
         alt="The Schmid Gate"
         width={100000}
         height={10000}
-        className="translate-y-2"
+        className="translate-y-4 pt-36"
+        style={{
+          background: `linear-gradient(#FFFFFF 0%, #4DC9CC 98%, #00000000 98.1%, #00000000 100%)`,
+        }}
       />
       <footer className="flex flex-col justify-center items-center w-full space-y-2 p-4 bg-primary">
         <p className="font-TangoSansBold text-xl text-center text-white">PantherHacks {hackathonDateInfo.year}</p>

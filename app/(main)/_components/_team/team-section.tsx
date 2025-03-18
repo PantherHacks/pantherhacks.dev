@@ -5,7 +5,7 @@ import TeamMember from "./team-member";
 
 const TeamSection = () => {
   return (
-    <div id="team" className="flex flex-col items-center justify-center w-full py-40 relative overflow-x-clip">
+    <div id="team" className="flex flex-col items-center justify-center w-full pt-40 relative overflow-x-clip">
       <Image
         src="/images/oranges/orange-branch-2.svg"
         alt="An orange branch."
@@ -26,7 +26,7 @@ const TeamSection = () => {
       <p className="mx-8 sm:mx-20 md:mx-24 text-center">
         Meet the people who made PantherHacks {hackathonDateInfo.year} possible.
       </p>
-      <div className="pt-8 pb-4 grid grid-cols-2 gap-2 md:gap-6 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4">
+      <div className="pt-8 pb-4 flex flex-row flex-wrap gap-3 md:gap-6 px-4 sm:px-8 md:px-16 max-w-[60rem] justify-center items-center">
         <TeamMember
           name="Nataniel Farzan"
           teamRole="Executive Team"
@@ -41,6 +41,11 @@ const TeamSection = () => {
           name="Owen Agbayani"
           teamRole="Executive Team"
           linkedinLink="https://www.linkedin.com/in/agbayani/"
+        />
+        <TeamMember
+          name="Joel Escobar"
+          teamRole="Executive Team"
+          linkedinLink="https://www.linkedin.com/in/joel-escobar-6059a4214/"
         />
         <TeamMember
           name="Dylan Ravel"
