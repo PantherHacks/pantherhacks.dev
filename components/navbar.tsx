@@ -40,7 +40,13 @@ const Navbar = () => {
       <div className="hidden md:flex justify-between items-center w-full">
         <div className="flex flex-row items-center">
           <div className="flex items-center overflow-hidden">
-            <NavLink href="/" variant={"logo"} className="h-[70px] rounded-l-[10px] group" aria-label="Home">
+            <NavLink
+              href="/"
+              variant={"logo"}
+              className="h-[70px] rounded-l-[10px] group"
+              aria-label="Home"
+              isExternalLink
+            >
               <Image
                 src="/logos/pantherhacks/pantherhacks_mascot_light.png"
                 alt="Panther Hacks Logo"
@@ -59,7 +65,7 @@ const Navbar = () => {
             <NavLink href="#prizes">Prizes</NavLink>
             <NavLink href="#faqs">FAQs</NavLink>
             <NavLink href="#team">Team</NavLink>
-            <NavLink href={applicationLink} variant="bold" className="bg-[rgb(75,0,0)]" target="_blank">
+            <NavLink isExternalLink href={applicationLink} variant="bold" className="bg-[rgb(75,0,0)]">
               APPLY
             </NavLink>
           </div>
@@ -71,6 +77,7 @@ const Navbar = () => {
             variant={"icon"}
             title={"PantherHacks GitHub Link"}
             aria-label={"PantherHacks GitHub Link"}
+            isExternalLink
           >
             <Image
               src="./icons/github.svg"
@@ -88,6 +95,7 @@ const Navbar = () => {
             variant={"icon"}
             title={"PantherHacks Discord Link"}
             aria-label={"PantherHacks Discord Link"}
+            isExternalLink
           >
             <Image
               src="./icons/discord.svg"
@@ -106,6 +114,7 @@ const Navbar = () => {
             className="rounded-r-[10px]"
             title={"PantherHacks Instagram Link"}
             aria-label={"PantherHacks Instagram Link"}
+            isExternalLink
           >
             <Image
               src="./icons/instagram.svg"
@@ -127,6 +136,7 @@ const Navbar = () => {
             className={cn("h-[70px]", isMobileOpen ? "rounded-tl-[10px]" : "rounded-l-[10px]")}
             aria-label="Home"
             onClick={handleMobileLinkClick}
+            isExternalLink
           >
             <Image
               src="/logos/pantherhacks/pantherhacks_mascot_light.png"
@@ -179,6 +189,7 @@ const Navbar = () => {
             className="bg-[rgb(75,0,0)]"
             onClick={handleMobileLinkClick}
             target="_blank"
+            isExternalLink
           >
             APPLY
           </NavLink>
@@ -190,6 +201,7 @@ const Navbar = () => {
               title={"PantherHacks GitHub Link"}
               aria-label={"PantherHacks GitHub Link"}
               onClick={handleMobileLinkClick}
+              isExternalLink
             >
               <Image
                 src="./icons/github.svg"
@@ -208,6 +220,7 @@ const Navbar = () => {
               title={"PantherHacks Discord Link"}
               aria-label={"PantherHacks Discord Link"}
               onClick={handleMobileLinkClick}
+              isExternalLink
             >
               <Image
                 src="./icons/discord.svg"
@@ -226,6 +239,7 @@ const Navbar = () => {
               target="_blank"
               variant={"mobile_icon"}
               onClick={handleMobileLinkClick}
+              isExternalLink
             >
               <Image
                 src="./icons/instagram.svg"
