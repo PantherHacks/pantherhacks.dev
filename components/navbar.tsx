@@ -37,7 +37,7 @@ const Navbar = () => {
       ref={navRef}
       className="m-[20px] w-[calc(100vw_-_40px)] rounded-[10px] fixed top-0 left-0 bg-primary z-[49] flex items-center box-border drop-shadow-lg"
     >
-      <div className="hidden lg:flex justify-between items-center w-full">
+      <div className="hidden [@media(min-width:805px)]:flex justify-between items-center w-full">
         <div className="flex flex-row items-center">
           <div className="flex items-center overflow-hidden">
             <NavLink
