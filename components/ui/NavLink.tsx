@@ -29,17 +29,11 @@ export interface NavLinkProps
     VariantProps<typeof navLinkVariants> {
   children?: React.ReactNode;
   className?: string;
-  isExternalLink?: boolean;
 }
 
-export function NavLink({ href, children, variant, className, isExternalLink = false, ...props }: NavLinkProps) {
+export function NavLink({ href, children, variant, className, ...props }: NavLinkProps) {
   return (
-    <Link
-      href={`${isExternalLink ? "" : "/"}${href}`}
-      className={cn("select-none", navLinkVariants({ variant }), className)}
-      target={isExternalLink ? "_blank" : ""}
-      {...props}
-    >
+    <Link href={href} className={cn("select-none", navLinkVariants({ variant }), className)} {...props}>
       {children}
     </Link>
   );
