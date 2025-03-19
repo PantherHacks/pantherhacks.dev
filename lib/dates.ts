@@ -36,8 +36,9 @@ export const applicationDateInfo = {
   closeYear: 2025,
   closeHour: 11,
   closeMinute: 59,
+  pmOrAm: "PM",
   timeZone: "PST",
   get dateString() {
-    return `${this.closeMonth} ${this.closeDay}, ${this.closeYear} at ${this.closeHour}:${this.closeMinute} ${this.timeZone}`;
+    return `${this.closeMonth} ${this.closeDay}, ${this.closeYear} at ${this.closeHour}:${this.closeMinute} ${this.pmOrAm} ${this.timeZone}`;
   },
 };
