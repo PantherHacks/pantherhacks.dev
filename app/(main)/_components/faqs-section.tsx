@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { hackathonDateInfo } from "@/lib/dates";
+import { applicationDateInfo, hackathonDateInfo } from "@/lib/dates";
 import { applicationLink } from "@/lib/links";
 
 const FaqsSection = () => {
@@ -53,7 +53,7 @@ const FaqsSection = () => {
               <Link href={applicationLink} target="_blank" className="underline hover:text-primary">
                 this link
               </Link>
-              .
+              . Applications are due {applicationDateInfo.dateString}.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-5">
