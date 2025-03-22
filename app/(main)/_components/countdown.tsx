@@ -31,7 +31,7 @@ const Countdown = () => {
     const dayString = `${days == 0 ? "" : days + "d "}`;
     const hourString = `${days == 0 && hours == 0 ? "" : hours + "h "}`;
     const minuteString = `${days == 0 && hours == 0 && minutes == 0 ? "" : minutes + "m "}`;
-    const secondString = `${days == 0 && hours == 0 && minutes == 0 ? seconds : seconds + "s"}`;
+    const secondString = `${seconds}s`;
 
     return dayString + hourString + minuteString + secondString;
   };
