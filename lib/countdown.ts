@@ -9,6 +9,7 @@ import { hackathonDateInfo } from "@/lib/dates";
  * @property hasEnded - Description (without a timer) for when the hackathon has ended
  */
 export const countdownDescriptions = {
+  toApplicationDue: "until applications due",
   toStart: "until hackathon starts",
   toEnd: "until judging",
   hasEnded: `PantherHacks ${hackathonDateInfo.year} has concluded. Thank you for participating!`,

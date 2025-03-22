@@ -1,15 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { countdownDescriptions } from "@/lib/countdown";
-import { hackathonDateInfo } from "@/lib/dates";
+import { applicationDateInfo, hackathonDateInfo } from "@/lib/dates";
 
 const Countdown = () => {
   const hdi = hackathonDateInfo;
+  const adi = applicationDateInfo;
   const hackathonStartDate = new Date(
     `${hdi.month.substring(0, 3)} ${hdi.startDay}, ${hdi.year} ${hdi.startHour + ":" + hdi.startMinute}:00`
   ).getTime();
   const hackathonEndDate = new Date(
     `${hdi.month.substring(0, 3)} ${hdi.endDay}, ${hdi.year} ${hdi.endHour + ":" + hdi.endMinute}:00`
+  ).getTime();
+  const applicationSubmissionDate = new Date(
+    `${adi.closeMonth.substring(0, 3)} ${adi.closeDay}, ${adi.closeYear} ${adi.pmOrAm == "PM" ? adi.closeHour + 12 : adi.closeHour + ":" + adi.closeMinute}:00`
   ).getTime();
 
   const [countdownString, setCountdownString] = useState<string>("");
@@ -31,36 +35,44 @@ const Countdown = () => {
     return dayString + hourString + minuteString + secondString;
   };
 
-  const updateCountdown = () => {
-    // check if hackathon has started or has ended
-    const now = new Date().getTime();
+  useEffect(() => {
+    let intervalId: NodeJS.Timeout | null = null;
 
-    // past both countdown times
-    if (hackathonStartDate < now && hackathonEndDate < now) {
-      try {
-        // eslint-disable-next-line @typescript-eslint/no-use-before-define
-        clearInterval(interval);
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+
+      if (hackathonStartDate < now && hackathonEndDate < now && applicationSubmissionDate < now) {
+        clearInterval(intervalId!); // clear interval
         setIsCountdownHidden(true);
         setDescriptionString(countdownDescriptions.hasEnded);
-      } catch (e) {
-        console.error(e);
+      } else if (applicationSubmissionDate > now) {
+        const distance = applicationSubmissionDate - now;
+        setCountdownString(createCountdownString(distance));
+        setDescriptionString(countdownDescriptions.toApplicationDue);
+      } else if (hackathonStartDate > now) {
+        const distance = hackathonStartDate - now;
+        setCountdownString(createCountdownString(distance));
+        setDescriptionString(countdownDescriptions.toStart);
+      } else if (hackathonEndDate > now) {
+        const distance = hackathonEndDate - now;
+        setCountdownString(createCountdownString(distance));
+        setDescriptionString(countdownDescriptions.toEnd);
       }
-    } else if (hackathonStartDate > now) {
-      // update strings for the countdown until the start of the hackathon
-      const distance = hackathonStartDate - now;
-      setCountdownString(createCountdownString(distance));
-      setDescriptionString(countdownDescriptions.toStart);
-    } else if (hackathonEndDate > now) {
-      const distance = hackathonEndDate - now;
-      setCountdownString(createCountdownString(distance));
-      setDescriptionString(countdownDescriptions.toEnd);
-    }
-  };
+    };
 
-  const interval = setInterval(updateCountdown, 1000);
+    // interval on mount
+    intervalId = setInterval(updateCountdown, 1000);
+
+    // clear interval on unmount
+    return () => {
+      if (intervalId) {
+        clearInterval(intervalId);
+      }
+    };
+  }, [hackathonStartDate, hackathonEndDate, applicationSubmissionDate]); // Add dependencies to re-run effect if dates change
 
   return (
-    <div className="flex flex-col gap-y-2 justify-center items-center">
+    <div className="flex flex-col gap-y-2 justify-center items-center pb-16">
       <h2
         className={`text-3xl sm:text-5xl md:text-6xl font-TangoSansBold text-primary${isCountdownHidden ? " hidden" : ""}`}
       >

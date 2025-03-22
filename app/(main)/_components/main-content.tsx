@@ -33,11 +33,11 @@ const MainContent = () => {
         />
       </div>
       <AboutSection />
+      <Countdown />
       <TracksSection />
       <PrizesSection />
       <FaqsSection />
       <TeamSection />
-      <Countdown />
     </div>
   );
 };
