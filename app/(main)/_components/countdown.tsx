@@ -6,6 +6,7 @@ import { applicationDateInfo, hackathonDateInfo } from "@/lib/dates";
 const Countdown = () => {
   const hdi = hackathonDateInfo;
   const adi = applicationDateInfo;
+
   const hackathonStartDate = new Date(
     `${hdi.month.substring(0, 3)} ${hdi.startDay}, ${hdi.year} ${hdi.startHour + ":" + hdi.startMinute}:00`
   ).getTime();
@@ -39,7 +40,7 @@ const Countdown = () => {
     let intervalId: NodeJS.Timeout | null = null;
 
     const updateCountdown = () => {
-      const now = new Date().getTime();
+      const now = new Date(new Date().toLocaleString("en-US", { timeZone: "America/Los_Angeles" })).getTime(); // converts user's date to PST to compare
 
       if (hackathonStartDate < now && hackathonEndDate < now && applicationSubmissionDate < now) {
         clearInterval(intervalId!); // clear interval
