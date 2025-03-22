@@ -19,7 +19,7 @@ const Countdown = () => {
 
   const [countdownString, setCountdownString] = useState<string>("");
   const [descriptionString, setDescriptionString] = useState<string>("");
-  const [isCountdownHidden, setIsCountdownHidden] = useState<boolean>(false);
+  const [hackathonConcluded, setHackathonConcluded] = useState<boolean>(false);
 
   const createCountdownString = (dist: number) => {
     // get values for differences
@@ -44,7 +44,7 @@ const Countdown = () => {
 
       if (hackathonStartDate < now && hackathonEndDate < now && applicationSubmissionDate < now) {
         clearInterval(intervalId!); // clear interval
-        setIsCountdownHidden(true);
+        setHackathonConcluded(true);
         setDescriptionString(countdownDescriptions.hasEnded);
       } else if (applicationSubmissionDate > now) {
         const distance = applicationSubmissionDate - now;
@@ -73,13 +73,17 @@ const Countdown = () => {
   }, [hackathonStartDate, hackathonEndDate, applicationSubmissionDate]); // Add dependencies to re-run effect if dates change
 
   return (
-    <div className="flex flex-col gap-y-2 justify-center items-center pb-16">
+    <div className="flex flex-col gap-y-2 justify-center items-center pb-16 md:pb-32 lg:pb-20">
       <h2
-        className={`text-3xl sm:text-5xl md:text-6xl font-TangoSansBold text-primary${isCountdownHidden ? " hidden" : ""}`}
+        className={`text-3xl sm:text-5xl md:text-6xl font-TangoSansBold text-primary${hackathonConcluded ? " hidden" : ""}`}
       >
         {countdownString}
       </h2>
-      <h3 className="text-3xl">{descriptionString}</h3>
+      <h3
+        className={`px-10 md:px-24 text-xl sm:text-2xl md:text-3xl max-w-[50rem] text-center${hackathonConcluded ? " font-TangoSansBold text-primary" : ""}`}
+      >
+        {descriptionString}
+      </h3>
     </div>
   );
 };
