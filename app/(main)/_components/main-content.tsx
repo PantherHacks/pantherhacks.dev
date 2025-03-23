@@ -5,7 +5,6 @@ import { ParallaxProvider } from "react-scroll-parallax";
 
 import Heading from "@/app/(main)/_components/_headings/heading";
 import PrizesSection from "@/app/(main)/_components/_prizes/prizes-section";
-import Countdown from "@/app/(main)/_components/countdown";
 import MobileHeading from "./_headings/mobileheading";
 import TeamSection from "./_team/team-section";
 import TracksSection from "./_tracks/tracks-section";
@@ -33,7 +32,6 @@ const MainContent = () => {
         />
       </div>
       <AboutSection />
-      <Countdown />
       <TracksSection />
       <PrizesSection />
       <FaqsSection />
