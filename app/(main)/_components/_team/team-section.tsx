@@ -62,6 +62,11 @@ const TeamSection = () => {
           teamRole="Design Team"
           linkedinLink="https://www.linkedin.com/in/samantha-fago-08b4072ab/"
         />
+        <TeamMember
+          name="Daniel Min"
+          teamRole="Operations Team"
+          linkedinLink="https://www.linkedin.com/in/daniel-min-9758812b3/"
+        />
       </div>
     </div>
   );

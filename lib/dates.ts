@@ -5,14 +5,23 @@
  *
  * @property {string} month - The month of the hackathon.
  * @property {number} startDay - The starting day of the hackathon.
+ * @property {number} startHour - The starting hour of the hackathon.
+ * @property {number} startMinute - The starting minute of the hackathon.
  * @property {number} endDay - The ending day of the hackathon.
+ * @property {number} endHour - The ending hour of the hackathon.
+ * @property {number} endMinute - The ending minute of the hackathon.
  * @property {number} year - The year of the hackathon.
  * @property {string} dateString - A formatted string representing the hackathon dates.
  */
 export const hackathonDateInfo = {
   month: "April",
   startDay: 25,
+  startHour: 15,
+  startMinute: 0,
   endDay: 27,
+  endHour: 12,
+  endMinute: 0,
+  endTime: "12:00pm",
   year: 2025,
   get dateString() {
     return this.month + " " + this.startDay + "-" + this.endDay + ", " + this.year;
