@@ -73,7 +73,7 @@ const Countdown = () => {
   }, [hackathonStartDate, hackathonEndDate, applicationSubmissionDate]); // Add dependencies to re-run effect if dates change
 
   return (
-    <div className="flex flex-col gap-y-2 justify-center items-center pb-16 md:pb-32 lg:pb-20">
+    <div className="flex flex-col gap-y-2 justify-center items-center">
       <h2
         className={`text-3xl sm:text-5xl md:text-5xl font-TangoSansBold text-primary${hackathonConcluded ? " hidden" : ""}`}
       >
