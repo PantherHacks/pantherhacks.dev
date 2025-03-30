@@ -28,7 +28,7 @@ const Footer = () => {
               alt="GitHub Icon"
               width={24}
               height={24}
-              className="filter invert select-none"
+              className="select-none"
               draggable={false}
             />
           </FooterSocialLink>
@@ -38,7 +38,7 @@ const Footer = () => {
               alt="Discord Icon"
               width={24}
               height={24}
-              className="filter invert select-none"
+              className="select-none"
               draggable={false}
             />
           </FooterSocialLink>
@@ -48,7 +48,7 @@ const Footer = () => {
               alt="Instagram Icon"
               width={24}
               height={24}
-              className="filter invert select-none"
+              className="select-none"
               draggable={false}
             />
           </FooterSocialLink>
