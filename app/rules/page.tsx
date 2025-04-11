@@ -69,9 +69,9 @@ function Rules() {
                 can use an idea they had before the event.
               </li>
               <li>
-                Teams can work on ideas that have already been done. If somebody wants to work on a common idea they
-                should be allowed to do so and should be judged on the quality of their hack. These days it’s hard to
-                find something that’s fully original and teams might not know an idea has been done before anyway.
+                Teams can work on ideas that have already been done. If somebody wants to work on a common idea, they
+                should be allowed to do so and should be judged on the quality of their hack. These days, it’s hard to
+                find something that’s fully original, and teams might not know that an idea has been done before anyway.
               </li>
               <li>
                 Teams can work on an idea that they have worked on before (as long as they do not reuse any code).
