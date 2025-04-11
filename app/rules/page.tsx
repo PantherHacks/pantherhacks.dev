@@ -2,7 +2,7 @@ import React from "react";
 
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar";
-import { hackathonDateInfo } from "@/lib/dates";
+import { formatHourTo12Hour, hackathonDateInfo } from "@/lib/dates";
 
 function Rules() {
   return (
@@ -61,9 +61,10 @@ function Rules() {
                 Teams are encouraged to receive feedback and support from organizers, volunteers, sponsors, and others.
               </li>
               <li>
-                All project work must be done within the 48-hour hacking period ({hackathonDateInfo.startHour - 12}pm on
+                All project work must be done within the 48-hour hacking period (
+                {formatHourTo12Hour(hackathonDateInfo.startHour)} on
                 {" " + hackathonDateInfo.month + " " + hackathonDateInfo.startDay + ", " + hackathonDateInfo.year} to
-                {" " + (hackathonDateInfo.endHour - 12)}pm on
+                {" " + formatHourTo12Hour(hackathonDateInfo.endHour)} on
                 {" " + hackathonDateInfo.month + " " + hackathonDateInfo.endDay + ", " + hackathonDateInfo.year}). Teams
                 can use an idea they had before the event.
               </li>
