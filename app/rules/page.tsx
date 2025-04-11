@@ -23,7 +23,7 @@ function Rules() {
                   <li>Learn new things.</li>
                   <li>Step outside of your comfort zone.</li>
                   <li>Experiment and make mistakes.</li>
-                  <li>Don’t be afraid to ask for help from fellow hackers, mentors, or organizers</li>
+                  <li>Don’t be afraid to ask for help from fellow hackers, mentors, or organizers.</li>
                 </ul>
               </li>
               <li>
