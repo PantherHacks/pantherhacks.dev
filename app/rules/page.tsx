@@ -6,7 +6,7 @@ import { formatHourTo12Hour, hackathonDateInfo } from "@/lib/dates";
 
 function Rules() {
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen">
+    <div id="rules" className="flex flex-col justify-center items-center min-h-screen">
       <Navbar />
       <main className="flex flex-1 w-[100vw] justify-center items-center">
         <div className="flex flex-col flex-1 w-full justify-center items-center mt-48 mx-8 sm:mx-20 md:mx-64 max-w-[50rem]">
