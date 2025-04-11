@@ -66,3 +66,7 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.list-spacing li:not(:last-child) {
+  margin-bottom: 8px;
+}
