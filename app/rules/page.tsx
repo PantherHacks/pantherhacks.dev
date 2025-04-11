@@ -6,9 +6,9 @@ import { formatHourTo12Hour, hackathonDateInfo } from "@/lib/dates";
 
 function Rules() {
   return (
-    <div id="rules" className="flex flex-col justify-center items-center min-h-screen">
+    <div className="flex flex-col justify-center items-center min-h-screen">
       <Navbar />
-      <main className="flex flex-1 w-[100vw] justify-center items-center">
+      <main className="flex flex-1 w-[100vw] justify-center items-center" id="rules" aria-label="Rules Section">
         <div className="flex flex-col flex-1 w-full justify-center items-center mt-48 mx-8 sm:mx-20 md:mx-64 max-w-[50rem]">
           <h2 className="font-TangoSansBold text-6xl text-primary pb-10 text-center">Rules</h2>
           <div className="flex flex-col flex-1 w-full justify-center items-center mt-10">
