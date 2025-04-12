@@ -8,13 +8,23 @@ const Countdown = () => {
   const adi = applicationDateInfo;
 
   const hackathonStartDate = new Date(
-    `${hdi.month.substring(0, 3)} ${hdi.startDay}, ${hdi.year} ${hdi.startHour + ":" + hdi.startMinute}:00`
+    `${hdi.month.substring(0, 3)} ${hdi.startDay}, ${hdi.year} ${
+      hdi.startHour >= 12 ? hdi.startHour : hdi.startHour + (hdi.startHour === 12 ? 0 : 12)
+    }:${hdi.startMinute}:00`
   ).getTime();
   const hackathonEndDate = new Date(
-    `${hdi.month.substring(0, 3)} ${hdi.endDay}, ${hdi.year} ${hdi.endHour + ":" + hdi.endMinute}:00`
+    `${hdi.month.substring(0, 3)} ${hdi.endDay}, ${hdi.year} ${
+      hdi.endHour >= 12 ? hdi.endHour : hdi.endHour + (hdi.endHour === 12 ? 0 : 12)
+    }:${hdi.endMinute}:00`
   ).getTime();
   const applicationSubmissionDate = new Date(
-    `${adi.closeMonth.substring(0, 3)} ${adi.closeDay}, ${adi.closeYear} ${adi.pmOrAm == "PM" ? adi.closeHour + 12 : adi.closeHour + ":" + adi.closeMinute}:00`
+    `${adi.closeMonth.substring(0, 3)} ${adi.closeDay}, ${adi.closeYear} ${
+      adi.pmOrAm === "PM" && adi.closeHour !== 12
+        ? adi.closeHour + 12
+        : adi.pmOrAm === "AM" && adi.closeHour === 12
+          ? 0
+          : adi.closeHour
+    }:${adi.closeMinute}:00`
   ).getTime();
 
   const [countdownString, setCountdownString] = useState<string>("");
@@ -70,7 +80,7 @@ const Countdown = () => {
         clearInterval(intervalId);
       }
     };
-  }, [hackathonStartDate, hackathonEndDate, applicationSubmissionDate]); // Add dependencies to re-run effect if dates change
+  }, [hackathonStartDate, hackathonEndDate, applicationSubmissionDate]);
 
   return (
     <div className="flex flex-col gap-y-2 justify-center items-center">

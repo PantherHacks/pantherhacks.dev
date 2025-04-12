@@ -4,7 +4,7 @@ import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar";
 import { formatHourTo12Hour, hackathonDateInfo } from "@/lib/dates";
 
-function Rules() {
+const RulesPage = () => {
   return (
     <div className="flex flex-col justify-center items-center min-h-screen">
       <Navbar />
@@ -111,6 +111,6 @@ function Rules() {
       <Footer />
     </div>
   );
-}
+};
 
-export default Rules;
+export default RulesPage;
