@@ -16,12 +16,12 @@
 export const hackathonDateInfo = {
   month: "April",
   startDay: 25,
-  startHour: 15,
+  startHour: 17,
   startMinute: 0,
   endDay: 27,
-  endHour: 12,
+  endHour: 17,
   endMinute: 0,
-  endTime: "12:00pm",
+  endTime: "5:00pm",
   year: 2025,
   get dateString() {
     return this.month + " " + this.startDay + "-" + this.endDay + ", " + this.year;
@@ -51,3 +51,13 @@ export const applicationDateInfo = {
     return `${this.closeMonth} ${this.closeDay}, ${this.closeYear} at ${this.closeHour}:${this.closeMinute} ${this.pmOrAm} ${this.timeZone}`;
   },
 };
+
+export function formatHourTo12Hour(hour: number) {
+  if (hour < 12) {
+    return "" + hour + "am";
+  } else if (hour == 12) {
+    return "" + hour + "pm";
+  } else {
+    return "" + (hour - 12) + "pm";
+  }
+}
