@@ -16,7 +16,7 @@ const RulesPage = () => {
             <p className="text-center pb-4">
               The goal of any hackathon is to encourage participants to learn, build, and share.
             </p>
-            <ul style={{ listStyleType: "circle" }}>
+            <ul style={{ listStyleType: "circle" }} className="ml-3">
               <li>
                 <span className="font-bold">Learn</span>
                 <ul style={{ listStyleType: "square" }} className="ml-8">
@@ -44,7 +44,7 @@ const RulesPage = () => {
           </div>
           <div className="flex flex-col flex-1 w-full justify-center items-center mt-10">
             <h3 className="font-TangoSansBold text-2xl pb-5 text-[#EE5000] text-center">Competition Rules</h3>
-            <ul style={{ listStyleType: "circle" }} className="list-spacing">
+            <ul style={{ listStyleType: "circle" }} className="list-spacing ml-3">
               <li>
                 Only current students of Chapman University are eligible to participate in the competition as hackers.
               </li>
