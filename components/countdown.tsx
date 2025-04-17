@@ -1,9 +1,13 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { countdownDescriptions } from "@/lib/countdown";
 import { applicationDateInfo, hackathonDateInfo } from "@/lib/dates";
 
-const Countdown = () => {
+interface CountdownProps {
+  dark?: boolean;
+}
+
+const Countdown: React.FC<CountdownProps> = ({ dark = false }) => {
   const hdi = hackathonDateInfo;
   const adi = applicationDateInfo;
 
@@ -85,7 +89,7 @@ const Countdown = () => {
   return (
     <div className="flex flex-col gap-y-2 justify-center items-center">
       <h2
-        className={`text-3xl sm:text-5xl md:text-5xl font-TangoSansBold text-primary${hackathonConcluded ? " hidden" : ""}`}
+        className={`text-3xl sm:text-5xl md:text-5xl font-TangoSansBold ${dark ? "text-white" : "text-primary"} ${hackathonConcluded ? " hidden" : ""}`}
       >
         {countdownString}
       </h2>
