@@ -90,11 +90,13 @@ const Countdown: React.FC<CountdownProps> = ({ dark = false }) => {
     <div className="flex flex-col gap-y-2 justify-center items-center">
       <h2
         className={`text-3xl sm:text-5xl md:text-5xl font-TangoSansBold ${dark ? "text-white" : "text-primary"} ${hackathonConcluded ? " hidden" : ""}`}
+        style={{ minHeight: "3rem" }}
       >
         {countdownString}
       </h2>
       <h3
         className={`px-10 md:px-24 text-xl sm:text-2xl md:text-3xl max-w-[50rem] text-center${hackathonConcluded ? " font-TangoSansBold text-primary" : ""}`}
+        style={{ minHeight: "2.5rem" }}
       >
         {descriptionString}
       </h3>

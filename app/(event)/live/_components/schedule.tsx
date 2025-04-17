@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { Loader2 } from "lucide-react";
 import PublicGoogleSheetsParser from "public-google-sheets-parser";
 
 import { hackathonDateInfo } from "@/lib/dates";
