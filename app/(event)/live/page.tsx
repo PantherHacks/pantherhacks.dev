@@ -5,7 +5,7 @@ import Navbar from "@/components/navbar";
 
 import "./_components/live.css";
 
-import LiveHeading from "./_components/heading";
+import LiveHeading from "./_components/live-heading";
 import ScheduleSection from "./_components/schedule";
 
 const LivePage = () => {

@@ -3,10 +3,7 @@ import { hackathonDateInfo } from "@/lib/dates";
 
 const LiveHeading = () => {
   return (
-    <div
-      id="home"
-      className="flex flex-col flex-1 w-full justify-center items-center mt-48 mx-8 sm:mx-20 md:mx-64 max-w-[50rem]"
-    >
+    <div id="home" className="flex flex-col flex-1 justify-center items-center mt-48 mx-auto max-w-[50rem]">
       <div className="flex flex-col items-center justify-center space-y-4 pb-10">
         <h2 className="font-TangoSansBold text-6xl text-[#fd021d] flex flex-row justify-center items-center gap-2">
           <span className="text-white text-shadow-none text-7xl">[</span>
@@ -19,7 +16,9 @@ const LiveHeading = () => {
           </div>
           <span className="text-white text-shadow-none text-7xl">]</span>
         </h2>
-        <h2 className="font-TangoSansBold text-6xl text-white">PANTHERHACKS {hackathonDateInfo.year}</h2>
+        <h2 className="font-TangoSansBold text-4xl sm:text-5xl md:text-6xl text-white text-center">
+          PANTHERHACKS {hackathonDateInfo.year}
+        </h2>
       </div>
       <div className="flex flex-col flex-1 w-full justify-center items-center mt-10">
         <Countdown dark />
