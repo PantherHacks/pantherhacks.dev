@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import PublicGoogleSheetsParser from "public-google-sheets-parser";
 
+import { Separator } from "@/components/ui/separator";
 import { hackathonDateInfo } from "@/lib/dates";
 import { liveScheduleSpreadsheetID } from "@/lib/links";
 import EventCard from "./event-card";
@@ -54,9 +55,10 @@ const ScheduleSection = () => {
       {isFetching && (
         <Image
           src="/images/oranges/orange-loader.svg"
-          width={1000}
-          height={1000}
+          width={100}
+          height={100}
           unoptimized
+          priority
           alt="A spinning orange"
           className="animate-spin duration-1000 w-24 h-24"
         />
@@ -64,19 +66,24 @@ const ScheduleSection = () => {
       {!isFetching && calendarEvents.length === 0 && (
         <p className="font-bold text-lg text-red-600">Failed to load events. Please refresh the page and try again!</p>
       )}
-      <div className="flex flex-col gap-4">
-        {calendarEvents.map((event, index) => (
-          <EventCard
-            key={index}
-            name={event.name}
-            activityType={event.activityType}
-            location={event.location}
-            description={event.description}
-            startTimestamp={event.startTimestamp}
-            endTimestamp={event.endTimestamp}
-          />
-        ))}
-      </div>
+      {!isFetching && calendarEvents.length > 0 && (
+        <div className="flex flex-col gap-4">
+          <Separator />
+          {calendarEvents.map((event, index) => (
+            <EventCard
+              key={index}
+              name={event.name}
+              activityType={event.activityType}
+              location={event.location}
+              description={event.description}
+              startTimestamp={event.startTimestamp}
+              endTimestamp={event.endTimestamp}
+            />
+          ))}
+          <Separator />
+          <p className="text-center italic">That's all folks!</p>
+        </div>
+      )}
     </div>
   );
 };
