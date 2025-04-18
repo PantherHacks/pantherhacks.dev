@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { RefreshCcw } from "lucide-react";
 import PublicGoogleSheetsParser from "public-google-sheets-parser";
 
+import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { hackathonDateInfo } from "@/lib/dates";
 import { liveScheduleSpreadsheetID } from "@/lib/links";
@@ -11,9 +13,12 @@ import { CalendarEvent } from "./schedule-helpers";
 const ScheduleSection = () => {
   const [calendarEvents, setCalendarEvents] = useState<CalendarEvent[]>([]);
   const [isFetching, setIsFetching] = useState<boolean>(true);
+  const [lastRefreshed, setLastRefreshed] = useState<Date | undefined>(undefined);
+  const [timeAgo, setTimeAgo] = useState<string>("");
 
   const fetchCSV = async () => {
     try {
+      setIsFetching(true);
       const parser = new PublicGoogleSheetsParser(liveScheduleSpreadsheetID, { useFormat: true });
 
       const data = await parser.parse();
@@ -31,6 +36,9 @@ const ScheduleSection = () => {
           }))
       );
 
+      const now = new Date(Date.now());
+      setLastRefreshed(now);
+      setTimeAgo("just now");
       setIsFetching(false);
     } catch (error) {
       setIsFetching(false);
@@ -41,6 +49,45 @@ const ScheduleSection = () => {
   useEffect(() => {
     fetchCSV();
   }, []);
+
+  useEffect(() => {
+    if (lastRefreshed) {
+      const interval = setInterval(() => {
+        const now = new Date();
+        const diff = Math.floor((now.getTime() - lastRefreshed.getTime()) / 1000);
+
+        if (diff === 0) {
+          setTimeAgo("just now");
+        } else if (diff < 60) {
+          setTimeAgo(`${diff} seconds ago`);
+        } else if (diff < 3600) {
+          setTimeAgo(`${Math.floor(diff / 60)} minutes ago`);
+        } else {
+          setTimeAgo(`${Math.floor(diff / 3600)} hours ago`);
+        }
+      }, 1000);
+
+      return () => clearInterval(interval);
+    } else {
+      setTimeAgo("just now");
+    }
+  }, [lastRefreshed]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (lastRefreshed) {
+        const now = new Date();
+        const diff = Math.floor((now.getTime() - lastRefreshed.getTime()) / 1000);
+
+        // Automatically refresh if more than 5 minutes (300 seconds) have passed
+        if (diff > 300) {
+          fetchCSV();
+        }
+      }
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [lastRefreshed]);
 
   return (
     <div id="schedule" className="flex flex-col items-center justify-center w-full py-40">
@@ -69,6 +116,13 @@ const ScheduleSection = () => {
       {!isFetching && calendarEvents.length > 0 && (
         <div className="flex flex-col gap-4">
           <Separator />
+          <div className="flex flex-row items-center justify-center gap-2">
+            <Button className="bg-primary hover:bg-[#83022b] cursor-pointer" onClick={fetchCSV}>
+              <RefreshCcw /> Refresh Schedule
+            </Button>
+            <p>Last refreshed {timeAgo}</p>
+          </div>
+          <Separator />
           {calendarEvents.map((event, index) => (
             <EventCard
               key={index}
@@ -81,7 +135,7 @@ const ScheduleSection = () => {
             />
           ))}
           <Separator />
-          <p className="text-center italic">That's all folks!</p>
+          <p className="text-center italic font-bold text-lg text-white/80">That's all folks!</p>
         </div>
       )}
     </div>
