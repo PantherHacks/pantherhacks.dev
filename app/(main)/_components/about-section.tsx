@@ -1,5 +1,5 @@
+import Countdown from "@/components/countdown";
 import { hackathonDateInfo } from "@/lib/dates";
-import Countdown from "./countdown";
 
 const AboutSection = () => {
   return (
