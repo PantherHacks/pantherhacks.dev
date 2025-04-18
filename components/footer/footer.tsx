@@ -21,7 +21,7 @@ const Footer: React.FC<FooterProps> = ({ daytimeVariant = true }) => {
         style={{
           background: daytimeVariant
             ? `linear-gradient(#FFFFFF 0%, #4DC9CC 98%, #00000000 98.1%, #00000000 100%)`
-            : `linear-gradient(#000000, #1F214D, #50366F, #BF3475, #EE6C45, #FFCE61, #FFE58A, #00000000 98.1%, #00000000 100%)`,
+            : `linear-gradient(#000000, #1F214D, #50366F, #BF3475, #EE6C45, #FFCE61, #FFE58A 98%, #00000000 98.1%, #00000000 100%)`,
         }}
       />
       <footer className="flex flex-col justify-center items-center w-full space-y-2 p-4 bg-primary">
