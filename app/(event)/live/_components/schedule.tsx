@@ -116,7 +116,7 @@ const ScheduleSection = () => {
       {!isFetching && calendarEvents.length > 0 && (
         <div className="flex flex-col gap-4">
           <Separator />
-          <div className="flex flex-row items-center justify-center gap-2">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
             <Button className="bg-primary hover:bg-[#83022b] cursor-pointer" onClick={fetchCSV}>
               <RefreshCcw /> Refresh Schedule
             </Button>

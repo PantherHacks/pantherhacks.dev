@@ -22,8 +22,8 @@ const EventCard: React.FC<CalendarEvent> = ({
       )}
     >
       <div className="flex flex-col md:flex-row items-start md:items-center gap-2 mb-2 md:mb-0">
-        <h3 className={cn("text-3xl", getCalendarEventColors(activityType)[2])}>{name}</h3>{" "}
-        <Badge className={cn("h-6", getCalendarEventColors(activityType)[0])}>
+        <h3 className={cn("text-3xl flex-shrink", getCalendarEventColors(activityType)[2])}>{name}</h3>
+        <Badge className={cn("h-6 flex-shrink-0 whitespace-nowrap", getCalendarEventColors(activityType)[0])}>
           {activityType === "Check-in" && <Clock className="w-3 h-3 mr-2" />}
           {activityType === "Main Event" && <Star className="w-3 h-3 mr-2" />}
           {activityType === "Hacking Time" && <Laptop className="w-3 h-3 mr-2" />}
