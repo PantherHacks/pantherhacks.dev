@@ -116,17 +116,20 @@ const ScheduleSection = () => {
         <p className="font-bold text-lg text-red-600">Failed to load events. Please refresh the page and try again!</p>
       )}
       {!isFetching && calendarEvents.length > 0 && (
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 justify-center items-center px-10">
           <Separator />
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
-            <Button className="bg-primary hover:bg-[#83022b] cursor-pointer" onClick={fetchCSV}>
-              <RefreshCcw /> Refresh Schedule
-            </Button>
+          <div className="flex flex-row items-center justify-center">
             <p>Last refreshed {timeAgo}</p>
+            <Button
+              variant="ghost"
+              className="cursor-pointer hover:bg-transparent hover:text-white/75"
+              onClick={fetchCSV}
+              aria-label="Refresh Schedule"
+            >
+              <RefreshCcw />
+            </Button>
           </div>
-          <div className="flex flex-row items-center justify-center gap-2">
-            <ScheduleFilters activeFilters={activeFilters} setActiveFilters={setActiveFilters} />
-          </div>
+          <ScheduleFilters activeFilters={activeFilters} setActiveFilters={setActiveFilters} />
           <Separator />
           {calendarEvents.map((event, index) =>
             activeFilters.length === 0 || activeFilters.includes(event.activityType) ? (
