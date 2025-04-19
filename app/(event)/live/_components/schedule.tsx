@@ -3,6 +3,7 @@ import Image from "next/image";
 import { RefreshCcw } from "lucide-react";
 import PublicGoogleSheetsParser from "public-google-sheets-parser";
 
+import ScheduleFilters from "@/app/(event)/live/_components/schedule-filters";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { hackathonDateInfo } from "@/lib/dates";
@@ -12,6 +13,7 @@ import { CalendarEvent } from "./schedule-helpers";
 
 const ScheduleSection = () => {
   const [calendarEvents, setCalendarEvents] = useState<CalendarEvent[]>([]);
+  const [activeFilters, setActiveFilters] = useState<string[]>([]);
   const [isFetching, setIsFetching] = useState<boolean>(true);
   const [lastRefreshed, setLastRefreshed] = useState<Date | undefined>(undefined);
   const [timeAgo, setTimeAgo] = useState<string>("");
@@ -122,18 +124,23 @@ const ScheduleSection = () => {
             </Button>
             <p>Last refreshed {timeAgo}</p>
           </div>
+          <div className="flex flex-row items-center justify-center gap-2">
+            <ScheduleFilters activeFilters={activeFilters} setActiveFilters={setActiveFilters} />
+          </div>
           <Separator />
-          {calendarEvents.map((event, index) => (
-            <EventCard
-              key={index}
-              name={event.name}
-              activityType={event.activityType}
-              location={event.location}
-              description={event.description}
-              startTimestamp={event.startTimestamp}
-              endTimestamp={event.endTimestamp}
-            />
-          ))}
+          {calendarEvents.map((event, index) =>
+            activeFilters.length === 0 || activeFilters.includes(event.activityType) ? (
+              <EventCard
+                key={index}
+                name={event.name}
+                activityType={event.activityType}
+                location={event.location}
+                description={event.description}
+                startTimestamp={event.startTimestamp}
+                endTimestamp={event.endTimestamp}
+              />
+            ) : null
+          )}
           <Separator />
           <p className="text-center italic font-bold text-lg text-white/80">That's all folks!</p>
         </div>
