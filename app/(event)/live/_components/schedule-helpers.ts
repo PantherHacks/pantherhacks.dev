@@ -113,7 +113,8 @@ END:VCALENDAR
   const blob = new Blob([icsContent], { type: "text/calendar;charset=utf-8" });
 
   const a = document.createElement("a");
-  a.download = `${title.replace(/\s+/g, "_")}.ics`;
+  const sanitizedTitle = title.replace(/[^a-zA-Z0-9_\- ]/g, "").replace(/\s+/g, "_");
+  a.download = `${sanitizedTitle}.ics`;
   a.href = URL.createObjectURL(blob);
   a.addEventListener("click", () => {
     setTimeout(() => URL.revokeObjectURL(a.href), 30 * 1000);
