@@ -63,7 +63,7 @@ const EventCard: React.FC<CalendarEvent> = ({
         </div>
         <Separator className="block sm:hidden bg-black" />
         <Button
-          className="px-3 py-5 h-5 bg-primary hover:bg-[#83022b] cursor-pointer items-center text-white"
+          className="px-3 py-5 bg-primary hover:bg-[#83022b] cursor-pointer items-center text-white"
           onClick={() => addToCalendar(name, activityType, description, location, startTimestamp, endTimestamp)}
         >
           <CalendarPlus2 className="w-4 h-4 mr-1" /> Add to calendar
