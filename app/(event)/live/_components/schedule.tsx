@@ -131,10 +131,10 @@ const ScheduleSection = () => {
           </div>
           <ScheduleFilters activeFilters={activeFilters} setActiveFilters={setActiveFilters} />
           <Separator />
-          {calendarEvents.map((event, index) =>
+          {calendarEvents.map((event) =>
             activeFilters.length === 0 || activeFilters.includes(event.activityType) ? (
               <EventCard
-                key={index}
+                key={event.name}
                 name={event.name}
                 activityType={event.activityType}
                 location={event.location}
