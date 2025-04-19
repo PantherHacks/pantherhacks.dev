@@ -61,3 +61,63 @@ export function getCalendarEventColors(activityType: string): string[] {
       return ["blue", "blue", "blue", "blue"];
   }
 }
+
+/**
+ * Generates an ICS (iCalendar) file for an event and triggers a download for the user.
+ *
+ * @param title - The title of the event.
+ * @param activityType - The type of activity (e.g., meeting, workshop).
+ * @param description - A description of the event.
+ * @param location - The location where the event will take place.
+ * @param startTimestamp - The start time of the event as a Date object.
+ * @param endTimestamp - The end time of the event as a Date object.
+ *
+ * @remarks
+ * This function creates a downloadable `.ics` file containing the event details.
+ * The file is automatically named based on the event title, with spaces replaced by underscores.
+ * The function uses the `Blob` API to generate the file and a temporary anchor element to trigger the download.
+ *
+ * @example
+ * ```typescript
+ * addToCalendar(
+ *   "Team Meeting",
+ *   "Meeting",
+ *   "Discuss project updates and next steps.",
+ *   "Conference Room A",
+ *   new Date("2023-10-01T10:00:00Z"),
+ *   new Date("2023-10-01T11:00:00Z")
+ * );
+ * ```
+ */
+export function addToCalendar(
+  title: string,
+  activityType: string,
+  description: string,
+  location: string,
+  startTimestamp: Date,
+  endTimestamp: Date
+): void {
+  const icsContent = `
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+SUMMARY:[${activityType}] ${title}
+DESCRIPTION:${description}
+LOCATION:${location}
+DTSTART:${startTimestamp.toISOString().replace(/[-:]/g, "").split(".")[0]}Z
+DTEND:${endTimestamp.toISOString().replace(/[-:]/g, "").split(".")[0]}Z
+END:VEVENT
+END:VCALENDAR
+  `.trim();
+
+  const blob = new Blob([icsContent], { type: "text/calendar;charset=utf-8" });
+
+  const a = document.createElement("a");
+  const sanitizedTitle = title.replace(/[^a-zA-Z0-9_\- ]/g, "").replace(/\s+/g, "_");
+  a.download = `${sanitizedTitle}.ics`;
+  a.href = URL.createObjectURL(blob);
+  a.addEventListener("click", () => {
+    setTimeout(() => URL.revokeObjectURL(a.href), 30 * 1000);
+  });
+  a.click();
+}
