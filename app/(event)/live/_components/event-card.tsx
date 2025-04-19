@@ -14,7 +14,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
-import { CalendarEvent, getCalendarEventColors } from "./schedule-helpers";
+import { addToCalendar, CalendarEvent, getCalendarEventColors } from "./schedule-helpers";
 
 const EventCard: React.FC<CalendarEvent> = ({
   name,
@@ -62,7 +62,10 @@ const EventCard: React.FC<CalendarEvent> = ({
           </div>
         </div>
         <Separator className="block sm:hidden bg-black" />
-        <Button className="px-3 py-5 h-5 bg-primary hover:bg-[#83022b] cursor-pointer items-center text-white">
+        <Button
+          className="px-3 py-5 h-5 bg-primary hover:bg-[#83022b] cursor-pointer items-center text-white"
+          onClick={() => addToCalendar(name, activityType, description, location, startTimestamp, endTimestamp)}
+        >
           <CalendarPlus2 className="w-4 h-4 mr-1" /> Add to calendar
         </Button>
       </div>
