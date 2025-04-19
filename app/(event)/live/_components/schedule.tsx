@@ -3,6 +3,7 @@ import Image from "next/image";
 import { RefreshCcw } from "lucide-react";
 import PublicGoogleSheetsParser from "public-google-sheets-parser";
 
+import ScheduleFilters from "@/app/(event)/live/_components/schedule-filters";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { hackathonDateInfo } from "@/lib/dates";
@@ -12,6 +13,7 @@ import { CalendarEvent } from "./schedule-helpers";
 
 const ScheduleSection = () => {
   const [calendarEvents, setCalendarEvents] = useState<CalendarEvent[]>([]);
+  const [activeFilters, setActiveFilters] = useState<string[]>([]);
   const [isFetching, setIsFetching] = useState<boolean>(true);
   const [lastRefreshed, setLastRefreshed] = useState<Date | undefined>(undefined);
   const [timeAgo, setTimeAgo] = useState<string>("");
@@ -114,26 +116,29 @@ const ScheduleSection = () => {
         <p className="font-bold text-lg text-red-600">Failed to load events. Please refresh the page and try again!</p>
       )}
       {!isFetching && calendarEvents.length > 0 && (
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 justify-center items-center px-10">
           <Separator />
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
+          <div className="flex flex-col items-center justify-center gap-y-2">
             <Button className="bg-primary hover:bg-[#83022b] cursor-pointer" onClick={fetchCSV}>
               <RefreshCcw /> Refresh Schedule
             </Button>
-            <p>Last refreshed {timeAgo}</p>
+            <p className="text-xs ">Last refreshed {timeAgo}</p>
           </div>
+          <ScheduleFilters activeFilters={activeFilters} setActiveFilters={setActiveFilters} />
           <Separator />
-          {calendarEvents.map((event, index) => (
-            <EventCard
-              key={index}
-              name={event.name}
-              activityType={event.activityType}
-              location={event.location}
-              description={event.description}
-              startTimestamp={event.startTimestamp}
-              endTimestamp={event.endTimestamp}
-            />
-          ))}
+          {calendarEvents.map((event, index) =>
+            activeFilters.length === 0 || activeFilters.includes(event.activityType) ? (
+              <EventCard
+                key={index}
+                name={event.name}
+                activityType={event.activityType}
+                location={event.location}
+                description={event.description}
+                startTimestamp={event.startTimestamp}
+                endTimestamp={event.endTimestamp}
+              />
+            ) : null
+          )}
           <Separator />
           <p className="text-center italic font-bold text-lg text-white/80">That's all folks!</p>
         </div>
