@@ -36,7 +36,7 @@ const ScheduleFilters: FC<ScheduleFiltersProps> = ({ activeFilters, setActiveFil
         <Badge
           key={type}
           className={cn(
-            "min-h-6 cursor-pointer select-none ",
+            "min-h-6 cursor-pointer select-none transition-colors duration-300 ",
             activeFilters.includes(type)
               ? `${getCalendarEventColors(type)[2]} ${getCalendarEventColors(type)[3]} hover:${getCalendarEventColors(type)[2]}/75`
               : "bg-white/20 hover:bg-white/30"
