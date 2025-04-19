@@ -118,16 +118,11 @@ const ScheduleSection = () => {
       {!isFetching && calendarEvents.length > 0 && (
         <div className="flex flex-col gap-4 justify-center items-center px-10">
           <Separator />
-          <div className="flex flex-row items-center justify-center">
-            <p>Last refreshed {timeAgo}</p>
-            <Button
-              variant="ghost"
-              className="cursor-pointer hover:bg-transparent hover:text-white/75"
-              onClick={fetchCSV}
-              aria-label="Refresh Schedule"
-            >
-              <RefreshCcw />
+          <div className="flex flex-col items-center justify-center gap-y-2">
+            <Button className="bg-primary hover:bg-[#83022b] cursor-pointer" onClick={fetchCSV}>
+              <RefreshCcw /> Refresh Schedule
             </Button>
+            <p className="text-xs ">Last refreshed {timeAgo}</p>
           </div>
           <ScheduleFilters activeFilters={activeFilters} setActiveFilters={setActiveFilters} />
           <Separator />
