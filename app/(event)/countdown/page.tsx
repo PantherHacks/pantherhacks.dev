@@ -81,8 +81,9 @@ const CountdownPage = () => {
       />
       <Link href="/" className="z-10">
         <Button
-          className={`absolute top-4 left-4 px-3 py-2 bg-transparent hover:bg-[#83022b] transition-opacity duration-300 ${showButton ? "opacity-100" : "opacity-0"
-            }`}
+          className={`absolute top-4 left-4 px-3 py-2 bg-transparent hover:bg-[#83022b] transition-opacity duration-300 ${
+            showButton ? "opacity-100" : "opacity-0"
+          }`}
         >
           <Home />
         </Button>
