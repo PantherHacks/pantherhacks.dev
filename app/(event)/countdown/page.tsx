@@ -59,13 +59,12 @@ const CountdownPage = () => {
   }, [position, rotation]);
 
   useEffect(() => {
-    const intervalId = setInterval(
-      () => {
-        setPosition(-200);
-        animate();
-      },
-      Math.random() * (20 * 60 * 1000 - 30 * 1000) + 30 * 1000 // random time between 30 seconds and 20 minutes
-    );
+    const timeAmountInMiliseconds = Math.floor(Math.random() * (20 * 60 * 1000 - 30 * 1000) + 30 * 1000); // random time between 30 seconds and 20 minutes
+
+    const intervalId = setInterval(() => {
+      setPosition(-200);
+      animate();
+    }, timeAmountInMiliseconds);
 
     return () => clearInterval(intervalId);
   }, [animate]);
