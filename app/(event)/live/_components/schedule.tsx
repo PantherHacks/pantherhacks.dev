@@ -169,7 +169,7 @@ const ScheduleSection = () => {
                       />
                     ))
                   ) : (
-                    <p className="text-white/60 italic">No events matching the selected filters for this day.</p>
+                    <p className="text-white/60 italic text-center">No events matching the selected filters.</p>
                   )}
                 </div>
               );
