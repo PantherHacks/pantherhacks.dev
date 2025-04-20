@@ -71,18 +71,27 @@ const CountdownPage = () => {
 
   return (
     <div className="relative flex flex-col items-center justify-center min-h-screen bg-black text-white overflow-hidden">
-      <Link href="/">
+      <Image
+        src="/images/countdown/countdown-mountain.svg"
+        alt="A mountain in the background"
+        width={100}
+        height={100}
+        unoptimized
+        className="w-full absolute z-0 bottom-0"
+      />
+      <Link href="/" className="z-10">
         <Button
-          className={`absolute top-4 left-4 px-3 py-2 bg-transparent hover:bg-[#83022b] transition-opacity duration-300 ${
-            showButton ? "opacity-100" : "opacity-0"
-          }`}
+          className={`absolute top-4 left-4 px-3 py-2 bg-transparent hover:bg-[#83022b] transition-opacity duration-300 ${showButton ? "opacity-100" : "opacity-0"
+            }`}
         >
           <Home />
         </Button>
       </Link>
-      <Countdown dark size="large" />
+      <div className="z-50">
+        <Countdown dark size="large" />
+      </div>
       <div
-        className="absolute bottom-0"
+        className="absolute bottom-0 z-50"
         style={{
           left: `${position}px`,
           transform: `rotate(${rotation}deg)`,
