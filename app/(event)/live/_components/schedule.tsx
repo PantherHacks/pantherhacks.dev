@@ -46,7 +46,6 @@ const ScheduleSection = () => {
       const groupedEvents: EventsByDay = parsedEvents.reduce((acc: EventsByDay, event) => {
         const day = event.startTimestamp.toLocaleDateString([], {
           weekday: "long",
-          year: "numeric",
           month: "long",
           day: "numeric",
         });
