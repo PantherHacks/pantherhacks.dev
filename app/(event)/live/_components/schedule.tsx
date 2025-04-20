@@ -152,7 +152,11 @@ const ScheduleSection = () => {
                 (event) => activeFilters.length === 0 || activeFilters.includes(event.activityType)
               );
               return (
-                <div key={day} className="w-full flex flex-col justify-center items-center gap-4 pt-4 pb-3">
+                <div
+                  key={day}
+                  aria-label={`Events for ${day}`}
+                  className="w-full flex flex-col justify-center items-center gap-4 pt-4 pb-3"
+                >
                   <h3 className="font-bold text-2xl">{day}</h3>
                   <Separator className="bg-white/20" />
                   {dailyEvents.length > 0 ? (

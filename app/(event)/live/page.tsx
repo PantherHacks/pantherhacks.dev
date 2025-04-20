@@ -12,7 +12,7 @@ const LivePage = () => {
   return (
     <div className="flex flex-col justify-center items-center min-h-screen bg-black text-white">
       <Navbar />
-      <main className="flex flex-1 flex-col" id="rules" aria-label="Rules Section">
+      <main className="flex flex-1 flex-col" id="live-schedule" aria-label="Live Schedule Section">
         <LiveHeading />
         <ScheduleSection />
       </main>
