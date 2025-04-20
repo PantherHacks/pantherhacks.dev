@@ -146,7 +146,7 @@ const ScheduleSection = () => {
           <ScheduleFilters activeFilters={activeFilters} setActiveFilters={setActiveFilters} />
           <Separator />
           {Object.keys(eventsByDay)
-            .sort((a, b) => new Date(a).getTime() - new Date(b).getTime()) // Sort by date
+            .sort((a, b) => Date.parse(a) - Date.parse(b)) // Sort by date
             .map((day) => {
               const dailyEvents = eventsByDay[day].filter(
                 (event) => activeFilters.length === 0 || activeFilters.includes(event.activityType)
