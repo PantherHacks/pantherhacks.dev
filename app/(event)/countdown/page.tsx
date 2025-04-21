@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Home } from "lucide-react";
+import { Home, Radio } from "lucide-react";
 
 import Countdown from "@/components/countdown";
 import { Button } from "@/components/ui/button";
@@ -86,6 +86,15 @@ const CountdownPage = () => {
           }`}
         >
           <Home />
+        </Button>
+      </Link>
+      <Link href="/live" className="z-10">
+        <Button
+          className={`absolute top-4 left-16 px-3 py-2 bg-transparent hover:bg-[#83022b] transition-opacity duration-300 ${
+            showButton ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <Radio />
         </Button>
       </Link>
       <div className="z-50">

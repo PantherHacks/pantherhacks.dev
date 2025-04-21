@@ -111,7 +111,7 @@ const ScheduleSection = () => {
   }, [lastRefreshed]);
 
   return (
-    <div id="schedule" className="flex flex-col items-center justify-center w-full py-40">
+    <div id="schedule" className="flex flex-col items-center justify-center w-full py-20">
       <h2 className="font-TangoSansBold text-6xl text-white pb-10">Schedule</h2>
       <p className="mx-8 sm:mx-20 md:mx-64 text-center max-w-[50rem] pb-10">
         <span className="font-bold">
