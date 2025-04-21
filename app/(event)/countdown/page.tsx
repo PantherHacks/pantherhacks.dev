@@ -79,7 +79,7 @@ const CountdownPage = () => {
         unoptimized
         className="w-full absolute z-0 bottom-0"
       />
-      <Link href="/" className="z-10">
+      <Link href="/" className="z-10" aria-label="Go to Home Page">
         <Button
           className={`absolute top-4 left-4 px-3 py-2 bg-transparent hover:bg-[#83022b] transition-opacity duration-300 ${
             showButton ? "opacity-100" : "opacity-0"
@@ -88,7 +88,7 @@ const CountdownPage = () => {
           <Home />
         </Button>
       </Link>
-      <Link href="/live" className="z-10">
+      <Link href="/live" aria-label="Go to live page" className="z-10">
         <Button
           className={`absolute top-4 left-16 px-3 py-2 bg-transparent hover:bg-[#83022b] transition-opacity duration-300 ${
             showButton ? "opacity-100" : "opacity-0"
