@@ -1,7 +1,52 @@
 .neon-text {
   color: #fd021d;
   text-shadow:
-    0 0 2px #fd021d,
-    0 0 16px #f00,
-    0 0 32px #f00;
+    0 0 1px #fd021d,
+    0 0 2px #f00,
+    0 0 8px #f00;
+}
+
+.neon-text-small {
+  color: #fd021d;
+}
+
+.highlighted-card {
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  transition: width 0.1s ease-in-out; /* Added transition property */
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.highlighted-card::before, .highlighted-card::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  background-image: conic-gradient(
+          from var(--angle),
+          #00000000,
+          #ff2d4f
+  );
+  z-index: -2;
+  border-radius: calc(1.5rem + 4px);
+  animation: 3s highlighted-card-spin linear infinite;
+}
+
+.highlighted-card::before {
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+
+@keyframes highlighted-card-spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
 }

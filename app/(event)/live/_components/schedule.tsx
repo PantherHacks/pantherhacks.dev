@@ -159,7 +159,14 @@ const ScheduleSection = () => {
           {Object.keys(eventsByDay)
             .sort((a, b) => Date.parse(a) - Date.parse(b)) // Sort by date
             .map((day) => {
-              if (!showPrevEvents && Date.parse(day) < Date.now()) return;
+              if (!showPrevEvents) {
+                const parsedDate = new Date(Date.parse(day + " " + hackathonDateInfo.year));
+                parsedDate.setDate(parsedDate.getDate() + 1); // Add one day (24 hours)
+
+                if (parsedDate.getTime() < Date.now()) {
+                  return;
+                }
+              }
 
               const dailyEvents = eventsByDay[day].filter(
                 (event) => activeFilters.length === 0 || activeFilters.includes(event.activityType)
