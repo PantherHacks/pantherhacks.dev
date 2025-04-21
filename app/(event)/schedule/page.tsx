@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 import { Loader2 } from "lucide-react";
 
 import Footer from "@/components/footer/footer";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/navbar/navbar";
 
 export default function Schedule() {
   redirect("/live/#schedule");

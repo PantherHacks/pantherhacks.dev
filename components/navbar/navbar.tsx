@@ -6,8 +6,10 @@ import { Menu } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/ui/NavLink";
-import { applicationLink, discordLink, gitHubLink, instagramLink } from "@/lib/links";
+import { discordLink, gitHubLink, instagramLink } from "@/lib/links";
 import { cn } from "@/lib/utils";
+
+import "./navbar.css";
 
 const Navbar = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -37,7 +39,8 @@ const Navbar = () => {
       ref={navRef}
       className="m-[20px] w-[calc(100vw_-_40px)] rounded-[10px] fixed top-0 left-0 bg-primary z-[49] flex items-center box-border drop-shadow-lg"
     >
-      <div className="hidden [@media(min-width:850px)]:flex justify-between items-center w-full">
+      {/* min-width:850px when it has the normal APPLY button */}
+      <div className="hidden [@media(min-width:860px)]:flex justify-between items-center w-full">
         <div className="flex flex-row items-center">
           <div className="flex items-center overflow-hidden">
             <NavLink href="/" variant={"logo"} className="h-[70px] rounded-l-[10px] group" aria-label="Home">
@@ -59,8 +62,22 @@ const Navbar = () => {
             <NavLink href="/#prizes">Prizes</NavLink>
             <NavLink href="/#faqs">FAQs</NavLink>
             <NavLink href="/#team">Team</NavLink>
-            <NavLink href={applicationLink} variant="bold" className="bg-[rgb(75,0,0)]" target="_blank">
+            {/* <NavLink href={applicationLink} variant="bold" className="bg-[rgb(75,0,0)]" target="_blank">
               APPLY
+            </NavLink> */}
+            <NavLink
+              href="/live"
+              variant="bold"
+              className="bg-[rgb(75,0,0)] font-TangoSansBold text-xl text-[#fd021d] flex flex-row justify-center items-center gap-2"
+              target="_blank"
+            >
+              <div className="flex items-center gap-2">
+                <div className="relative flex justify-center items-center">
+                  <div className="absolute inline-flex w-4 h-4 bg-[#fd021d] rounded-full animate-ping duration-1000"></div>
+                  <div className="relative inline-flex w-5 h-5 bg-[#fd021d] rounded-full"></div>
+                </div>
+                <span className="neon-text transform-gpu">LIVE</span>
+              </div>
             </NavLink>
           </div>
         </div>
@@ -119,7 +136,8 @@ const Navbar = () => {
           </NavLink>
         </div>
       </div>
-      <div className="flex flex-col w-full [@media(min-width:850px)]:hidden">
+      {/* min-width:850px when it has the normal APPLY button */}
+      <div className="flex flex-col w-full [@media(min-width:860px)]:hidden">
         <div className="flex items-center justify-between w-full overflow-hidden">
           <NavLink
             href="/"
@@ -174,7 +192,7 @@ const Navbar = () => {
           <NavLink variant="mobile" href="/#team" onClick={handleMobileLinkClick}>
             Team
           </NavLink>
-          <NavLink
+          {/* <NavLink
             href={applicationLink}
             variant={"mobile_bold"}
             className="bg-[rgb(75,0,0)]"
@@ -182,6 +200,21 @@ const Navbar = () => {
             target="_blank"
           >
             APPLY
+          </NavLink> */}
+          <NavLink
+            href="/live"
+            variant={"mobile_bold"}
+            className="bg-[rgb(75,0,0)] font-TangoSansBold text-xl text-[#fd021d] flex flex-row justify-center items-center gap-2"
+            onClick={handleMobileLinkClick}
+            target="_blank"
+          >
+            <div className="flex items-center gap-2">
+              <div className="relative flex justify-center items-center">
+                <div className="absolute inline-flex w-4 h-4 bg-[#fd021d] rounded-full animate-ping duration-1000"></div>
+                <div className="relative inline-flex w-5 h-5 bg-[#fd021d] rounded-full"></div>
+              </div>
+              <span className="neon-text transform-gpu">LIVE</span>
+            </div>
           </NavLink>
           <div className="flex items-center justify-center">
             <NavLink
