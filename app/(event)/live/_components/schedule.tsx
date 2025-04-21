@@ -153,7 +153,7 @@ const ScheduleSection = () => {
               checked={showPrevEvents}
               onCheckedChange={() => setShowPrevEvents(!showPrevEvents)}
             />
-            <Label htmlFor="show-previous-events">Show Previous Events</Label>
+            <Label htmlFor="show-previous-events">Show Past Events</Label>
           </div>
           <Separator />
           {Object.keys(eventsByDay)
