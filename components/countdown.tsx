@@ -92,7 +92,7 @@ const Countdown: React.FC<CountdownProps> = ({ dark = false, size = "default" })
       <h2
         className={`font-TangoSansBold ${dark ? "text-white" : "text-primary"} ${
           hackathonConcluded ? "hidden" : ""
-        } ${size === "large" ? "text-4xl sm:text-6xl md:text-7xl lg:text-8xl" : "text-xl sm:text-5xl md:text-5xl"}`}
+        } ${size === "large" ? "text-4xl sm:text-6xl md:text-7xl lg:text-8xl" : "text-3xl sm:text-5xl md:text-5xl"}`}
         style={{ minHeight: size === "large" ? "4rem" : "3rem" }}
       >
         {countdownString}

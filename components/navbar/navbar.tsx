@@ -69,7 +69,6 @@ const Navbar = () => {
               href="/live"
               variant="bold"
               className="bg-[rgb(75,0,0)] font-TangoSansBold text-xl text-[#fd021d] flex flex-row justify-center items-center gap-2"
-              target="_blank"
             >
               <div className="flex items-center gap-2">
                 <div className="relative flex justify-center items-center">
@@ -206,7 +205,6 @@ const Navbar = () => {
             variant={"mobile_bold"}
             className="bg-[rgb(75,0,0)] font-TangoSansBold text-xl text-[#fd021d] flex flex-row justify-center items-center gap-2"
             onClick={handleMobileLinkClick}
-            target="_blank"
           >
             <div className="flex items-center gap-2">
               <div className="relative flex justify-center items-center">

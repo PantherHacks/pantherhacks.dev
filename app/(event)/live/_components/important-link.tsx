@@ -12,8 +12,8 @@ interface ImportantLinkProps {
 const ImportantLink: React.FC<ImportantLinkProps> = ({ name, url, icon: Icon, iconUrl }) => {
   return (
     <Link href={url} target="_blank">
-      <div className="flex flex-col w-48 h-48 bg-primary hover:bg-[#83022b] cursor-pointer text-white text-xl font-TangoSansBold justify-center items-center gap-2 rounded-2xl">
-        {Icon && <Icon className="w-16 h-16" />}
+      <div className="flex flex-col w-36 h-36 sm:w-48 sm:h-48 bg-primary hover:bg-[#83022b] cursor-pointer text-white sm:text-xl font-TangoSansBold justify-center items-center gap-2 rounded-2xl">
+        {Icon && <Icon className="w-12 h-12 sm:w-16 sm:h-16" />}
         {iconUrl && !Icon && (
           <Image
             src={iconUrl}
@@ -21,7 +21,7 @@ const ImportantLink: React.FC<ImportantLinkProps> = ({ name, url, icon: Icon, ic
             unoptimized
             width={100}
             height={100}
-            className="w-16 h-16 select-none"
+            className="w-12 h-12 sm:w-16 sm:h-16 select-none"
             draggable={false}
           />
         )}
