@@ -11,8 +11,13 @@ import { liveScheduleSpreadsheetID } from "@/lib/links";
 import EventCard from "./event-card";
 import { CalendarEvent } from "./schedule-helpers";
 
+interface EventsByDay {
+  [key: string]: CalendarEvent[];
+}
+
 const ScheduleSection = () => {
   const [calendarEvents, setCalendarEvents] = useState<CalendarEvent[]>([]);
+  const [eventsByDay, setEventsByDay] = useState<EventsByDay>({});
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
   const [isFetching, setIsFetching] = useState<boolean>(true);
   const [lastRefreshed, setLastRefreshed] = useState<Date | undefined>(undefined);
@@ -25,18 +30,32 @@ const ScheduleSection = () => {
 
       const data = await parser.parse();
 
-      setCalendarEvents(
-        data
-          .filter((event) => event.isHidden !== "TRUE")
-          .map((event) => ({
-            name: event.eventName,
-            activityType: event.eventType,
-            location: event.location,
-            description: event.description,
-            startTimestamp: new Date(event.startTime),
-            endTimestamp: new Date(event.endTime),
-          }))
-      );
+      const parsedEvents = data
+        .filter((event) => event.isHidden !== "TRUE")
+        .map((event) => ({
+          name: event.eventName,
+          activityType: event.eventType,
+          location: event.location,
+          description: event.description,
+          startTimestamp: new Date(event.startTime),
+          endTimestamp: new Date(event.endTime),
+        }));
+
+      setCalendarEvents(parsedEvents);
+
+      const groupedEvents: EventsByDay = parsedEvents.reduce((acc: EventsByDay, event) => {
+        const day = event.startTimestamp.toLocaleDateString([], {
+          weekday: "long",
+          month: "long",
+          day: "numeric",
+        });
+        if (!acc[day]) {
+          acc[day] = [];
+        }
+        acc[day].push(event);
+        return acc;
+      }, {});
+      setEventsByDay(groupedEvents);
 
       const now = new Date(Date.now());
       setLastRefreshed(now);
@@ -126,19 +145,38 @@ const ScheduleSection = () => {
           </div>
           <ScheduleFilters activeFilters={activeFilters} setActiveFilters={setActiveFilters} />
           <Separator />
-          {calendarEvents.map((event, index) =>
-            activeFilters.length === 0 || activeFilters.includes(event.activityType) ? (
-              <EventCard
-                key={index}
-                name={event.name}
-                activityType={event.activityType}
-                location={event.location}
-                description={event.description}
-                startTimestamp={event.startTimestamp}
-                endTimestamp={event.endTimestamp}
-              />
-            ) : null
-          )}
+          {Object.keys(eventsByDay)
+            .sort((a, b) => Date.parse(a) - Date.parse(b)) // Sort by date
+            .map((day) => {
+              const dailyEvents = eventsByDay[day].filter(
+                (event) => activeFilters.length === 0 || activeFilters.includes(event.activityType)
+              );
+              return (
+                <div
+                  key={day}
+                  aria-label={`Events for ${day}`}
+                  className="w-full flex flex-col justify-center items-center gap-4 pt-4 pb-3"
+                >
+                  <h3 className="font-bold text-2xl">{day}</h3>
+                  <Separator className="bg-white/20" />
+                  {dailyEvents.length > 0 ? (
+                    dailyEvents.map((event, index) => (
+                      <EventCard
+                        key={`${day}-${index}`}
+                        name={event.name}
+                        activityType={event.activityType}
+                        location={event.location}
+                        description={event.description}
+                        startTimestamp={event.startTimestamp}
+                        endTimestamp={event.endTimestamp}
+                      />
+                    ))
+                  ) : (
+                    <p className="text-white/60 italic text-center">No events matching the selected filters.</p>
+                  )}
+                </div>
+              );
+            })}
           <Separator />
           <p className="text-center italic font-bold text-lg text-white/80">That's all folks!</p>
         </div>

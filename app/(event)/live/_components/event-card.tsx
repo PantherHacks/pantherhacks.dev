@@ -34,14 +34,16 @@ const EventCard: React.FC<CalendarEvent> = ({
     >
       <div className="flex flex-col md:flex-row items-start md:items-center gap-2 mb-2 md:mb-0">
         <h3 className={cn("text-3xl flex-shrink", getCalendarEventColors(activityType)[2])}>{name}</h3>
-        <Badge className={cn("h-6 flex-shrink-0 whitespace-nowrap", getCalendarEventColors(activityType)[0])}>
-          {activityType === "Check-in" && <Clock className="w-3 h-3 mr-2" />}
-          {activityType === "Main Event" && <Star className="w-3 h-3 mr-2" />}
-          {activityType === "Hacking Time" && <Laptop className="w-3 h-3 mr-2" />}
-          {activityType === "Office Hours" && <MessageCircleQuestion className="w-3 h-3 mr-2" />}
-          {activityType === "Food" && <Utensils className="w-3 h-3 mr-2" />}
-          {activityType === "Social Event" && <Users className="w-3 h-3 mr-2" />}
-          {activityType === "Guest Speaker" && <Speech className="w-3 h-3 mr-2" />} {activityType}
+        <Badge
+          className={cn("h-6 flex-shrink-0 cursor-default whitespace-nowrap", getCalendarEventColors(activityType)[0])}
+        >
+          {activityType === "Check-in" && <Clock className="w-3 h-3 mr-2" aria-hidden="true" />}
+          {activityType === "Main Event" && <Star className="w-3 h-3 mr-2" aria-hidden="true" />}
+          {activityType === "Hacking Time" && <Laptop className="w-3 h-3 mr-2" aria-hidden="true" />}
+          {activityType === "Office Hours" && <MessageCircleQuestion className="w-3 h-3 mr-2" aria-hidden="true" />}
+          {activityType === "Food" && <Utensils className="w-3 h-3 mr-2" aria-hidden="true" />}
+          {activityType === "Social Event" && <Users className="w-3 h-3 mr-2" aria-hidden="true" />}
+          {activityType === "Guest Speaker" && <Speech className="w-3 h-3 mr-2" aria-hidden="true" />} {activityType}
         </Badge>
       </div>
       <Separator className="mb-2 bg-black" />

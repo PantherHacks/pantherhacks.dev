@@ -32,22 +32,27 @@ const ScheduleFilters: FC<ScheduleFiltersProps> = ({ activeFilters, setActiveFil
 
   return (
     <div className="flex flex-row justify-center items-center gap-2 flex-wrap max-w-[30rem]">
-      {activityTypes.map((type) => (
-        <Badge
-          key={type}
-          className={cn(
-            "min-h-6 cursor-pointer select-none transition-colors duration-300 ",
-            activeFilters.includes(type)
-              ? `${getCalendarEventColors(type)[2]} ${getCalendarEventColors(type)[3]} hover:${getCalendarEventColors(type)[2]}/75`
-              : "bg-white/20 hover:bg-white/30"
-          )}
-          aria-label={`Toggle filter for ${type} events`}
-          onClick={() => handleFilterChange(type)}
-        >
-          {activeFilters.includes(type) ? <CheckCircle className="pr-2" /> : <Circle className="pr-2" />}
-          {type}
-        </Badge>
-      ))}
+      {activityTypes.map((type) => {
+        const isFilterActive = activeFilters.includes(type);
+        return (
+          <Badge
+            key={type}
+            role="button" // Explicitly define as a button
+            aria-pressed={isFilterActive} // Indicate the toggle state
+            className={cn(
+              "min-h-6 cursor-pointer select-none transition-colors duration-300 ",
+              isFilterActive
+                ? `${getCalendarEventColors(type)[2]} ${getCalendarEventColors(type)[3]} hover:${getCalendarEventColors(type)[2]}/75`
+                : "bg-white/20 hover:bg-white/30"
+            )}
+            aria-label={`Toggle filter for ${type} events`}
+            onClick={() => handleFilterChange(type)}
+          >
+            {isFilterActive ? <CheckCircle className="pr-2" /> : <Circle className="pr-2" />}
+            {type}
+          </Badge>
+        );
+      })}
     </div>
   );
 };
