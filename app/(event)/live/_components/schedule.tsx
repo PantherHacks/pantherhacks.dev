@@ -147,7 +147,7 @@ const ScheduleSection = () => {
             <p className="text-xs ">Last refreshed {timeAgo}</p>
           </div>
           <ScheduleFilters activeFilters={activeFilters} setActiveFilters={setActiveFilters} />
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 pt-1">
             <Switch
               id="show-previous-events"
               checked={showPrevEvents}
