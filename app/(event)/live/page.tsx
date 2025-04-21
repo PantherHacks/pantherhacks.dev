@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar";
 
 import "./_components/live.css";
 
+import ImportantLinksSection from "./_components/important-links";
 import LiveHeading from "./_components/live-heading";
 import ScheduleSection from "./_components/schedule";
 
@@ -14,6 +15,7 @@ const LivePage = () => {
       <Navbar />
       <main className="flex flex-1 flex-col" id="live-schedule" aria-label="Live Schedule Section">
         <LiveHeading />
+        <ImportantLinksSection />
         <ScheduleSection />
       </main>
       <Footer daytimeVariant={false} />
