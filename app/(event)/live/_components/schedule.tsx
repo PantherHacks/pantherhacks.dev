@@ -5,7 +5,9 @@ import PublicGoogleSheetsParser from "public-google-sheets-parser";
 
 import ScheduleFilters from "@/app/(event)/live/_components/schedule-filters";
 import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
+import { Switch } from "@/components/ui/switch";
 import { hackathonDateInfo } from "@/lib/dates";
 import { liveScheduleSpreadsheetID } from "@/lib/links";
 import EventCard from "./event-card";
@@ -19,6 +21,7 @@ const ScheduleSection = () => {
   const [calendarEvents, setCalendarEvents] = useState<CalendarEvent[]>([]);
   const [eventsByDay, setEventsByDay] = useState<EventsByDay>({});
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
+  const [showPrevEvents, setShowPrevEvents] = useState<boolean>(false);
   const [isFetching, setIsFetching] = useState<boolean>(true);
   const [lastRefreshed, setLastRefreshed] = useState<Date | undefined>(undefined);
   const [timeAgo, setTimeAgo] = useState<string>("");
@@ -144,6 +147,14 @@ const ScheduleSection = () => {
             <p className="text-xs ">Last refreshed {timeAgo}</p>
           </div>
           <ScheduleFilters activeFilters={activeFilters} setActiveFilters={setActiveFilters} />
+          <div className="flex items-center space-x-2">
+            <Switch
+              id="show-previous-events"
+              checked={showPrevEvents}
+              onCheckedChange={() => setShowPrevEvents(!showPrevEvents)}
+            />
+            <Label htmlFor="show-previous-events">Show Previous Events</Label>
+          </div>
           <Separator />
           {Object.keys(eventsByDay)
             .sort((a, b) => Date.parse(a) - Date.parse(b)) // Sort by date
