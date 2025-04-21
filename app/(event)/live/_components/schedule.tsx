@@ -159,9 +159,12 @@ const ScheduleSection = () => {
           {Object.keys(eventsByDay)
             .sort((a, b) => Date.parse(a) - Date.parse(b)) // Sort by date
             .map((day) => {
+              if (!showPrevEvents && Date.parse(day) < Date.now()) return;
+
               const dailyEvents = eventsByDay[day].filter(
                 (event) => activeFilters.length === 0 || activeFilters.includes(event.activityType)
               );
+
               return (
                 <div
                   key={day}
@@ -171,17 +174,21 @@ const ScheduleSection = () => {
                   <h3 className="font-bold text-2xl">{day}</h3>
                   <Separator className="bg-white/20" />
                   {dailyEvents.length > 0 ? (
-                    dailyEvents.map((event, index) => (
-                      <EventCard
-                        key={`${day}-${index}`}
-                        name={event.name}
-                        activityType={event.activityType}
-                        location={event.location}
-                        description={event.description}
-                        startTimestamp={event.startTimestamp}
-                        endTimestamp={event.endTimestamp}
-                      />
-                    ))
+                    dailyEvents.map((event, index) => {
+                      if (!showPrevEvents && event.endTimestamp.getTime() < Date.now()) return null;
+                      else
+                        return (
+                          <EventCard
+                            key={`${day}-${index}`}
+                            name={event.name}
+                            activityType={event.activityType}
+                            location={event.location}
+                            description={event.description}
+                            startTimestamp={event.startTimestamp}
+                            endTimestamp={event.endTimestamp}
+                          />
+                        );
+                    })
                   ) : (
                     <p className="text-white/60 italic text-center">No events matching the selected filters.</p>
                   )}

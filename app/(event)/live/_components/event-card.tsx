@@ -24,6 +24,7 @@ const EventCard: React.FC<CalendarEvent> = ({
   startTimestamp,
   endTimestamp,
 }) => {
+  //TODO: highlight an event if it is happening currently
   return (
     <div
       className={cn(
