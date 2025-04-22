@@ -159,18 +159,46 @@ const ScheduleSection = () => {
           {Object.keys(eventsByDay)
             .sort((a, b) => Date.parse(a) - Date.parse(b)) // Sort by date
             .map((day) => {
-              if (!showPrevEvents) {
-                const parsedDate = new Date(Date.parse(day + " " + hackathonDateInfo.year));
-                parsedDate.setDate(parsedDate.getDate() + 1); // Add one day (24 hours)
+              // original daily events and get the end of this day
+              const originalDailyEvents = eventsByDay[day] || [];
+              const endOfDay = new Date(Date.parse(day + " " + hackathonDateInfo.year));
+              endOfDay.setHours(23, 59, 59, 999);
+              const isDayOver = endOfDay.getTime() < Date.now();
 
-                if (parsedDate.getTime() < Date.now()) {
-                  return;
-                }
-              }
-
-              const dailyEvents = eventsByDay[day].filter(
+              // filter events by type of event
+              const dailyEventsFilteredByType = originalDailyEvents.filter(
                 (event) => activeFilters.length === 0 || activeFilters.includes(event.activityType)
               );
+
+              // filter events by time
+              const futureOrCurrentFilteredEvents = showPrevEvents
+                ? dailyEventsFilteredByType // If showing previous, use all type-filtered events
+                : dailyEventsFilteredByType.filter(
+                    // filter by whether event has passed
+                    (event) => event.endTimestamp.getTime() >= Date.now()
+                  );
+
+              // don't render day if not showing previous events and day is over
+              if (!showPrevEvents && isDayOver) {
+                return null;
+              }
+
+              // hide the day if there are no future events left (and not showing previous events)
+              const hideBecauseNoFutureEventsLeft = !showPrevEvents && futureOrCurrentFilteredEvents.length === 0;
+
+              // still show the day despite no future events if filter is what hides the event
+              const showDespiteNoFutureEvents =
+                hideBecauseNoFutureEventsLeft &&
+                dailyEventsFilteredByType.length === 0 &&
+                originalDailyEvents.length > 0;
+
+              // combine previous two checks to render nothing if no future events and filters weren't the cause
+              if (hideBecauseNoFutureEventsLeft && !showDespiteNoFutureEvents) {
+                return null;
+              }
+
+              // get events to be rendered
+              const eventsToRender = futureOrCurrentFilteredEvents;
 
               return (
                 <div
@@ -180,24 +208,32 @@ const ScheduleSection = () => {
                 >
                   <h3 className="font-bold text-2xl">{day}</h3>
                   <Separator className="bg-white/20" />
-                  {dailyEvents.length > 0 ? (
-                    dailyEvents.map((event, index) => {
-                      if (!showPrevEvents && event.endTimestamp.getTime() < Date.now()) return null;
-                      else
-                        return (
-                          <EventCard
-                            key={`${day}-${index}`}
-                            name={event.name}
-                            activityType={event.activityType}
-                            location={event.location}
-                            description={event.description}
-                            startTimestamp={event.startTimestamp}
-                            endTimestamp={event.endTimestamp}
-                          />
-                        );
-                    })
+                  {eventsToRender.length > 0 ? (
+                    // show events if there are events to render
+                    eventsToRender.map((event, index) => (
+                      <EventCard
+                        key={`${day}-${index}`}
+                        name={event.name}
+                        activityType={event.activityType}
+                        location={event.location}
+                        description={event.description}
+                        startTimestamp={event.startTimestamp}
+                        endTimestamp={event.endTimestamp}
+                      />
+                    ))
+                  ) : // if no events to render
+                  originalDailyEvents.length === 0 ? (
+                    <p className="text-white/60 italic text-center">No scheduled events for this day.</p>
+                  ) : dailyEventsFilteredByType.length === 0 ? ( // if no daily events filtered by type for the day
+                    <p className="text-white/60 italic text-center">
+                      No events matching the selected filters for this day.
+                    </p>
+                  ) : dailyEventsFilteredByType.length === 0 ? ( // Double check if filters are the cause of no events being shown
+                    <p className="text-white/60 italic text-center">
+                      No events matching the selected filters for this day.
+                    </p>
                   ) : (
-                    <p className="text-white/60 italic text-center">No events matching the selected filters.</p>
+                    <p className="text-white/60 italic text-center">No remaining events for this day.</p>
                   )}
                 </div>
               );
