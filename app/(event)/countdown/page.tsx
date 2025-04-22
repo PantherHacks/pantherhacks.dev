@@ -18,8 +18,12 @@ const CountdownPage = () => {
 
     const handleMouseMove = () => {
       setShowButton(true);
+      document.body.style.cursor = "default";
       clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => setShowButton(false), 2000);
+      timeoutId = setTimeout(() => {
+        setShowButton(false);
+        document.body.style.cursor = "none";
+      }, 2000);
     };
 
     window.addEventListener("mousemove", handleMouseMove);
@@ -27,6 +31,7 @@ const CountdownPage = () => {
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
       clearTimeout(timeoutId);
+      document.body.style.cursor = "default";
     };
   }, []);
 
@@ -59,12 +64,12 @@ const CountdownPage = () => {
   }, [position, rotation]);
 
   useEffect(() => {
-    const timeAmountInMiliseconds = Math.floor(Math.random() * (20 * 60 * 1000 - 30 * 1000) + 30 * 1000); // random time between 30 seconds and 20 minutes
+    const timeAmountInMilliseconds = Math.floor(Math.random() * (20 * 60 * 1000 - 30 * 1000) + 30 * 1000); // random time between 30 seconds and 20 minutes
 
     const intervalId = setInterval(() => {
       setPosition(-200);
       animate();
-    }, timeAmountInMiliseconds);
+    }, timeAmountInMilliseconds);
 
     return () => clearInterval(intervalId);
   }, [animate]);
