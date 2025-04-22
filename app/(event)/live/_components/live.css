@@ -8,7 +8,9 @@
 
 .neon-text-small {
   color: #fd021d;
-  text-shadow: 0 0 1px #fd021d, 0 0 3px rgba(213, 0, 0, 0.82);
+  text-shadow:
+    0 0 1px #fd021d,
+    0 0 3px rgba(213, 0, 0, 0.82);
 }
 
 .highlighted-card {

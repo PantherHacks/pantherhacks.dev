@@ -16,7 +16,7 @@ const LiveHeading = () => {
           </div>
           <span className="text-white text-shadow-none text-7xl">]</span>
         </h2>
-        <h2 className="font-TangoSansBold text-4xl sm:text-5xl md:text-6xl text-white text-center">
+        <h2 className="font-TangoSansBold text-4xl sm:text-6xl md:text-7xl text-white text-center mx-6">
           PANTHERHACKS {hackathonDateInfo.year}
         </h2>
       </div>

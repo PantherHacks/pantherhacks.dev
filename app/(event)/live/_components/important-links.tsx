@@ -7,11 +7,9 @@ import ImportantLink from "./important-link";
 const ImportantLinksSection = () => {
   return (
     <div id="important-links" className="flex flex-col items-center justify-center text-center w-full pt-40 py-20">
-      <h2 className="font-TangoSansBold text-5xl sm:text-6xl text-white pb-10">Important Links</h2>
+      <h2 className="font-TangoSansBold text-4xl sm:text-6xl text-white pb-10 mx-4">Important Links</h2>
       <p className="mx-8 sm:mx-20 md:mx-64 text-center max-w-[50rem] pb-10">
-        <span className="font-bold">
-          Below you can find important links you may need for PantherHacks {hackathonDateInfo.year}.
-        </span>
+        Below you can find important links you may need for PantherHacks {hackathonDateInfo.year}.
       </p>
       <div className="pt-8 pb-4 flex flex-row flex-wrap gap-3 md:gap-6 px-4 sm:px-8 md:px-16 max-w-[60rem] justify-center items-center">
         <ImportantLink name="Devpost" url={devpostUrl} icon={Code} />
