@@ -5,7 +5,9 @@ import PublicGoogleSheetsParser from "public-google-sheets-parser";
 
 import ScheduleFilters from "@/app/(event)/live/_components/schedule-filters";
 import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
+import { Switch } from "@/components/ui/switch";
 import { hackathonDateInfo } from "@/lib/dates";
 import { liveScheduleSpreadsheetID } from "@/lib/links";
 import EventCard from "./event-card";
@@ -19,6 +21,7 @@ const ScheduleSection = () => {
   const [calendarEvents, setCalendarEvents] = useState<CalendarEvent[]>([]);
   const [eventsByDay, setEventsByDay] = useState<EventsByDay>({});
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
+  const [showPrevEvents, setShowPrevEvents] = useState<boolean>(false);
   const [isFetching, setIsFetching] = useState<boolean>(true);
   const [lastRefreshed, setLastRefreshed] = useState<Date | undefined>(undefined);
   const [timeAgo, setTimeAgo] = useState<string>("");
@@ -144,13 +147,59 @@ const ScheduleSection = () => {
             <p className="text-xs ">Last refreshed {timeAgo}</p>
           </div>
           <ScheduleFilters activeFilters={activeFilters} setActiveFilters={setActiveFilters} />
+          <div className="flex items-center space-x-2 pt-1">
+            <Switch
+              id="show-previous-events"
+              checked={showPrevEvents}
+              onCheckedChange={() => setShowPrevEvents(!showPrevEvents)}
+            />
+            <Label htmlFor="show-previous-events">Show Past Events</Label>
+          </div>
           <Separator />
           {Object.keys(eventsByDay)
             .sort((a, b) => Date.parse(a) - Date.parse(b)) // Sort by date
             .map((day) => {
-              const dailyEvents = eventsByDay[day].filter(
+              // original daily events and get the end of this day
+              const originalDailyEvents = eventsByDay[day] || [];
+              const endOfDay = new Date(Date.parse(day + " " + hackathonDateInfo.year));
+              endOfDay.setHours(23, 59, 59, 999);
+              const isDayOver = endOfDay.getTime() < Date.now();
+
+              // filter events by type of event
+              const dailyEventsFilteredByType = originalDailyEvents.filter(
                 (event) => activeFilters.length === 0 || activeFilters.includes(event.activityType)
               );
+
+              // filter events by time
+              const futureOrCurrentFilteredEvents = showPrevEvents
+                ? dailyEventsFilteredByType // If showing previous, use all type-filtered events
+                : dailyEventsFilteredByType.filter(
+                    // filter by whether event has passed
+                    (event) => event.endTimestamp.getTime() >= Date.now()
+                  );
+
+              // don't render day if not showing previous events and day is over
+              if (!showPrevEvents && isDayOver) {
+                return null;
+              }
+
+              // hide the day if there are no future events left (and not showing previous events)
+              const hideBecauseNoFutureEventsLeft = !showPrevEvents && futureOrCurrentFilteredEvents.length === 0;
+
+              // still show the day despite no future events if filter is what hides the event
+              const showDespiteNoFutureEvents =
+                hideBecauseNoFutureEventsLeft &&
+                dailyEventsFilteredByType.length === 0 &&
+                originalDailyEvents.length > 0;
+
+              // combine previous two checks to render nothing if no future events and filters weren't the cause
+              if (hideBecauseNoFutureEventsLeft && !showDespiteNoFutureEvents) {
+                return null;
+              }
+
+              // get events to be rendered
+              const eventsToRender = futureOrCurrentFilteredEvents;
+
               return (
                 <div
                   key={day}
@@ -159,8 +208,9 @@ const ScheduleSection = () => {
                 >
                   <h3 className="font-bold text-2xl">{day}</h3>
                   <Separator className="bg-white/20" />
-                  {dailyEvents.length > 0 ? (
-                    dailyEvents.map((event, index) => (
+                  {eventsToRender.length > 0 ? (
+                    // show events if there are events to render
+                    eventsToRender.map((event, index) => (
                       <EventCard
                         key={`${day}-${index}`}
                         name={event.name}
@@ -171,8 +221,19 @@ const ScheduleSection = () => {
                         endTimestamp={event.endTimestamp}
                       />
                     ))
+                  ) : // if no events to render
+                  originalDailyEvents.length === 0 ? (
+                    <p className="text-white/60 italic text-center">No scheduled events for this day.</p>
+                  ) : dailyEventsFilteredByType.length === 0 ? ( // if no daily events filtered by type for the day
+                    <p className="text-white/60 italic text-center">
+                      No events matching the selected filters for this day.
+                    </p>
+                  ) : dailyEventsFilteredByType.length === 0 ? ( // Double check if filters are the cause of no events being shown
+                    <p className="text-white/60 italic text-center">
+                      No events matching the selected filters for this day.
+                    </p>
                   ) : (
-                    <p className="text-white/60 italic text-center">No events matching the selected filters.</p>
+                    <p className="text-white/60 italic text-center">No remaining events for this day.</p>
                   )}
                 </div>
               );
