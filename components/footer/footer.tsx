@@ -5,7 +5,11 @@ import { FooterSocialLink } from "@/components/footer/footer-social-link";
 import { hackathonDateInfo } from "@/lib/dates";
 import { contactEmail, discordLink, gitHubLink, instagramLink } from "@/lib/links";
 
-const Footer = () => {
+interface FooterProps {
+  daytimeVariant?: boolean;
+}
+
+const Footer: React.FC<FooterProps> = ({ daytimeVariant = true }) => {
   return (
     <>
       <Image
@@ -15,7 +19,9 @@ const Footer = () => {
         height={10000}
         className="translate-y-4 pt-36"
         style={{
-          background: `linear-gradient(#FFFFFF 0%, #4DC9CC 98%, #00000000 98.1%, #00000000 100%)`,
+          background: daytimeVariant
+            ? `linear-gradient(#FFFFFF 0%, #4DC9CC 98%, #00000000 98.1%, #00000000 100%)`
+            : `linear-gradient(#000000, #1F214D, #50366F, #BF3475, #EE6C45, #FFCE61, #FFE58A 98%, #00000000 98.1%, #00000000 100%)`,
         }}
       />
       <footer className="flex flex-col justify-center items-center w-full space-y-2 p-4 bg-primary">
@@ -53,7 +59,7 @@ const Footer = () => {
             />
           </FooterSocialLink>
           <FooterSocialLink href={contactEmail} aria-label="Chapman Computer Science Club Email">
-            <Mail className="w-[24px] h-[24px] filter invert" />
+            <Mail className="w-[24px] h-[24px] text-white" />
           </FooterSocialLink>
         </div>
       </footer>

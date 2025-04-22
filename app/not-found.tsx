@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Footer from "@/components/footer/footer";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/navbar/navbar";
 
 export default function NotFound() {
   return (

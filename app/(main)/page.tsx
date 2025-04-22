@@ -1,6 +1,6 @@
 import MainContent from "@/app/(main)/_components/main-content";
 import Footer from "@/components/footer/footer";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/navbar/navbar";
 
 export default function Home() {
   return (
