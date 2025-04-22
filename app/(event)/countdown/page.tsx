@@ -3,13 +3,14 @@
 import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Home, Radio } from "lucide-react";
+import { Home, Maximize, Minimize, Radio } from "lucide-react";
 
 import Countdown from "@/components/countdown";
 import { Button } from "@/components/ui/button";
 
 const CountdownPage = () => {
   const [showButton, setShowButton] = useState<boolean>(true);
+  const [isFullscreen, setIsFullscreen] = useState(false);
   const [position, setPosition] = useState<number>(-200);
   const [rotation, setRotation] = useState<number>(0);
 
@@ -34,6 +35,26 @@ const CountdownPage = () => {
       document.body.style.cursor = "default";
     };
   }, []);
+
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+    };
+
+    document.addEventListener("fullscreenchange", handleFullscreenChange);
+
+    return () => {
+      document.removeEventListener("fullscreenchange", handleFullscreenChange);
+    };
+  }, []);
+
+  const toggleFullscreen = () => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+    } else {
+      document.exitFullscreen();
+    }
+  };
 
   const animate = useCallback(() => {
     const speed = 1;
@@ -102,6 +123,14 @@ const CountdownPage = () => {
           <Radio />
         </Button>
       </Link>
+      <Button
+        className={`absolute top-4 right-4 px-3 py-2 bg-transparent hover:bg-[#83022b] transition-opacity duration-300 ${
+          showButton ? "opacity-100" : "opacity-0"
+        }`}
+        onClick={toggleFullscreen}
+      >
+        {isFullscreen ? <Minimize /> : <Maximize />}
+      </Button>
       <div className="z-50">
         <Countdown dark size="large" />
       </div>
