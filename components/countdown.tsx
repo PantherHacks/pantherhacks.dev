@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { countdownDescriptions } from "@/lib/countdown";
 import { applicationDateInfo, hackathonDateInfo } from "@/lib/dates";
+import { Skeleton } from "./ui/skeleton";
 
 interface CountdownProps {
   dark?: boolean;
@@ -89,22 +90,30 @@ const Countdown: React.FC<CountdownProps> = ({ dark = false, size = "default" })
 
   return (
     <div className="flex flex-col gap-y-2 justify-center items-center">
-      <h2
-        className={`font-TangoSansBold ${dark ? "text-white" : "text-primary"} ${
-          hackathonConcluded ? "hidden" : ""
-        } ${size === "large" ? "text-4xl sm:text-6xl md:text-7xl lg:text-8xl" : "text-3xl sm:text-5xl md:text-5xl"}`}
-        style={{ minHeight: size === "large" ? "4rem" : "3rem" }}
-      >
-        {countdownString}
-      </h2>
-      <h3
-        className={`px-10 md:px-24 text-center ${
-          hackathonConcluded ? "font-TangoSansBold text-primary" : ""
-        } ${size === "large" ? "text-3xl sm:text-4xl md:text-5xl" : "text-xl sm:text-2xl md:text-3xl"}`}
-        style={{ minHeight: size === "large" ? "3.5rem" : "2.5rem" }}
-      >
-        {descriptionString}
-      </h3>
+      {!countdownString ? (
+        <Skeleton className={`rounded-full ${size === "large" ? "w-[300px] h-[4rem]" : "w-[200px] h-[3rem]"}`} />
+      ) : (
+        <h2
+          className={`font-TangoSansBold ${dark ? "text-white" : "text-primary"} ${
+            hackathonConcluded ? "hidden" : ""
+          } ${size === "large" ? "text-4xl sm:text-6xl md:text-7xl lg:text-8xl" : "text-3xl sm:text-5xl md:text-5xl"}`}
+          style={{ minHeight: size === "large" ? "4rem" : "3rem" }}
+        >
+          {countdownString}
+        </h2>
+      )}
+      {!descriptionString ? (
+        <Skeleton className={`rounded-full ${size === "large" ? "w-[250px] h-[3.5rem]" : "w-[150px] h-[2.5rem]"}`} />
+      ) : (
+        <h3
+          className={`px-10 md:px-24 text-center ${
+            hackathonConcluded ? "font-TangoSansBold text-primary" : ""
+          } ${size === "large" ? "text-3xl sm:text-4xl md:text-5xl" : "text-xl sm:text-2xl md:text-3xl"}`}
+          style={{ minHeight: size === "large" ? "3.5rem" : "2.5rem" }}
+        >
+          {descriptionString}
+        </h3>
+      )}
     </div>
   );
 };
