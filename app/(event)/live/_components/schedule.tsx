@@ -133,7 +133,9 @@ const ScheduleSection = () => {
         />
       )}
       {!isFetching && calendarEvents.length === 0 && (
-        <p className="font-bold text-lg text-red-600">Failed to load events. Please refresh the page and try again!</p>
+        <p className="font-bold text-lg text-red-600 text-center mx-10">
+          Failed to load events. Check your connection, refresh the page, and try again!
+        </p>
       )}
       {!isFetching && calendarEvents.length > 0 && (
         <div className="flex flex-col gap-4 justify-center items-center px-10">
