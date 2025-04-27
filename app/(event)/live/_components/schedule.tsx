@@ -238,6 +238,11 @@ const ScheduleSection = () => {
                 </div>
               );
             })}
+          {!showPrevEvents &&
+            Object.keys(eventsByDay).every((day) => {
+              const dailyEvents = eventsByDay[day] || [];
+              return dailyEvents.every((event) => event.endTimestamp.getTime() < Date.now());
+            }) && <p className="font-bold text-lg text-center mx-10">There are no more upcoming events.</p>}
           <Separator />
           <p className="text-center italic font-bold text-lg text-white/80">That's all folks!</p>
         </div>
