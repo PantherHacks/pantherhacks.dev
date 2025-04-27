@@ -13,5 +13,5 @@ export const countdownDescriptions = {
   toApplicationDue: "until applications due",
   toStart: "until hacking begins",
   toEnd: "until submissions due",
-  hasEnded: `PantherHacks ${hackathonDateInfo.year} has concluded. Thank you for participating!`,
+  hasEnded: `PantherHacks ${hackathonDateInfo.year} has concluded.`,
 };
