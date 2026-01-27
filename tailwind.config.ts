@@ -60,6 +60,11 @@ export default {
         TangoSans: "Tango Sans",
         TangoSansBold: "Tango Sans Bold",
         NeuePlak: "Neue Plak",
+        Xirod: "Xirod",
+        UbuntoMono: "Ubuntu Mono",
+        UbuntoMonoItalic: "Ubuntu Mono Italic",
+        UbuntoMonoBold: "Ubuntu Mono Bold",
+        UbuntoMonoBoldItalic: "Ubuntu Mono Bold Italic",
       },
       keyframes: {
         "accordion-down": {
