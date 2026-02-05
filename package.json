@@ -1,6 +1,6 @@
 {
   "name": "pantherhacks.dev",
-  "version": "1.3.4",
+  "version": "2026.1",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -24,7 +24,7 @@
     "clsx": "^2.1.1",
     "eslint-prettier-next-15": "^0.1.11",
     "lucide-react": "^0.474.0",
-    "next": "15.2.4",
+    "next": "15.4.8",
     "public-google-sheets-parser": "^1.5.4",
     "react": "^19.0.0",
     "react-confetti": "^6.4.0",
