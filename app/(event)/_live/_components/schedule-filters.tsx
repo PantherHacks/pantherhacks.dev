@@ -1,7 +1,7 @@
 import { Dispatch, FC, SetStateAction } from "react";
 import { CheckCircle, Circle } from "lucide-react";
 
-import { getCalendarEventColors } from "@/app/(event)/live/_components/schedule-helpers";
+import { getCalendarEventColors } from "@/app/(event)/_live/_components/schedule-helpers";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 

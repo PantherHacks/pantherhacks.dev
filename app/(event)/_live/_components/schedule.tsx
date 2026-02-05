@@ -3,7 +3,7 @@ import Image from "next/image";
 import { RefreshCcw } from "lucide-react";
 import PublicGoogleSheetsParser from "public-google-sheets-parser";
 
-import ScheduleFilters from "@/app/(event)/live/_components/schedule-filters";
+import ScheduleFilters from "@/app/(event)/_live/_components/schedule-filters";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
