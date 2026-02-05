@@ -15,14 +15,14 @@
  */
 export const hackathonDateInfo = {
   month: "April",
-  startDay: 25,
+  startDay: 3,
   startHour: 17,
   startMinute: 0,
-  endDay: 27,
+  endDay: 5,
   endHour: 17,
   endMinute: 0,
   endTime: "5:00pm",
-  year: 2025,
+  year: 2026,
   get dateString() {
     return this.month + " " + this.startDay + "-" + this.endDay + ", " + this.year;
   },

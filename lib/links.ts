@@ -2,7 +2,7 @@
 export const mainWebsiteLink = "https://pantherhacks.dev";
 export const gitHubLink = "https://github.com/PantherHacks/pantherhacks.dev";
 export const discordLink = "https://discord.gg/gXBAU6GsZQ";
-export const instagramLink = "https://www.instagram.com/chapmancsclub/";
+export const instagramLink = "https://www.instagram.com/pantherhacks.dev/";
 export const contactEmail = "mailto:info@pantherhacks.dev";
 export const applicationLink = "https://forms.gle/pg198Dya3wzJEYo5A";
 export const devpostUrl = "https://pantherhacks.devpost.com/";

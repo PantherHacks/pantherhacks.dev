@@ -9,21 +9,9 @@ interface FooterProps {
   daytimeVariant?: boolean;
 }
 
-const Footer: React.FC<FooterProps> = ({ daytimeVariant = true }) => {
+const Footer: React.FC<FooterProps> = () => {
   return (
     <>
-      <Image
-        src="/images/arch/Arch.svg"
-        alt="The Schmid Gate"
-        width={100000}
-        height={10000}
-        className="translate-y-4 pt-36"
-        style={{
-          background: daytimeVariant
-            ? `linear-gradient(#FFFFFF 0%, #4DC9CC 98%, #00000000 98.1%, #00000000 100%)`
-            : `linear-gradient(#000000, #1F214D, #50366F, #BF3475, #EE6C45, #FFCE61, #FFE58A 98%, #00000000 98.1%, #00000000 100%)`,
-        }}
-      />
       <footer className="flex flex-col justify-center items-center w-full space-y-2 p-4 bg-primary">
         <p className="font-TangoSansBold text-xl text-center text-white">PantherHacks {hackathonDateInfo.year}</p>
         <p className="text-white text-center pt-2">Made with ❤️ by the PantherHacks Team</p>

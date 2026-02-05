@@ -61,10 +61,10 @@ export default {
         TangoSansBold: "Tango Sans Bold",
         NeuePlak: "Neue Plak",
         Xirod: "Xirod",
-        UbuntoMono: "Ubuntu Mono",
-        UbuntoMonoItalic: "Ubuntu Mono Italic",
-        UbuntoMonoBold: "Ubuntu Mono Bold",
-        UbuntoMonoBoldItalic: "Ubuntu Mono Bold Italic",
+        UbuntuMono: "Ubuntu Mono",
+        UbuntuMonoItalic: "Ubuntu Mono Italic",
+        UbuntuMonoBold: "Ubuntu Mono Bold",
+        UbuntuMonoBoldItalic: "Ubuntu Mono Bold Italic",
       },
       keyframes: {
         "accordion-down": {
@@ -83,10 +83,19 @@ export default {
             height: "0",
           },
         },
+        blink: {
+          "0%, 49%": {
+            opacity: "1",
+          },
+          "50%, 100%": {
+            opacity: "0",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        blink: "blink 1s ease-in-out infinite",
       },
     },
   },
