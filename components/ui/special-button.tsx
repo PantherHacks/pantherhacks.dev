@@ -16,27 +16,27 @@ export default function SpecialButton({ children, onClick, className = "" }: Spe
   // tailwind class strings
 
   // text
-  const defaultTextColor = "text-teal-300";
+  const defaultTextColor = "text-[#04EEFD]";
   const hoverTextColor = "text-orange-600";
   const clickedTextColor = "text-fuchsia-500";
 
   // border 1
-  const defaultBorderColor1 = "border-teal-300";
+  const defaultBorderColor1 = "border-[#04EEFD]";
   const hoverBorderColor1 = "border-orange-600";
   const clickedBorderColor1 = "border-fuchsia-500";
 
   // border 2
-  const defaultBorderColor2 = "border-teal-300/50";
+  const defaultBorderColor2 = "border-[#04EEFD]/50";
   const hoverBorderColor2 = "border-orange-600/50";
   const clickedBorderColor2 = "border-fuchsia-500/50";
 
   // border 3
-  const defaultBorderColor3 = "border-teal-300/30";
+  const defaultBorderColor3 = "border-[#04EEFD]/30";
   const hoverBorderColor3 = "border-orange-600/30";
   const clickedBorderColor3 = "border-fuchsia-500/30";
 
   // border 4
-  const defaultBorderColor4 = "border-teal-300/10";
+  const defaultBorderColor4 = "border-[#04EEFD]/10";
   const hoverBorderColor4 = "border-orange-600/10";
   const clickedBorderColor4 = "border-fuchsia-500/10";
 

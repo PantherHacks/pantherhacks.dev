@@ -22,7 +22,7 @@ const TeamSection = () => {
         className="block md:hidden w-64 h-64 sm:w-96 sm:h-96 absolute top-0 -translate-y-1/2 select-none"
         draggable={false}
       />
-      <h2 className="font-Xirod text-6xl text-[#04EEFD] pb-10">Team</h2>
+      <h2 className="font-Xirod text-6xl text-[#04EEFD] drop-shadow-[0_10px_10px_rgba(4,238,253,0.5)] pb-4">Team</h2>
       <p className="mx-8 font-UbuntuMono text-lg sm:mx-20 md:mx-24 text-center">
         Meet the people who made PantherHacks {hackathonDateInfo.year} possible.
       </p>
