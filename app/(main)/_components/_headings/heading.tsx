@@ -54,21 +54,21 @@ const Heading = () => {
         </ParallaxBannerLayer> */}
 
         <ParallaxBannerLayer speed={20}>
-          <div className="absolute w-full flex justify-center items-center text-center top-[26rem] z-50">
+          <div className="absolute w-full flex justify-center items-center text-center top-[26rem] z-30">
             <h1 className="font-Xirod text-2xl sm:text-5xl lg:text-6xl xl:text-7xl text-[#fe5401] max-w-[calc(100vw-4rem)] drop-shadow-lg">
               PANTHERHACKS {hackathonDateInfo.year}
             </h1>
           </div>
         </ParallaxBannerLayer>
 
-        <div className="absolute w-full flex flex-col justify-center items-center text-center gap-y-8 top-[36rem] z-[70]">
+        <div className="absolute w-full flex flex-col justify-center items-center text-center gap-y-8 top-[36rem] z-30">
           <Link href="/apply" target="_blank" rel="noopener noreferrer">
             <SpecialButton className="font-Xirod text-4xl">APPLY NOW</SpecialButton>
           </Link>
         </div>
 
         <ParallaxBannerLayer speed={20}>
-          <div className="absolute w-full flex flex-col justify-center items-center text-center gap-y-8 top-[34rem] z-[60]">
+          <div className="absolute w-full flex flex-col justify-center items-center text-center gap-y-8 top-[34rem] z-30">
             <h2 className="font-UbuntuMonoBold text-xl sm:text-5xl text-white cursor-default [@media(min-width:1800px)]:bg-[#3F1324] p-4 rounded-lg">
               {hackathonDateInfo.dateString}
             </h2>
