@@ -1,11 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 
 import SpecialButton from "@/components/ui/special-button";
 import { hackathonDateInfo } from "@/lib/dates";
-import Link from "next/link";
 
 const Heading = () => {
   return (
