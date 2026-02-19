@@ -57,16 +57,16 @@ export default function SpecialButton({ children, onClick, className = "" }: Spe
     >
       {children}
       <div
-        className={`absolute bottom-0 left-0 w-full h-full rounded-none border-2 transition-all ${isClicked ? `${clickedBorderColor1} scale-[153%] duration-700` : isHovered ? `${hoverBorderColor1} scale-[103%] ${!wasClicked ? "" : "delay-300"}` : `${defaultBorderColor1} delay-300`}`}
+        className={`absolute bottom-0 left-0 w-full h-full rounded-none border-2 transition-all ${isClicked ? `${clickedBorderColor1} scale-[113%]` : isHovered ? `${hoverBorderColor1} scale-[103%] ${!wasClicked ? "" : "delay-300"}` : `${defaultBorderColor1} delay-300`}`}
       ></div>
       <div
-        className={`absolute -bottom-1 left-0 w-full h-full rounded-none border-2 transition-all ${isClicked ? `${clickedBorderColor2} delay-100 scale-[150%] duration-700` : isHovered ? `${hoverBorderColor2} scale-[100%] ${!wasClicked ? "delay-100" : "delay-200"}` : `${defaultBorderColor2} scale-[97%] delay-200`}`}
+        className={`absolute -bottom-1 left-0 w-full h-full rounded-none border-2 transition-all ${isClicked ? `${clickedBorderColor2} delay-100 scale-[110%]` : isHovered ? `${hoverBorderColor2} scale-[100%] ${!wasClicked ? "delay-100" : "delay-200"}` : `${defaultBorderColor2} scale-[97%] delay-200`}`}
       ></div>
       <div
-        className={`absolute -bottom-2 left-0 w-full h-full rounded-none border-2 transition-all ${isClicked ? `${clickedBorderColor3} delay-200 scale-[147%] duration-700` : isHovered ? `${hoverBorderColor3} scale-[97%] ${!wasClicked ? "delay-200" : "delay-100"}` : `${defaultBorderColor3} scale-[94%]  delay-100`}`}
+        className={`absolute -bottom-2 left-0 w-full h-full rounded-none border-2 transition-all ${isClicked ? `${clickedBorderColor3} delay-200 scale-[107%]` : isHovered ? `${hoverBorderColor3} scale-[97%] ${!wasClicked ? "delay-200" : "delay-100"}` : `${defaultBorderColor3} scale-[94%]  delay-100`}`}
       ></div>
       <div
-        className={`absolute -bottom-3 left-0 w-full h-full rounded-none border-2 transition-all ${isClicked ? `${clickedBorderColor4} delay-300 scale-[144%] duration-700` : isHovered ? `${hoverBorderColor4} scale-[94%] ${!wasClicked ? "delay-300" : ""}` : `${defaultBorderColor4} scale-[91%]`}`}
+        className={`absolute -bottom-3 left-0 w-full h-full rounded-none border-2 transition-all ${isClicked ? `${clickedBorderColor4} delay-300 scale-[104%]` : isHovered ? `${hoverBorderColor4} scale-[94%] ${!wasClicked ? "delay-300" : ""}` : `${defaultBorderColor4} scale-[91%]`}`}
       ></div>
     </button>
   );
