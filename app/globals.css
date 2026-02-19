@@ -60,6 +60,7 @@
 
 body {
   font-family: "Neue Plak", sans-serif;
+  background-color: #000000;
 }
 
 @layer base {
