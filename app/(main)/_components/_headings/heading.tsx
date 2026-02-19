@@ -5,6 +5,7 @@ import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 
 import SpecialButton from "@/components/ui/special-button";
 import { hackathonDateInfo } from "@/lib/dates";
+import Link from "next/link";
 
 const Heading = () => {
   return (
@@ -61,7 +62,9 @@ const Heading = () => {
         </ParallaxBannerLayer>
 
         <div className="absolute w-full flex flex-col justify-center items-center text-center gap-y-8 top-[36rem] z-[70]">
-          <SpecialButton className="font-Xirod text-4xl">APPLY NOW</SpecialButton>
+          <Link href="/apply" target="_blank" rel="noopener noreferrer">
+            <SpecialButton className="font-Xirod text-4xl">APPLY NOW</SpecialButton>
+          </Link>
         </div>
 
         <ParallaxBannerLayer speed={20}>
