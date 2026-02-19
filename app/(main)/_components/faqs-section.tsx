@@ -24,7 +24,7 @@ const FaqsSection = () => {
         className="block md:hidden w-64 h-64 sm:w-96 sm:h-96 absolute top-0 -translate-y-1/2 select-none"
         draggable={false}
       />
-      <h2 className="font-TangoSansBold text-6xl text-primary pb-10">FAQs</h2>
+      <h2 className="font-Xirod text-6xl text-primary pb-10">FAQs</h2>
       <p className="">Got questions? We got answers.</p>
       <div className="px-10 w-full md:w-1/2">
         <Accordion type="single" collapsible className="w-full">

@@ -15,7 +15,7 @@ export default function Apply() {
       <main className="flex flex-1 w-[100vw]">
         <div className="flex flex-grow flex-col w-full">
           <div id="about" className="flex flex-col items-center justify-center w-full py-40">
-            <h2 className="font-TangoSansBold text-6xl text-primary pb-10">Apply</h2>
+            <h2 className="font-Xirod text-6xl text-primary pb-10">Apply</h2>
             <p className="mx-8 sm:mx-20 md:mx-24 text-center">
               Redirecting you to the application. If this doesn't work, click{" "}
               <Link href={applicationLink} className="underline hover:text-primary transition-colors">

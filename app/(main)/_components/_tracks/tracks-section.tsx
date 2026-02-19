@@ -21,7 +21,7 @@ const TracksSection = () => {
         className="block md:hidden w-64 h-64 sm:w-96 sm:h-96 absolute top-0 -translate-y-1/2 select-none"
         draggable={false}
       />
-      <h2 className="font-TangoSansBold text-6xl text-[#EE5000] pb-10">Tracks</h2>
+      <h2 className="font-Xirod text-6xl text-[#EE5000] pb-10">Tracks</h2>
       <p className="">Learn more about the tracks we offer.</p>
       <div className="flex flex-col pt-8 pb-4 md:grid md:grid-cols-2 space-y-16 md:space-y-0 md:gap-16">
         <Track

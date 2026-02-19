@@ -40,7 +40,7 @@ const Track: React.FC<ITrackProps> = ({
             draggable={false}
           />
           <p
-            className={`pt-4 md:pt-0 font-TangoSansBold text-[#FC8332] text-3xl text-center${
+            className={`pt-4 md:pt-0 font-Xirod text-[#FC8332] text-3xl text-center${
               leftOffset ? ` md:translate-x-[1.5rem]` : ""
             }${rightOffset ? ` md:-translate-x-[1.5rem]` : ""}`}
           >
@@ -49,7 +49,7 @@ const Track: React.FC<ITrackProps> = ({
         </DialogTrigger>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle className="text-[#FC8332] font-TangoSansBold font-bold text-2xl">
+            <DialogTitle className="text-[#FC8332] font-Xirod font-bold text-2xl">
               {popupNameOverride ?? name} Track
             </DialogTitle>
             <div className="text-base flex flex-row gap-x-2">

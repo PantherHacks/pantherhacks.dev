@@ -10,9 +10,9 @@ const RulesPage = () => {
       <Navbar />
       <main className="flex flex-1 w-[100vw] justify-center items-center" id="rules" aria-label="Rules Section">
         <div className="flex flex-col flex-1 w-full justify-center items-center mt-48 mx-8 sm:mx-20 md:mx-64 max-w-[50rem]">
-          <h2 className="font-TangoSansBold text-6xl text-primary pb-10 text-center">Rules</h2>
+          <h2 className="font-Xirod text-6xl text-primary pb-10 text-center">Rules</h2>
           <div className="flex flex-col flex-1 w-full justify-center items-center mt-10">
-            <h3 className="font-TangoSansBold text-2xl pb-5 text-[#EE5000] text-center">The Hackathon Spirit</h3>
+            <h3 className="font-Xirod text-2xl pb-5 text-[#EE5000] text-center">The Hackathon Spirit</h3>
             <p className="text-center pb-4">
               The goal of any hackathon is to encourage participants to learn, build, and share.
             </p>
@@ -43,7 +43,7 @@ const RulesPage = () => {
             </ul>
           </div>
           <div className="flex flex-col flex-1 w-full justify-center items-center mt-10">
-            <h3 className="font-TangoSansBold text-2xl pb-5 text-[#EE5000] text-center">Competition Rules</h3>
+            <h3 className="font-Xirod text-2xl pb-5 text-[#EE5000] text-center">Competition Rules</h3>
             <ul style={{ listStyleType: "circle" }} className="list-spacing ml-3">
               <li>
                 Only current students of Chapman University are eligible to participate in the competition as hackers.

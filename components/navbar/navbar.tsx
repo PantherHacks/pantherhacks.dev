@@ -68,7 +68,7 @@ const Navbar = () => {
             <NavLink
               href="/live"
               variant="bold"
-              className="bg-[rgb(75,0,0)] font-TangoSansBold text-xl text-[#fd021d] flex flex-row justify-center items-center gap-2"
+              className="bg-[rgb(75,0,0)] font-Xirod text-xl text-[#fd021d] flex flex-row justify-center items-center gap-2"
             >
               <div className="flex items-center gap-2">
                 <div className="relative flex justify-center items-center">
@@ -155,7 +155,7 @@ const Navbar = () => {
               loading="eager"
             />
           </NavLink>
-          <h1 className="hidden sm:block font-TangoSansBold text-2xl text-white">PANTHERHACKS</h1>
+          <h1 className="hidden sm:block font-Xirod text-2xl text-white">PANTHERHACKS</h1>
           <Button
             className={cn(
               "h-[70px] px-[16px] hover:bg-[#83022b] [&_svg]:size-6 rounded-l-none rounded-tr-[10px]",
@@ -203,7 +203,7 @@ const Navbar = () => {
           <NavLink
             href="/live"
             variant={"mobile_bold"}
-            className="bg-[rgb(75,0,0)] font-TangoSansBold text-xl text-[#fd021d] flex flex-row justify-center items-center gap-2"
+            className="bg-[rgb(75,0,0)] font-Xirod text-xl text-[#fd021d] flex flex-row justify-center items-center gap-2"
             onClick={handleMobileLinkClick}
           >
             <div className="flex items-center gap-2">

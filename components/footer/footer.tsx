@@ -13,7 +13,7 @@ const Footer: React.FC<FooterProps> = () => {
   return (
     <>
       <footer className="flex flex-col justify-center items-center w-full space-y-2 p-4 bg-primary">
-        <p className="font-TangoSansBold text-xl text-center text-white">PantherHacks {hackathonDateInfo.year}</p>
+        <p className="font-Xirod text-xl text-center text-white">PantherHacks {hackathonDateInfo.year}</p>
         <p className="text-white text-center pt-2">Made with ❤️ by the PantherHacks Team</p>
         <div className="flex flex-row justify-center items-center space-x-1" aria-label="Social Links">
           <FooterSocialLink href={gitHubLink} aria-label="PantherHacks GitHub">
