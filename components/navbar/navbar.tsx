@@ -149,7 +149,7 @@ const Navbar = () => {
           </NavLink>
           <h1 className="hidden sm:block font-Xirod text-2xl text-white">PANTHERHACKS</h1>
           <Button
-            className="h-[70px] px-[16px] [&_svg]:size-6 bg-transparent"
+            className="h-[70px] px-[16px] [&_svg]:size-6 bg-transparent hover:bg-transparent"
             onClick={() => setIsMobileOpen(!isMobileOpen)}
             aria-label="Mobile Navigation Dropdown"
           >
