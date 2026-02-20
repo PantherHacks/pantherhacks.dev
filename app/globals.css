@@ -58,8 +58,15 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: "DS-Digital";
+  src: url("./fonts/DS_Digital/DS-DIGI.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  font-family: "Neue Plak", sans-serif;
+  font-family: "Ubuntu Mono", sans-serif;
   background-color: #000000;
 }
 

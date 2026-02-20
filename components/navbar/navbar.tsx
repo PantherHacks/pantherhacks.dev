@@ -37,7 +37,7 @@ const Navbar = () => {
   return (
     <nav
       ref={navRef}
-      className="navbar-glow m-[20px] w-[calc(100vw_-_40px)] bg-black fixed top-0 left-0 y z-[49] flex items-center box-border drop-shadow-lg"
+      className="navbar-glow m-[20px] w-[calc(100vw_-_40px)] rounded-2xl bg-black fixed top-0 left-0 y z-[49] flex items-center box-border drop-shadow-lg"
     >
       {/* min-width:850px when it has the normal APPLY button */}
       <div className="hidden [@media(min-width:860px)]:flex justify-between items-center w-full">
@@ -49,7 +49,7 @@ const Navbar = () => {
                 alt="PantherHacks Mascot"
                 width={50}
                 height={50}
-                className="transition-transform duration-300 ease-in-out transform group-hover:scale-105 select-none"
+                className="transition-transform duration-300ease-in-out transform group-hover:scale-105 select-none"
                 draggable={false}
                 loading="eager"
               />
@@ -149,19 +149,14 @@ const Navbar = () => {
           </NavLink>
           <h1 className="hidden sm:block font-Xirod text-2xl text-white">PANTHERHACKS</h1>
           <Button
-            className="h-[70px] px-[16px] hover:bg-[#83022b] [&_svg]:size-6"
+            className="h-[70px] px-[16px] [&_svg]:size-6 bg-transparent"
             onClick={() => setIsMobileOpen(!isMobileOpen)}
             aria-label="Mobile Navigation Dropdown"
           >
             <Menu />
           </Button>
         </div>
-        <div
-          className={cn(
-            "flex flex-col w-full bg-primary font-TangoSans text-white text-lg",
-            isMobileOpen ? "flex" : "hidden"
-          )}
-        >
+        <div className={cn("flex flex-col w-full font-Xirod text-white text-lg", isMobileOpen ? "flex" : "hidden")}>
           <NavLink variant="mobile" href="/#about" onClick={handleMobileLinkClick}>
             About
           </NavLink>
@@ -177,13 +172,7 @@ const Navbar = () => {
           <NavLink variant="mobile" href="/#team" onClick={handleMobileLinkClick}>
             Team
           </NavLink>
-          <NavLink
-            href={applicationLink}
-            variant={"mobile"}
-            className="bg-[rgb(75,0,0)]"
-            onClick={handleMobileLinkClick}
-            target="_blank"
-          >
+          <NavLink href={applicationLink} variant={"mobile"} onClick={handleMobileLinkClick} target="_blank">
             APPLY
           </NavLink>
           {/* <NavLink
