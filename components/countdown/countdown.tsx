@@ -91,7 +91,7 @@ const Countdown: React.FC<CountdownProps> = ({ dark = false, size = "default" })
         </h2>
       ) : (
         <h2
-          className={`font-DSDigital ${colorClass} ${isLarge ? "text-5xl sm:text-7xl md:text-8xl lg:text-9xl" : "text-4xl sm:text-6xl md:text-6xl"}`}
+          className={`font-DSDigital ${colorClass} ${isLarge ? "text-5xl sm:text-7xl md:text-[7rem] lg:text-9xl" : "text-4xl sm:text-6xl md:text-6xl"}`}
           style={{ minHeight: isLarge ? "4rem" : "3rem" }}
         >
           {segments.map(({ value, unit }, i) => (
