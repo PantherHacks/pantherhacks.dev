@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { SectionTitle } from "@/components/section-title";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { applicationDateInfo, hackathonDateInfo } from "@/lib/dates";
 import { applicationLink } from "@/lib/links";
@@ -24,7 +25,16 @@ const FaqsSection = () => {
         className="block md:hidden w-64 h-64 sm:w-96 sm:h-96 absolute top-0 -translate-y-1/2 select-none"
         draggable={false}
       />
-      <h2 className="font-Xirod text-6xl text-[#8C02D6] drop-shadow-[0_10px_10px_rgba(140,2,214,0.5)] pb-4">FAQs</h2>
+      <SectionTitle
+        color1="#FE5501"
+        color2="#4d1900"
+        color3="#EE5000"
+        color4="#ff6d12"
+        textShadowColor="#FFE300"
+        flickerIndices={[0, 1, 2, 3]}
+      >
+        FAQS
+      </SectionTitle>
       <p className="font-UbuntuMono">Got questions? We got answers.</p>
       <div className="px-10 pt-8 w-full md:w-1/2">
         <Accordion type="single" collapsible className="w-full">
