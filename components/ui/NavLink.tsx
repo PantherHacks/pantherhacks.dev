@@ -25,8 +25,8 @@ const navLinkVariants = cva("font-Xirod flex items-center justify-center transit
 
 export interface NavLinkProps
   extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "href">,
-  LinkProps,
-  VariantProps<typeof navLinkVariants> {
+    LinkProps,
+    VariantProps<typeof navLinkVariants> {
   children?: React.ReactNode;
   className?: string;
 }
