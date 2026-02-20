@@ -25,7 +25,14 @@ const FaqsSection = () => {
         className="block md:hidden w-64 h-64 sm:w-96 sm:h-96 absolute top-0 -translate-y-1/2 select-none"
         draggable={false}
       />
-      <SectionTitle color1="#FE5501" color2="#4d1900" color3="#EE5000" color4="#ff6d12" textShadowColor="#FFE300">
+      <SectionTitle
+        color1="#FE5501"
+        color2="#4d1900"
+        color3="#EE5000"
+        color4="#ff6d12"
+        textShadowColor="#FFE300"
+        flickerIndices={[0, 1, 2, 3]}
+      >
         FAQS
       </SectionTitle>
       <p className="font-UbuntuMono">Got questions? We got answers.</p>

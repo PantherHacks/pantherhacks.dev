@@ -1,14 +1,21 @@
-import { ReactNode } from "react";
+import "./section-title.css";
 
 type Props = {
-  children: ReactNode;
+  children: string;
   className?: string;
   color1?: string;
   color2?: string;
   color3?: string;
   color4?: string;
   textShadowColor?: string;
+  flickerIndices?: number[];
 };
+// Deterministic pseudo-random based on seed — same value on server and client.
+const seededRandom = (seed: number) => {
+  const x = Math.sin(seed + 0.025) * 10000;
+  return x - Math.floor(x);
+};
+
 export const SectionTitle = ({
   children,
   className = "",
@@ -17,7 +24,10 @@ export const SectionTitle = ({
   color3 = "#5C299E",
   color4 = "#8A38F5",
   textShadowColor = "#E377F5",
+  flickerIndices = [],
 }: Props) => {
+  const letters = children.split("");
+
   return (
     <div
       className={`flex flex-col justify-center items-center w-[32rem] mb-14 ${className}`}
@@ -39,7 +49,19 @@ export const SectionTitle = ({
           textShadow: `0px -2px 2px ${textShadowColor}, -1px 0px 2px ${textShadowColor}, 0px 0px 1px ${textShadowColor}, 0px -0.5px 1px ${textShadowColor}`,
         }}
       >
-        {children}
+        {letters.map((letter, i) => {
+          const flickerPos = flickerIndices.indexOf(i);
+          const isFlicker = flickerPos !== -1;
+          return (
+            <span
+              key={i}
+              className={isFlicker ? "letter-flicker" : undefined}
+              style={isFlicker ? { animationDelay: `${seededRandom(i) * 5}s` } : undefined}
+            >
+              {letter === " " ? "\u00A0" : letter}
+            </span>
+          );
+        })}
       </h2>
       <div
         className="flex flex-row justify-between px-2 relative z-10 pointer-events-none w-full h-4 -bottom-6 left-0"
