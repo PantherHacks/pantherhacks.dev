@@ -173,12 +173,15 @@ const CountdownPage = () => {
         colors={["#A50034", "#ED024D", "#FF87AD", "#FFFFFF"]}
       />
       <Image
-        src="/images/countdown/countdown-mountain.svg"
-        alt="A mountain in the background"
+        src="/images/main-background/building-background.svg"
+        alt="Buildings in the background"
         width={100}
         height={100}
         unoptimized
         className="w-full absolute z-0 bottom-0"
+        style={{
+          filter: `grayscale(1)`,
+        }}
       />
       <Link href="/" className="z-10" aria-label="Go to Home Page">
         <Button
