@@ -26,7 +26,7 @@ const Prize: FC<PrizeProps> = ({ title, description, imageSrc, imageSide = "left
         unoptimized
       />
       <div className="flex flex-col items-center justify-center text-center gap-y-2">
-        <h2 className="text-2xl font-bold font-Xirod text-primary">{title}</h2>
+        <h2 className="text-2xl font-bold font-Xirod text-[#9f1ee5]">{title}</h2>
         <p className="">{description}</p>
       </div>
     </div>
