@@ -15,10 +15,11 @@ const AboutSection = () => {
       >
         About
       </SectionTitle>
-      <p className="mx-8 sm:mx-20 md:mx-64 text-center max-w-[50rem] pb-10">
-        <span className="font-bold">PantherHacks {hackathonDateInfo.year}</span> is a 48-hour hackathon (team-based
-        coding competition) held from <span className="font-bold">{hackathonDateInfo.dateString}</span>. It will take
-        place in <span className="font-bold">Sandhu Conference Center</span> for the entirety of the event including
+      <p className="mx-8 sm:mx-20 md:mx-64 text-center max-w-[50rem] pb-10 font-UbuntuMono">
+        <span className="font-bold text-primary">PantherHacks {hackathonDateInfo.year}</span> is a 48-hour hackathon
+        (team-based coding competition) held from{" "}
+        <span className="font-bold text-primary">{hackathonDateInfo.dateString}</span>. It will take place in{" "}
+        <span className="font-bold text-primary">Sandhu Conference Center</span> for the entirety of the event including
         project work time, workshops, mentorship, and more! Food will be provided. Read further for more details on
         PantherHacks {hackathonDateInfo.year}!
       </p>
