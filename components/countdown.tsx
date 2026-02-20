@@ -95,14 +95,14 @@ const Countdown: React.FC<CountdownProps> = ({ dark = false, size = "default" })
         <Skeleton className={`rounded-full ${size === "large" ? "w-[300px] h-[4rem]" : "w-[200px] h-[3rem]"}`} />
       ) : hackathonConcluded ? (
         <h2
-          className={`text-center mx-10 font-UbuntuMonoBold ${dark ? "text-white" : "text-primary"} ${size === "large" ? "text-4xl md:text-5xl lg:text-6xl" : "text-3xl sm:text-5xl md:text-5xl"}`}
+          className={`text-center mx-10 font-DSDigital ${dark ? "text-white" : "text-primary"} ${size === "large" ? "text-5xl md:text-6xl lg:text-7xl" : "text-4xl sm:text-6xl md:text-6xl"}`}
           style={{ minHeight: size === "large" ? "4rem" : "3rem" }}
         >
           {countdownString}
         </h2>
       ) : (
         <h2
-          className={`font-UbuntuMonoBold ${dark ? "text-white" : "text-primary"} ${size === "large" ? "text-4xl sm:text-6xl md:text-7xl lg:text-8xl" : "text-3xl sm:text-5xl md:text-5xl"}`}
+          className={`font-DSDigital ${dark ? "text-white" : "text-primary"} ${size === "large" ? "text-5xl sm:text-7xl md:text-8xl lg:text-9xl" : "text-4xl sm:text-6xl md:text-6xl"}`}
           style={{ minHeight: size === "large" ? "4rem" : "3rem" }}
         >
           {countdownString}
