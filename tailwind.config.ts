@@ -65,6 +65,7 @@ export default {
         UbuntuMonoItalic: "Ubuntu Mono Italic",
         UbuntuMonoBold: "Ubuntu Mono Bold",
         UbuntuMonoBoldItalic: "Ubuntu Mono Bold Italic",
+        DSDigital: "DS-Digital",
       },
       keyframes: {
         "accordion-down": {
