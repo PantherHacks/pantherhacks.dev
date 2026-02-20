@@ -11,6 +11,8 @@ import { cn } from "@/lib/utils";
 
 import "./navbar.css";
 
+import { hackathonDateInfo } from "@/lib/dates";
+
 const Navbar = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
@@ -39,8 +41,7 @@ const Navbar = () => {
       ref={navRef}
       className="navbar-glow mx-[20px] mt-[20px] w-[calc(100vw_-_40px)] fixed top-0 left-0 y z-[49] flex items-center box-border drop-shadow-lg"
     >
-      {/* min-width:850px when it has the normal APPLY button */}
-      <div className="hidden [@media(min-width:860px)]:flex justify-between items-center w-full">
+      <div className="hidden [@media(min-width:990px)]:flex justify-between items-center w-full">
         <div className="flex flex-row items-center">
           <div className="flex items-center overflow-hidden">
             <NavLink href="/" variant={"logo"} className="h-[70px] group" aria-label="Home">
@@ -56,11 +57,21 @@ const Navbar = () => {
             </NavLink>
           </div>
           <div className="flex items-center flex-grow font-Xirod text-white text-lg">
-            <NavLink href="/#about">About</NavLink>
-            <NavLink href="/#tracks">Tracks</NavLink>
-            <NavLink href="/#prizes">Prizes</NavLink>
-            <NavLink href="/#faqs">FAQs</NavLink>
-            <NavLink href="/#team">Team</NavLink>
+            <NavLink href="/#about" variant="red_orange">
+              About
+            </NavLink>
+            <NavLink href="/#tracks" variant="pink">
+              Tracks
+            </NavLink>
+            <NavLink href="/#prizes" variant="purple">
+              Prizes
+            </NavLink>
+            <NavLink href="/#faqs" variant="red_orange">
+              FAQs
+            </NavLink>
+            <NavLink href="/#team" variant="cyan">
+              Team
+            </NavLink>
             <NavLink href={applicationLink} variant="default" target="_blank">
               APPLY
             </NavLink>
@@ -133,8 +144,7 @@ const Navbar = () => {
           </NavLink>
         </div>
       </div>
-      {/* min-width:850px when it has the normal APPLY button */}
-      <div className="flex flex-col w-full [@media(min-width:860px)]:hidden">
+      <div className="flex flex-col w-full [@media(min-width:990px)]:hidden">
         <div className="flex items-center justify-between w-full overflow-hidden">
           <NavLink href="/" variant={"logo"} className="h-[70px]" aria-label="Home" onClick={handleMobileLinkClick}>
             <Image
@@ -147,7 +157,7 @@ const Navbar = () => {
               loading="eager"
             />
           </NavLink>
-          <h1 className="hidden sm:block font-Xirod text-2xl text-white">PANTHERHACKS</h1>
+          <h1 className="hidden sm:block font-Xirod text-2xl text-white">PANTHERHACKS {hackathonDateInfo.year}</h1>
           <Button
             className="h-[70px] px-[16px] [&_svg]:size-6 bg-transparent hover:bg-transparent"
             onClick={() => setIsMobileOpen(!isMobileOpen)}

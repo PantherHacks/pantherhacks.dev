@@ -10,17 +10,20 @@ function cn(...classes: (string | false | undefined | null)[]) {
 }
 
 const navLinkVariants = cva(
-  "font-Xirod flex items-center justify-center transition-colors duration-200 hover:text-primary hover:bg-gradient-to-b from-transparent to-primary/30",
+  "font-Xirod flex items-center justify-center transition-colors duration-200 hover:bg-gradient-to-b from-transparent to-primary/30",
   {
     variants: {
       variant: {
         default: "h-[70px] px-[16px]",
-        bold: "h-[70px] px-[16px] font-Xirod text-xl",
         logo: "px-[10px]",
         icon: "px-[10px] w-[50px]",
         mobile: "w-full h-12 py-[12px]",
-        mobile_bold: "w-full h-12 py-[12px] font-Xirod text-xl",
         mobile_icon: "px-[20px]",
+        red_orange: "h-[70px] px-[16px] hover:text-[#FF5500]",
+        cyan: "h-[70px] px-[16px] hover:text-[#00EEFF]",
+        pink: "h-[70px] px-[16px] hover:text-[#FF1A98]",
+        purple: "h-[70px] px-[16px] hover:text-[#8C02D6]",
+        dark_blue: "h-[70px] px-[16px] hover:text-[#002140]",
       },
     },
     defaultVariants: {

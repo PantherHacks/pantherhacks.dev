@@ -1,9 +1,9 @@
 .countdown-glow {
-  background: linear-gradient(to bottom, transparent, #ed500080)
+  background: linear-gradient(to bottom, transparent, #ed500080);
 }
 
 .countdown-glow::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: -2;
