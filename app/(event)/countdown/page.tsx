@@ -182,7 +182,7 @@ const CountdownPage = () => {
       />
       <Link href="/" className="z-10" aria-label="Go to Home Page">
         <Button
-          className={`absolute top-4 left-4 px-3 py-2 bg-transparent hover:bg-[#83022b] transition-opacity duration-300 ${
+          className={`absolute top-4 left-4 px-3 py-2 bg-transparent hover:bg-transparent border border-transparent rounded-none hover:border-primary hover:text-primary transition-all duration-100 ${
             showButton ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -191,7 +191,7 @@ const CountdownPage = () => {
       </Link>
       <Link href="/live" aria-label="Go to live page" className="z-10">
         <Button
-          className={`absolute top-4 left-16 px-3 py-2 bg-transparent hover:bg-[#83022b] transition-opacity duration-300 ${
+          className={`absolute top-4 left-16 px-3 py-2 bg-transparent hover:bg-transparent border border-transparent rounded-none hover:border-primary hover:text-primary transition-all duration-100 ${
             showButton ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -199,7 +199,7 @@ const CountdownPage = () => {
         </Button>
       </Link>
       <Button
-        className={`absolute top-4 right-4 px-3 py-2 bg-transparent hover:bg-[#83022b] transition-opacity duration-300 ${
+        className={`absolute top-4 right-4 px-3 py-2 bg-transparent hover:bg-transparent border border-transparent rounded-none hover:border-primary hover:text-primary transition-all duration-100 ${
           showButton ? "opacity-100" : "opacity-0"
         }`}
         onClick={toggleFullscreen}
