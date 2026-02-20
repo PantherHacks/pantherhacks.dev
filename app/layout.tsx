@@ -16,19 +16,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PantherHacks",
-  description: "PantherHacks is a hackathon hosted by Chapman University's Fowler School of Engineering.",
+  title: "PantherHacks 2026",
+  description:
+    "PantherHacks is a hackathon hosted by Chapman Computer Science Club in partnership with Chapman University's Fowler School of Engineering.",
   icons: {
     icon: [
       {
         media: "(prefers-color-scheme: light)",
-        url: "/logos/pantherhacks/pantherhacks_red_mascot.png",
-        href: "/logos/pantherhacks/pantherhacks_red_mascot.png",
+        url: "/logos/pantherhacks/cyborg_pete_orange.svg",
+        href: "/logos/pantherhacks/cyborg_pete_orange.svg",
       },
       {
         media: "(prefers-color-scheme: dark)",
-        url: "/logos/pantherhacks/pantherhacks_mascot_light.png",
-        href: "/logos/pantherhacks/pantherhacks_mascot_light.png",
+        url: "/logos/pantherhacks/cyborg_pete_white.svg",
+        href: "/logos/pantherhacks/cyborg_pete_white.svg",
       },
     ],
   },

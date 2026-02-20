@@ -6,7 +6,7 @@ import { Menu } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/ui/NavLink";
-import { discordLink, gitHubLink, instagramLink } from "@/lib/links";
+import { applicationLink, discordLink, gitHubLink, instagramLink } from "@/lib/links";
 import { cn } from "@/lib/utils";
 
 import "./navbar.css";
@@ -37,16 +37,16 @@ const Navbar = () => {
   return (
     <nav
       ref={navRef}
-      className="m-[20px] w-[calc(100vw_-_40px)] rounded-[10px] fixed top-0 left-0 bg-primary z-[49] flex items-center box-border drop-shadow-lg"
+      className="navbar-glow m-[20px] w-[calc(100vw_-_40px)] bg-black fixed top-0 left-0 y z-[49] flex items-center box-border drop-shadow-lg"
     >
       {/* min-width:850px when it has the normal APPLY button */}
       <div className="hidden [@media(min-width:860px)]:flex justify-between items-center w-full">
         <div className="flex flex-row items-center">
           <div className="flex items-center overflow-hidden">
-            <NavLink href="/" variant={"logo"} className="h-[70px] rounded-l-[10px] group" aria-label="Home">
+            <NavLink href="/" variant={"logo"} className="h-[70px] group" aria-label="Home">
               <Image
-                src="/logos/pantherhacks/pantherhacks_mascot_light.png"
-                alt="PantherHacks Logo"
+                src="/logos/pantherhacks/cyborg_pete_white.svg"
+                alt="PantherHacks Mascot"
                 width={50}
                 height={50}
                 className="transition-transform duration-300 ease-in-out transform group-hover:scale-105 select-none"
@@ -55,17 +55,16 @@ const Navbar = () => {
               />
             </NavLink>
           </div>
-          <div className="flex items-center flex-grow font-TangoSans text-white text-lg">
-            <NavLink href="/#home">Home</NavLink>
+          <div className="flex items-center flex-grow font-Xirod text-white text-lg">
             <NavLink href="/#about">About</NavLink>
             <NavLink href="/#tracks">Tracks</NavLink>
             <NavLink href="/#prizes">Prizes</NavLink>
             <NavLink href="/#faqs">FAQs</NavLink>
             <NavLink href="/#team">Team</NavLink>
-            {/* <NavLink href={applicationLink} variant="bold" className="bg-[rgb(75,0,0)]" target="_blank">
+            <NavLink href={applicationLink} variant="default" target="_blank">
               APPLY
-            </NavLink> */}
-            <NavLink
+            </NavLink>
+            {/* <NavLink
               href="/live"
               variant="bold"
               className="bg-[rgb(75,0,0)] font-Xirod text-xl text-[#fd021d] flex flex-row justify-center items-center gap-2"
@@ -77,7 +76,7 @@ const Navbar = () => {
                 </div>
                 <span className="neon-text transform-gpu">LIVE</span>
               </div>
-            </NavLink>
+            </NavLink> */}
           </div>
         </div>
         <div className="flex items-center justify-center">
@@ -119,7 +118,6 @@ const Navbar = () => {
             href={instagramLink}
             target="_blank"
             variant="icon"
-            className="rounded-r-[10px]"
             title={"PantherHacks Instagram Link"}
             aria-label={"PantherHacks Instagram Link"}
           >
@@ -138,15 +136,9 @@ const Navbar = () => {
       {/* min-width:850px when it has the normal APPLY button */}
       <div className="flex flex-col w-full [@media(min-width:860px)]:hidden">
         <div className="flex items-center justify-between w-full overflow-hidden">
-          <NavLink
-            href="/"
-            variant={"logo"}
-            className={cn("h-[70px]", isMobileOpen ? "rounded-tl-[10px]" : "rounded-l-[10px]")}
-            aria-label="Home"
-            onClick={handleMobileLinkClick}
-          >
+          <NavLink href="/" variant={"logo"} className="h-[70px]" aria-label="Home" onClick={handleMobileLinkClick}>
             <Image
-              src="/logos/pantherhacks/pantherhacks_mascot_light.png"
+              src="/logos/pantherhacks/cyborg_pete_white.svg"
               alt="Panther Hacks Logo"
               width={50}
               height={50}
@@ -157,10 +149,7 @@ const Navbar = () => {
           </NavLink>
           <h1 className="hidden sm:block font-Xirod text-2xl text-white">PANTHERHACKS</h1>
           <Button
-            className={cn(
-              "h-[70px] px-[16px] hover:bg-[#83022b] [&_svg]:size-6 rounded-l-none rounded-tr-[10px]",
-              isMobileOpen ? "rounded-br-none" : "rounded-r-[10px]"
-            )}
+            className="h-[70px] px-[16px] hover:bg-[#83022b] [&_svg]:size-6"
             onClick={() => setIsMobileOpen(!isMobileOpen)}
             aria-label="Mobile Navigation Dropdown"
           >
@@ -169,13 +158,10 @@ const Navbar = () => {
         </div>
         <div
           className={cn(
-            "flex flex-col w-full bg-primary font-TangoSans text-white text-lg rounded-b-[10px]",
+            "flex flex-col w-full bg-primary font-TangoSans text-white text-lg",
             isMobileOpen ? "flex" : "hidden"
           )}
         >
-          <NavLink variant="mobile" href="/#home" onClick={handleMobileLinkClick}>
-            Home
-          </NavLink>
           <NavLink variant="mobile" href="/#about" onClick={handleMobileLinkClick}>
             About
           </NavLink>
@@ -191,16 +177,16 @@ const Navbar = () => {
           <NavLink variant="mobile" href="/#team" onClick={handleMobileLinkClick}>
             Team
           </NavLink>
-          {/* <NavLink
+          <NavLink
             href={applicationLink}
-            variant={"mobile_bold"}
+            variant={"mobile"}
             className="bg-[rgb(75,0,0)]"
             onClick={handleMobileLinkClick}
             target="_blank"
           >
             APPLY
-          </NavLink> */}
-          <NavLink
+          </NavLink>
+          {/* <NavLink
             href="/live"
             variant={"mobile_bold"}
             className="bg-[rgb(75,0,0)] font-Xirod text-xl text-[#fd021d] flex flex-row justify-center items-center gap-2"
@@ -213,7 +199,7 @@ const Navbar = () => {
               </div>
               <span className="neon-text transform-gpu">LIVE</span>
             </div>
-          </NavLink>
+          </NavLink> */}
           <div className="flex items-center justify-center">
             <NavLink
               href={gitHubLink}
