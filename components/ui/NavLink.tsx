@@ -10,10 +10,10 @@ const navLinkVariants = cva("font-Xirod flex items-center justify-center transit
   variants: {
     variant: {
       default: "h-[70px] px-[16px]",
-      bold: "h-[70px] px-[16px] hover:bg-[#83022b] font-Xirod text-xl",
+      bold: "h-[70px] px-[16px] font-Xirod text-xl",
       logo: "px-[10px]",
       icon: "px-[10px] w-[50px]",
-      mobile: "w-full h-12 py-[12px] hover:bg-[#83022b]",
+      mobile: "w-full h-12 py-[12px]",
       mobile_bold: "w-full h-12 py-[12px] font-Xirod text-xl",
       mobile_icon: "px-[20px]",
     },
@@ -25,8 +25,8 @@ const navLinkVariants = cva("font-Xirod flex items-center justify-center transit
 
 export interface NavLinkProps
   extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "href">,
-    LinkProps,
-    VariantProps<typeof navLinkVariants> {
+  LinkProps,
+  VariantProps<typeof navLinkVariants> {
   children?: React.ReactNode;
   className?: string;
 }
