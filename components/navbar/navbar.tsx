@@ -37,7 +37,7 @@ const Navbar = () => {
   return (
     <nav
       ref={navRef}
-      className="navbar-glow m-[20px] w-[calc(100vw_-_40px)] rounded-2xl bg-black fixed top-0 left-0 y z-[49] flex items-center box-border drop-shadow-lg"
+      className="navbar-glow mx-[20px] mt-[20px] w-[calc(100vw_-_40px)] fixed top-0 left-0 y z-[49] flex items-center box-border drop-shadow-lg"
     >
       {/* min-width:850px when it has the normal APPLY button */}
       <div className="hidden [@media(min-width:860px)]:flex justify-between items-center w-full">
