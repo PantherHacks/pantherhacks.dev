@@ -1,4 +1,4 @@
-import Countdown from "@/components/countdown";
+import Countdown from "@/components/countdown/countdown";
 import { SectionTitle } from "@/components/section-title";
 import { hackathonDateInfo } from "@/lib/dates";
 

@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Home, Maximize, Minimize, Radio } from "lucide-react";
 import Confetti from "react-confetti";
 
-import Countdown from "@/components/countdown";
+import Countdown from "@/components/countdown/countdown";
 import { Button } from "@/components/ui/button";
 import { applicationDateInfo, hackathonDateInfo } from "@/lib/dates";
 

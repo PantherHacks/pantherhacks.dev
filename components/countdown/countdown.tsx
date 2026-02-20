@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 
 import { countdownDescriptions } from "@/lib/countdown";
 import { applicationDateInfo, hackathonDateInfo } from "@/lib/dates";
-import { Skeleton } from "./ui/skeleton";
+import { Skeleton } from "../ui/skeleton";
+
+import "./countdown.css";
 
 interface CountdownProps {
   dark?: boolean;
@@ -101,6 +103,7 @@ const Countdown: React.FC<CountdownProps> = ({ dark = false, size = "default" })
           ))}
         </h2>
       )}
+      {isLarge && <div className="flex h-16 w-[110%] countdown-glow -translate-y-14 -mb-10"></div>}
       {description === null ? (
         <Skeleton
           className={`bg-white/20 ${isLarge ? "w-[300px] sm:w-[500px] h-[3.5rem]" : "w-[200px] sm:w-[300px] h-[2.5rem]"}`}
