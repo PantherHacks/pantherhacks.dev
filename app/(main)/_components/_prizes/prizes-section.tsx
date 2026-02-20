@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 
 import Prize from "@/app/(main)/_components/_prizes/prize";
+import { SectionTitle } from "@/components/section-title";
 
 const PrizesSection = () => {
   const [pantherHovered, setPantherHovered] = useState(false);
@@ -11,7 +12,9 @@ const PrizesSection = () => {
       className="relative flex flex-col w-full items-center justify-end gap-y-8 sm:gap-y-6 md:gap-y-4 pt-40 px-8 md:px-20 lg:px-32 overflow-x-clip py-40"
     >
       <div className="flex flex-col items-center justify-center text-center gap-y-4">
-        <h2 className="font-Xirod text-6xl  text-primary pb-10">Prizes</h2>
+        <SectionTitle color1="#8C02D6" color2="#2A183E" color3="#652CAF" color4="#8A38F5" textShadowColor="#FDABFE">
+          Prizes
+        </SectionTitle>
         <p>
           Check out the prizes we offer! Each member of the winning teams will receive a prize (each team consists of
           1-4 people).

@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { SectionTitle } from "@/components/section-title";
 import { hackathonDateInfo } from "@/lib/dates";
 import TeamMember from "./team-member";
 
@@ -22,7 +23,9 @@ const TeamSection = () => {
         className="block md:hidden w-64 h-64 sm:w-96 sm:h-96 absolute top-0 -translate-y-1/2 select-none"
         draggable={false}
       />
-      <h2 className="font-Xirod text-6xl text-[#04EEFD] drop-shadow-[0_10px_10px_rgba(4,238,253,0.5)] pb-4">Team</h2>
+      <SectionTitle color1="#02dbf7" color2="#0E3C40" color3="#08c9a9" color4="#00EEFF" textShadowColor="#99ffff">
+        Team
+      </SectionTitle>
       <p className="mx-8 font-UbuntuMono text-lg sm:mx-20 md:mx-24 text-center">
         Meet the people who made PantherHacks {hackathonDateInfo.year} possible.
       </p>
