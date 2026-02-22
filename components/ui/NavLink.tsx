@@ -9,28 +9,25 @@ function cn(...classes: (string | false | undefined | null)[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-const navLinkVariants = cva(
-  "font-Xirod flex items-center justify-center transition-colors duration-200",
-  {
-    variants: {
-      variant: {
-        default: "h-[70px] px-[16px]",
-        logo: "px-[10px]",
-        icon: "px-[10px] w-[50px]",
-        mobile: "w-full h-12 py-[12px]",
-        mobile_icon: "px-[20px]",
-        red_orange: "h-[70px] px-[16px] hover:text-[#FF5500]",
-        cyan: "h-[70px] px-[16px] hover:text-[#00EEFF]",
-        pink: "h-[70px] px-[16px] hover:text-[#FF1A98]",
-        purple: "h-[70px] px-[16px] hover:text-[#8C02D6]",
-        dark_blue: "h-[70px] px-[16px] hover:text-[#002140]",
-      },
+const navLinkVariants = cva("font-Xirod flex items-center justify-center transition-colors duration-200", {
+  variants: {
+    variant: {
+      default: "h-[70px] px-[16px]",
+      logo: "px-[10px]",
+      icon: "px-[10px] w-[50px]",
+      mobile: "w-full h-12 py-[12px]",
+      mobile_icon: "px-[20px]",
+      red_orange: "h-[70px] px-[16px] hover:text-[#FF5500]",
+      cyan: "h-[70px] px-[16px] hover:text-[#00EEFF]",
+      pink: "h-[70px] px-[16px] hover:text-[#FF1A98]",
+      purple: "h-[70px] px-[16px] hover:text-[#8C02D6]",
+      dark_blue: "h-[70px] px-[16px] hover:text-[#002140]",
     },
-    defaultVariants: {
-      variant: "default",
-    },
-  }
-);
+  },
+  defaultVariants: {
+    variant: "default",
+  },
+});
 
 export interface NavLinkProps
   extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "href">,
