@@ -1,4 +1,5 @@
 .nav-link-glow:hover {
+  background-image: linear-gradient(to bottom, transparent, hsl(var(--primary) / 0.3));
   text-shadow:
     0px -0.5px 0.5px #fde200,
     -0.5px 0px 0.5px #fde200,

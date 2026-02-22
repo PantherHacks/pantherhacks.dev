@@ -10,7 +10,7 @@ function cn(...classes: (string | false | undefined | null)[]) {
 }
 
 const navLinkVariants = cva(
-  "font-Xirod flex items-center justify-center transition-colors duration-200 hover:bg-gradient-to-b from-transparent to-primary/30",
+  "font-Xirod flex items-center justify-center transition-colors duration-200",
   {
     variants: {
       variant: {
