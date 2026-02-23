@@ -24,11 +24,11 @@ const TeamSection = () => {
         draggable={false}
       />
       <SectionTitle
-        color1="#02dbf7"
-        color2="#0E3C40"
-        color3="#08c9a9"
-        color4="#00EEFF"
-        textShadowColor="#99ffff"
+        color1="#000bde"
+        color2="#010d7a"
+        color3="#2432ff"
+        color4="#4053ff"
+        textShadowColor="#929dfc"
         flickerIndices={[0, 1]}
       >
         Team
@@ -36,7 +36,7 @@ const TeamSection = () => {
       <p className="mx-8 font-UbuntuMono sm:mx-20 md:mx-24 text-center">
         Meet the people who made PantherHacks {hackathonDateInfo.year} possible.
       </p>
-      <div className="pt-8 pb-4 flex flex-row flex-wrap gap-6 px-4 sm:px-8 md:px-16 max-w-[60rem] justify-center items-center">
+      <div className="pt-8 pb-10 flex flex-row flex-wrap gap-6 px-4 sm:px-8 md:px-16 max-w-[60rem] justify-center items-center">
         <TeamMember
           name="Nataniel Farzan"
           teamRole="Executive Team"
