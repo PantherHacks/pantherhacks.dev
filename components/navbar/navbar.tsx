@@ -39,7 +39,7 @@ const Navbar = () => {
   return (
     <nav
       ref={navRef}
-      className="navbar-glow mx-[20px] mt-[20px] w-[calc(100vw_-_40px)] fixed top-0 left-0 y z-[49] flex items-center box-border drop-shadow-lg"
+      className="navbar-glow mx-[20px] mt-[20px] w-[calc(100vw_-_40px)] fixed top-0 left-0 y z-[49] flex items-center box-border drop-shadow-lg backdrop-blur-sm"
     >
       <div className="hidden [@media(min-width:990px)]:flex justify-between items-center w-full">
         <div className="flex flex-row items-center">
