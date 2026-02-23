@@ -6,7 +6,7 @@ import { Menu } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/ui/NavLink";
-import { applicationLink, discordLink, gitHubLink, instagramLink } from "@/lib/links";
+import { discordLink, gitHubLink, instagramLink } from "@/lib/links";
 import { cn } from "@/lib/utils";
 
 import "./navbar.css";
@@ -72,7 +72,7 @@ const Navbar = () => {
             <NavLink href="/#team" hoverColor="#4835FF" glowColor="#6FB3FE">
               Team
             </NavLink>
-            <NavLink href={applicationLink} variant="default" target="_blank">
+            <NavLink href="/apply" variant="default" target="_blank" rel="noopener noreferrer">
               APPLY
             </NavLink>
             {/* <NavLink
@@ -212,7 +212,13 @@ const Navbar = () => {
           >
             Team
           </NavLink>
-          <NavLink href={applicationLink} variant={"mobile"} onClick={handleMobileLinkClick} target="_blank">
+          <NavLink
+            href="/apply"
+            variant={"mobile"}
+            onClick={handleMobileLinkClick}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             APPLY
           </NavLink>
           {/* <NavLink
