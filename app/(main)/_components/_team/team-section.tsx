@@ -48,11 +48,6 @@ const TeamSection = () => {
           linkedinLink="https://www.linkedin.com/in/kalin-richardson/"
         />
         <TeamMember
-          name="Owen Agbayani"
-          teamRole="Executive Team"
-          linkedinLink="https://www.linkedin.com/in/agbayani/"
-        />
-        <TeamMember
           name="Joel Escobar"
           teamRole="Executive Team"
           linkedinLink="https://www.linkedin.com/in/joel-escobar-6059a4214/"
@@ -65,6 +60,11 @@ const TeamSection = () => {
         <TeamMember
           name="Daniel Tsivkovski"
           teamRole="Software Team"
+          linkedinLink="https://www.linkedin.com/in/danieltsivkovski/"
+        />
+        <TeamMember
+          name="Divi Newton"
+          teamRole="Mogging Team"
           linkedinLink="https://www.linkedin.com/in/danieltsivkovski/"
         />
         <TeamMember

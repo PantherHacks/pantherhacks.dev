@@ -35,7 +35,7 @@ const TeamMember: React.FC<ITeamMemberProps> = ({
     >
       <Link href={linkedinLink} target="_blank" className="flex flex-col items-center space-y-5">
         <div
-          className={`rounded-full transition-all ${isHovered ? "scale-90" : "scale-125 translate-y-10"}`}
+          className={`rounded-full transition-all ${isHovered ? "scale-[95%] translate-y-2" : "scale-125 translate-y-8"}`}
           style={{
             boxShadow: `0px 10px 10px 1px ${color_hex}99`,
             backgroundImage: `linear-gradient(to bottom, transparent 0%, transparent ${isHovered ? "40%" : "70%"}, ${color_hex}55 100%)`,
