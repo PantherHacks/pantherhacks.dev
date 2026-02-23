@@ -66,10 +66,10 @@ const Navbar = () => {
             <NavLink href="/#prizes" variant="purple">
               Prizes
             </NavLink>
-            <NavLink href="/#faqs" variant="red_orange">
+            <NavLink href="/#faqs" variant="green">
               FAQs
             </NavLink>
-            <NavLink href="/#team" variant="cyan">
+            <NavLink href="/#team" variant="blue">
               Team
             </NavLink>
             <NavLink href={applicationLink} variant="default" target="_blank">
