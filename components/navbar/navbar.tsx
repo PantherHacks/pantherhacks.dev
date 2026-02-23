@@ -57,19 +57,19 @@ const Navbar = () => {
             </NavLink>
           </div>
           <div className="flex items-center flex-grow font-Xirod text-white text-lg">
-            <NavLink href="/#about" variant="red_orange">
+            <NavLink href="/#about" hoverColor="#FF5500" glowColor="#FDE200">
               About
             </NavLink>
-            <NavLink href="/#tracks" variant="pink">
+            <NavLink href="/#tracks" hoverColor="#FF1A98" glowColor="#FFFFFF">
               Tracks
             </NavLink>
-            <NavLink href="/#prizes" variant="purple">
+            <NavLink href="/#prizes" hoverColor="#8C02D6" glowColor="#AD98FF">
               Prizes
             </NavLink>
-            <NavLink href="/#faqs" variant="green">
+            <NavLink href="/#faqs" hoverColor="#53FF1D" glowColor="#E9FF26">
               FAQs
             </NavLink>
-            <NavLink href="/#team" variant="blue">
+            <NavLink href="/#team" hoverColor="#4835FF" glowColor="#6FB3FE">
               Team
             </NavLink>
             <NavLink href={applicationLink} variant="default" target="_blank">
@@ -159,7 +159,7 @@ const Navbar = () => {
           </NavLink>
           <h1 className="hidden sm:block font-Xirod text-2xl text-white">PANTHERHACKS {hackathonDateInfo.year}</h1>
           <Button
-            className="h-[70px] px-[16px] [&_svg]:size-6 bg-transparent hover:bg-transparent"
+            className="h-[70px] px-[16px] [&_svg]:size-6 bg-transparent hover:bg-transparent nav-link-hover rounded-none"
             onClick={() => setIsMobileOpen(!isMobileOpen)}
             aria-label="Mobile Navigation Dropdown"
           >
@@ -167,19 +167,49 @@ const Navbar = () => {
           </Button>
         </div>
         <div className={cn("flex flex-col w-full font-Xirod text-white text-lg", isMobileOpen ? "flex" : "hidden")}>
-          <NavLink variant="mobile" href="/#about" onClick={handleMobileLinkClick}>
+          <NavLink
+            variant="mobile"
+            href="/#about"
+            onClick={handleMobileLinkClick}
+            hoverColor="#FF5500"
+            glowColor="#FDE200"
+          >
             About
           </NavLink>
-          <NavLink variant="mobile" href="/#tracks" onClick={handleMobileLinkClick}>
+          <NavLink
+            variant="mobile"
+            href="/#tracks"
+            onClick={handleMobileLinkClick}
+            hoverColor="#FF1A98"
+            glowColor="#FFFFFF"
+          >
             Tracks
           </NavLink>
-          <NavLink variant="mobile" href="/#prizes" onClick={handleMobileLinkClick}>
+          <NavLink
+            variant="mobile"
+            href="/#prizes"
+            onClick={handleMobileLinkClick}
+            hoverColor="#8C02D6"
+            glowColor="#AD98FF"
+          >
             Prizes
           </NavLink>
-          <NavLink variant="mobile" href="/#faqs" onClick={handleMobileLinkClick}>
+          <NavLink
+            variant="mobile"
+            href="/#faqs"
+            onClick={handleMobileLinkClick}
+            hoverColor="#53FF1D"
+            glowColor="#E9FF26"
+          >
             FAQs
           </NavLink>
-          <NavLink variant="mobile" href="/#team" onClick={handleMobileLinkClick}>
+          <NavLink
+            variant="mobile"
+            href="/#team"
+            onClick={handleMobileLinkClick}
+            hoverColor="#4835FF"
+            glowColor="#6FB3FE"
+          >
             Team
           </NavLink>
           <NavLink href={applicationLink} variant={"mobile"} onClick={handleMobileLinkClick} target="_blank">

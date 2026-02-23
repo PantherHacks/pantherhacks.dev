@@ -1,7 +1,14 @@
-.nav-link-glow:hover {
+.nav-link-hover:hover {
   background-image: linear-gradient(to bottom, transparent, hsl(var(--primary) / 0.3));
+}
+
+.nav-link-colored:hover {
+  color: var(--nav-hover-color);
+}
+
+.nav-link-glow:hover {
   text-shadow:
-    0px -0.5px 0.5px #fde200,
-    -0.5px 0px 0.5px #fde200,
-    0px 0px 0.5px #fde200;
+    0px -0.5px 0.5px var(--nav-hover-glow-color),
+    -0.5px 0px 0.5px var(--nav-hover-glow-color),
+    0px 0px 0.5px var(--nav-hover-glow-color);
 }
