@@ -18,10 +18,11 @@ const navLinkVariants = cva("font-Xirod flex items-center justify-center transit
       mobile: "w-full h-12 py-[12px]",
       mobile_icon: "px-[20px]",
       red_orange: "h-[70px] px-[16px] hover:text-[#FF5500]",
-      cyan: "h-[70px] px-[16px] hover:text-[#00EEFF]",
+      blue: "h-[70px] px-[16px] hover:text-[#4835FF]",
       pink: "h-[70px] px-[16px] hover:text-[#FF1A98]",
       purple: "h-[70px] px-[16px] hover:text-[#8C02D6]",
       dark_blue: "h-[70px] px-[16px] hover:text-[#002140]",
+      green: "h-[70px] px-[16px] hover:text-[#53FF1D]",
     },
   },
   defaultVariants: {
