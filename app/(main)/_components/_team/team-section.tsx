@@ -36,7 +36,7 @@ const TeamSection = () => {
       <p className="mx-8 font-UbuntuMono sm:mx-20 md:mx-24 text-center">
         Meet the people who made PantherHacks {hackathonDateInfo.year} possible.
       </p>
-      <div className="pt-8 pb-10 flex flex-row flex-wrap gap-6 px-4 sm:px-8 md:px-16 max-w-[60rem] justify-center items-center">
+      <div className="pt-8 pb-10 grid grid-cols-2 sm:flex sm:flex-row sm:flex-wrap gap-6 px-4 sm:px-8 md:px-16 max-w-[60rem] justify-center items-center">
         <TeamMember
           name="Nataniel Farzan"
           teamRole="Executive Team"

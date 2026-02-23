@@ -29,7 +29,7 @@ const TeamMember: React.FC<ITeamMemberProps> = ({
 
   return (
     <div
-      className="flex flex-col items-center space-y-4 md:hover:scale-105 transition-transform duration-300 w-44 sm:w-64 my-2"
+      className="flex flex-col items-center space-y-4 md:hover:scale-105 transition-transform duration-300 w-full sm:w-64 my-2"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -46,7 +46,7 @@ const TeamMember: React.FC<ITeamMemberProps> = ({
             width={0}
             height={0}
             alt={`${name}`}
-            className="w-40 h-40 select-none rounded-full transition-all duration-500"
+            className="w-20 h-20 sm:w-32 sm:h-32 select-none rounded-full transition-all duration-500"
             style={{
               filter: `brightness(1.4) saturate(1.6) hue-rotate(${hueRotation}deg) drop-shadow(0 0 10px ${color_hex}99)`,
             }}
