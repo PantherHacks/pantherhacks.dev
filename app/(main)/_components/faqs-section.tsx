@@ -38,79 +38,51 @@ const FaqsSection = () => {
       <div className="px-10 pt-8 w-full md:w-1/2">
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
-            <AccordionTrigger>What is a hackathon?</AccordionTrigger>
-            <AccordionContent>A hackathon is a team-based timed coding competition.</AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-2">
             <AccordionTrigger>What is PantherHacks {hackathonDateInfo.year}?</AccordionTrigger>
             <AccordionContent>
-              PantherHacks {hackathonDateInfo.year} is Chapman University's inaugural hackathon. The event is by
-              students and for students. Students can participate in teams of 1-4 people.
+              PantherHacks {hackathonDateInfo.year} is Chapman University’s second annual student-run hackathon, hosted
+              by Computer Science Club.
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-3">
+          <AccordionItem value="item-2">
             <AccordionTrigger>When is PantherHacks {hackathonDateInfo.year}?</AccordionTrigger>
             <AccordionContent>
               PantherHacks {hackathonDateInfo.year} is a 48-hour hackathon that will take place the weekend of{" "}
               {hackathonDateInfo.dateString}.
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-4">
+          <AccordionItem value="item-3">
             <AccordionTrigger>How do I apply?</AccordionTrigger>
             <AccordionContent>
-              You can apply to PantherHacks {hackathonDateInfo.year} by visiting{" "}
+              You can apply to PantherHacks {hackathonDateInfo.year}{" "}
               <Link href="/apply" target="_blank" className="underline hover:text-primary">
                 this link
               </Link>
               . Applications are due {applicationDateInfo.dateString}.
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-5">
-            <AccordionTrigger>Where is PantherHacks {hackathonDateInfo.year}?</AccordionTrigger>
+          <AccordionItem value="item-4">
+            <AccordionTrigger>Who is eligible to attend?</AccordionTrigger>
             <AccordionContent>
-              Sandhu Conference Center at Chapman University (590 N Shaffer St, Orange, CA 92866).
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-6">
-            <AccordionTrigger>Will transportation be provided to the venue?</AccordionTrigger>
-            <AccordionContent>
-              Unfortunately, we are not able to provide any transportation accommodations this year. Free on-campus
-              parking will be available for participants at the Anderson Parking Structure, which is located underneath
-              Wilson Field.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-7">
-            <AccordionTrigger>How much does it cost?</AccordionTrigger>
-            <AccordionContent>
-              PantherHacks is free for all attendees. We would like to thank Chapman University's Student Government
-              Association for providing funding for our event.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-8">
-            <AccordionTrigger>Am I eligible to attend?</AccordionTrigger>
-            <AccordionContent>
-              All Chapman University students of any field of study are eligible to participate in PantherHacks{" "}
+              All undergraduate students from any school of any major are eligible to participate in PantherHacks{" "}
               {hackathonDateInfo.year}.
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-9">
-            <AccordionTrigger>Can I still attend even if I don't know how to code?</AccordionTrigger>
+          <AccordionItem value="item-5">
+            <AccordionTrigger>What if I don’t know how to code?</AccordionTrigger>
             <AccordionContent>
-              Yes! Prior experience is not required to participate. Mentors will be available to help you if you get
-              stuck.
+              No worries at all! You don’t need prior coding experience to participate. Hackathons are all about
+              learning, experimenting, and trying new things. We’ll have mentors available throughout the event to help
+              you if you get stuck, and we encourage you to team up with others!
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-10">
-            <AccordionTrigger>Will there be food?</AccordionTrigger>
-            <AccordionContent>Yes, meals and snacks will be provided throughout the event.</AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-11">
+          <AccordionItem value="item-6">
             <AccordionTrigger>Will there be prizes?</AccordionTrigger>
             <AccordionContent>
-              Yes, judges will score projects at the end of the event and prizes will be given to each member of the
-              winning teams. Judges will determine the winners of each of the four tracks (Entertainment, Cybersecurity,
-              Healthcare, Sustainability). Additionally, the Hacker's Choice award will be presented to the team that
-              receives the most votes from fellow hackathon participants.
+              Yes, over $2,000 in prizes are up for grabs! Judges will score projects at the end of the event and prizes
+              will be given to each member of the winning teams. Judges will determine the winners of each of the four
+              tracks (Entertainment, Cybersecurity, Healthcare, Sustainability). Additionally, the Hacker's Choice Award
+              will be presented to the team that receives the most votes from fellow hackathon participants.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
