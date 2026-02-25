@@ -45,15 +45,24 @@ const Navbar = () => {
         <div className="flex flex-row items-center">
           <div className="flex items-center overflow-hidden">
             <NavLink href="/" variant={"logo"} className="h-[70px] group" aria-label="Home">
-              <Image
-                src="/logos/pantherhacks/cyborg_pete_white.svg"
-                alt="PantherHacks Mascot"
-                width={50}
-                height={50}
-                className="transition-transform duration-300 ease-in-out transform group-hover:scale-105 select-none"
-                draggable={false}
-                loading="eager"
-              />
+              <div className="relative w-[50px] h-[50px] transition-transform duration-300 ease-in-out group-hover:scale-105">
+                <Image
+                  src="/logos/pantherhacks/cyborg_pete_white.svg"
+                  alt="PantherHacks Mascot"
+                  fill
+                  className="transition-opacity duration-300 ease-in-out opacity-100 group-hover:opacity-0 select-none object-contain"
+                  draggable={false}
+                  loading="eager"
+                />
+                <Image
+                  src="/logos/pantherhacks/cyborg_pete.svg"
+                  alt="PantherHacks Mascot"
+                  fill
+                  className="transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100 select-none object-contain"
+                  draggable={false}
+                  loading="eager"
+                />
+              </div>
             </NavLink>
           </div>
           <div className="flex items-center flex-grow font-Xirod text-white text-lg">
