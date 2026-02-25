@@ -50,7 +50,7 @@ const Navbar = () => {
                 alt="PantherHacks Mascot"
                 width={50}
                 height={50}
-                className="transition-transform duration-300ease-in-out transform group-hover:scale-105 select-none"
+                className="transition-transform duration-300 ease-in-out transform group-hover:scale-105 select-none"
                 draggable={false}
                 loading="eager"
               />
@@ -66,7 +66,7 @@ const Navbar = () => {
             <NavLink href="/#prizes" hoverColor="#8C02D6" glowColor="#AD98FF">
               Prizes
             </NavLink>
-            <NavLink href="/#faqs" hoverColor="#53FF1D" glowColor="#E9FF26">
+            <NavLink href="/#faqs" hoverColor="#22CC00" glowColor="#E9FF26">
               FAQs
             </NavLink>
             <NavLink href="/#team" hoverColor="#4835FF" glowColor="#6FB3FE">
@@ -198,7 +198,7 @@ const Navbar = () => {
             variant="mobile"
             href="/#faqs"
             onClick={handleMobileLinkClick}
-            hoverColor="#53FF1D"
+            hoverColor="#22CC00"
             glowColor="#E9FF26"
           >
             FAQs
