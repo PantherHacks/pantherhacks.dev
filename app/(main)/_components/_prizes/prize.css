@@ -1,3 +1,291 @@
-.prize-image {
-  filter: drop-shadow(0px 5px 5px #888888);
+.prize-card-wrapper {
+  flex: 1 1 0;
+  min-width: 130px;
+  max-width: 200px;
+  display: flex;
+  align-items: stretch;
+}
+
+.prize-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  will-change: transform;
+  background: linear-gradient(rgba(255, 255, 255, 0.014) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.014) 1px, transparent 1px),
+    linear-gradient(160deg, #131320 0%, #0a0a18 50%, #0f0f1e 100%);
+  background-size:
+    18px 18px,
+    18px 18px,
+    100% 100%;
+  border: 1px solid rgba(110, 70, 190, 0.4);
+  box-shadow:
+    0 0 0 1px rgba(80, 40, 140, 0.2),
+    inset 0 0 24px rgba(50, 15, 90, 0.3),
+    0 6px 20px rgba(0, 0, 0, 0.9);
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.prize-card-hovered {
+  border-color: rgba(180, 130, 255, 0.65);
+  box-shadow:
+    0 0 0 1px rgba(160, 110, 255, 0.3),
+    inset 0 0 28px rgba(100, 50, 180, 0.35),
+    0 10px 32px rgba(0, 0, 0, 0.95),
+    0 0 24px rgba(130, 80, 220, 0.18);
+}
+
+.holo-foil {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+  border-radius: 10px;
+}
+
+.card-accent-strip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 5;
+}
+
+.card-image-area {
+  position: absolute;
+  top: 12px;
+  left: 8px;
+  right: 8px;
+  bottom: 38%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.card-img {
+  width: auto !important;
+  height: 100% !important;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.85));
+  user-select: none;
+  pointer-events: none;
+}
+
+.card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  z-index: 3;
+  background: linear-gradient(to top, rgba(5, 4, 14, 0.97) 0%, rgba(8, 6, 18, 0.88) 55%, transparent 100%);
+}
+
+.card-separator {
+  width: 80%;
+  height: 1px;
+  margin-bottom: 4px;
+  opacity: 0.8;
+}
+
+.card-prize-name {
+  font-family: "Ubuntu Mono Bold", "Ubuntu Mono", monospace;
+  font-weight: bold;
+  font-size: 10px;
+  color: #ddd8f0;
+  text-align: center;
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.card-track-name {
+  font-family: "Xirod", sans-serif;
+  font-size: 7.5px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.vending-machine-outer {
+  position: relative;
+  background: linear-gradient(170deg, #0d0d18 0%, #08080f 100%);
+  border: 2px solid #7a5c10;
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow:
+    0 0 0 1px #09090f,
+    0 0 0 3px #c8a020,
+    0 0 0 4px #09090f,
+    0 0 0 6px #7a5c10,
+    inset 0 0 0 1px rgba(175, 135, 25, 0.12),
+    0 8px 40px rgba(0, 0, 0, 0.95),
+    0 0 100px rgba(0, 50, 80, 0.08);
+}
+
+.vending-glow-bar {
+  height: 4px;
+  border-radius: 2px;
+  margin-bottom: 6px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 220, 230, 0.4) 4%,
+    #00f0f0 15%,
+    #00ffff 50%,
+    #00f0f0 85%,
+    rgba(0, 220, 230, 0.4) 96%,
+    transparent 100%
+  );
+  box-shadow:
+    0 0 5px 1px rgba(0, 240, 240, 0.9),
+    0 0 10px 2px rgba(0, 210, 255, 0.7),
+    0 0 22px 3px rgba(0, 190, 255, 0.4),
+    0 0 44px 5px rgba(0, 170, 255, 0.15);
+}
+
+.vending-ornate-bar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 2px 0 6px;
+}
+
+.vending-ornate-diamond {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  background: #c8a020;
+  box-shadow: 0 0 5px rgba(200, 160, 32, 0.7);
+  transform: rotate(45deg);
+}
+
+.vending-ornate-line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, #7a5c10 0%, #c8a020 20%, #e8c030 50%, #c8a020 80%, #7a5c10 100%);
+  box-shadow: 0 0 4px rgba(200, 160, 32, 0.25);
+}
+
+.vending-display-area {
+  position: relative;
+  background: linear-gradient(180deg, #080814 0%, #060610 100%);
+  border: 1px solid rgba(150, 115, 18, 0.2);
+  border-radius: 2px;
+  padding: 20px 14px;
+  box-shadow: inset 0 0 44px rgba(15, 5, 40, 0.85);
+}
+
+.vending-corner {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #c8a020;
+  z-index: 2;
+  box-shadow: 0 0 6px rgba(200, 160, 32, 0.8);
+}
+
+.vending-corner-tl {
+  top: -1px;
+  left: -1px;
+}
+.vending-corner-tr {
+  top: -1px;
+  right: -1px;
+}
+.vending-corner-bl {
+  bottom: -1px;
+  left: -1px;
+}
+.vending-corner-br {
+  bottom: -1px;
+  right: -1px;
+}
+
+.prizes-grid {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.prizes-grid::-webkit-scrollbar {
+  height: 3px;
+}
+.prizes-grid::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+}
+.prizes-grid::-webkit-scrollbar-thumb {
+  background: rgba(200, 160, 32, 0.4);
+  border-radius: 2px;
+}
+
+.vending-bottom-dots {
+  display: flex;
+  align-items: center;
+  padding: 7px 2px 2px;
+}
+
+.vending-dot {
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  background: #c8a020;
+  box-shadow: 0 0 4px rgba(200, 160, 32, 0.65);
+  transform: rotate(45deg);
+}
+
+.vending-dot-spacer {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(200, 160, 32, 0.08), rgba(200, 160, 32, 0.22), rgba(200, 160, 32, 0.08));
+}
+
+.vending-selection-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 12px 4px;
+  margin-top: 6px;
+  background: rgba(4, 4, 10, 0.92);
+  border: 1px solid rgba(140, 105, 15, 0.2);
+  border-radius: 2px;
+}
+
+.vending-led-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #00ff88;
+  box-shadow:
+    0 0 5px #00ff88,
+    0 0 10px rgba(0, 255, 136, 0.35);
+}
+
+.vending-panel-display {
+  font-family: "DS-Digital", "Ubuntu Mono", monospace;
+  font-size: 10px;
+  color: #00ff88;
+  text-shadow:
+    0 0 6px #00ff88,
+    0 0 14px rgba(0, 255, 136, 0.4);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
