@@ -40,10 +40,13 @@ const PrizesSection = () => {
           <div className="vending-corner absolute w-[14px] h-[14px] bg-[#c8a020] z-[2] -bottom-px -left-px" />
           <div className="vending-corner absolute w-[14px] h-[14px] bg-[#c8a020] z-[2] -bottom-px -right-px" />
 
-          <div className="prizes-grid grid grid-cols-[repeat(auto-fill,minmax(min(130px,45%),1fr))] md:grid-cols-[repeat(auto-fill,minmax(130px,200px))] lg:grid-cols-5 gap-3.5 pb-1 justify-center">
+          <div className="prizes-grid grid grid-cols-[repeat(auto-fill,minmax(min(130px,45%),1fr))] md:grid-cols-4 lg:grid-cols-5 gap-3.5 pb-1 justify-center">
             {prizes.map((prize) => (
               <PrizeCard key={prize.trackName} {...prize} />
             ))}
+            <PrizeCard isEmpty />
+            <PrizeCard isEmpty />
+            <PrizeCard isEmpty />
           </div>
         </div>
 
