@@ -48,7 +48,7 @@ export default function PrizeCard({ trackName, prizeItem, imageSrc, accentColor 
     >
       <div
         ref={cardRef}
-        className={`prize-card relative w-full aspect-[3/4] rounded-[10px] overflow-hidden cursor-pointer will-change-transform${hovered ? " prize-card-hovered" : ""}`}
+        className={`prize-card relative w-full aspect-[2/3] rounded-[10px] overflow-hidden cursor-pointer will-change-transform flex flex-col${hovered ? " prize-card-hovered" : ""}`}
         style={{
           transform: hovered
             ? `perspective(700px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg) scale(0.92)`
@@ -86,7 +86,7 @@ export default function PrizeCard({ trackName, prizeItem, imageSrc, accentColor 
           }}
         />
 
-        <div className="absolute top-3 left-2 right-2 bottom-[38%] flex items-center justify-center overflow-hidden z-[2]">
+        <div className="flex-1 flex items-center justify-center overflow-hidden z-[2] px-2 pt-3">
           <Image
             src={`/images/prizes/${imageSrc}`}
             alt={prizeItem}
@@ -98,20 +98,24 @@ export default function PrizeCard({ trackName, prizeItem, imageSrc, accentColor 
           />
         </div>
 
-        <div className="card-info absolute bottom-0 left-0 right-0 px-[10px] pt-2 pb-[10px] flex flex-col items-center gap-[3px] z-[3]">
-          <p
-            className="font-Xirod text-[10px] text-center tracking-[0.1em] uppercase leading-[1.2]"
-            style={{ color: accentColor, textShadow: `0 0 10px ${accentColor}90` }}
-          >
-            {trackName}
-          </p>
+        <div className="card-info px-[10px] pt-2 pb-[10px] flex flex-col items-center gap-[3px] z-[3]">
+          <div className="w-full overflow-hidden">
+            <p
+              className="card-prize-ticker-reverse font-Xirod text-[10px] tracking-[0.1em] uppercase leading-[1.2]"
+              style={{ color: accentColor, textShadow: `0 0 10px ${accentColor}90` }}
+            >
+              {trackName}&nbsp;◆&nbsp;{trackName}&nbsp;◆&nbsp;
+            </p>
+          </div>
           <div
             className="w-4/5 h-px mb-1 opacity-80"
             style={{ background: accentColor, boxShadow: `0 0 5px ${accentColor}60` }}
           />
-          <p className="font-UbuntuMonoBold font-bold text-[10px] text-[#ddd8f0] text-center leading-[1.3] uppercase tracking-[0.04em]">
-            {prizeItem}
-          </p>
+          <div className="w-full overflow-hidden">
+            <p className="card-prize-ticker font-UbuntuMonoBold font-bold text-[10px] text-[#ddd8f0] leading-[1.3] uppercase tracking-[0.04em]">
+              {prizeItem}&nbsp;◆&nbsp;{prizeItem}&nbsp;◆&nbsp;
+            </p>
+          </div>
         </div>
       </div>
     </div>

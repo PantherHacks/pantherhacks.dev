@@ -26,6 +26,33 @@
     0 0 24px rgba(130, 80, 220, 0.18);
 }
 
+@keyframes prize-ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes prize-ticker-reverse {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+.card-prize-ticker {
+  display: inline-block;
+  white-space: nowrap;
+  animation: prize-ticker 10s linear infinite;
+}
+
+.card-prize-ticker-reverse {
+  display: inline-block;
+  white-space: nowrap;
+  animation: prize-ticker-reverse 10s linear infinite;
+}
+
+.prize-card-hovered .card-prize-ticker,
+.prize-card-hovered .card-prize-ticker-reverse {
+  animation-play-state: paused;
+}
+
 .card-img {
   filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.85));
 }

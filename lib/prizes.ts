@@ -5,31 +5,31 @@
  */
 export const prizes: Array<{ trackName: string; prizeItem: string; imageSrc: string; accentColor: string }> = [
   {
-    trackName: "HACKER'S CHOICE",
+    trackName: "HACKER'S CHOICE WINNER",
     prizeItem: "Ember Temperature Control Smart Mug",
     imageSrc: "hackers_choice_winner.png",
     accentColor: "#FE5501",
   },
   {
-    trackName: "CYBERSECURITY",
+    trackName: "CYBERSECURITY TRACK WINNER",
     prizeItem: "Raspberry Pi 5 Starter Kit",
     imageSrc: "cybersecurity_winner.png",
     accentColor: "#00FF88",
   },
   {
-    trackName: "ENTERTAINMENT",
+    trackName: "ENTERTAINMENT TRACK WINNER",
     prizeItem: "Nothing Ear (a) Earbuds",
     imageSrc: "entertainment_winner.png",
     accentColor: "#5B41FF",
   },
   {
-    trackName: "HEALTHCARE",
+    trackName: "HEALTHCARE TRACK WINNER",
     prizeItem: "Levoit Smart Air Purifier",
     imageSrc: "healthcare_winner.png",
     accentColor: "#E820AB",
   },
   {
-    trackName: "SUSTAINABILITY",
+    trackName: "SUSTAINABILITY TRACK WINNER",
     prizeItem: "Kasa Smart Plugs & Kasa Smart Bulbs",
     imageSrc: "sustainability_winner.png",
     accentColor: "#8A38F5",
