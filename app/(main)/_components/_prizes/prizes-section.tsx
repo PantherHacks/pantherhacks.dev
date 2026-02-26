@@ -1,38 +1,6 @@
 import PrizeCard from "@/app/(main)/_components/_prizes/prize-card";
 import { SectionTitle } from "@/components/section-title";
-
-const PRIZES = [
-  {
-    trackName: "HACKER'S CHOICE",
-    prizeItem: "Retro Handheld Gaming Console",
-    imageSrc: "retro-console.png",
-    accentColor: "#FE5501",
-  },
-  {
-    trackName: "AI TRACK WINNER",
-    prizeItem: "1 TB Portable SSD",
-    imageSrc: "crucial-ssd.png",
-    accentColor: "#00CFFF",
-  },
-  {
-    trackName: "CYBER TRACK WINNER",
-    prizeItem: "8GB Raspberry Pi 5",
-    imageSrc: "raspberry-pi.png",
-    accentColor: "#00FF88",
-  },
-  {
-    trackName: "HEALTH TRACK WINNER",
-    prizeItem: "Keychron K4 Wireless Keyboard",
-    imageSrc: "keychron-k4.png",
-    accentColor: "#E820AB",
-  },
-  {
-    trackName: "SUSTAINABILITY TRACK",
-    prizeItem: "Lego Piranha Plant",
-    imageSrc: "piranha-plant.png",
-    accentColor: "#8A38F5",
-  },
-];
+import { prizes } from "@/lib/prizes";
 
 const PrizesSection = () => {
   return (
@@ -73,7 +41,7 @@ const PrizesSection = () => {
           <div className="vending-corner vending-corner-br" />
 
           <div className="prizes-grid">
-            {PRIZES.map((prize) => (
+            {prizes.map((prize) => (
               <PrizeCard key={prize.trackName} {...prize} />
             ))}
           </div>

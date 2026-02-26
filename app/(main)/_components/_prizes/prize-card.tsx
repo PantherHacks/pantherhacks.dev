@@ -99,11 +99,11 @@ export default function PrizeCard({ trackName, prizeItem, imageSrc, accentColor 
         </div>
 
         <div className="card-info">
-          <div className="card-separator" style={{ background: accentColor, boxShadow: `0 0 5px ${accentColor}60` }} />
-          <p className="card-prize-name">{prizeItem}</p>
           <p className="card-track-name" style={{ color: accentColor, textShadow: `0 0 10px ${accentColor}90` }}>
             {trackName}
           </p>
+          <div className="card-separator" style={{ background: accentColor, boxShadow: `0 0 5px ${accentColor}60` }} />
+          <p className="card-prize-name">{prizeItem}</p>
         </div>
       </div>
     </div>
