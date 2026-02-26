@@ -25,38 +25,44 @@ const PrizesSection = () => {
         </p>
       </div>
 
-      <div className="vending-machine-outer w-full max-w-5xl">
-        <div className="vending-glow-bar" />
+      <div className="vending-machine-outer relative w-full max-w-5xl border-2 border-[#7a5c10] rounded-[4px] p-[10px]">
+        <div className="vending-glow-bar h-1 rounded-[2px] mb-[6px]" />
 
-        <div className="vending-ornate-bar">
-          <div className="vending-ornate-diamond" />
-          <div className="vending-ornate-line" />
-          <div className="vending-ornate-diamond" />
+        <div className="flex items-center gap-1 mt-[2px] mb-[6px]">
+          <div className="vending-ornate-diamond w-3 h-3 shrink-0 bg-[#c8a020] rotate-45" />
+          <div className="vending-ornate-line flex-1 h-[2px]" />
+          <div className="vending-ornate-diamond w-3 h-3 shrink-0 bg-[#c8a020] rotate-45" />
         </div>
 
-        <div className="vending-display-area">
-          <div className="vending-corner vending-corner-tl" />
-          <div className="vending-corner vending-corner-tr" />
-          <div className="vending-corner vending-corner-bl" />
-          <div className="vending-corner vending-corner-br" />
+        <div className="vending-display-area relative border border-[rgba(150,115,18,0.2)] rounded-sm py-5 px-[14px]">
+          <div className="vending-corner absolute w-[14px] h-[14px] bg-[#c8a020] z-[2] -top-px -left-px" />
+          <div className="vending-corner absolute w-[14px] h-[14px] bg-[#c8a020] z-[2] -top-px -right-px" />
+          <div className="vending-corner absolute w-[14px] h-[14px] bg-[#c8a020] z-[2] -bottom-px -left-px" />
+          <div className="vending-corner absolute w-[14px] h-[14px] bg-[#c8a020] z-[2] -bottom-px -right-px" />
 
-          <div className="prizes-grid">
+          <div className="prizes-grid flex gap-[14px] overflow-x-auto pb-1">
             {prizes.map((prize) => (
               <PrizeCard key={prize.trackName} {...prize} />
             ))}
           </div>
         </div>
 
-        <div className="vending-bottom-dots">
+        <div className="flex items-center pt-[7px] px-[2px] pb-[2px]">
           {Array.from({ length: 13 }, (_, i) =>
-            i % 2 === 0 ? <div key={i} className="vending-dot" /> : <div key={i} className="vending-dot-spacer" />
+            i % 2 === 0 ? (
+              <div key={i} className="vending-dot w-[7px] h-[7px] shrink-0 bg-[#c8a020] rotate-45" />
+            ) : (
+              <div key={i} className="vending-dot-spacer flex-1 h-px" />
+            )
           )}
         </div>
 
-        <div className="vending-selection-panel">
-          <div className="vending-led-dot" />
-          <span className="vending-panel-display">Make Your Selection</span>
-          <div className="vending-led-dot" />
+        <div className="flex items-center justify-center gap-[10px] pt-[5px] px-3 pb-1 mt-[6px] bg-[rgba(4,4,10,0.92)] border border-[rgba(140,105,15,0.2)] rounded-[2px]">
+          <div className="vending-led-dot w-[5px] h-[5px] rounded-full bg-[#00ff88]" />
+          <span className="vending-panel-display font-DSDigital text-[10px] text-[#00ff88] tracking-[0.2em] uppercase">
+            Make Your Selection
+          </span>
+          <div className="vending-led-dot w-[5px] h-[5px] rounded-full bg-[#00ff88]" />
         </div>
       </div>
     </div>
