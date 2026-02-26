@@ -45,7 +45,7 @@ const Navbar = () => {
         <div className="flex flex-row items-center">
           <div className="flex items-center overflow-hidden">
             <NavLink href="/" variant={"logo"} className="h-[70px] group" aria-label="Home">
-              <div className="relative w-[50px] h-[50px] transition-transform duration-300 ease-in-out group-hover:scale-105">
+              <div className="relative w-[50px] h-[50px] transition-transform duration-300 ease-in-out group-hover:scale-110">
                 <Image
                   src="/logos/pantherhacks/cyborg_pete_white.svg"
                   alt="PantherHacks Mascot"
@@ -58,7 +58,7 @@ const Navbar = () => {
                   src="/logos/pantherhacks/cyborg_pete.svg"
                   alt="PantherHacks Mascot"
                   fill
-                  className="transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100 select-none object-contain"
+                  className="transition-opacity scale-110 duration-300 ease-in-out opacity-0 group-hover:opacity-100 select-none object-contain"
                   draggable={false}
                   loading="eager"
                 />
