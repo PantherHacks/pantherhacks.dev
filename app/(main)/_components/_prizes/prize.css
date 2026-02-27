@@ -118,10 +118,11 @@
 }
 
 .prize-card-empty {
-  border-color: rgba(50, 20, 70, 0.35);
+  border-color: rgba(100, 40, 150, 0.5);
   box-shadow:
-    0 0 0 1px rgba(30, 10, 50, 0.15),
-    inset 0 0 28px rgba(8, 0, 18, 0.7),
+    0 0 0 1px rgba(80, 30, 120, 0.3),
+    inset 0 0 28px rgba(20, 5, 45, 0.8),
+    0 0 18px rgba(80, 20, 140, 0.15),
     0 6px 20px rgba(0, 0, 0, 0.9);
   background: repeating-linear-gradient(
       0deg,
@@ -130,7 +131,7 @@
       rgba(0, 0, 0, 0.12) 3px,
       rgba(0, 0, 0, 0.12) 4px
     ),
-    linear-gradient(160deg, #090910 0%, #050508 50%, #07070d 100%);
+    linear-gradient(160deg, #0d0a16 0%, #08060f 50%, #0b0812 100%);
 }
 
 @keyframes null-flicker {
@@ -171,7 +172,7 @@
   left: 0;
   right: 0;
   height: 35%;
-  background: linear-gradient(to bottom, transparent 0%, rgba(70, 20, 140, 0.07) 50%, transparent 100%);
+  background: linear-gradient(to bottom, transparent 0%, rgba(100, 40, 200, 0.12) 50%, transparent 100%);
   animation: null-scanbeam 5s linear infinite;
   pointer-events: none;
   z-index: 1;

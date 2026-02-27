@@ -137,29 +137,17 @@ export default function PrizeCard({
         </div>
       ) : (
         <div className={cn("flex-1 basis-0 min-w-[130px] max-w-[200px] flex items-stretch", className)}>
-          <div className="prize-card prize-card-empty w-full aspect-[2/3] rounded-[10px] relative overflow-hidden flex flex-col opacity-60">
+          <div className="prize-card prize-card-empty w-full aspect-[2/3] rounded-[10px] relative overflow-hidden flex flex-col">
             <div className="null-scanbeam" />
 
-            <div
-              className="absolute top-0 left-0 right-0 h-[3px] z-[5]"
-              style={{
-                background: "rgba(60, 10, 10, 0.8)",
-                boxShadow: "0 0 6px rgba(80, 10, 10, 0.5)",
-              }}
-            />
+            <div className="absolute top-0 left-0 right-0 h-[3px] z-[5] bg-[rgba(120,20,20,0.9)] shadow-[0_0_8px_rgba(160,20,20,0.7)]" />
 
             <div className="flex-1 flex flex-col items-center justify-center z-[2] gap-1 px-2">
-              <p
-                className="null-flicker font-UbuntuMono text-[16px] tracking-[0.15em] select-none"
-                style={{ color: "rgba(110, 45, 170, 0.75)", textShadow: "0 0 14px rgba(90, 30, 150, 0.5)" }}
-              >
+              <p className="null-flicker font-UbuntuMono text-[16px] tracking-[0.15em] select-none text-[rgba(160,80,240,0.5)] [text-shadow:0_0_16px_rgba(130,60,220,0.8)]">
                 [ NULL ]
               </p>
-              <p
-                className="font-Xirod text-[7px] tracking-[0.25em] uppercase select-none mt-[2px]"
-                style={{ color: "rgba(90, 35, 130, 0.5)" }}
-              >
-                SLOT VACANT
+              <p className="font-Xirod text-[7px] tracking-[0.25em] uppercase select-none mt-[2px] text-[rgba(130,70,190,0.5)]">
+                SLOT EMPTY
               </p>
             </div>
           </div>
