@@ -12,7 +12,8 @@ interface ITrackProps {
 const Track: React.FC<ITrackProps> = ({ name, description, left = false, right = false }) => {
   return (
     <div
-      className={`flex flex-col items-center space-y-4 w-full transition-transform duration-300 ${left ? "md:translate-x-[-4rem] lg:translate-x-[-6rem] xl:translate-x-[-12rem] 2xl:translate-x-[-20rem]" : right ? "md:translate-x-[4rem] lg:translate-x-[6rem] xl:translate-x-[12rem] 2xl:translate-x-[20rem]" : ""}`}
+      id={`${name.toLowerCase()}-track`}
+      className={`scroll-m-40 flex flex-col items-center space-y-4 w-full transition-transform duration-300 ${left ? "md:translate-x-[-4rem] lg:translate-x-[-6rem] xl:translate-x-[-12rem] 2xl:translate-x-[-20rem]" : right ? "md:translate-x-[4rem] lg:translate-x-[6rem] xl:translate-x-[12rem] 2xl:translate-x-[20rem]" : ""}`}
     >
       <div className="relative flex flex-col rounded-none p-2 sm:p-6 w-auto mx-6 md:mx-0 md:w-[40rem] lg:w-[50rem] 3xl:w-[60rem] z-3">
         <div
