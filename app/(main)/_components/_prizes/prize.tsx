@@ -3,6 +3,8 @@ import Image from "next/image";
 
 import "./prize.css";
 
+import { cn } from "@/lib/utils";
+
 interface PrizeProps {
   title: string;
   description: string;
@@ -14,14 +16,21 @@ interface PrizeProps {
 const Prize: FC<PrizeProps> = ({ title, description, imageSrc, imageSide = "left", className }) => {
   return (
     <div
-      className={`flex ${imageSide == "left" ? "flex-row" : "flex-row-reverse"} justify-center items-center gap-x-2 md:gap-x-8 w-full ${className ?? ""}`}
+      className={cn(
+        "flex justify-center items-center gap-x-2 md:gap-x-8 w-full",
+        imageSide === "left" ? "flex-row" : "flex-row-reverse",
+        className
+      )}
     >
       <Image
         src={"/images/prizes/" + imageSrc}
         alt={description}
         width={0}
         height={0}
-        className={`w-28 sm:w-40 md:w-44 max-w-64 prize-image transform-gpu transition-transform duration-300 hover:scale-105 ${imageSide == "left" ? "hover:-rotate-6" : "hover:rotate-6"}`}
+        className={cn(
+          "w-28 sm:w-40 md:w-44 max-w-64 prize-image transform-gpu transition-transform duration-300 hover:scale-105",
+          imageSide === "left" ? "hover:-rotate-6" : "hover:rotate-6"
+        )}
         draggable="false"
         unoptimized
       />

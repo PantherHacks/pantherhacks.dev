@@ -1,3 +1,232 @@
-.prize-image {
-  filter: drop-shadow(0px 5px 5px #888888);
+.prize-card {
+  background: linear-gradient(rgba(255, 255, 255, 0.014) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.014) 1px, transparent 1px),
+    linear-gradient(160deg, #131320 0%, #0a0a18 50%, #0f0f1e 100%);
+  background-size:
+    18px 18px,
+    18px 18px,
+    100% 100%;
+  border: 1px solid rgba(110, 70, 190, 0.4);
+  box-shadow:
+    0 0 0 1px rgba(80, 40, 140, 0.2),
+    inset 0 0 24px rgba(50, 15, 90, 0.3),
+    0 6px 20px rgba(0, 0, 0, 0.9);
+  transform-style: preserve-3d;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.prize-card-hovered {
+  border-color: rgba(180, 130, 255, 0.65);
+  box-shadow:
+    0 0 0 1px rgba(160, 110, 255, 0.3),
+    inset 0 0 28px rgba(100, 50, 180, 0.35),
+    0 10px 32px rgba(0, 0, 0, 0.95),
+    0 0 24px rgba(130, 80, 220, 0.18);
+}
+
+@keyframes prize-ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes prize-ticker-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.card-prize-ticker {
+  display: inline-block;
+  white-space: nowrap;
+  animation: prize-ticker 10s linear infinite;
+}
+
+.card-prize-ticker-reverse {
+  display: inline-block;
+  white-space: nowrap;
+  animation: prize-ticker-reverse 10s linear infinite;
+}
+
+.prize-card-hovered .card-prize-ticker,
+.prize-card-hovered .card-prize-ticker-reverse {
+  animation-play-state: paused;
+}
+
+.card-img {
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.85));
+}
+
+.card-info {
+  background: linear-gradient(to top, rgba(5, 4, 14, 0.97) 0%, rgba(8, 6, 18, 0.88) 55%, transparent 100%);
+}
+
+.vending-machine-outer {
+  background: linear-gradient(170deg, #0d0d18 0%, #08080f 100%);
+  box-shadow:
+    0 0 0 1px #09090f,
+    0 0 0 3px #c8a020,
+    0 0 0 4px #09090f,
+    0 0 0 6px #7a5c10,
+    inset 0 0 0 1px rgba(175, 135, 25, 0.12),
+    0 8px 40px rgba(0, 0, 0, 0.95),
+    0 0 100px rgba(0, 50, 80, 0.08);
+}
+
+.vending-glow-bar {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 220, 230, 0.4) 4%,
+    #00f0f0 15%,
+    #00ffff 50%,
+    #00f0f0 85%,
+    rgba(0, 220, 230, 0.4) 96%,
+    transparent 100%
+  );
+  box-shadow:
+    0 0 5px 1px rgba(0, 240, 240, 0.9),
+    0 0 10px 2px rgba(0, 210, 255, 0.7),
+    0 0 22px 3px rgba(0, 190, 255, 0.4),
+    0 0 44px 5px rgba(0, 170, 255, 0.15);
+}
+
+.vending-ornate-diamond {
+  box-shadow: 0 0 5px rgba(200, 160, 32, 0.7);
+}
+
+.vending-ornate-line {
+  background: linear-gradient(90deg, #7a5c10 0%, #c8a020 20%, #e8c030 50%, #c8a020 80%, #7a5c10 100%);
+  box-shadow: 0 0 4px rgba(200, 160, 32, 0.25);
+}
+
+.vending-display-area {
+  background: linear-gradient(180deg, #080814 0%, #060610 100%);
+  box-shadow: inset 0 0 44px rgba(15, 5, 40, 0.85);
+}
+
+.vending-corner {
+  box-shadow: 0 0 6px rgba(200, 160, 32, 0.8);
+}
+
+.prize-card-empty {
+  border-color: rgba(100, 40, 150, 0.5);
+  box-shadow:
+    0 0 0 1px rgba(80, 30, 120, 0.3),
+    inset 0 0 28px rgba(20, 5, 45, 0.8),
+    0 0 18px rgba(80, 20, 140, 0.15),
+    0 6px 20px rgba(0, 0, 0, 0.9);
+  background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgba(0, 0, 0, 0.12) 3px,
+      rgba(0, 0, 0, 0.12) 4px
+    ),
+    linear-gradient(160deg, #0d0a16 0%, #08060f 50%, #0b0812 100%);
+}
+
+@keyframes prize-card-bounce {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.88);
+  }
+  55% {
+    transform: scale(1.06);
+  }
+  75% {
+    transform: scale(0.97);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.prize-card-bouncing {
+  animation: prize-card-bounce 0.45s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes null-flicker {
+  0%,
+  85%,
+  100% {
+    opacity: 1;
+  }
+  86% {
+    opacity: 0.3;
+  }
+  87% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  91% {
+    opacity: 1;
+  }
+}
+
+@keyframes null-scanbeam {
+  0% {
+    top: -30%;
+  }
+  100% {
+    top: 115%;
+  }
+}
+
+.null-flicker {
+  animation: null-flicker 6s ease-in-out infinite;
+}
+
+.null-scanbeam {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 35%;
+  background: linear-gradient(to bottom, transparent 0%, rgba(100, 40, 200, 0.12) 50%, transparent 100%);
+  animation: null-scanbeam 5s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.prizes-grid::-webkit-scrollbar {
+  height: 3px;
+}
+.prizes-grid::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+}
+.prizes-grid::-webkit-scrollbar-thumb {
+  background: rgba(200, 160, 32, 0.4);
+  border-radius: 2px;
+}
+
+.vending-dot {
+  box-shadow: 0 0 4px rgba(200, 160, 32, 0.65);
+}
+
+.vending-dot-spacer {
+  background: linear-gradient(90deg, rgba(200, 160, 32, 0.08), rgba(200, 160, 32, 0.22), rgba(200, 160, 32, 0.08));
+}
+
+.vending-led-dot {
+  box-shadow:
+    0 0 5px #00ff88,
+    0 0 10px rgba(0, 255, 136, 0.35);
+}
+
+.vending-panel-display {
+  text-shadow:
+    0 0 6px #00ff88,
+    0 0 14px rgba(0, 255, 136, 0.4);
 }
