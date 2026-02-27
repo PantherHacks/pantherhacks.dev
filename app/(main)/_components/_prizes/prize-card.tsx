@@ -5,6 +5,8 @@ import Image from "next/image";
 
 import "./prize.css";
 
+import { cn } from "@/lib/utils";
+
 interface PrizeCardProps {
   isEmpty?: boolean;
   trackName?: string;
@@ -52,14 +54,17 @@ export default function PrizeCard({
     <>
       {!isEmpty ? (
         <div
-          className={`flex-1 basis-0 min-w-[130px] max-w-[200px] flex items-stretch${className ? ` ${className}` : ""}`}
+          className={cn("flex-1 basis-0 min-w-[130px] max-w-[200px] flex items-stretch", className)}
           onMouseMove={onMove}
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={onLeave}
         >
           <div
             ref={cardRef}
-            className={`prize-card relative w-full aspect-[2/3] rounded-[10px] overflow-hidden cursor-pointer will-change-transform flex flex-col${hovered ? " prize-card-hovered" : ""}`}
+            className={cn(
+              "prize-card relative w-full aspect-[2/3] rounded-[10px] overflow-hidden cursor-pointer will-change-transform flex flex-col",
+              hovered && "prize-card-hovered"
+            )}
             style={{
               transform: hovered
                 ? `perspective(700px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg) scale(0.92)`
@@ -131,9 +136,7 @@ export default function PrizeCard({
           </div>
         </div>
       ) : (
-        <div
-          className={`flex-1 basis-0 min-w-[130px] max-w-[200px] flex items-stretch${className ? ` ${className}` : ""}`}
-        >
+        <div className={cn("flex-1 basis-0 min-w-[130px] max-w-[200px] flex items-stretch", className)}>
           <div className="prize-card w-full aspect-[2/3] rounded-[10px] opacity-20 flex items-center justify-center">
             <p className="font-UbuntuMono text-center select-none">[ NULL ]</p>
           </div>
