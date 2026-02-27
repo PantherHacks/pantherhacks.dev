@@ -21,7 +21,7 @@ export default function NotFound() {
               unoptimized
             />
             <h2 className="font-Xirod text-6xl sm:text-9xl text-primary">404</h2>
-            <p className="mx-8 sm:mx-20 md:mx-24 text-center">
+            <p className="mx-8 sm:mx-20 md:mx-24 text-center text-white">
               <span className="font-bold">Paws...</span> That page doesn't exist. Click{" "}
               <Link href="/" className="underline hover:text-primary transition-colors">
                 here
