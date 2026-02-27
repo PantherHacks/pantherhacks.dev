@@ -117,6 +117,66 @@
   box-shadow: 0 0 6px rgba(200, 160, 32, 0.8);
 }
 
+.prize-card-empty {
+  border-color: rgba(50, 20, 70, 0.35);
+  box-shadow:
+    0 0 0 1px rgba(30, 10, 50, 0.15),
+    inset 0 0 28px rgba(8, 0, 18, 0.7),
+    0 6px 20px rgba(0, 0, 0, 0.9);
+  background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgba(0, 0, 0, 0.12) 3px,
+      rgba(0, 0, 0, 0.12) 4px
+    ),
+    linear-gradient(160deg, #090910 0%, #050508 50%, #07070d 100%);
+}
+
+@keyframes null-flicker {
+  0%,
+  85%,
+  100% {
+    opacity: 1;
+  }
+  86% {
+    opacity: 0.3;
+  }
+  87% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  91% {
+    opacity: 1;
+  }
+}
+
+@keyframes null-scanbeam {
+  0% {
+    top: -30%;
+  }
+  100% {
+    top: 115%;
+  }
+}
+
+.null-flicker {
+  animation: null-flicker 6s ease-in-out infinite;
+}
+
+.null-scanbeam {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 35%;
+  background: linear-gradient(to bottom, transparent 0%, rgba(70, 20, 140, 0.07) 50%, transparent 100%);
+  animation: null-scanbeam 5s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
 .prizes-grid::-webkit-scrollbar {
   height: 3px;
 }
