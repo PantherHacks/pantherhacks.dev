@@ -26,6 +26,7 @@ export default function PrizeCard({
 }: PrizeCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [hovered, setHovered] = useState(false);
+  const [bouncing, setBouncing] = useState(false);
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
   const [mx, setMx] = useState(50);
   const [my, setMy] = useState(50);
@@ -54,10 +55,19 @@ export default function PrizeCard({
     <>
       {!isEmpty ? (
         <div
-          className={cn("flex-1 basis-0 min-w-[130px] max-w-[200px] flex items-stretch", className)}
+          className={cn(
+            "flex-1 basis-0 min-w-[130px] max-w-[200px] flex items-stretch",
+            bouncing && "prize-card-bouncing",
+            className
+          )}
           onMouseMove={onMove}
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={onLeave}
+          onMouseDown={() => {
+            setBouncing(false);
+            requestAnimationFrame(() => setBouncing(true));
+          }}
+          onAnimationEnd={() => setBouncing(false)}
         >
           <div
             ref={cardRef}

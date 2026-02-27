@@ -134,6 +134,28 @@
     linear-gradient(160deg, #0d0a16 0%, #08060f 50%, #0b0812 100%);
 }
 
+@keyframes prize-card-bounce {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.88);
+  }
+  55% {
+    transform: scale(1.06);
+  }
+  75% {
+    transform: scale(0.97);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.prize-card-bouncing {
+  animation: prize-card-bounce 0.45s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
 @keyframes null-flicker {
   0%,
   85%,
