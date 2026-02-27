@@ -11,9 +11,17 @@ interface PrizeCardProps {
   prizeItem?: string;
   imageSrc?: string;
   accentColor?: string;
+  className?: string;
 }
 
-export default function PrizeCard({ isEmpty = false, trackName, prizeItem, imageSrc, accentColor }: PrizeCardProps) {
+export default function PrizeCard({
+  isEmpty = false,
+  trackName,
+  prizeItem,
+  imageSrc,
+  accentColor,
+  className,
+}: PrizeCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [hovered, setHovered] = useState(false);
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
@@ -44,7 +52,7 @@ export default function PrizeCard({ isEmpty = false, trackName, prizeItem, image
     <>
       {!isEmpty ? (
         <div
-          className="flex-1 basis-0 min-w-[130px] max-w-[200px] flex items-stretch"
+          className={`flex-1 basis-0 min-w-[130px] max-w-[200px] flex items-stretch${className ? ` ${className}` : ""}`}
           onMouseMove={onMove}
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={onLeave}
@@ -104,7 +112,7 @@ export default function PrizeCard({ isEmpty = false, trackName, prizeItem, image
             <div className="card-info px-[10px] pt-2 pb-[10px] flex flex-col items-center gap-[3px] z-[3]">
               <div className="w-full overflow-hidden">
                 <p
-                  className="card-prize-ticker-reverse font-Xirod text-[10px] tracking-[0.1em] uppercase leading-[1.2]"
+                  className="card-prize-ticker-reverse font-Xirod text-[10px] tracking-[0.1em] uppercase leading-[1.2] select-none"
                   style={{ color: accentColor, textShadow: `0 0 10px ${accentColor}90` }}
                 >
                   {trackName}&nbsp;◆&nbsp;{trackName}&nbsp;◆&nbsp;
@@ -115,7 +123,7 @@ export default function PrizeCard({ isEmpty = false, trackName, prizeItem, image
                 style={{ background: accentColor, boxShadow: `0 0 5px ${accentColor}60` }}
               />
               <div className="w-full overflow-hidden">
-                <p className="card-prize-ticker font-UbuntuMonoBold font-bold text-[10px] text-[#ddd8f0] leading-[1.3] uppercase tracking-[0.04em]">
+                <p className="card-prize-ticker font-UbuntuMonoBold font-bold text-[10px] text-[#ddd8f0] leading-[1.3] uppercase tracking-[0.04em] select-none">
                   {prizeItem}&nbsp;◆&nbsp;{prizeItem}&nbsp;◆&nbsp;
                 </p>
               </div>
@@ -123,8 +131,12 @@ export default function PrizeCard({ isEmpty = false, trackName, prizeItem, image
           </div>
         </div>
       ) : (
-        <div className="prize-card aspect-[2/3] rounded-[10px] opacity-20">
-          <p className="font-UbuntuMono flex flex-col items-center justify-center h-full">[ NULL ]</p>
+        <div
+          className={`flex-1 basis-0 min-w-[130px] max-w-[200px] flex items-stretch${className ? ` ${className}` : ""}`}
+        >
+          <div className="prize-card w-full aspect-[2/3] rounded-[10px] opacity-20 flex items-center justify-center">
+            <p className="font-UbuntuMono text-center select-none">[ NULL ]</p>
+          </div>
         </div>
       )}
     </>

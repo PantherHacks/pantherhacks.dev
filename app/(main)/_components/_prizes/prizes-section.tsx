@@ -1,6 +1,5 @@
-import PrizeCard from "@/app/(main)/_components/_prizes/prize-card";
+import PrizesGrid from "@/app/(main)/_components/_prizes/prizes-grid";
 import { SectionTitle } from "@/components/section-title";
-import { prizes } from "@/lib/prizes";
 
 const PrizesSection = () => {
   return (
@@ -40,14 +39,7 @@ const PrizesSection = () => {
           <div className="vending-corner absolute w-[14px] h-[14px] bg-[#c8a020] z-[2] -bottom-px -left-px" />
           <div className="vending-corner absolute w-[14px] h-[14px] bg-[#c8a020] z-[2] -bottom-px -right-px" />
 
-          <div className="prizes-grid grid grid-cols-[repeat(auto-fill,minmax(min(130px,45%),1fr))] md:grid-cols-4 lg:grid-cols-5 gap-3.5 pb-1 justify-center">
-            {prizes.map((prize) => (
-              <PrizeCard key={prize.trackName} {...prize} />
-            ))}
-            <PrizeCard isEmpty />
-            <PrizeCard isEmpty />
-            <PrizeCard isEmpty />
-          </div>
+          <PrizesGrid />
         </div>
 
         <div className="flex items-center pt-[7px] px-[2px] pb-[2px]">
