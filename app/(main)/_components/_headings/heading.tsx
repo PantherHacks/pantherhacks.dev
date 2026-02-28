@@ -54,10 +54,20 @@ const Heading = () => {
         </ParallaxBannerLayer> */}
 
         <ParallaxBannerLayer speed={20}>
-          <div className="absolute w-full flex justify-center items-center text-center top-[26rem] z-30">
-            <h1 className="font-Xirod text-2xl sm:text-5xl lg:text-6xl xl:text-7xl text-[#fe5401] max-w-[calc(100vw-4rem)] drop-shadow-lg">
-              PANTHERHACKS {hackathonDateInfo.year}
-            </h1>
+          <div className="absolute w-full flex flex-col justify-center items-center text-center gap-y-6 top-[22rem] z-30">
+            <Image
+              className="w-[40em] select-none"
+              src="/logos/pantherhacks/pantherhacks_wordmark_2026.svg"
+              alt="PantherHacks 2026"
+              width={252}
+              height={77}
+              loading="eager"
+              draggable={false}
+              unoptimized
+            />
+            <h2 className="font-UbuntuMonoBold text-xl sm:text-5xl text-primary cursor-default [@media(min-width:1800px)]:bg-[#3F1324] p-4 rounded-lg">
+              {hackathonDateInfo.dateString}
+            </h2>
           </div>
         </ParallaxBannerLayer>
 
@@ -66,14 +76,6 @@ const Heading = () => {
             <SpecialButton className="font-Xirod text-4xl">APPLY NOW</SpecialButton>
           </Link>
         </div>
-
-        <ParallaxBannerLayer speed={20}>
-          <div className="absolute w-full flex flex-col justify-center items-center text-center gap-y-8 top-[34rem] z-30">
-            <h2 className="font-UbuntuMonoBold text-xl sm:text-5xl text-white cursor-default [@media(min-width:1800px)]:bg-[#3F1324] p-4 rounded-lg">
-              {hackathonDateInfo.dateString}
-            </h2>
-          </div>
-        </ParallaxBannerLayer>
       </ParallaxBanner>
     </>
   );
