@@ -5,6 +5,7 @@ import SpecialButton from "@/components/ui/special-button";
 import { hackathonDateInfo } from "@/lib/dates";
 
 import "./mobileheading.css";
+import "./heading.css";
 
 const MobileHeading = () => {
   return (
@@ -26,7 +27,7 @@ const MobileHeading = () => {
       />
       <div className="relative z-10 flex flex-col items-center gap-y-6 px-4 pt-40">
         <Image
-          className="w-[20em] select-none"
+          className="logo-glow w-[20em] select-none"
           src="/logos/pantherhacks/pantherhacks_wordmark_2026.svg"
           alt="PantherHacks 2026"
           width={252}

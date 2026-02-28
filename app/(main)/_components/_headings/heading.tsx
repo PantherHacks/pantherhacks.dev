@@ -7,6 +7,8 @@ import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 import SpecialButton from "@/components/ui/special-button";
 import { hackathonDateInfo } from "@/lib/dates";
 
+import "./heading.css";
+
 const Heading = () => {
   return (
     <>
@@ -57,7 +59,7 @@ const Heading = () => {
         <ParallaxBannerLayer speed={20}>
           <div className="absolute w-full flex flex-col justify-center items-center text-center gap-y-6 top-[22rem] z-30">
             <Image
-              className="w-[40em] select-none"
+              className="w-[40em] select-none logo-glow"
               src="/logos/pantherhacks/pantherhacks_wordmark_2026.svg"
               alt="PantherHacks 2026"
               width={252}
