@@ -78,7 +78,7 @@ const Navbar = () => {
             <NavLink href="/#faqs" hoverColor="#22CC00" glowColor="#E9FF26">
               FAQs
             </NavLink>
-            <NavLink href="/#team" hoverColor="#4835FF" glowColor="#6FB3FE">
+            <NavLink href="/#team" hoverColor="#61D7FF" glowColor="#6FB3FE">
               Team
             </NavLink>
             <NavLink href="/apply" variant="default" target="_blank" rel="noopener noreferrer">

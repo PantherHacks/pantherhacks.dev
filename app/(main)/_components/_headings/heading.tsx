@@ -31,7 +31,7 @@ const Heading = () => {
 
         <ParallaxBannerLayer speed={10}>
           <Image
-            className="absolute h-screen min-w-full w-auto max-w-[5000rem] top-0 left-1/2 -translate-x-1/2 z-20 grayscale"
+            className="absolute h-screen min-w-full w-auto max-w-[5000rem] xl:top-0 top-60 left-1/2 -translate-x-1/2 z-20 grayscale"
             src="/images/main-background/building-background.svg"
             alt="Buildings"
             width={0}
