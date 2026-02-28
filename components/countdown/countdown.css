@@ -1,5 +1,58 @@
+.countdown-frame {
+  position: relative;
+  border: 1px solid rgba(255, 85, 0, 0.45);
+  padding: 1.5rem 2.5rem;
+  box-shadow:
+    0 0 12px 1px rgba(255, 85, 0, 0.08),
+    inset 0 0 12px 1px rgba(255, 85, 0, 0.04);
+}
+
+.countdown-corner {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-color: rgb(255, 85, 0);
+  border-style: solid;
+}
+
+.countdown-corner.tl {
+  top: -2px;
+  left: -2px;
+  border-width: 3px 0 0 3px;
+}
+
+.countdown-corner.tr {
+  top: -2px;
+  right: -2px;
+  border-width: 3px 3px 0 0;
+}
+
+.countdown-corner.bl {
+  bottom: -2px;
+  left: -2px;
+  border-width: 0 0 3px 3px;
+}
+
+.countdown-corner.br {
+  bottom: -2px;
+  right: -2px;
+  border-width: 0 3px 3px 0;
+}
+
 .countdown-glow {
   background: linear-gradient(to bottom, transparent, #ed500080);
+}
+
+.countdown-text-glow {
+  text-shadow:
+    0 0 6px #a76b03,
+    0 0 14px rgba(201, 212, 1, 0.4);
+}
+
+.description-text-glow {
+  text-shadow:
+    0 0 6px #a76b03,
+    0 0 4px rgba(201, 212, 1, 0.2);
 }
 
 .countdown-glow::after {
