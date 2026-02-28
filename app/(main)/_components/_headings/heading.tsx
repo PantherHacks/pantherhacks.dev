@@ -34,6 +34,7 @@ const Heading = () => {
             alt="Buildings"
             width={0}
             height={0}
+            draggable={false}
             loading="eager"
           />
         </ParallaxBannerLayer>

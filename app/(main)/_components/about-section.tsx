@@ -4,7 +4,7 @@ import { hackathonDateInfo } from "@/lib/dates";
 
 const AboutSection = () => {
   return (
-    <div id="about" className="flex flex-col items-center justify-center w-full py-40">
+    <div id="about" className="flex flex-col items-center justify-center w-full pb-40 md:pt-40">
       <SectionTitle
         color1="#FE5501"
         color2="#4d1900"
