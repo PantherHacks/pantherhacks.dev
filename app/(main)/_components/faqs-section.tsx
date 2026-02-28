@@ -86,7 +86,7 @@ const FaqsSection = () => {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-7">
-            <AccordionTrigger>Who is eligible to volunteer for PantherHacks 2026?</AccordionTrigger>
+            <AccordionTrigger>Who is eligible to volunteer for PantherHacks {hackathonDateInfo.year}?</AccordionTrigger>
             <AccordionContent>
               Volunteer positions are open exclusively to currently enrolled Chapman University students. Individuals
               who are not current Chapman students are not eligible to apply for volunteer roles.
@@ -96,8 +96,8 @@ const FaqsSection = () => {
             <AccordionTrigger>Can I volunteer and also participate as a hacker?</AccordionTrigger>
             <AccordionContent>
               No. Individuals who apply and are selected to serve as volunteers may not also compete as participants in
-              PantherHacks 2026. Volunteers play an essential role in supporting the event and therefore are not
-              permitted to participate as hackers during the same event.
+              PantherHacks {hackathonDateInfo.year}. Volunteers play an essential role in supporting the event and
+              therefore are not permitted to participate as hackers during the same event.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
