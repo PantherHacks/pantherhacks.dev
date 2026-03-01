@@ -24,11 +24,11 @@ const TeamSection = () => {
         draggable={false}
       />
       <SectionTitle
-        color1="#000bde"
-        color2="#010d7a"
-        color3="#2432ff"
-        color4="#4053ff"
-        textShadowColor="#929dfc"
+        color1="#61D7FF"
+        color2="#0b89e3"
+        color3="#1695f0"
+        color4="#30b3ff"
+        textShadowColor="#6FB3FE"
         flickerIndices={[0, 1]}
       >
         Team
