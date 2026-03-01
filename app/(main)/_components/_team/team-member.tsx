@@ -18,7 +18,7 @@ const TeamMember: React.FC<ITeamMemberProps> = ({
   name,
   teamRole,
   linkedinLink,
-  color_hex = "#2432ff",
+  color_hex = "#61D7FF",
   hueRotation = -150,
 }) => {
   const [isHovered, setIsHovered] = useState(false);

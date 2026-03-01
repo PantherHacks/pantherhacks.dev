@@ -26,8 +26,8 @@ const TeamSection = () => {
       <SectionTitle
         color1="#61D7FF"
         color2="#0b89e3"
-        color3="#1695f0"
-        color4="#30b3ff"
+        color3="#61D7FF"
+        color4="#a3e8ff"
         textShadowColor="#6FB3FE"
         flickerIndices={[0, 1]}
       >
