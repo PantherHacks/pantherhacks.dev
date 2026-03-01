@@ -1,12 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { SectionTitle } from "@/components/section-title";
+import SpecialButton from "@/components/ui/special-button";
 import { hackathonDateInfo } from "@/lib/dates";
 import TeamMember from "./team-member";
 
 const TeamSection = () => {
   return (
-    <div id="team" className="flex flex-col items-center justify-center w-full pt-40 relative overflow-x-clip">
+    <div id="team" className="flex flex-col items-center justify-center w-full pt-40 relative overflow-x-clip pb-12">
       <Image
         src="/images/oranges/orange-branch-2.svg"
         alt="An orange branch."
@@ -78,6 +80,12 @@ const TeamSection = () => {
           linkedinLink="https://www.linkedin.com/in/daniel-min-9758812b3/"
         />
       </div>
+      <p className="mx-8 font-UbuntuMono sm:mx-20 md:mx-24 text-center my-4">
+        Want to be a part of making PantherHacks possible? Sign up to be a volunteer below!
+      </p>
+      <Link href="/volunteer" target="_blank" rel="noopener noreferrer">
+        <SpecialButton className="font-Xirod text-xl">VOLUNTEER</SpecialButton>
+      </Link>
     </div>
   );
 };
