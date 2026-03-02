@@ -18,8 +18,8 @@ const TeamSection = () => {
         draggable={false}
       />
       <Image
-        src="/images/oranges/orange-branch-mobile-divider.svg"
-        alt="An orange branch divider."
+        src="/images/dividers/mobile-divider.svg"
+        alt="An circuit wire divider."
         width={100}
         height={100}
         className="block md:hidden w-64 h-64 sm:w-96 sm:h-96 absolute top-0 -translate-y-1/2 select-none"

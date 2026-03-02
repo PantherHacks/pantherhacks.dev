@@ -14,14 +14,14 @@ const TracksSection = () => {
         className="hidden md:block w-40 h-40 absolute md:-translate-x-[16rem] lg:-translate-x-[24rem] top-0 -translate-y-3/4 select-none"
         draggable={false}
       />
-      {/* <Image
-        src="/images/oranges/orange-branch-mobile-divider.svg"
-        alt="An orange branch divider."
+      <Image
+        src="/images/dividers/mobile-divider.svg"
+        alt="An circuit wire divider."
         width={100}
         height={100}
         className="block md:hidden w-64 h-64 sm:w-96 sm:h-96 absolute top-0 -translate-y-1/2 select-none"
         draggable={false}
-      /> */}
+      />
       <SectionTitle flickerIndices={[1, 4, 5]}>Tracks</SectionTitle>
       <p className="">Learn more about the tracks we offer.</p>
       <div className="flex flex-col pt-16 pb-4 space-y-20">
@@ -54,14 +54,14 @@ const TracksSection = () => {
         className="hidden md:block w-72 h-72 absolute md:translate-x-[14rem] lg:translate-x-[20rem] bottom-0 translate-y-1/2 select-none"
         draggable={false}
       />
-      {/* <Image
-        src="/images/oranges/orange-branch-mobile-divider.svg"
-        alt="An orange branch divider."
+      <Image
+        src="/images/dividers/mobile-divider.svg"
+        alt="An circuit wire divider."
         width={100}
         height={100}
         className="block md:hidden w-64 h-64 sm:w-96 sm:h-96 absolute bottom-0 translate-y-1/2 select-none"
         draggable={false}
-      /> */}
+      />
     </div>
   );
 };
