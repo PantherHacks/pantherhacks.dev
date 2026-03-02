@@ -24,20 +24,20 @@ const PrizesSection = () => {
         </p>
       </div>
 
-      <div className="vending-machine-outer relative w-full max-w-5xl border-2 border-[#7a5c10] rounded-[4px] p-[10px]">
+      <div className="vending-machine-outer relative w-full max-w-5xl border-2 border-[#580087] rounded-[4px] p-[10px]">
         <div className="vending-glow-bar h-1 rounded-[2px] mb-[6px]" />
 
         <div className="flex items-center gap-1 mt-[2px] mb-[6px]">
-          <div className="vending-ornate-diamond w-3 h-3 shrink-0 bg-[#c8a020] rotate-45" />
+          <div className="vending-ornate-diamond w-3 h-3 shrink-0 bg-[#a00fef] rotate-45" />
           <div className="vending-ornate-line flex-1 h-[2px]" />
-          <div className="vending-ornate-diamond w-3 h-3 shrink-0 bg-[#c8a020] rotate-45" />
+          <div className="vending-ornate-diamond w-3 h-3 shrink-0 bg-[#a00fef] rotate-45" />
         </div>
 
         <div className="vending-display-area relative border border-[rgba(150,115,18,0.2)] rounded-sm py-5 px-[14px]">
-          <div className="vending-corner absolute w-[14px] h-[14px] bg-[#c8a020] z-[2] -top-px -left-px" />
-          <div className="vending-corner absolute w-[14px] h-[14px] bg-[#c8a020] z-[2] -top-px -right-px" />
-          <div className="vending-corner absolute w-[14px] h-[14px] bg-[#c8a020] z-[2] -bottom-px -left-px" />
-          <div className="vending-corner absolute w-[14px] h-[14px] bg-[#c8a020] z-[2] -bottom-px -right-px" />
+          <div className="vending-corner absolute w-[14px] h-[14px] bg-[#a00fef] z-[2] -top-px -left-px" />
+          <div className="vending-corner absolute w-[14px] h-[14px] bg-[#a00fef] z-[2] -top-px -right-px" />
+          <div className="vending-corner absolute w-[14px] h-[14px] bg-[#a00fef] z-[2] -bottom-px -left-px" />
+          <div className="vending-corner absolute w-[14px] h-[14px] bg-[#a00fef] z-[2] -bottom-px -right-px" />
 
           <PrizesGrid />
         </div>
@@ -45,7 +45,7 @@ const PrizesSection = () => {
         <div className="flex items-center pt-[7px] px-[2px] pb-[2px]">
           {Array.from({ length: 13 }, (_, i) =>
             i % 2 === 0 ? (
-              <div key={i} className="vending-dot w-[7px] h-[7px] shrink-0 bg-[#c8a020] rotate-45" />
+              <div key={i} className="vending-dot w-[7px] h-[7px] shrink-0 bg-[#a00fef] rotate-45" />
             ) : (
               <div key={i} className="vending-dot-spacer flex-1 h-px" />
             )

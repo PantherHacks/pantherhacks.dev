@@ -73,9 +73,9 @@
   background: linear-gradient(170deg, #0d0d18 0%, #08080f 100%);
   box-shadow:
     0 0 0 1px #09090f,
-    0 0 0 3px #c8a020,
+    0 0 0 3px #a00fef,
     0 0 0 4px #09090f,
-    0 0 0 6px #7a5c10,
+    0 0 0 6px #580087,
     inset 0 0 0 1px rgba(175, 135, 25, 0.12),
     0 8px 40px rgba(0, 0, 0, 0.95),
     0 0 100px rgba(0, 50, 80, 0.08);
@@ -104,7 +104,7 @@
 }
 
 .vending-ornate-line {
-  background: linear-gradient(90deg, #7a5c10 0%, #c8a020 20%, #e8c030 50%, #c8a020 80%, #7a5c10 100%);
+  background: linear-gradient(90deg, #580087 0%, #7c05bc 20%, #a00fef 50%, #7c05bc 80%, #580087 100%);
   box-shadow: 0 0 4px rgba(200, 160, 32, 0.25);
 }
 

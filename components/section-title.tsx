@@ -20,9 +20,9 @@ export const SectionTitle = ({
   children,
   className = "",
   color1 = "#E820AB",
-  color2 = "#2A183E",
-  color3 = "#5C299E",
-  color4 = "#8A38F5",
+  color2 = "#B3007C",
+  color3 = "#E820AB",
+  color4 = "#E377F5",
   textShadowColor = "#E377F5",
   flickerIndices = [],
 }: Props) => {
