@@ -5,7 +5,7 @@ import Track from "./track";
 
 const TracksSection = () => {
   return (
-    <div id="tracks" className="flex flex-col items-center justify-center w-full pb-20 pt-20 relative overflow-x-clip">
+    <div id="tracks" className="flex flex-col items-center justify-center w-full pt-40 md:pt-20 pb-40 md:pb-20 relative overflow-x-clip">
       <Image
         src="/images/artifacts/coffee.svg"
         alt="A cyberpunk-style coffee cup."
