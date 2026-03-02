@@ -30,7 +30,7 @@ export const SectionTitle = ({
 
   return (
     <div
-      className={`flex flex-col scale-50 xs:scale-[65%] sm:scale-[85%] md:scale-100 justify-center items-center w-[32rem] mb-14 ${className}`}
+      className={`flex flex-col scale-[85%] xs:scale-[100%] justify-center items-center w-[24rem] md:w-[32rem] mb-14 ${className}`}
       style={{
         background: `linear-gradient(180deg, ${color2} 0%, #00000000 50%, ${color2} 100%)`,
       }}
