@@ -7,13 +7,16 @@ import { applicationDateInfo, hackathonDateInfo } from "@/lib/dates";
 
 const FaqsSection = () => {
   return (
-    <div id="faqs" className="flex flex-col items-center justify-center w-full py-40 relative overflow-x-clip">
+    <div
+      id="faqs"
+      className="flex flex-col items-center justify-center w-full pb-40 pt-40 md:pt-30 relative overflow-x-clip"
+    >
       <Image
-        src="/images/oranges/orange-branch-1.svg"
+        src="/images/artifacts/headphones.svg"
         alt="An orange branch."
         width={100}
         height={100}
-        className="hidden md:block w-96 h-96 absolute -left-2 top-0 -translate-y-1/2 select-none"
+        className="hidden md:block w-40 h-40 absolute md:-translate-x-[16rem] lg:-translate-x-[20rem] top-0 -translate-y-1/2 select-none drop-shadow-[0_0_10px_#FE5501] hover:-rotate-12 transition-all"
         draggable={false}
       />
       <Image
@@ -35,7 +38,7 @@ const FaqsSection = () => {
         FAQS
       </SectionTitle>
       <p className="font-UbuntuMono">Got questions? We got answers.</p>
-      <div className="px-10 pt-8 w-full md:w-1/2">
+      <div className="px-10 pt-8 w-full max-w-2xl">
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
             <AccordionTrigger>What is PantherHacks {hackathonDateInfo.year}?</AccordionTrigger>
