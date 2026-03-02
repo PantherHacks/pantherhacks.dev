@@ -11,7 +11,7 @@ const TracksSection = () => {
         alt="A cyberpunk-style coffee cup."
         width={100}
         height={100}
-        className="hidden md:block w-40 h-40 absolute md:-translate-x-[16rem] lg:-translate-x-[24rem] top-0 -translate-y-3/4 select-none"
+        className="hidden md:block w-40 h-40 absolute md:-translate-x-[16rem] lg:-translate-x-[24rem] top-0 -translate-y-3/4 select-none drop-shadow-[0_0_10px_#FE5501]"
         draggable={false}
       />
       <Image
@@ -51,7 +51,7 @@ const TracksSection = () => {
         alt="Cyberpunk-style glasses."
         width={100}
         height={100}
-        className="hidden md:block w-72 h-72 absolute md:translate-x-[14rem] lg:translate-x-[20rem] bottom-0 translate-y-1/2 select-none"
+        className="hidden md:block w-72 h-72 absolute md:translate-x-[14rem] lg:translate-x-[20rem] bottom-0 translate-y-1/2 select-none drop-shadow-[0_0_10px_#FE5501]"
         draggable={false}
       />
       <Image
