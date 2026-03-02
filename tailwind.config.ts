@@ -24,6 +24,12 @@ export default {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
+        primaryBlue: {
+          DEFAULT: "hsl(var(--primary-blue))",
+        },
+        primaryPink: {
+          DEFAULT: "hsl(var(--primary-pink))",
+        },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
@@ -65,6 +71,7 @@ export default {
         UbuntuMonoItalic: "Ubuntu Mono Italic",
         UbuntuMonoBold: "Ubuntu Mono Bold",
         UbuntuMonoBoldItalic: "Ubuntu Mono Bold Italic",
+        DSDigital: "DS-Digital",
       },
       keyframes: {
         "accordion-down": {

@@ -1,69 +1,79 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 
+import SpecialButton from "@/components/ui/special-button";
 import { hackathonDateInfo } from "@/lib/dates";
+
+import "./heading.css";
 
 const Heading = () => {
   return (
     <>
       <ParallaxBanner
-        className="h-[60rem] [@media(min-width:1000px)]:h-[70rem] [@media(min-width:1800px)]:h-[80rem] [@media(min-width:3000px)]:h-[90rem] parallax-banner"
+        className="h-screen parallax-banner"
         style={{
-          background: `linear-gradient(#195B7B 0%, #4DC9CC 30%, #BEFCFD 100%)`,
+          background: `linear-gradient(#0c0a24 0%, #0b0b0b 30%, #000000 100%)`,
         }}
       >
-        <ParallaxBannerLayer speed={1}>
+        {/* <ParallaxBannerLayer speed={1}>
           <Image
-            className="absolute w-[200%] top-[22rem] z-10"
+            className="absolute w-[200%] top-1/2 z-10"
             src="/images/main-background/mountain-1-cropped.svg"
             alt="Mountain"
             width={0}
             height={0}
             loading="eager"
           />
-        </ParallaxBannerLayer>
+        </ParallaxBannerLayer> */}
 
         <ParallaxBannerLayer speed={10}>
           <Image
-            className="absolute w-[200%] top-[32rem] z-20"
-            src="/images/main-background/mountain-2-cropped.svg"
-            alt="Mountain"
+            className="select-none absolute h-screen min-w-full w-auto max-w-[5000rem] xl:top-0 top-60 left-1/2 -translate-x-1/2 z-20 grayscale"
+            src="/images/main-background/building-background.svg"
+            alt="Buildings"
             width={0}
             height={0}
+            draggable={false}
             loading="eager"
           />
         </ParallaxBannerLayer>
 
-        <ParallaxBannerLayer speed={20}>
-          <div className="absolute w-full bg-[#3F1324] top-[54rem] h-[100rem] z-30" />
-        </ParallaxBannerLayer>
+        {/* <ParallaxBannerLayer speed={20}>
+          <div className="absolute w-full bg-[#000000] top-[62rem] h-[100rem] z-30" />
+        </ParallaxBannerLayer> */}
 
-        <ParallaxBannerLayer speed={30}>
+        {/* <ParallaxBannerLayer speed={30}>
           <Image
-            className="absolute w-[200%] top-[48rem] z-40"
+            className="absolute w-[200%] top-1/2 z-40"
             src="/images/main-background/keck-cropped-cropped.svg"
             alt="Keck Center"
             width={0}
             height={0}
             loading="eager"
           />
-        </ParallaxBannerLayer>
+        </ParallaxBannerLayer> */}
 
         <ParallaxBannerLayer speed={20}>
-          <div className="absolute w-full flex justify-center items-center text-center top-[26rem] z-50">
-            <h1 className="font-TangoSansBold text-3xl sm:text-6xl lg:text-7xl xl:text-8xl text-[#befcfd] max-w-[calc(100vw-4rem)] drop-shadow-lg">
-              PANTHERHACKS {hackathonDateInfo.year}
-            </h1>
-          </div>
-        </ParallaxBannerLayer>
-
-        <ParallaxBannerLayer speed={20}>
-          <div className="absolute w-full flex flex-col justify-center items-center text-center gap-y-8 top-[64rem] [@media(min-width:1000px)]:top-[72rem] [@media(min-width:1550px)]:top-[77rem] [@media(min-width:1800px)]:top-[85rem] z-[60]">
-            <h2 className="font-TangoSansBold text-xl sm:text-5xl text-white cursor-default [@media(min-width:1800px)]:bg-[#3F1324] p-4 rounded-lg">
+          <div className="absolute inset-0 flex flex-col justify-center items-center text-center gap-y-6 z-30">
+            <Image
+              className="w-[min(40em,90vw)] select-none logo-glow"
+              src="/logos/pantherhacks/pantherhacks_wordmark_2026.svg"
+              alt="PantherHacks 2026"
+              width={252}
+              height={77}
+              loading="eager"
+              draggable={false}
+              unoptimized
+            />
+            <h2 className="font-UbuntuMonoBold text-xl sm:text-5xl text-primary cursor-default p-4 rounded-lg">
               {hackathonDateInfo.dateString}
             </h2>
+            <Link href="/apply" target="_blank" rel="noopener noreferrer">
+              <SpecialButton className="font-Xirod text-4xl">APPLY NOW</SpecialButton>
+            </Link>
           </div>
         </ParallaxBannerLayer>
       </ParallaxBanner>

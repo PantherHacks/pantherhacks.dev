@@ -1,59 +1,65 @@
-import React, { useState } from "react";
-import Image from "next/image";
-
-import Prize from "@/app/(main)/_components/_prizes/prize";
+import PrizesGrid from "@/app/(main)/_components/_prizes/prizes-grid";
+import { SectionTitle } from "@/components/section-title";
 
 const PrizesSection = () => {
-  const [pantherHovered, setPantherHovered] = useState(false);
   return (
     <div
       id="prizes"
-      className="relative flex flex-col w-full items-center justify-end gap-y-8 sm:gap-y-6 md:gap-y-4 pt-40 px-8 md:px-20 lg:px-32 overflow-x-clip py-40"
+      className="relative flex flex-col w-full items-center justify-center gap-y-8 pt-40 pb-40 px-4 md:px-8 overflow-x-clip"
     >
-      <div className="flex flex-col items-center justify-center text-center gap-y-4">
-        <h2 className="font-TangoSansBold text-6xl  text-primary pb-10">Prizes</h2>
-        <p>
+      <div className="flex flex-col items-center justify-center text-center gap-y-4 mb-2">
+        <SectionTitle
+          color1="#8C02D6"
+          color2="#2A183E"
+          color3="#652CAF"
+          color4="#8A38F5"
+          textShadowColor="#FDABFE"
+          flickerIndices={[0, 2, 3]}
+        >
+          Prizes
+        </SectionTitle>
+        <p className="max-w-xl text-center mx-20">
           Check out the prizes we offer! Each member of the winning teams will receive a prize (each team consists of
           1-4 people).
         </p>
       </div>
-      <Prize
-        title="HACKER'S CHOICE AWARD"
-        description="Portable Retro Handheld Gaming Console"
-        imageSrc="retro-console.png"
-        imageSide="left"
-      />
-      <Prize title="AI TRACK WINNER" description="1 TB Portable SSD" imageSrc="crucial-ssd.png" imageSide="right" />
-      <Prize title="CYBER TRACK WINNER" description="8GB Raspberry Pi 5" imageSrc="raspberry-pi.png" imageSide="left" />
-      <Prize
-        title="HEALTH TRACK WINNER"
-        description="Keychron K4 Wireless Keyboard"
-        imageSrc="keychron-k4.png"
-        imageSide="right"
-        className="py-6"
-      />
-      <Prize
-        title="SUSTAINABILITY TRACK WINNER"
-        description="Lego Piranha Plant"
-        imageSrc="piranha-plant.png"
-        imageSide="left"
-      />
-      <Image
-        src="/images/panther/panther.png"
-        alt="A panther with a Chapman bandana."
-        width={100}
-        height={100}
-        className={`hidden md:block w-64 h-64 absolute right-0 translate-y-[15rem] select-none overflow-x-clip drop-shadow-md ${pantherHovered ? "scale-105" : "scale-100"} transition-transform duration-150`}
-        draggable={false}
-        unoptimized
-        onMouseEnter={() => setPantherHovered(true)}
-        onMouseLeave={() => setPantherHovered(false)}
-      />
-      <p
-        className={`hidden md:block absolute right-56 font-bold italic transition-opacity duration-150 select-none ${pantherHovered ? "opacity-100" : "opacity-0"}`}
-      >
-        Meow!
-      </p>
+
+      <div className="vending-machine-outer relative w-full max-w-5xl border-2 border-[#580087] rounded-[4px] p-[10px]">
+        <div className="vending-glow-bar h-1 rounded-[2px] mb-[6px]" />
+
+        <div className="flex items-center gap-1 mt-[2px] mb-[6px]">
+          <div className="vending-ornate-diamond w-3 h-3 shrink-0 bg-[#a00fef] rotate-45" />
+          <div className="vending-ornate-line flex-1 h-[2px]" />
+          <div className="vending-ornate-diamond w-3 h-3 shrink-0 bg-[#a00fef] rotate-45" />
+        </div>
+
+        <div className="vending-display-area relative border border-[rgba(150,115,18,0.2)] rounded-sm py-5 px-[14px]">
+          <div className="vending-corner absolute w-[14px] h-[14px] bg-[#a00fef] z-[2] -top-px -left-px" />
+          <div className="vending-corner absolute w-[14px] h-[14px] bg-[#a00fef] z-[2] -top-px -right-px" />
+          <div className="vending-corner absolute w-[14px] h-[14px] bg-[#a00fef] z-[2] -bottom-px -left-px" />
+          <div className="vending-corner absolute w-[14px] h-[14px] bg-[#a00fef] z-[2] -bottom-px -right-px" />
+
+          <PrizesGrid />
+        </div>
+
+        <div className="flex items-center pt-[7px] px-[2px] pb-[2px]">
+          {Array.from({ length: 13 }, (_, i) =>
+            i % 2 === 0 ? (
+              <div key={i} className="vending-dot w-[7px] h-[7px] shrink-0 bg-[#a00fef] rotate-45" />
+            ) : (
+              <div key={i} className="vending-dot-spacer flex-1 h-px" />
+            )
+          )}
+        </div>
+
+        <div className="flex items-center justify-center gap-[10px] pt-[5px] px-3 pb-1 mt-[6px] bg-[rgba(4,4,10,0.92)] border border-[rgba(140,105,15,0.2)] rounded-[2px]">
+          <div className="vending-led-dot w-[5px] h-[5px] rounded-full bg-[#00ff88]" />
+          <span className="vending-panel-display font-DSDigital text-[#00ff88] tracking-[0.2em] uppercase">
+            Make Your Selection
+          </span>
+          <div className="vending-led-dot w-[5px] h-[5px] rounded-full bg-[#00ff88]" />
+        </div>
+      </div>
     </div>
   );
 };

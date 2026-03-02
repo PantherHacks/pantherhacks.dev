@@ -1,4 +1,4 @@
-import Countdown from "@/components/countdown";
+import Countdown from "@/components/countdown/countdown";
 import { hackathonDateInfo } from "@/lib/dates";
 
 const LiveHeading = () => {

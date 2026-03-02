@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Home, Maximize, Minimize, Radio } from "lucide-react";
 import Confetti from "react-confetti";
 
-import Countdown from "@/components/countdown";
+import Countdown from "@/components/countdown/countdown";
 import { Button } from "@/components/ui/button";
 import { applicationDateInfo, hackathonDateInfo } from "@/lib/dates";
 
@@ -173,16 +173,19 @@ const CountdownPage = () => {
         colors={["#A50034", "#ED024D", "#FF87AD", "#FFFFFF"]}
       />
       <Image
-        src="/images/countdown/countdown-mountain.svg"
-        alt="A mountain in the background"
+        src="/images/main-background/building-background.svg"
+        alt="Buildings in the background"
         width={100}
         height={100}
         unoptimized
         className="w-full absolute z-0 bottom-0"
+        style={{
+          filter: `grayscale(1)`,
+        }}
       />
       <Link href="/" className="z-10" aria-label="Go to Home Page">
         <Button
-          className={`absolute top-4 left-4 px-3 py-2 bg-transparent hover:bg-[#83022b] transition-opacity duration-300 ${
+          className={`absolute top-4 left-4 px-3 py-2 bg-transparent hover:bg-transparent border border-transparent rounded-none hover:border-primary hover:text-primary transition-all duration-100 ${
             showButton ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -191,7 +194,7 @@ const CountdownPage = () => {
       </Link>
       <Link href="/live" aria-label="Go to live page" className="z-10">
         <Button
-          className={`absolute top-4 left-16 px-3 py-2 bg-transparent hover:bg-[#83022b] transition-opacity duration-300 ${
+          className={`absolute top-4 left-16 px-3 py-2 bg-transparent hover:bg-transparent border border-transparent rounded-none hover:border-primary hover:text-primary transition-all duration-100 ${
             showButton ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -199,14 +202,14 @@ const CountdownPage = () => {
         </Button>
       </Link>
       <Button
-        className={`absolute top-4 right-4 px-3 py-2 bg-transparent hover:bg-[#83022b] transition-opacity duration-300 ${
+        className={`absolute top-4 right-4 px-3 py-2 bg-transparent hover:bg-transparent border border-transparent rounded-none hover:border-primary hover:text-primary transition-all duration-100 ${
           showButton ? "opacity-100" : "opacity-0"
         }`}
         onClick={toggleFullscreen}
       >
         {isFullscreen ? <Minimize /> : <Maximize />}
       </Button>
-      <div className="z-50">
+      <div className="z-50 mx-4 sm:mx-0">
         <Countdown dark size="large" />
       </div>
       <div
