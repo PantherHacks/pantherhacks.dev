@@ -5,13 +5,21 @@ import Track from "./track";
 
 const TracksSection = () => {
   return (
-    <div id="tracks" className="flex flex-col items-center justify-center w-full pb-40 pt-20 relative overflow-x-clip">
+    <div id="tracks" className="flex flex-col items-center justify-center w-full pb-20 pt-20 relative overflow-x-clip">
       <Image
         src="/images/artifacts/coffee.svg"
         alt="A cyberpunk-style coffee cup."
         width={100}
         height={100}
-        className="hidden md:block w-40 h-40 absolute md:-translate-x-[16rem] lg:-translate-x-[24rem] top-0 -translate-y-3/4 select-none drop-shadow-[0_0_10px_#FE5501] hover:-rotate-12 transition-all"
+        className="hidden md:block w-40 h-40 absolute md:translate-x-[16rem] lg:translate-x-[24rem] top-0 -translate-y-3/4 select-none drop-shadow-[0_0_10px_#FE5501] hover:-rotate-12 transition-all"
+        draggable={false}
+      />
+      <Image
+        src="/logos/pantherhacks/cyborg_pete_orange.svg"
+        alt="A cyberpunk-style coffee cup."
+        width={100}
+        height={100}
+        className="hidden md:block w-40 h-40 absolute md:-translate-x-[16rem] lg:-translate-x-[24rem] top-0 -translate-y-3/4 select-none drop-shadow-[0_0_5px_#FE5501] hover:-rotate-12 transition-all"
         draggable={false}
       />
       <Image
