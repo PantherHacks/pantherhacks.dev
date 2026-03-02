@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="PantherHacks 2025 Banner" src="https://github.com/user-attachments/assets/095d2b8a-b6ad-4477-beb9-6c01b2f4ae14" width="70%">
+  <img alt="PantherHacks 2025 Banner" src="https://github.com/user-attachments/assets/8f29a100-6022-4c7e-bcfa-67ca7c587ab8" width="70%">
 </p>
 
 <div align="center">
