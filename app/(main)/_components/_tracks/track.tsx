@@ -30,10 +30,12 @@ const Track: React.FC<ITrackProps> = ({ name, description, left = false, right =
         <div className="track-frame absolute z-10 pointer-events-none w-full h-3 -top-[0.25rem] left-0 bg-primaryPink" />
         <div className="track-frame absolute z-[8] pointer-events-none w-full h-3 bottom-0 left-0 bg-primaryPink" />
         <div
-          className={`track-beam absolute z-[5] pointer-events-none w-screen h-10 top-[20%] bg-gradient-to-b from-[#9b72a4] via-gray-700 to-gray-900 ${left ? "right-full" : right ? "left-full" : ""}`}
+          className={`track-beam absolute z-[5] pointer-events-none w-screen h-10 top-[20%] ${left ? "right-full" : right ? "left-full" : ""}`}
+          style={{ backgroundImage: "linear-gradient(to bottom, #9b72a4, #374151, #000000)" }}
         />
         <div
-          className={`track-beam absolute z-[5] pointer-events-none w-screen h-10 top-[70%] bg-gradient-to-b from-[#9b72a4] via-gray-700 to-gray-900 ${left ? "right-full" : right ? "left-full" : ""}`}
+          className={`track-beam absolute z-[5] pointer-events-none w-screen h-10 top-[70%] ${left ? "right-full" : right ? "left-full" : ""}`}
+          style={{ backgroundImage: "linear-gradient(to bottom, #9b72a4, #374151, #000000)" }}
         />
         <div
           className={`flex flex-row gap-x-8 items-center my-3 md:my-5 ${left ? "flex-row ml-4 mr-2 lg:ml-12 lg:mr-8" : right ? "flex-row mr-4 ml-2 lg:mr-12 lg:ml-8" : ""}`}
