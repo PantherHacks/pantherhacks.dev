@@ -20,6 +20,14 @@ const FaqsSection = () => {
         draggable={false}
       />
       <Image
+        src="/images/artifacts/laptop.svg"
+        alt="An orange branch."
+        width={100}
+        height={100}
+        className="hidden md:block w-52 h-52 absolute md:translate-x-[16rem] lg:translate-x-[20rem] top-0 -translate-y-1/2 select-none drop-shadow-[0_0_10px_#FE5501] hover:rotate-12 transition-all"
+        draggable={false}
+      />
+      <Image
         src="/images/dividers/mobile-divider.svg"
         alt="An circuit wire divider."
         width={100}

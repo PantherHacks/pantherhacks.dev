@@ -13,11 +13,19 @@ const TeamSection = () => {
       className="flex flex-col items-center justify-center w-full pt-40 md:pt-30 pb-20 relative overflow-x-clip"
     >
       <Image
-        src="/images/artifacts/laptop.svg"
+        src="/images/artifacts/martini.svg"
+        alt="A cyberpunk-style martini glass."
+        width={100}
+        height={100}
+        className="hidden md:block w-40 h-40 absolute md:-translate-x-[12rem] lg:-translate-x-[16rem] top-0 -translate-y-1/2 select-none drop-shadow-[0_0_10px_#FE5501] -rotate-6 hover:-rotate-12 transition-all"
+        draggable={false}
+      />
+      <Image
+        src="/images/artifacts/coffee.svg"
         alt="An orange branch."
         width={100}
         height={100}
-        className="hidden md:block w-52 h-52 absolute md:translate-x-[12rem] lg:translate-x-[16rem] top-0 -translate-y-1/2 select-none drop-shadow-[0_0_10px_#FE5501] hover:rotate-12 transition-all"
+        className="hidden md:block w-40 h-40 absolute md:translate-x-[12rem] lg:translate-x-[16rem] top-0 -translate-y-1/2 select-none drop-shadow-[0_0_10px_#FE5501] hover:rotate-12 transition-all"
         draggable={false}
       />
       <Image
