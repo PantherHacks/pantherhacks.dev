@@ -115,14 +115,14 @@ const Countdown: React.FC<CountdownProps> = ({ dark = false, size = "default" })
           />
         ) : concluded ? (
           <h3
-            className={`px-10 md:px-24 text-center font-UbuntuMonoBold text-primary ${isLarge ? "text-3xl sm:text-4xl md:text-5xl" : "text-xl sm:text-2xl md:text-3xl"}`}
+            className={`text-center font-UbuntuMonoBold text-primary ${isLarge ? "text-3xl sm:text-4xl md:text-5xl" : "text-xl sm:text-2xl md:text-3xl"}`}
             style={{ minHeight: isLarge ? "3.5rem" : "2.5rem" }}
           >
             Thank you for participating!
           </h3>
         ) : (
           <h3
-            className={`description-text-glow px-10 text-primary/70 md:px-24 text-center font-DSDigital tracking-[0.1em] ${isLarge ? "text-3xl sm:text-4xl md:text-5xl" : "text-lg sm:text-2xl md:text-3xl"}`}
+            className={`description-text-glow text-primary/70 px-6 text-center font-DSDigital tracking-[0.1em] ${isLarge ? "text-3xl sm:text-4xl md:text-5xl" : "text-lg sm:text-2xl md:text-3xl"}`}
             style={{ minHeight: isLarge ? "3.5rem" : "2.5rem" }}
           >
             {description}

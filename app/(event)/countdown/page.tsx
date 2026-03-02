@@ -209,7 +209,7 @@ const CountdownPage = () => {
       >
         {isFullscreen ? <Minimize /> : <Maximize />}
       </Button>
-      <div className="z-50">
+      <div className="z-50 mx-4 sm:mx-0">
         <Countdown dark size="large" />
       </div>
       <div
