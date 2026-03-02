@@ -18,7 +18,7 @@ const PrizesSection = () => {
         >
           Prizes
         </SectionTitle>
-        <p className="max-w-xl text-center">
+        <p className="max-w-xl text-center mx-20">
           Check out the prizes we offer! Each member of the winning teams will receive a prize (each team consists of
           1-4 people).
         </p>
