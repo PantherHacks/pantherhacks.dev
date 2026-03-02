@@ -25,11 +25,11 @@ const FaqsSection = () => {
         draggable={false}
       />
       <SectionTitle
-        color1="#FE5501"
-        color2="#4d1900"
-        color3="#EE5000"
-        color4="#ff6d12"
-        textShadowColor="#FFE300"
+        color1="#22CC00"
+        color2="#1ca600"
+        color3="#5fe002"
+        color4="#E9FF26"
+        textShadowColor="#E9FF26"
         flickerIndices={[0, 1, 2, 3]}
       >
         FAQS

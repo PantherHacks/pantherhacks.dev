@@ -24,11 +24,11 @@ const AccordionTrigger = React.forwardRef<
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        "flex flex-1 items-center text-start justify-between py-4 gap-x-[0.5rem] font-medium font-UbuntuMonoBold text-[#FE5501] transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
+        "flex flex-1 items-center text-start justify-between py-4 gap-x-[0.5rem] font-medium font-UbuntuMonoBold text-[#22CC00] transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
         className
       )}
       style={{
-        textShadow: `-0.25px -0.5px 0.5px #FFE300`,
+        textShadow: `-0.25px -0.5px 0.5px #E9FF26`,
       }}
       {...props}
     >
