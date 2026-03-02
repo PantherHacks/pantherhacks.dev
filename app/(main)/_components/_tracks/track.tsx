@@ -18,11 +18,20 @@ const Track: React.FC<ITrackProps> = ({ name, description, left = false, right =
       <div className="relative flex flex-col rounded-none p-2 sm:p-6 w-auto mx-6 md:mx-0 md:w-[40rem] lg:w-[50rem] 3xl:w-[60rem] z-3">
         <div
           className="absolute z-[1] pointer-events-none w-full h-full top-0 left-0"
-          style={{ backgroundImage: "linear-gradient(to bottom, rgba(244, 126, 209, 0.15), transparent, rgba(244, 126, 209, 0.15))" }}
+          style={{
+            backgroundImage:
+              "linear-gradient(to bottom, rgba(244, 126, 209, 0.15), transparent, rgba(244, 126, 209, 0.15))",
+          }}
         />
         <div
           className="absolute z-[1] pointer-events-none w-full h-full top-0 left-0"
-          style={{ backgroundImage: left ? "linear-gradient(to right, rgba(244, 126, 209, 0.15), transparent)" : right ? "linear-gradient(to left, rgba(244, 126, 209, 0.15), transparent)" : undefined }}
+          style={{
+            backgroundImage: left
+              ? "linear-gradient(to right, rgba(244, 126, 209, 0.15), transparent)"
+              : right
+                ? "linear-gradient(to left, rgba(244, 126, 209, 0.15), transparent)"
+                : undefined,
+          }}
         />
         <div
           className={`track-frame absolute z-[9] pointer-events-none w-6 h-full top-0 bg-primaryPink ${left ? "left-0" : right ? "right-0" : ""}`}
