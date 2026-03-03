@@ -4,6 +4,7 @@ import Link from "next/link";
 import { SectionTitle } from "@/components/section-title";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { applicationDateInfo, hackathonDateInfo } from "@/lib/dates";
+import { csClubInstagramLink } from "@/lib/links";
 
 const FaqsSection = () => {
   return (
@@ -51,8 +52,12 @@ const FaqsSection = () => {
           <AccordionItem value="item-1">
             <AccordionTrigger>What is PantherHacks {hackathonDateInfo.year}?</AccordionTrigger>
             <AccordionContent>
-              PantherHacks {hackathonDateInfo.year} is Chapman University’s second annual student-run hackathon, hosted
-              by Computer Science Club.
+              PantherHacks {hackathonDateInfo.year} is Chapman University's second annual student-run hackathon, hosted
+              by Computer Science Club (
+              <Link href={csClubInstagramLink} target="_blank" className="underline hover:text-primary">
+                @chapmancsclub
+              </Link>
+              ).
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
@@ -65,7 +70,7 @@ const FaqsSection = () => {
           <AccordionItem value="item-3">
             <AccordionTrigger>How do I apply?</AccordionTrigger>
             <AccordionContent>
-              You can apply to PantherHacks {hackathonDateInfo.year}{" "}
+              You can apply to PantherHacks {hackathonDateInfo.year} by visiting{" "}
               <Link href="/apply" target="_blank" className="underline hover:text-primary">
                 this link
               </Link>
@@ -80,10 +85,10 @@ const FaqsSection = () => {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-5">
-            <AccordionTrigger>What if I don’t know how to code?</AccordionTrigger>
+            <AccordionTrigger>What if I don't know how to code?</AccordionTrigger>
             <AccordionContent>
-              No worries at all! You don’t need prior coding experience to participate. Hackathons are all about
-              learning, experimenting, and trying new things. We’ll have mentors available throughout the event to help
+              No worries at all! You don't need prior coding experience to participate. Hackathons are all about
+              learning, experimenting, and trying new things. We'll have mentors available throughout the event to help
               you if you get stuck, and we encourage you to team up with others!
             </AccordionContent>
           </AccordionItem>
@@ -109,6 +114,14 @@ const FaqsSection = () => {
               No. Individuals who apply and are selected to serve as volunteers may not also compete as participants in
               PantherHacks {hackathonDateInfo.year}. Volunteers play an essential role in supporting the event and
               therefore are not permitted to participate as hackers during the same event.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-9">
+            <AccordionTrigger>Will transportation be provided to the venue?</AccordionTrigger>
+            <AccordionContent>
+              Unfortunately, we are not able to provide any transportation accommodations to PantherHacks{" "}
+              {hackathonDateInfo.year}. Free campus parking passes will be available for participants to park at the
+              Anderson Parking Structure (300 E Walnut Ave, Orange, CA 92867), which is located underneath Wilson Field.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
