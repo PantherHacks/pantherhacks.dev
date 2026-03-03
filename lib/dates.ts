@@ -40,9 +40,9 @@ export const hackathonDateInfo = {
  * @property {string} dateString - A formatted string representing the closing date and time.
  */
 export const applicationDateInfo = {
-  closeMonth: "April",
-  closeDay: 10,
-  closeYear: 2025,
+  closeMonth: "March",
+  closeDay: 21,
+  closeYear: 2026,
   closeHour: 11,
   closeMinute: 59,
   pmOrAm: "PM",

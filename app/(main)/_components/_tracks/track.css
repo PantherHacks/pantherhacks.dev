@@ -1,3 +1,14 @@
 .track-image {
-  filter: drop-shadow(0px 0px 10px #7f2e05) drop-shadow(0px 0px 20px #d67513);
+  filter: drop-shadow(0px 0px 4px #f47ed1a4) drop-shadow(0px 0px 8px #ee7dcc46);
+}
+
+.track-title {
+  text-shadow: 0px -1px 1px #ffe7f8d1;
+}
+
+.track-frame {
+  box-shadow:
+    0px -4px 8px #f47ed1a4,
+    -1px 0px 4px #f47ed1a4,
+    1px 0px 4px #f47ed1a4;
 }

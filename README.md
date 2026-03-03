@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="PantherHacks 2025 Banner" src="https://github.com/user-attachments/assets/095d2b8a-b6ad-4477-beb9-6c01b2f4ae14" width="70%">
+  <img alt="PantherHacks 2025 Banner" src="https://github.com/user-attachments/assets/8f29a100-6022-4c7e-bcfa-67ca7c587ab8" width="70%">
 </p>
 
 <div align="center">
@@ -13,7 +13,7 @@ uses [React](https://reactjs.org/).
 
 ## Installation
 
-1. **Install Node**: Install the correct version of node (v22.5.1) for the project.
+1. **Install Node**: Install the correct version of node (v24.13.1) for the project.
 
 > ### Note About Node
 >
@@ -27,7 +27,7 @@ uses [React](https://reactjs.org/).
 Run the follow command to make sure that you are on the correct version of node:
 
 ```sh
-node -v # Should be v22.5.1
+node -v # Should be v24.13.1
 ```
 
 2. **Install Node Dependencies**: Install all the dependencies that the project uses by running the following command in the project's root directory:

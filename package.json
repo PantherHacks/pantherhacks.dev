@@ -1,6 +1,6 @@
 {
   "name": "pantherhacks.dev",
-  "version": "2026.1",
+  "version": "2026.2",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
-    "@netlify/plugin-nextjs": "^5.9.4",
+    "@netlify/plugin-nextjs": "^5.15.8",
     "@radix-ui/react-accordion": "^1.2.3",
     "@radix-ui/react-dialog": "^1.1.6",
     "@radix-ui/react-label": "^2.1.1",
@@ -24,7 +24,7 @@
     "clsx": "^2.1.1",
     "eslint-prettier-next-15": "^0.1.11",
     "lucide-react": "^0.474.0",
-    "next": "15.5.10",
+    "next": "^16.1.6",
     "public-google-sheets-parser": "^1.5.4",
     "react": "^19.0.0",
     "react-confetti": "^6.4.0",
@@ -36,15 +36,15 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.2.0",
-    "@eslint/js": "^9.18.0",
+    "@eslint/eslintrc": "^3.3.3",
+    "@eslint/js": "^9.39.3",
     "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@typescript-eslint/eslint-plugin": "^8.19.1",
-    "@typescript-eslint/parser": "^8.19.1",
-    "eslint": "^9.18.0",
+    "@typescript-eslint/eslint-plugin": "^8.56.0",
+    "@typescript-eslint/parser": "^8.56.0",
+    "eslint": "^9.39.3",
     "eslint-config-next": "^15.1.4",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",

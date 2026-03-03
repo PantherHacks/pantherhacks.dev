@@ -1,9 +1,11 @@
 import Image from "next/image";
-import { Mail } from "lucide-react";
 
 import { FooterSocialLink } from "@/components/footer/footer-social-link";
+import { YearSwitcher } from "@/components/footer/year-switcher";
 import { hackathonDateInfo } from "@/lib/dates";
 import { contactEmail, discordLink, gitHubLink, instagramLink } from "@/lib/links";
+
+import "./footer.css";
 
 interface FooterProps {
   daytimeVariant?: boolean;
@@ -12,17 +14,20 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = () => {
   return (
     <>
-      <footer className="flex flex-col justify-center items-center w-full space-y-2 p-4 bg-primary">
-        <p className="font-TangoSansBold text-xl text-center text-white">PantherHacks {hackathonDateInfo.year}</p>
+      <footer className="footer-glow flex flex-col justify-center items-center w-full space-y-2 p-4 bg-black font-UbuntuMono">
+        <div className="flex items-center gap-2">
+          <p className="font-Xirod text-xl text-center text-white">PantherHacks {hackathonDateInfo.year}</p>
+        </div>
         <p className="text-white text-center pt-2">Made with ❤️ by the PantherHacks Team</p>
         <div className="flex flex-row justify-center items-center space-x-1" aria-label="Social Links">
           <FooterSocialLink href={gitHubLink} aria-label="PantherHacks GitHub">
             <Image
               src="/icons/github.svg"
               alt="GitHub Icon"
-              width={24}
-              height={24}
-              className="select-none"
+              width={0}
+              height={0}
+              className="w-6 h-6 select-none icon-neon transform-gpu"
+              unoptimized
               draggable={false}
             />
           </FooterSocialLink>
@@ -30,9 +35,10 @@ const Footer: React.FC<FooterProps> = () => {
             <Image
               src="/icons/discord.svg"
               alt="Discord Icon"
-              width={24}
-              height={24}
-              className="select-none"
+              width={0}
+              height={0}
+              className="w-6 h-6 select-none icon-neon transform-gpu"
+              unoptimized
               draggable={false}
             />
           </FooterSocialLink>
@@ -40,16 +46,26 @@ const Footer: React.FC<FooterProps> = () => {
             <Image
               src="/icons/instagram.svg"
               alt="Instagram Icon"
-              width={24}
-              height={24}
-              className="select-none"
+              width={0}
+              height={0}
+              className="w-6 h-6 select-none icon-neon transform-gpu"
+              unoptimized
               draggable={false}
             />
           </FooterSocialLink>
           <FooterSocialLink href={contactEmail} aria-label="Chapman Computer Science Club Email">
-            <Mail className="w-[24px] h-[24px] text-white" />
+            <Image
+              src="/icons/mail.svg"
+              alt="Instagram Icon"
+              width={0}
+              height={0}
+              className="w-6 h-6 select-none icon-neon transform-gpu"
+              unoptimized
+              draggable={false}
+            />
           </FooterSocialLink>
         </div>
+        <YearSwitcher />
       </footer>
     </>
   );
