@@ -35,10 +35,10 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL(mainWebsiteLink),
   openGraph: {
-    images: "/social-images/opengraph-image.png",
+    images: "/social-images/opengraph-image.png?v=2",
   },
   twitter: {
-    images: "/social-images/opengraph-image.png",
+    images: "/social-images/opengraph-image.png?v=2",
   },
 };
 
