@@ -53,11 +53,11 @@ const PrizesSection = () => {
         </div>
 
         <div className="flex items-center justify-center gap-[10px] pt-[5px] px-3 pb-1 mt-[6px] bg-[rgba(4,4,10,0.92)] border border-[rgba(140,105,15,0.2)] rounded-[2px]">
-          <div className="vending-led-dot w-[5px] h-[5px] rounded-full bg-[#00ff88]" />
-          <span className="vending-panel-display font-DSDigital text-[#00ff88] tracking-[0.2em] uppercase">
+          <div className="vending-led-dot w-[5px] h-[5px] rounded-full bg-[#02FFFF]" />
+          <span className="vending-panel-display font-DSDigital text-[#02FFFF] tracking-[0.2em] uppercase">
             Make Your Selection
           </span>
-          <div className="vending-led-dot w-[5px] h-[5px] rounded-full bg-[#00ff88]" />
+          <div className="vending-led-dot w-[5px] h-[5px] rounded-full bg-[#02FFFF]" />
         </div>
       </div>
     </div>
