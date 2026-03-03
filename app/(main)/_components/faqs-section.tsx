@@ -4,6 +4,7 @@ import Link from "next/link";
 import { SectionTitle } from "@/components/section-title";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { applicationDateInfo, hackathonDateInfo } from "@/lib/dates";
+import { csClubInstagramLink } from "@/lib/links";
 
 const FaqsSection = () => {
   return (
@@ -52,7 +53,11 @@ const FaqsSection = () => {
             <AccordionTrigger>What is PantherHacks {hackathonDateInfo.year}?</AccordionTrigger>
             <AccordionContent>
               PantherHacks {hackathonDateInfo.year} is Chapman University's second annual student-run hackathon, hosted
-              by Computer Science Club (@chapmancsclub).
+              by Computer Science Club (
+              <Link href={csClubInstagramLink} target="_blank" className="underline hover:text-primary">
+                @chapmancsclub
+              </Link>
+              ).
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
@@ -65,7 +70,7 @@ const FaqsSection = () => {
           <AccordionItem value="item-3">
             <AccordionTrigger>How do I apply?</AccordionTrigger>
             <AccordionContent>
-              You can apply to PantherHacks {hackathonDateInfo.year} by visiting {""}
+              You can apply to PantherHacks {hackathonDateInfo.year} by visiting{" "}
               <Link href="/apply" target="_blank" className="underline hover:text-primary">
                 this link
               </Link>
