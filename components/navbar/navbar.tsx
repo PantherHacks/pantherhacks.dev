@@ -112,7 +112,8 @@ const Navbar = () => {
               alt="GitHub Icon"
               width={24}
               height={24}
-              className="h-[70px] select-none"
+              className="select-none"
+              unoptimized
               draggable={false}
               loading="eager"
             />
@@ -129,7 +130,8 @@ const Navbar = () => {
               alt="Discord Icon"
               width={24}
               height={24}
-              className="h-[70px] select-none"
+              className="select-none"
+              unoptimized
               draggable={false}
               loading="eager"
             />
@@ -146,7 +148,8 @@ const Navbar = () => {
               alt="Discord Icon"
               width={24}
               height={24}
-              className="h-[70px] select-none"
+              className="select-none"
+              unoptimized
               draggable={false}
               loading="eager"
             />
@@ -258,7 +261,8 @@ const Navbar = () => {
                 alt="GitHub Icon"
                 width={24}
                 height={24}
-                className="h-[70px] select-none"
+                className="select-none"
+                unoptimized
                 draggable={false}
                 loading="eager"
               />
@@ -276,7 +280,8 @@ const Navbar = () => {
                 alt="Discord Icon"
                 width={24}
                 height={24}
-                className="h-[70px] select-none"
+                className="select-none"
+                unoptimized
                 draggable={false}
                 loading="eager"
               />
@@ -294,7 +299,8 @@ const Navbar = () => {
                 alt="Instagram Icon"
                 width={24}
                 height={24}
-                className="h-[70px] select-none"
+                className="select-none"
+                unoptimized
                 draggable={false}
                 loading="eager"
               />

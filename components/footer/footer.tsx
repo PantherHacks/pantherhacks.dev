@@ -27,6 +27,7 @@ const Footer: React.FC<FooterProps> = () => {
               width={24}
               height={24}
               className="select-none"
+              unoptimized
               draggable={false}
             />
           </FooterSocialLink>
@@ -37,6 +38,7 @@ const Footer: React.FC<FooterProps> = () => {
               width={24}
               height={24}
               className="select-none"
+              unoptimized
               draggable={false}
             />
           </FooterSocialLink>
@@ -47,6 +49,7 @@ const Footer: React.FC<FooterProps> = () => {
               width={24}
               height={24}
               className="select-none"
+              unoptimized
               draggable={false}
             />
           </FooterSocialLink>
@@ -57,6 +60,7 @@ const Footer: React.FC<FooterProps> = () => {
               width={24}
               height={24}
               className="select-none"
+              unoptimized
               draggable={false}
             />
           </FooterSocialLink>
