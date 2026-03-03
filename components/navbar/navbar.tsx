@@ -108,16 +108,8 @@ const Navbar = () => {
             title={"PantherHacks GitHub Link"}
             aria-label={"PantherHacks GitHub Link"}
           >
-            <Image
-              src="./icons/github.svg"
-              alt="GitHub Icon"
-              width={0}
-              height={0}
-              className="w-6 h-6 select-none"
-              unoptimized
-              draggable={false}
-              loading="eager"
-            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="./icons/github.svg" alt="GitHub Icon" className="w-6 h-6 select-none" draggable={false} />
           </NavLink>
           <NavLink
             href={discordLink}
@@ -127,16 +119,8 @@ const Navbar = () => {
             title={"PantherHacks Discord Link"}
             aria-label={"PantherHacks Discord Link"}
           >
-            <Image
-              src="./icons/discord.svg"
-              alt="Discord Icon"
-              width={0}
-              height={0}
-              className="w-6 h-6 select-none"
-              unoptimized
-              draggable={false}
-              loading="eager"
-            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="./icons/discord.svg" alt="Discord Icon" className="w-6 h-6 select-none" draggable={false} />
           </NavLink>
           <NavLink
             href={instagramLink}
@@ -146,16 +130,8 @@ const Navbar = () => {
             title={"PantherHacks Instagram Link"}
             aria-label={"PantherHacks Instagram Link"}
           >
-            <Image
-              src="./icons/instagram.svg"
-              alt="Discord Icon"
-              width={0}
-              height={0}
-              className="w-6 h-6 select-none"
-              unoptimized
-              draggable={false}
-              loading="eager"
-            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="./icons/instagram.svg" alt="Instagram Icon" className="w-6 h-6 select-none" draggable={false} />
           </NavLink>
         </div>
       </div>
@@ -260,16 +236,8 @@ const Navbar = () => {
               aria-label={"PantherHacks GitHub Link"}
               onClick={handleMobileLinkClick}
             >
-              <Image
-                src="./icons/github.svg"
-                alt="GitHub Icon"
-                width={0}
-                height={0}
-                className="w-6 h-6 select-none"
-                unoptimized
-                draggable={false}
-                loading="eager"
-              />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="./icons/github.svg" alt="GitHub Icon" className="w-6 h-6 select-none" draggable={false} />
             </NavLink>
             <NavLink
               href={discordLink}
@@ -280,16 +248,8 @@ const Navbar = () => {
               aria-label={"PantherHacks Discord Link"}
               onClick={handleMobileLinkClick}
             >
-              <Image
-                src="./icons/discord.svg"
-                alt="Discord Icon"
-                width={0}
-                height={0}
-                className="w-6 h-6 select-none"
-                unoptimized
-                draggable={false}
-                loading="eager"
-              />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="./icons/discord.svg" alt="Discord Icon" className="w-6 h-6 select-none" draggable={false} />
             </NavLink>
             <NavLink
               href={instagramLink}
@@ -300,16 +260,8 @@ const Navbar = () => {
               className="h-[70px]"
               onClick={handleMobileLinkClick}
             >
-              <Image
-                src="./icons/instagram.svg"
-                alt="Instagram Icon"
-                width={0}
-                height={0}
-                className="w-6 h-6 select-none"
-                unoptimized
-                draggable={false}
-                loading="eager"
-              />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="./icons/instagram.svg" alt="Instagram Icon" className="w-6 h-6 select-none" draggable={false} />
             </NavLink>
           </div>
         </div>

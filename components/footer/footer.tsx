@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import { FooterSocialLink } from "@/components/footer/footer-social-link";
 import { YearSwitcher } from "@/components/footer/year-switcher";
 import { hackathonDateInfo } from "@/lib/dates";
@@ -20,50 +18,20 @@ const Footer: React.FC<FooterProps> = () => {
         </div>
         <p className="text-white text-center pt-2">Made with ❤️ by the PantherHacks Team</p>
         <div className="flex flex-row justify-center items-center space-x-1" aria-label="Social Links">
+          {/* eslint-disable @next/next/no-img-element */}
           <FooterSocialLink href={gitHubLink} aria-label="PantherHacks GitHub">
-            <Image
-              src="/icons/github.svg"
-              alt="GitHub Icon"
-              width={0}
-              height={0}
-              className="w-6 h-6 select-none"
-              unoptimized
-              draggable={false}
-            />
+            <img src="/icons/github.svg" alt="GitHub Icon" className="w-6 h-6 select-none" draggable={false} />
           </FooterSocialLink>
           <FooterSocialLink href={discordLink} aria-label="PantherHacks Discord">
-            <Image
-              src="/icons/discord.svg"
-              alt="Discord Icon"
-              width={0}
-              height={0}
-              className="w-6 h-6 select-none"
-              unoptimized
-              draggable={false}
-            />
+            <img src="/icons/discord.svg" alt="Discord Icon" className="w-6 h-6 select-none" draggable={false} />
           </FooterSocialLink>
           <FooterSocialLink href={instagramLink} aria-label="PantherHacks Instagram">
-            <Image
-              src="/icons/instagram.svg"
-              alt="Instagram Icon"
-              width={0}
-              height={0}
-              className="w-6 h-6 select-none"
-              unoptimized
-              draggable={false}
-            />
+            <img src="/icons/instagram.svg" alt="Instagram Icon" className="w-6 h-6 select-none" draggable={false} />
           </FooterSocialLink>
           <FooterSocialLink href={contactEmail} aria-label="Chapman Computer Science Club Email">
-            <Image
-              src="/icons/mail.svg"
-              alt="Instagram Icon"
-              width={0}
-              height={0}
-              className="w-6 h-6 select-none"
-              unoptimized
-              draggable={false}
-            />
+            <img src="/icons/mail.svg" alt="Email Icon" className="w-6 h-6 select-none" draggable={false} />
           </FooterSocialLink>
+          {/* eslint-enable @next/next/no-img-element */}
         </div>
         <YearSwitcher />
       </footer>
