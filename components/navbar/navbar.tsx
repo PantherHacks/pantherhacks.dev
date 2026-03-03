@@ -113,7 +113,7 @@ const Navbar = () => {
               alt="GitHub Icon"
               width={0}
               height={0}
-              className="w-6 h-6 select-none"
+              className="w-6 h-6 select-none icon-neon transform-gpu"
               unoptimized
               draggable={false}
               loading="eager"
@@ -132,7 +132,7 @@ const Navbar = () => {
               alt="Discord Icon"
               width={0}
               height={0}
-              className="w-6 h-6 select-none"
+              className="w-6 h-6 select-none icon-neon transform-gpu"
               unoptimized
               draggable={false}
               loading="eager"
@@ -151,7 +151,7 @@ const Navbar = () => {
               alt="Discord Icon"
               width={0}
               height={0}
-              className="w-6 h-6 select-none"
+              className="w-6 h-6 select-none icon-neon transform-gpu"
               unoptimized
               draggable={false}
               loading="eager"
@@ -265,7 +265,7 @@ const Navbar = () => {
                 alt="GitHub Icon"
                 width={0}
                 height={0}
-                className="w-6 h-6 select-none"
+                className="w-6 h-6 select-none icon-neon transform-gpu"
                 unoptimized
                 draggable={false}
                 loading="eager"
@@ -285,7 +285,7 @@ const Navbar = () => {
                 alt="Discord Icon"
                 width={0}
                 height={0}
-                className="w-6 h-6 select-none"
+                className="w-6 h-6 select-none icon-neon transform-gpu"
                 unoptimized
                 draggable={false}
                 loading="eager"
@@ -305,7 +305,7 @@ const Navbar = () => {
                 alt="Instagram Icon"
                 width={0}
                 height={0}
-                className="w-6 h-6 select-none"
+                className="w-6 h-6 select-none icon-neon transform-gpu"
                 unoptimized
                 draggable={false}
                 loading="eager"
