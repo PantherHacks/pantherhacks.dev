@@ -24,9 +24,6 @@ const AboutSection = () => {
         PantherHacks {hackathonDateInfo.year}!
       </p>
       <Countdown />
-      {/*<Link href="/apply">*/}
-      {/*  <Button className="mt-6 p-6 font-Xirod text-3xl hover:bg-primary">APPLY NOW</Button>*/}
-      {/*</Link>*/}
     </div>
   );
 };
