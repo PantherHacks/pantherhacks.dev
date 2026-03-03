@@ -53,42 +53,26 @@ const TeamSection = () => {
         <TeamMember
           name="Nataniel Farzan"
           teamRole="Executive Team"
-          linkedinLink="https://www.linkedin.com/in/natanielfarzan/"
+          url="https://www.linkedin.com/in/natanielfarzan/"
         />
-        <TeamMember
-          name="Jeffrey Bok"
-          teamRole="Executive Team"
-          linkedinLink="https://www.linkedin.com/in/jeffreybok/"
-        />
+        <TeamMember name="Jeffrey Bok" teamRole="Executive Team" url="https://www.linkedin.com/in/jeffreybok/" />
         <TeamMember
           name="Kalin Richardson"
           teamRole="Executive Team"
-          linkedinLink="https://www.linkedin.com/in/kalin-richardson/"
+          url="https://www.linkedin.com/in/kalin-richardson/"
         />
         <TeamMember
           name="Joel Escobar"
           teamRole="Executive Team"
-          linkedinLink="https://www.linkedin.com/in/joel-escobar-6059a4214/"
+          url="https://www.linkedin.com/in/joel-escobar-6059a4214/"
         />
-        <TeamMember
-          name="Dylan Ravel"
-          teamRole="Software Team"
-          linkedinLink="https://www.linkedin.com/in/dylanravel/"
-        />
-        <TeamMember
-          name="Daniel Tsivkovski"
-          teamRole="Software Team"
-          linkedinLink="https://www.linkedin.com/in/danieltsivkovski/"
-        />
-        <TeamMember
-          name="Sam Fago"
-          teamRole="Design Team"
-          linkedinLink="https://www.linkedin.com/in/samantha-fago-08b4072ab/"
-        />
+        <TeamMember name="Dylan Ravel" teamRole="Software Team" url="https://dylanravel.com" />
+        <TeamMember name="Daniel Tsivkovski" teamRole="Software Team" url="https://tsiv.dev" />
+        <TeamMember name="Sam Fago" teamRole="Design Team" url="https://design.fago.us/" />
         <TeamMember
           name="Daniel Min"
           teamRole="Operations Team"
-          linkedinLink="https://www.linkedin.com/in/daniel-min-9758812b3/"
+          url="https://www.linkedin.com/in/daniel-min-9758812b3/"
         />
       </div>
       <p className="mx-8 font-UbuntuMono sm:mx-20 md:mx-24 text-center my-4">

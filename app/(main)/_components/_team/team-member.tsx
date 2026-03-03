@@ -9,18 +9,12 @@ import "./team-member.css";
 interface ITeamMemberProps {
   name: string;
   teamRole: string;
-  linkedinLink: string;
+  url: string;
   color_hex?: string;
   hueRotation?: number;
 }
 
-const TeamMember: React.FC<ITeamMemberProps> = ({
-  name,
-  teamRole,
-  linkedinLink,
-  color_hex = "#61D7FF",
-  hueRotation = -150,
-}) => {
+const TeamMember: React.FC<ITeamMemberProps> = ({ name, teamRole, url, color_hex = "#61D7FF", hueRotation = -150 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const nameParts = name.split(" ");
@@ -33,7 +27,7 @@ const TeamMember: React.FC<ITeamMemberProps> = ({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <Link href={linkedinLink} target="_blank" className="flex flex-col items-center space-y-5">
+      <Link href={url} target="_blank" className="flex flex-col items-center space-y-5">
         <div
           className={`rounded-full transition-all ${isHovered ? "scale-[95%] translate-y-2" : "scale-125 translate-y-8"}`}
           style={{
