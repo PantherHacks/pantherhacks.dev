@@ -24,9 +24,9 @@ const Footer: React.FC<FooterProps> = () => {
             <Image
               src="/icons/github.svg"
               alt="GitHub Icon"
-              width={24}
-              height={24}
-              className="select-none"
+              width={0}
+              height={0}
+              className="w-6 h-6 select-none"
               unoptimized
               draggable={false}
             />
@@ -35,9 +35,9 @@ const Footer: React.FC<FooterProps> = () => {
             <Image
               src="/icons/discord.svg"
               alt="Discord Icon"
-              width={24}
-              height={24}
-              className="select-none"
+              width={0}
+              height={0}
+              className="w-6 h-6 select-none"
               unoptimized
               draggable={false}
             />
@@ -46,9 +46,9 @@ const Footer: React.FC<FooterProps> = () => {
             <Image
               src="/icons/instagram.svg"
               alt="Instagram Icon"
-              width={24}
-              height={24}
-              className="select-none"
+              width={0}
+              height={0}
+              className="w-6 h-6 select-none"
               unoptimized
               draggable={false}
             />
@@ -57,9 +57,9 @@ const Footer: React.FC<FooterProps> = () => {
             <Image
               src="/icons/mail.svg"
               alt="Instagram Icon"
-              width={24}
-              height={24}
-              className="select-none"
+              width={0}
+              height={0}
+              className="w-6 h-6 select-none"
               unoptimized
               draggable={false}
             />

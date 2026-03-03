@@ -92,7 +92,7 @@ const Navbar = () => {
               <div className="flex items-center gap-2">
                 <div className="relative flex justify-center items-center">
                   <div className="absolute inline-flex w-4 h-4 bg-[#fd021d] rounded-full animate-ping duration-1000"></div>
-                  <div className="relative inline-flex w-5 h-5 bg-[#fd021d] rounded-full"></div>
+                  <div className="relative inline-flex w-6 h-6 bg-[#fd021d] rounded-full"></div>
                 </div>
                 <span className="neon-text transform-gpu">LIVE</span>
               </div>
@@ -111,9 +111,9 @@ const Navbar = () => {
             <Image
               src="./icons/github.svg"
               alt="GitHub Icon"
-              width={24}
-              height={24}
-              className="select-none"
+              width={0}
+              height={0}
+              className="w-6 h-6 select-none"
               unoptimized
               draggable={false}
               loading="eager"
@@ -130,9 +130,9 @@ const Navbar = () => {
             <Image
               src="./icons/discord.svg"
               alt="Discord Icon"
-              width={24}
-              height={24}
-              className="select-none"
+              width={0}
+              height={0}
+              className="w-6 h-6 select-none"
               unoptimized
               draggable={false}
               loading="eager"
@@ -149,9 +149,9 @@ const Navbar = () => {
             <Image
               src="./icons/instagram.svg"
               alt="Discord Icon"
-              width={24}
-              height={24}
-              className="select-none"
+              width={0}
+              height={0}
+              className="w-6 h-6 select-none"
               unoptimized
               draggable={false}
               loading="eager"
@@ -245,7 +245,7 @@ const Navbar = () => {
             <div className="flex items-center gap-2">
               <div className="relative flex justify-center items-center">
                 <div className="absolute inline-flex w-4 h-4 bg-[#fd021d] rounded-full animate-ping duration-1000"></div>
-                <div className="relative inline-flex w-5 h-5 bg-[#fd021d] rounded-full"></div>
+                <div className="relative inline-flex w-6 h-6 bg-[#fd021d] rounded-full"></div>
               </div>
               <span className="neon-text transform-gpu">LIVE</span>
             </div>
@@ -263,9 +263,9 @@ const Navbar = () => {
               <Image
                 src="./icons/github.svg"
                 alt="GitHub Icon"
-                width={24}
-                height={24}
-                className="select-none"
+                width={0}
+                height={0}
+                className="w-6 h-6 select-none"
                 unoptimized
                 draggable={false}
                 loading="eager"
@@ -283,9 +283,9 @@ const Navbar = () => {
               <Image
                 src="./icons/discord.svg"
                 alt="Discord Icon"
-                width={24}
-                height={24}
-                className="select-none"
+                width={0}
+                height={0}
+                className="w-6 h-6 select-none"
                 unoptimized
                 draggable={false}
                 loading="eager"
@@ -303,9 +303,9 @@ const Navbar = () => {
               <Image
                 src="./icons/instagram.svg"
                 alt="Instagram Icon"
-                width={24}
-                height={24}
-                className="select-none"
+                width={0}
+                height={0}
+                className="w-6 h-6 select-none"
                 unoptimized
                 draggable={false}
                 loading="eager"
