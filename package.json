@@ -1,6 +1,6 @@
 {
   "name": "pantherhacks.dev",
-  "version": "2026.1",
+  "version": "2026.2",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
