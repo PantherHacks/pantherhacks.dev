@@ -27,7 +27,7 @@ const TracksSection = () => {
       />
       <SectionTitle flickerIndices={[1, 4, 5]}>Tracks</SectionTitle>
       <p className="">Learn more about the tracks we offer.</p>
-      <div className="flex flex-col pt-16 pb-4 space-y-20">
+      <div className="flex flex-col pt-16 pb-16 space-y-20">
         <Track
           name="Entertainment"
           description="Create innovative solutions for the entertainment industry, including gaming, streaming, content creation, and immersive experiences. Build a game with a unique twist, design a tool for streamers to engage their audience, develop an app that enhances content creation, or explore new forms of digital entertainment. The possibilities are endless - we welcome all creative ideas that could make an impact in the world of entertainment."
