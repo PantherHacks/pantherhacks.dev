@@ -104,6 +104,7 @@ const Navbar = () => {
             href={gitHubLink}
             target="_blank"
             variant={"icon"}
+            className="h-[70px]"
             title={"PantherHacks GitHub Link"}
             aria-label={"PantherHacks GitHub Link"}
           >
@@ -112,7 +113,7 @@ const Navbar = () => {
               alt="GitHub Icon"
               width={24}
               height={24}
-              className="select-none h-[70px]"
+              className="select-none"
               unoptimized
               draggable={false}
               loading="eager"
@@ -122,6 +123,7 @@ const Navbar = () => {
             href={discordLink}
             target="_blank"
             variant={"icon"}
+            className="h-[70px]"
             title={"PantherHacks Discord Link"}
             aria-label={"PantherHacks Discord Link"}
           >
@@ -130,7 +132,7 @@ const Navbar = () => {
               alt="Discord Icon"
               width={24}
               height={24}
-              className="select-none h-[70px]"
+              className="select-none"
               unoptimized
               draggable={false}
               loading="eager"
@@ -140,6 +142,7 @@ const Navbar = () => {
             href={instagramLink}
             target="_blank"
             variant="icon"
+            className="h-[70px]"
             title={"PantherHacks Instagram Link"}
             aria-label={"PantherHacks Instagram Link"}
           >
@@ -148,7 +151,7 @@ const Navbar = () => {
               alt="Discord Icon"
               width={24}
               height={24}
-              className="select-none h-[70px]"
+              className="select-none"
               unoptimized
               draggable={false}
               loading="eager"
@@ -252,6 +255,7 @@ const Navbar = () => {
               href={gitHubLink}
               target="_blank"
               variant={"mobile_icon"}
+              className="h-[70px]"
               title={"PantherHacks GitHub Link"}
               aria-label={"PantherHacks GitHub Link"}
               onClick={handleMobileLinkClick}
@@ -261,7 +265,7 @@ const Navbar = () => {
                 alt="GitHub Icon"
                 width={24}
                 height={24}
-                className="select-none h-[70px]"
+                className="select-none"
                 unoptimized
                 draggable={false}
                 loading="eager"
@@ -271,6 +275,7 @@ const Navbar = () => {
               href={discordLink}
               target="_blank"
               variant={"mobile_icon"}
+              className="h-[70px]"
               title={"PantherHacks Discord Link"}
               aria-label={"PantherHacks Discord Link"}
               onClick={handleMobileLinkClick}
@@ -280,7 +285,7 @@ const Navbar = () => {
                 alt="Discord Icon"
                 width={24}
                 height={24}
-                className="select-none h-[70px]"
+                className="select-none"
                 unoptimized
                 draggable={false}
                 loading="eager"
@@ -292,6 +297,7 @@ const Navbar = () => {
               aria-label={"PantherHacks Instagram Link"}
               target="_blank"
               variant={"mobile_icon"}
+              className="h-[70px]"
               onClick={handleMobileLinkClick}
             >
               <Image
@@ -299,7 +305,7 @@ const Navbar = () => {
                 alt="Instagram Icon"
                 width={24}
                 height={24}
-                className="select-none h-[70px]"
+                className="select-none"
                 unoptimized
                 draggable={false}
                 loading="eager"
