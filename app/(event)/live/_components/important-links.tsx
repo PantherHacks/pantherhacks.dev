@@ -15,7 +15,7 @@ const ImportantLinksSection = () => {
         <ImportantLink name="Devpost" url={devpostUrl} icon={Code} />
         <ImportantLink name="Rules" url="/rules" icon={Scale} />
         <ImportantLink name="FAQs" url="/#faqs" icon={CircleHelp} />
-        <ImportantLink name="Discord" url={discordLink} iconUrl="/icons/discord.svg" />
+        <ImportantLink name="Discord" url={discordLink} iconUrl="/icons/discord_white.svg" />
         <ImportantLink name="Countdown" url="/countdown" icon={Hourglass} />
       </div>
     </div>
