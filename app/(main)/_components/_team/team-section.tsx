@@ -50,11 +50,7 @@ const TeamSection = () => {
         Meet the people who made PantherHacks {hackathonDateInfo.year} possible.
       </p>
       <div className="pt-8 pb-10 grid grid-cols-2 sm:flex sm:flex-row sm:flex-wrap gap-6 px-4 sm:px-8 md:px-16 max-w-[60rem] justify-center items-center">
-        <TeamMember
-          name="Nataniel Farzan"
-          teamRole="Executive Team"
-          url="https://www.linkedin.com/in/natanielfarzan/"
-        />
+        <TeamMember name="Nataniel Farzan" teamRole="Executive Team" url="https://natanielfarzan.com" />
         <TeamMember name="Jeffrey Bok" teamRole="Executive Team" url="https://www.linkedin.com/in/jeffreybok/" />
         <TeamMember
           name="Kalin Richardson"
