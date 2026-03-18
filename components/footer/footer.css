@@ -21,9 +21,7 @@
 }
 
 .icon-neon {
-  filter:
-    drop-shadow(0 0 1px #ffae00)
-    drop-shadow(0 0 4px rgba(255, 85, 0, 0.7))
+  filter: drop-shadow(0 0 1px #ffae00) drop-shadow(0 0 4px rgba(255, 85, 0, 0.7))
     drop-shadow(0 0 8px rgba(255, 85, 0, 0.25));
 }
 
