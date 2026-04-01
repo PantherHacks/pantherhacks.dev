@@ -1,3 +1,7 @@
+.section-title-container {
+  container-type: inline-size;
+}
+
 @keyframes letter-flicker {
   0%,
   100% {
