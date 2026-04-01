@@ -113,7 +113,7 @@ const EventCard: React.FC<CalendarEvent> = ({
             </div>
           ) : (
             <Button
-              className="w-full sm:w-auto shrink-0 px-3 py-2 h-auto bg-transparent text-primary border border-primary rounded-none hover:bg-primary/10 cursor-pointer font-UbuntuMono text-xs tracking-wider transition-colors duration-200"
+              className="w-full sm:w-auto shrink-0 px-3 py-2 h-auto bg-transparent text-primary border border-primary rounded-none hover:rounded-lg hover:bg-primary/10 cursor-pointer font-UbuntuMono text-xs tracking-wider transition-all duration-200"
               onClick={() => addToCalendar(name, activityType, description, location, startTimestamp, endTimestamp)}
             >
               <CalendarPlus2 className="w-3.5 h-3.5 mr-1.5" /> Add to calendar

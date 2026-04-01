@@ -37,28 +37,28 @@ export interface CalendarEvent {
 export function getCalendarEventColors(activityType: string): string[] {
   switch (activityType) {
     case "Check-in":
-      return ["bg-[#1A8E00] hover:bg-[#1A8E00]", "text-white", "bg-[#081408]", "text-white", "#22CC00"];
+      return ["bg-[#1A8E00] hover:bg-[#1A8E00]", "text-white", "bg-[#081408]", "text-white", "#22CC00", "#081408"];
 
     case "Hacking Time":
-      return ["bg-[#D51812] hover:bg-[#D51812]", "text-white", "bg-[#160808]", "text-white", "#ff2d4f"];
+      return ["bg-[#D51812] hover:bg-[#D51812]", "text-white", "bg-[#160808]", "text-white", "#ff2d4f", "#160808"];
 
     case "Guest Speaker":
-      return ["bg-[#03727F] hover:bg-[#03727F]", "text-white", "bg-[#071213]", "text-white", "#00cfcf"];
+      return ["bg-[#03727F] hover:bg-[#03727F]", "text-white", "bg-[#071213]", "text-white", "#00cfcf", "#071213"];
 
     case "Office Hours":
-      return ["bg-[#6D008E] hover:bg-[#6D008E]", "text-white", "bg-[#0f0818]", "text-white", "#c440ff"];
+      return ["bg-[#6D008E] hover:bg-[#6D008E]", "text-white", "bg-[#0f0818]", "text-white", "#c440ff", "#0f0818"];
 
     case "Main Event":
-      return ["bg-[#00288E] hover:bg-[#00288E]", "text-white", "bg-[#08101a]", "text-white", "#2288ff"];
+      return ["bg-[#00288E] hover:bg-[#00288E]", "text-white", "bg-[#08101a]", "text-white", "#2288ff", "#08101a"];
 
     case "Food":
-      return ["bg-[#F28910] hover:bg-[#F28910]", "text-white", "bg-[#130d04]", "text-white", "#FF5500"];
+      return ["bg-[#F28910] hover:bg-[#F28910]", "text-white", "bg-[#130d04]", "text-white", "#FF5500", "#130d04"];
 
     case "Social Event":
-      return ["bg-[#C4019A] hover:bg-[#C4019A]", "text-white", "bg-[#160810]", "text-white", "#ff40cc"];
+      return ["bg-[#C4019A] hover:bg-[#C4019A]", "text-white", "bg-[#160810]", "text-white", "#ff40cc", "#160810"];
 
     default:
-      return ["bg-white/10", "text-white", "bg-[#0d0d18]", "text-white", "#ffffff"];
+      return ["bg-white/10", "text-white", "bg-[#0d0d18]", "text-white", "#ffffff", "#0d0d18"];
   }
 }
 

@@ -152,7 +152,7 @@ const ScheduleSection = () => {
           <Separator />
           <div className="flex flex-col items-center justify-center gap-y-2">
             <Button
-              className="bg-transparent text-primary border border-primary transition-all duration-300 rounded-none hover:bg-primary/10 cursor-pointer items-center font-UbuntuMono tracking-wider"
+              className="bg-transparent text-primary border border-primary transition-all duration-200 rounded-none hover:rounded-lg hover:bg-primary/10 cursor-pointer items-center font-UbuntuMono tracking-wider"
               onClick={fetchCSV}
             >
               <RefreshCcw /> Refresh Schedule
