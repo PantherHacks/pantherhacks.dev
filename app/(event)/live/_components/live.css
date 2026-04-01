@@ -36,9 +36,9 @@
   content: "";
   position: absolute;
   inset: -3px;
-  background-image: conic-gradient(from var(--angle), #00000000, #ff2d4f);
+  background-image: conic-gradient(from var(--angle), #00000000, #fe5501);
   z-index: -2;
-  border-radius: calc(1.5rem + 4px);
+  border-radius: 4px;
   animation: 3s highlighted-card-spin linear infinite;
 }
 
