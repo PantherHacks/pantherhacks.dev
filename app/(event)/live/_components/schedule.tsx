@@ -151,7 +151,10 @@ const ScheduleSection = () => {
         <div className="flex flex-col gap-4 justify-center items-center px-10">
           <Separator />
           <div className="flex flex-col items-center justify-center gap-y-2">
-            <Button className="bg-primary hover:bg-[#83022b] cursor-pointer" onClick={fetchCSV}>
+            <Button
+              className="bg-transparent text-primary border border-primary transition-all duration-300 rounded-none hover:rounded-xl hover:bg-transparent cursor-pointer items-center"
+              onClick={fetchCSV}
+            >
               <RefreshCcw /> Refresh Schedule
             </Button>
             <p className="text-xs ">Last refreshed {timeAgo}</p>
