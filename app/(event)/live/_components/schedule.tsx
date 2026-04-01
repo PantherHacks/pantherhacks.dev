@@ -126,10 +126,10 @@ const ScheduleSection = () => {
       >
         SCHEDULE
       </SectionTitle>
-      <p className="mx-8 sm:mx-20 md:mx-64 text-center max-w-[50rem] pb-10">
+      <p className="mx-8 sm:mx-20 md:mx-64 text-center max-w-[50rem] pb-10 font-UbuntuMono text-white/70">
         PantherHacks will take place for three days from{" "}
-        <span className="font-bold">{hackathonDateInfo.dateString}</span>. Below you can find information on the
-        schedule of the event.
+        <span className="font-UbuntuMonoBold text-white">{hackathonDateInfo.dateString}</span>. Below you can find
+        information on the schedule of the event.
       </p>
       {isFetching && (
         <Image
@@ -152,12 +152,12 @@ const ScheduleSection = () => {
           <Separator />
           <div className="flex flex-col items-center justify-center gap-y-2">
             <Button
-              className="bg-transparent text-primary border border-primary transition-all duration-300 rounded-none hover:rounded-xl hover:bg-transparent cursor-pointer items-center"
+              className="bg-transparent text-primary border border-primary transition-all duration-300 rounded-none hover:bg-primary/10 cursor-pointer items-center font-UbuntuMono tracking-wider"
               onClick={fetchCSV}
             >
               <RefreshCcw /> Refresh Schedule
             </Button>
-            <p className="text-xs ">Last refreshed {timeAgo}</p>
+            <p className="text-xs font-UbuntuMono text-white/40">Last refreshed {timeAgo}</p>
           </div>
           <ScheduleFilters activeFilters={activeFilters} setActiveFilters={setActiveFilters} />
           <div className="flex items-center space-x-2 pt-1">
@@ -166,7 +166,9 @@ const ScheduleSection = () => {
               checked={showPrevEvents}
               onCheckedChange={() => setShowPrevEvents(!showPrevEvents)}
             />
-            <Label htmlFor="show-previous-events">Show Past Events</Label>
+            <Label htmlFor="show-previous-events" className="font-UbuntuMono text-white/60 cursor-pointer">
+              Show Past Events
+            </Label>
           </div>
           <Separator />
           {Object.keys(eventsByDay)
@@ -219,8 +221,13 @@ const ScheduleSection = () => {
                   aria-label={`Events for ${day}`}
                   className="w-full flex flex-col justify-center items-center gap-4 pt-4 pb-3"
                 >
-                  <h3 className="font-bold text-2xl">{day}</h3>
-                  <Separator className="bg-white/20" />
+                  <div className="flex items-center gap-4 w-full">
+                    <div className="h-px flex-1 bg-gradient-to-r from-transparent to-white/20" />
+                    <h3 className="font-Xirod text-lg tracking-widest text-white/80 uppercase whitespace-nowrap">
+                      {day}
+                    </h3>
+                    <div className="h-px flex-1 bg-gradient-to-l from-transparent to-white/20" />
+                  </div>
                   {eventsToRender.length > 0 ? (
                     // show events if there are events to render
                     eventsToRender.map((event, index) => (
@@ -257,7 +264,7 @@ const ScheduleSection = () => {
               return dailyEvents.every((event) => event.endTimestamp.getTime() < Date.now());
             }) && <p className="font-bold text-lg text-center mx-10">There are no more upcoming events.</p>}
           <Separator />
-          <p className="text-center italic font-bold text-lg text-white/80">That's all folks!</p>
+          <p className="text-center font-UbuntuMono text-white/40 text-sm tracking-widest uppercase">end of schedule</p>
         </div>
       )}
     </div>

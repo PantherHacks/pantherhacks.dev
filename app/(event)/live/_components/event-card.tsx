@@ -12,7 +12,6 @@ import {
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 import { addToCalendar, CalendarEvent, getCalendarEventColors } from "./schedule-helpers";
 
@@ -27,13 +26,41 @@ const EventCard: React.FC<CalendarEvent> = ({
   endTimestamp,
 }) => {
   const colors = getCalendarEventColors(activityType);
+  const accent = colors[4] ?? "#ffffff";
   const isLive = startTimestamp.getTime() <= Date.now() && endTimestamp.getTime() >= Date.now();
 
   return (
     <div className={cn("flex flex-col p-[2px] w-72 sm:w-[35rem] md:w-[45rem]", isLive && "highlighted-card")}>
-      <div className={cn("p-8 rounded-3xl border border-white/10", colors[2], colors[3])}>
-        <div className="flex flex-col md:flex-row items-start md:items-center gap-2 mb-2 md:mb-0">
-          <h3 className="text-3xl flex-shrink font-UbuntuMono">{name}</h3>
+      <div
+        className={cn("relative p-6 font-UbuntuMono", colors[2])}
+        style={{
+          border: `1px solid ${accent}40`,
+          boxShadow: `inset 0 0 60px rgba(0,0,0,0.5), 0 0 8px ${accent}18`,
+        }}
+      >
+        {/* Corner brackets */}
+        <div
+          className="absolute top-0 left-0 w-5 h-5"
+          style={{ borderTop: `2px solid ${accent}`, borderLeft: `2px solid ${accent}` }}
+        />
+        <div
+          className="absolute top-0 right-0 w-5 h-5"
+          style={{ borderTop: `2px solid ${accent}`, borderRight: `2px solid ${accent}` }}
+        />
+        <div
+          className="absolute bottom-0 left-0 w-5 h-5"
+          style={{ borderBottom: `2px solid ${accent}`, borderLeft: `2px solid ${accent}` }}
+        />
+        <div
+          className="absolute bottom-0 right-0 w-5 h-5"
+          style={{ borderBottom: `2px solid ${accent}`, borderRight: `2px solid ${accent}` }}
+        />
+
+        {/* Header */}
+        <div className="flex flex-col md:flex-row items-start md:items-center gap-2 mb-3">
+          <h3 className="text-2xl flex-shrink text-white" style={{ textShadow: `0 0 12px ${accent}55` }}>
+            {name}
+          </h3>
           <Badge className={cn("h-6 flex-shrink-0 cursor-default whitespace-nowrap", colors[0])}>
             {activityType === "Check-in" && <Clock className="w-3 h-3 mr-2" aria-hidden="true" />}
             {activityType === "Main Event" && <Star className="w-3 h-3 mr-2" aria-hidden="true" />}
@@ -44,24 +71,28 @@ const EventCard: React.FC<CalendarEvent> = ({
             {activityType === "Guest Speaker" && <Speech className="w-3 h-3 mr-2" aria-hidden="true" />} {activityType}
           </Badge>
         </div>
-        <Separator className="mb-2 bg-white/15" />
-        <p className="text-white/80 font-UbuntuMono">{description}</p>
-        <Separator className="my-2 bg-white/15" />
-        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-y-2 sm:gap-y-0">
-          <div className="align-bottom text-white/70">
-            <div className="flex flex-row items-center">
-              <MapPin className="mr-2 mb-2 w-5 h-5" />
-              <p>{location}</p>
+
+        {/* Accent separator */}
+        <div className="mb-3 h-px" style={{ background: `linear-gradient(to right, ${accent}99, transparent)` }} />
+
+        <p className="text-white/70 text-sm leading-relaxed">{description}</p>
+
+        <div className="mt-3 mb-3 h-px" style={{ background: `linear-gradient(to right, ${accent}44, transparent)` }} />
+
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-y-3 sm:gap-y-0">
+          <div className="text-white/55 text-sm space-y-1">
+            <div className="flex items-center gap-2">
+              <MapPin className="w-4 h-4 flex-shrink-0" style={{ color: accent }} />
+              <span>{location}</span>
             </div>
-            <div className="flex flex-row items-center">
-              <Clock className="mr-2 w-5 h-5" />
-              <p>
-                {startTimestamp.toLocaleTimeString([], { hour: "numeric", minute: "2-digit", hour12: true })} -{" "}
+            <div className="flex items-center gap-2">
+              <Clock className="w-4 h-4 flex-shrink-0" style={{ color: accent }} />
+              <span>
+                {startTimestamp.toLocaleTimeString([], { hour: "numeric", minute: "2-digit", hour12: true })} &ndash;{" "}
                 {endTimestamp.toLocaleTimeString([], { hour: "numeric", minute: "2-digit", hour12: true })}
-              </p>
+              </span>
             </div>
           </div>
-          <Separator className="block sm:hidden bg-white/15" />
           {isLive ? (
             <h2 className="font-TangoSansBold text-3xl text-[#fd021d] flex flex-row justify-center items-center gap-2">
               <div className="flex items-center gap-2">
@@ -74,7 +105,7 @@ const EventCard: React.FC<CalendarEvent> = ({
             </h2>
           ) : (
             <Button
-              className="px-3 py-5 bg-transparent text-primary border border-primary transition-all duration-300 rounded-none hover:rounded-xl hover:bg-transparent cursor-pointer items-center"
+              className="px-3 py-5 bg-transparent text-primary border border-primary transition-all duration-200 rounded-none hover:rounded-xl hover:bg-primary/10 cursor-pointer items-center font-UbuntuMono tracking-wider"
               onClick={() => addToCalendar(name, activityType, description, location, startTimestamp, endTimestamp)}
             >
               <CalendarPlus2 className="w-4 h-4 mr-1" /> Add to calendar

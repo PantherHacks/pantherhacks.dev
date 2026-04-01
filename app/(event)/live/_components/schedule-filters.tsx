@@ -37,13 +37,13 @@ const ScheduleFilters: FC<ScheduleFiltersProps> = ({ activeFilters, setActiveFil
         return (
           <Badge
             key={type}
-            role="button" // Explicitly define as a button
-            aria-pressed={isFilterActive} // Indicate the toggle state
+            role="button"
+            aria-pressed={isFilterActive}
             className={cn(
-              "min-h-6 cursor-pointer select-none transition-colors duration-300 ",
+              "min-h-6 cursor-pointer select-none transition-all duration-300 rounded-none font-UbuntuMono tracking-wide",
               isFilterActive
-                ? `${getCalendarEventColors(type)[2]} ${getCalendarEventColors(type)[3]} hover:${getCalendarEventColors(type)[2]}/75`
-                : "bg-white/20 hover:bg-white/30"
+                ? `${getCalendarEventColors(type)[0]} text-white`
+                : "bg-transparent text-white/50 border border-white/20 hover:border-white/40 hover:text-white/70"
             )}
             aria-label={`Toggle filter for ${type} events`}
             onClick={() => handleFilterChange(type)}
