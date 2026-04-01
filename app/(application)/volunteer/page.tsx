@@ -18,7 +18,10 @@ export default function Volunteer() {
             <h2 className="font-Xirod text-6xl text-primary pb-10">Volunteer Application</h2>
             <p className="mx-8 sm:mx-20 md:mx-24 text-center font-UbuntuMono text-white/70">
               Redirecting you to the volunteer application. If this doesn&apos;t work, click{" "}
-              <Link href={volunteerApplicationLink} className="text-primary underline hover:text-white transition-colors">
+              <Link
+                href={volunteerApplicationLink}
+                className="text-primary underline hover:text-white transition-colors"
+              >
                 here
               </Link>
               .

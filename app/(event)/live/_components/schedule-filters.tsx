@@ -39,7 +39,12 @@ const ScheduleFilters: FC<ScheduleFiltersProps> = ({ activeFilters, setActiveFil
             key={type}
             role="button"
             aria-pressed={isFilterActive}
-            style={{ "--accent": getCalendarEventColors(type)[4], "--card-bg": getCalendarEventColors(type)[5] } as React.CSSProperties}
+            style={
+              {
+                "--accent": getCalendarEventColors(type)[4],
+                "--card-bg": getCalendarEventColors(type)[5],
+              } as React.CSSProperties
+            }
             className={cn(
               "min-h-6 cursor-pointer select-none transition-all duration-300 rounded-none font-UbuntuMono tracking-wide",
               isFilterActive
