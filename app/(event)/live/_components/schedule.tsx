@@ -264,7 +264,9 @@ const ScheduleSection = () => {
               return dailyEvents.every((event) => event.endTimestamp.getTime() < Date.now());
             }) && <p className="font-bold text-lg text-center mx-10">There are no more upcoming events.</p>}
           <Separator />
-          <p className="text-center font-UbuntuMono text-white/40 text-sm tracking-widest uppercase">end of schedule</p>
+          <p className="text-center font-DSDigital text-[#02FFFF] tracking-[0.2em] uppercase [text-shadow:0_0_6px_#00ff88,0_0_14px_rgba(0,255,136,0.4)]">
+            That's all folks!
+          </p>
         </div>
       )}
     </div>
