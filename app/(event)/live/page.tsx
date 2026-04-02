@@ -15,7 +15,7 @@ const LivePage = () => {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center overflow-x-hidden bg-[#01050B] text-white">
       <Navbar />
-      <main className="flex flex-1 flex-col w-full" id="live-schedule" aria-label="Live Schedule Section">
+      <main className="flex w-full flex-1 flex-col" id="live-schedule" aria-label="Live Schedule Section">
         <ParallaxProvider>
           <LiveHeading />
         </ParallaxProvider>
