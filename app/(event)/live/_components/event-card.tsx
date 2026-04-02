@@ -33,7 +33,7 @@ const EventCard: React.FC<CalendarEvent> = ({
   const endTime = endTimestamp.toLocaleTimeString([], { hour: "numeric", minute: "2-digit", hour12: true });
 
   return (
-    <div className={cn("flex w-72 flex-col p-[2px] sm:w-[35rem] md:w-[45rem]", isLive && "highlighted-card")}>
+    <div className={cn("flex w-full flex-col p-[2px] sm:w-[35rem] md:w-[45rem]", isLive && "highlighted-card")}>
       <div
         className={cn("relative p-6 font-UbuntuMono", colors[2])}
         style={{
