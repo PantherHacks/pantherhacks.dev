@@ -9,11 +9,11 @@ const ImportantLinksSection = () => {
   return (
     <div id="important-links" className="flex flex-col items-center justify-center text-center w-full pt-40 py-20">
       <SectionTitle
-        color1="#00C896"
-        color2="#007A5A"
-        color3="#00E8A8"
-        color4="#80FFD4"
-        textShadowColor="#80FFD4"
+        color1="#FF0000"
+        color2="#CC0000"
+        color3="#FF0000"
+        color4="#CC0000"
+        textShadowColor="#CC0000"
         flickerIndices={[0, 1, 2, 4]}
       >
         LINKS

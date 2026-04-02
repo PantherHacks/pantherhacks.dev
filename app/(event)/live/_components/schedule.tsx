@@ -117,11 +117,11 @@ const ScheduleSection = () => {
   return (
     <div id="schedule" className="flex flex-col items-center justify-center w-full py-20">
       <SectionTitle
-        color1="#FF0000"
-        color2="#CC0000"
-        color3="#FF0000"
-        color4="#CC0000"
-        textShadowColor="#CC0000"
+        color1="#00C896"
+        color2="#007A5A"
+        color3="#00E8A8"
+        color4="#80FFD4"
+        textShadowColor="#80FFD4"
         flickerIndices={[0, 2, 4, 7]}
       >
         SCHEDULE
