@@ -35,7 +35,7 @@ export function YearSwitcher() {
         aria-expanded={open}
       >
         {hackathonDateInfo.year}
-        <ChevronDown className={cn("w-4 h-4 transition-transform duration-150", open ? "rotate-180" : "rotate-0")} />
+        <ChevronDown className={cn("h-4 w-4 transition-transform duration-150", open ? "rotate-180" : "rotate-0")} />
       </button>
 
       {open && (

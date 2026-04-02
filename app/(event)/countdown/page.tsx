@@ -164,7 +164,7 @@ const CountdownPage = () => {
   return (
     <div
       ref={containerRef}
-      className="relative flex flex-col items-center justify-center min-h-screen bg-black text-white overflow-hidden"
+      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-black text-white"
     >
       <Confetti
         run={hackathonEnded}
@@ -178,14 +178,14 @@ const CountdownPage = () => {
         width={100}
         height={100}
         unoptimized
-        className="w-full absolute z-0 bottom-0"
+        className="absolute bottom-0 z-0 w-full"
         style={{
           filter: `grayscale(1)`,
         }}
       />
       <Link href="/" className="z-10" aria-label="Go to Home Page">
         <Button
-          className={`absolute top-4 left-4 px-3 py-2 bg-transparent hover:bg-transparent border border-transparent rounded-none hover:border-primary hover:text-primary transition-all duration-100 ${
+          className={`absolute left-4 top-4 rounded-none border border-transparent bg-transparent px-3 py-2 transition-all duration-100 hover:border-primary hover:bg-transparent hover:text-primary ${
             showButton ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -194,7 +194,7 @@ const CountdownPage = () => {
       </Link>
       <Link href="/live" aria-label="Go to live page" className="z-10">
         <Button
-          className={`absolute top-4 left-16 px-3 py-2 bg-transparent hover:bg-transparent border border-transparent rounded-none hover:border-primary hover:text-primary transition-all duration-100 ${
+          className={`absolute left-16 top-4 rounded-none border border-transparent bg-transparent px-3 py-2 transition-all duration-100 hover:border-primary hover:bg-transparent hover:text-primary ${
             showButton ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -202,14 +202,14 @@ const CountdownPage = () => {
         </Button>
       </Link>
       <Button
-        className={`absolute top-4 right-4 px-3 py-2 bg-transparent hover:bg-transparent border border-transparent rounded-none hover:border-primary hover:text-primary transition-all duration-100 ${
+        className={`absolute right-4 top-4 rounded-none border border-transparent bg-transparent px-3 py-2 transition-all duration-100 hover:border-primary hover:bg-transparent hover:text-primary ${
           showButton ? "opacity-100" : "opacity-0"
         }`}
         onClick={toggleFullscreen}
       >
         {isFullscreen ? <Minimize /> : <Maximize />}
       </Button>
-      <div className="flex w-full items-center justify-center z-50 py-4 px-4 sm:px-16 md:px-20">
+      <div className="z-50 flex w-full items-center justify-center px-4 py-4 sm:px-16 md:px-20">
         <Countdown dark size="large" />
       </div>
       <div

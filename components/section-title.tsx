@@ -30,20 +30,20 @@ export const SectionTitle = ({
 
   return (
     <div
-      className={`section-title-container flex flex-col justify-center items-center w-[90vw] max-w-[24rem] md:max-w-[32rem] mb-14 ${className}`}
+      className={`section-title-container mb-14 flex w-[90vw] max-w-[24rem] flex-col items-center justify-center md:max-w-[32rem] ${className}`}
       style={{
         background: `linear-gradient(180deg, ${color2} 0%, #00000000 50%, ${color2} 100%)`,
       }}
     >
       <div
-        className="relative z-10 pointer-events-none w-full h-3 -top-2 left-0"
+        className="pointer-events-none relative -top-2 left-0 z-10 h-3 w-full"
         style={{
           backgroundColor: color3,
           boxShadow: `0px -4px 4px ${color4}, -1px 0px 2px ${color4}, 1px 0px 2px ${color4}, 0px -0.5px 2px ${color4}`,
         }}
       ></div>
       <h2
-        className={`font-Xirod mt-2 mb-0 select-none whitespace-nowrap`}
+        className={`mb-0 mt-2 select-none whitespace-nowrap font-Xirod`}
         style={{
           fontSize: "clamp(1rem, 11cqw, 3.75rem)",
           color: color1,
@@ -65,7 +65,7 @@ export const SectionTitle = ({
         })}
       </h2>
       <div
-        className="flex flex-row justify-between px-2 relative z-10 pointer-events-none w-full h-4 -bottom-4 left-0"
+        className="pointer-events-none relative -bottom-4 left-0 z-10 flex h-4 w-full flex-row justify-between px-2"
         style={{
           backgroundColor: color3,
           boxShadow: `0px -4px 4px ${color4}, -1px 0px 2px ${color4}, 1px 0px 2px ${color4}, 0px -0.5px 2px ${color4}`,
@@ -74,7 +74,7 @@ export const SectionTitle = ({
         {Array.from({ length: 10 }).map((_, i) => (
           <div
             key={i}
-            className="relative w-4 h-4 top-[0.5rem]"
+            className="relative top-[0.5rem] h-4 w-4"
             style={{
               backgroundColor: color4,
             }}

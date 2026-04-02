@@ -16,7 +16,7 @@ const MobileHeading = () => {
       }}
     >
       <Image
-        className="absolute w-[600%] top-[30%] grayscale pointer-events-none select-none"
+        className="pointer-events-none absolute top-[30%] w-[600%] select-none grayscale"
         src="/images/main-background/building-background.svg"
         alt="Buildings"
         width={0}
@@ -36,7 +36,7 @@ const MobileHeading = () => {
           draggable={false}
           unoptimized
         />
-        <h2 className="font-UbuntuMonoBold text-3xl text-primary cursor-default">{hackathonDateInfo.dateString}</h2>
+        <h2 className="cursor-default font-UbuntuMonoBold text-3xl text-primary">{hackathonDateInfo.dateString}</h2>
         <Link href="/apply" target="_blank" rel="noopener noreferrer">
           <SpecialButton className="font-Xirod text-2xl">APPLY NOW</SpecialButton>
         </Link>

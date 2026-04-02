@@ -1,5 +1,6 @@
 .prize-card {
-  background: linear-gradient(rgba(255, 255, 255, 0.014) 1px, transparent 1px),
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.014) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.014) 1px, transparent 1px),
     linear-gradient(160deg, #131320 0%, #0a0a18 50%, #0f0f1e 100%);
   background-size:
@@ -124,13 +125,8 @@
     inset 0 0 28px rgba(20, 5, 45, 0.8),
     0 0 18px rgba(80, 20, 140, 0.15),
     0 6px 20px rgba(0, 0, 0, 0.9);
-  background: repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 3px,
-      rgba(0, 0, 0, 0.12) 3px,
-      rgba(0, 0, 0, 0.12) 4px
-    ),
+  background:
+    repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0, 0, 0, 0.12) 3px, rgba(0, 0, 0, 0.12) 4px),
     linear-gradient(160deg, #0d0a16 0%, #08060f 50%, #0b0812 100%);
 }
 

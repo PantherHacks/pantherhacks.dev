@@ -31,7 +31,7 @@ const ScheduleFilters: FC<ScheduleFiltersProps> = ({ activeFilters, setActiveFil
   };
 
   return (
-    <div className="flex flex-row justify-center items-center gap-2 flex-wrap max-w-[30rem]">
+    <div className="flex max-w-[30rem] flex-row flex-wrap items-center justify-center gap-2">
       {activityTypes.map((type) => {
         const isFilterActive = activeFilters.includes(type);
         return (
@@ -46,10 +46,10 @@ const ScheduleFilters: FC<ScheduleFiltersProps> = ({ activeFilters, setActiveFil
               } as React.CSSProperties
             }
             className={cn(
-              "min-h-6 cursor-pointer select-none transition-all duration-300 rounded-none font-UbuntuMono tracking-wide",
+              "min-h-6 cursor-pointer select-none rounded-none font-UbuntuMono tracking-wide transition-all duration-300",
               isFilterActive
                 ? `${getCalendarEventColors(type)[0]} text-white`
-                : "bg-transparent text-white/50 border border-white/20 hover:bg-[var(--card-bg)] hover:text-white hover:border-[var(--accent)]"
+                : "border border-white/20 bg-transparent text-white/50 hover:border-[var(--accent)] hover:bg-[var(--card-bg)] hover:text-white"
             )}
             aria-label={`Toggle filter for ${type} events`}
             onClick={() => handleFilterChange(type)}

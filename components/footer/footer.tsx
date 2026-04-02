@@ -14,19 +14,19 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = () => {
   return (
     <>
-      <footer className="footer-glow flex flex-col justify-center items-center w-full space-y-2 p-4 bg-black font-UbuntuMono">
+      <footer className="footer-glow flex w-full flex-col items-center justify-center space-y-2 bg-black p-4 font-UbuntuMono">
         <div className="flex items-center gap-2">
-          <p className="font-Xirod text-xl text-center text-white">PantherHacks {hackathonDateInfo.year}</p>
+          <p className="text-center font-Xirod text-xl text-white">PantherHacks {hackathonDateInfo.year}</p>
         </div>
-        <p className="text-white text-center pt-2">Made with ❤️ by the PantherHacks Team</p>
-        <div className="flex flex-row justify-center items-center space-x-1" aria-label="Social Links">
+        <p className="pt-2 text-center text-white">Made with ❤️ by the PantherHacks Team</p>
+        <div className="flex flex-row items-center justify-center space-x-1" aria-label="Social Links">
           <FooterSocialLink href={gitHubLink} aria-label="PantherHacks GitHub">
             <Image
               src="/icons/github.svg"
               alt="GitHub Icon"
               width={0}
               height={0}
-              className="w-6 h-6 select-none icon-neon transform-gpu"
+              className="icon-neon h-6 w-6 transform-gpu select-none"
               unoptimized
               draggable={false}
             />
@@ -37,7 +37,7 @@ const Footer: React.FC<FooterProps> = () => {
               alt="Discord Icon"
               width={0}
               height={0}
-              className="w-6 h-6 select-none icon-neon transform-gpu"
+              className="icon-neon h-6 w-6 transform-gpu select-none"
               unoptimized
               draggable={false}
             />
@@ -48,7 +48,7 @@ const Footer: React.FC<FooterProps> = () => {
               alt="Instagram Icon"
               width={0}
               height={0}
-              className="w-6 h-6 select-none icon-neon transform-gpu"
+              className="icon-neon h-6 w-6 transform-gpu select-none"
               unoptimized
               draggable={false}
             />
@@ -59,7 +59,7 @@ const Footer: React.FC<FooterProps> = () => {
               alt="Instagram Icon"
               width={0}
               height={0}
-              className="w-6 h-6 select-none icon-neon transform-gpu"
+              className="icon-neon h-6 w-6 transform-gpu select-none"
               unoptimized
               draggable={false}
             />

@@ -11,7 +11,7 @@ import ScheduleSection from "./_components/schedule";
 
 const LivePage = () => {
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen bg-black text-white overflow-x-hidden">
+    <div className="flex min-h-screen flex-col items-center justify-center overflow-x-hidden bg-black text-white">
       <Navbar />
       <main className="flex flex-1 flex-col" id="live-schedule" aria-label="Live Schedule Section">
         <LiveHeading />

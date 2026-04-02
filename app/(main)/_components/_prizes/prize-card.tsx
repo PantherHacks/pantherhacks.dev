@@ -58,7 +58,7 @@ export default function PrizeCard({
   const cardContent = (
     <div
       className={cn(
-        "flex-1 basis-0 min-w-[130px] max-w-[200px] flex items-stretch",
+        "flex min-w-[130px] max-w-[200px] flex-1 basis-0 items-stretch",
         bouncing && "prize-card-bouncing",
         className
       )}
@@ -74,7 +74,7 @@ export default function PrizeCard({
       <div
         ref={cardRef}
         className={cn(
-          "prize-card relative w-full aspect-[2/3] rounded-[10px] overflow-hidden cursor-pointer will-change-transform flex flex-col",
+          "prize-card relative flex aspect-[2/3] w-full cursor-pointer flex-col overflow-hidden rounded-[10px] will-change-transform",
           hovered && "prize-card-hovered"
         )}
         style={{
@@ -85,7 +85,7 @@ export default function PrizeCard({
         }}
       >
         <div
-          className="absolute inset-0 z-10 pointer-events-none rounded-[10px]"
+          className="pointer-events-none absolute inset-0 z-10 rounded-[10px]"
           style={{
             opacity: hovered ? 0.38 : 0.06,
             background: `
@@ -107,40 +107,40 @@ export default function PrizeCard({
         />
 
         <div
-          className="absolute top-0 left-0 right-0 h-[3px] z-[5]"
+          className="absolute left-0 right-0 top-0 z-[5] h-[3px]"
           style={{
             background: accentColor,
             boxShadow: `0 0 8px ${accentColor}, 0 0 18px ${accentColor}70`,
           }}
         />
 
-        <div className="flex-1 flex items-center justify-center overflow-hidden z-[2] px-2 pt-3">
+        <div className="z-[2] flex flex-1 items-center justify-center overflow-hidden px-2 pt-3">
           <Image
             src={`/images/prizes/${imageSrc}`}
             alt={prizeItem || "An image of a prize"}
             width={0}
             height={0}
-            className="card-img !w-auto !h-full max-w-full max-h-full object-contain select-none pointer-events-none"
+            className="card-img pointer-events-none !h-full max-h-full !w-auto max-w-full select-none object-contain"
             unoptimized
             draggable={false}
           />
         </div>
 
-        <div className="card-info px-[10px] pt-2 pb-[10px] flex flex-col items-center gap-[3px] z-[3]">
+        <div className="card-info z-[3] flex flex-col items-center gap-[3px] px-[10px] pb-[10px] pt-2">
           <div className="w-full overflow-hidden">
             <p
-              className="card-prize-ticker-reverse font-Xirod text-[10px] tracking-[0.1em] uppercase leading-[1.2] select-none"
+              className="card-prize-ticker-reverse select-none font-Xirod text-[10px] uppercase leading-[1.2] tracking-[0.1em]"
               style={{ color: accentColor, textShadow: `0 0 10px ${accentColor}90` }}
             >
               {trackName}&nbsp;◆&nbsp;{trackName}&nbsp;◆&nbsp;
             </p>
           </div>
           <div
-            className="w-4/5 h-px mb-1 opacity-80"
+            className="mb-1 h-px w-4/5 opacity-80"
             style={{ background: accentColor, boxShadow: `0 0 5px ${accentColor}60` }}
           />
           <div className="w-full overflow-hidden">
-            <p className="card-prize-ticker font-UbuntuMonoBold font-bold text-[10px] text-[#ddd8f0] leading-[1.3] uppercase tracking-[0.04em] select-none">
+            <p className="card-prize-ticker select-none font-UbuntuMonoBold text-[10px] font-bold uppercase leading-[1.3] tracking-[0.04em] text-[#ddd8f0]">
               {prizeItem}&nbsp;◆&nbsp;{prizeItem}&nbsp;◆&nbsp;
             </p>
           </div>
@@ -158,17 +158,17 @@ export default function PrizeCard({
           cardContent
         )
       ) : (
-        <div className={cn("flex-1 basis-0 min-w-[130px] max-w-[200px] flex items-stretch", className)}>
-          <div className="prize-card prize-card-empty w-full aspect-[2/3] rounded-[10px] relative overflow-hidden flex flex-col">
+        <div className={cn("flex min-w-[130px] max-w-[200px] flex-1 basis-0 items-stretch", className)}>
+          <div className="prize-card prize-card-empty relative flex aspect-[2/3] w-full flex-col overflow-hidden rounded-[10px]">
             <div className="null-scanbeam" />
 
-            <div className="absolute top-0 left-0 right-0 h-[3px] z-[5] bg-[rgba(120,20,20,0.9)] shadow-[0_0_8px_rgba(160,20,20,0.7)]" />
+            <div className="absolute left-0 right-0 top-0 z-[5] h-[3px] bg-[rgba(120,20,20,0.9)] shadow-[0_0_8px_rgba(160,20,20,0.7)]" />
 
-            <div className="flex-1 flex flex-col items-center justify-center z-[2] gap-1 px-2">
-              <p className="null-flicker font-UbuntuMono text-[16px] tracking-[0.15em] select-none text-[rgba(160,80,240,0.5)] [text-shadow:0_0_16px_rgba(130,60,220,0.8)]">
+            <div className="z-[2] flex flex-1 flex-col items-center justify-center gap-1 px-2">
+              <p className="null-flicker select-none font-UbuntuMono text-[16px] tracking-[0.15em] text-[rgba(160,80,240,0.5)] [text-shadow:0_0_16px_rgba(130,60,220,0.8)]">
                 [ NULL ]
               </p>
-              <p className="font-Xirod text-[7px] tracking-[0.25em] uppercase select-none mt-[2px] text-[rgba(130,70,190,0.5)]">
+              <p className="mt-[2px] select-none font-Xirod text-[7px] uppercase tracking-[0.25em] text-[rgba(130,70,190,0.5)]">
                 SLOT EMPTY
               </p>
             </div>

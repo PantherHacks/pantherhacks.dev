@@ -23,13 +23,13 @@ const TeamMember: React.FC<ITeamMemberProps> = ({ name, teamRole, url, color_hex
 
   return (
     <div
-      className="flex flex-col items-center space-y-4 md:hover:scale-105 transition-transform duration-300 w-full sm:w-64 my-2"
+      className="my-2 flex w-full flex-col items-center space-y-4 transition-transform duration-300 sm:w-64 md:hover:scale-105"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <Link href={url} target="_blank" className="flex flex-col items-center space-y-5">
         <div
-          className={`rounded-full transition-all ${isHovered ? "scale-[95%] translate-y-2" : "scale-125 translate-y-8"}`}
+          className={`rounded-full transition-all ${isHovered ? "translate-y-2 scale-[95%]" : "translate-y-8 scale-125"}`}
           style={{
             boxShadow: `0px 10px 10px 1px ${color_hex}99`,
             backgroundImage: `linear-gradient(to bottom, transparent 0%, transparent ${isHovered ? "40%" : "70%"}, ${color_hex}55 100%)`,
@@ -40,7 +40,7 @@ const TeamMember: React.FC<ITeamMemberProps> = ({ name, teamRole, url, color_hex
             width={0}
             height={0}
             alt={`${name}`}
-            className="w-20 h-20 sm:w-32 sm:h-32 select-none rounded-full transition-all duration-500"
+            className="h-20 w-20 select-none rounded-full transition-all duration-500 sm:h-32 sm:w-32"
             style={{
               filter: `brightness(1.4) saturate(1.6) hue-rotate(${hueRotation}deg) drop-shadow(0 0 10px ${color_hex}99)`,
             }}
@@ -49,7 +49,7 @@ const TeamMember: React.FC<ITeamMemberProps> = ({ name, teamRole, url, color_hex
           />
         </div>
         <div
-          className={`flex flex-col items-center justify-center gap-2 w-40 sm:w-52 transition-all ${isHovered ? "opacity-100" : "translate-y-2"}`}
+          className={`flex w-40 flex-col items-center justify-center gap-2 transition-all sm:w-52 ${isHovered ? "opacity-100" : "translate-y-2"}`}
           style={{
             background: `${isHovered ? `linear-gradient(to bottom, ${color_hex}55, transparent, ${color_hex}55)` : ""}`,
           }}
@@ -59,7 +59,7 @@ const TeamMember: React.FC<ITeamMemberProps> = ({ name, teamRole, url, color_hex
             style={{ backgroundColor: color_hex, boxShadow: `0px 0px 10px 2px ${color_hex}B3` }}
           ></div>
           <p
-            className={`team-member-name font-Xirod text-sm sm:text-base text-center transition-all ${isHovered ? "" : "translate-y-10"}`}
+            className={`team-member-name text-center font-Xirod text-sm transition-all sm:text-base ${isHovered ? "" : "translate-y-10"}`}
             style={{ color: color_hex }}
           >
             {firstName}
@@ -67,7 +67,7 @@ const TeamMember: React.FC<ITeamMemberProps> = ({ name, teamRole, url, color_hex
             {lastName}
           </p>
           <p
-            className={`team-member-role font-UbuntuMono text-base sm:text-lg text-center transition-opacity ${isHovered ? "opacity-100" : "opacity-0"}`}
+            className={`team-member-role text-center font-UbuntuMono text-base transition-opacity sm:text-lg ${isHovered ? "opacity-100" : "opacity-0"}`}
           >
             {teamRole}
           </p>
