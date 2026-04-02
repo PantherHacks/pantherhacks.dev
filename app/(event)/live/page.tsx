@@ -1,5 +1,7 @@
 "use client";
 
+import { ParallaxProvider } from "react-scroll-parallax";
+
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 
@@ -14,7 +16,9 @@ const LivePage = () => {
     <div className="flex min-h-screen flex-col items-center justify-center overflow-x-hidden bg-black text-white">
       <Navbar />
       <main className="flex flex-1 flex-col" id="live-schedule" aria-label="Live Schedule Section">
-        <LiveHeading />
+        <ParallaxProvider>
+          <LiveHeading />
+        </ParallaxProvider>
         <ImportantLinksSection />
         <ScheduleSection />
       </main>
