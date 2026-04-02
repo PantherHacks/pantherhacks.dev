@@ -37,8 +37,8 @@ const MobileHeading = () => {
           unoptimized
         />
         <h2 className="cursor-default font-UbuntuMonoBold text-3xl text-primary">{hackathonDateInfo.dateString}</h2>
-        <Link href="/apply" target="_blank" rel="noopener noreferrer">
-          <SpecialButton className="font-Xirod text-2xl">APPLY NOW</SpecialButton>
+        <Link href="/live" target="_blank" rel="noopener noreferrer">
+          <SpecialButton className="font-Xirod text-2xl">VISIT LIVE PAGE</SpecialButton>
         </Link>
       </div>
     </div>

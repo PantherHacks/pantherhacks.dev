@@ -71,8 +71,8 @@ const Heading = () => {
             <h2 className="cursor-default rounded-lg p-4 font-UbuntuMonoBold text-xl text-primary sm:text-5xl">
               {hackathonDateInfo.dateString}
             </h2>
-            <Link href="/apply" target="_blank" rel="noopener noreferrer">
-              <SpecialButton className="font-Xirod text-4xl">APPLY NOW</SpecialButton>
+            <Link href="/live" target="_blank" rel="noopener noreferrer">
+              <SpecialButton className="font-Xirod text-4xl">VISIT LIVE PAGE</SpecialButton>
             </Link>
           </div>
         </ParallaxBannerLayer>

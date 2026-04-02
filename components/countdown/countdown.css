@@ -8,6 +8,10 @@
     inset 0 0 12px 1px rgba(255, 85, 0, 0.04);
 }
 
+.countdown-frame.flex {
+  width: 100%;
+}
+
 .countdown-corner {
   position: absolute;
   width: 18px;
