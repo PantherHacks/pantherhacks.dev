@@ -36,7 +36,7 @@ const LiveHeading = () => {
           draggable={false}
           unoptimized
         />
-        <div className="flex flex-row items-center justify-center z-50 w-[calc(100%-2rem)] py-4 sm:w-[calc(100%-8rem)] md:w-[calc(100%-10rem)]">
+        <div className="z-50 flex w-[calc(100%-2rem)] flex-row items-center justify-center py-4 sm:w-[calc(100%-8rem)] md:w-[calc(100%-10rem)]">
           <Countdown dark size="large" />
         </div>
       </div>
