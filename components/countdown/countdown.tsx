@@ -79,24 +79,30 @@ const Countdown: React.FC<CountdownProps> = ({ dark = false, size = "default" })
   const colorClass = dark ? "text-primary" : "text-primary";
 
   return (
-    <div className="countdown-frame">
-      <span className="countdown-corner tl" />
-      <span className="countdown-corner tr" />
-      <span className="countdown-corner bl" />
-      <span className="countdown-corner br" />
-      <div className="flex flex-col gap-y-2 justify-center items-center">
+    <div
+      className={`countdown-frame ${isLarge ? "flex w-full max-w-[900px] flex-1 items-center justify-center backdrop-blur-[4px]" : "mx-12 max-w-[800px] md:mx-16 lg:mx-20 xl:mx-20"}`}
+    >
+      <span className={`countdown-corner tl ${isLarge ? "hidden" : ""}`} />
+      <span className={`countdown-corner tr ${isLarge ? "hidden" : ""}`} />
+      <span className={`countdown-corner bl ${isLarge ? "hidden" : ""}`} />
+      <span className={`countdown-corner br ${isLarge ? "hidden" : ""}`} />
+      <span className={`countdown-line l ${isLarge ? "" : "hidden"}`} />
+      <span className={`countdown-line t ${isLarge ? "" : "hidden"}`} />
+      <span className={`countdown-line r ${isLarge ? "" : "hidden"}`} />
+      <span className={`countdown-line b ${isLarge ? "" : "hidden"}`} />
+      <div className="flex flex-col items-center justify-center gap-y-2">
         {segments === null ? (
-          <Skeleton className={`${isLarge ? "w-[350px] sm:w-[550px] h-[4rem]" : "w-[250px] sm:w-[350px] h-[3rem]"}`} />
+          <Skeleton className={`${isLarge ? "h-[4rem] w-[350px] sm:w-[550px]" : "h-[3rem] w-[250px] sm:w-[350px]"}`} />
         ) : concluded ? (
           <h2
-            className={`text-center mx-10 font-DSDigital ${colorClass} ${isLarge ? "text-5xl md:text-6xl lg:text-7xl" : "text-4xl sm:text-6xl md:text-6xl"}`}
+            className={`mx-10 text-center font-Xirod ${colorClass} ${isLarge ? "text-4xl md:text-5xl lg:text-6xl" : "text-2xl sm:text-3xl md:text-4xl"}`}
             style={{ minHeight: isLarge ? "4rem" : "3rem" }}
           >
             {countdownDescriptions.hasEnded}
           </h2>
         ) : (
           <h2
-            className={`font-DSDigital countdown-text-glow ${colorClass} ${isLarge ? "text-5xl sm:text-7xl md:text-[7rem] lg:text-9xl" : "text-4xl sm:text-6xl md:text-6xl"}`}
+            className={`countdown-text-glow text-center font-DSDigital ${colorClass} ${isLarge ? "text-5xl sm:text-7xl md:text-8xl lg:text-9xl" : "text-4xl sm:text-6xl md:text-6xl"}`}
             style={{ minHeight: isLarge ? "4rem" : "3rem" }}
           >
             {segments.map(({ value, unit }, i) => (
@@ -108,21 +114,20 @@ const Countdown: React.FC<CountdownProps> = ({ dark = false, size = "default" })
             ))}
           </h2>
         )}
-        {isLarge && <div className="flex h-16 w-[110%] countdown-glow -translate-y-14 -mb-10"></div>}
         {description === null ? (
           <Skeleton
-            className={`bg-white/20 ${isLarge ? "w-[300px] sm:w-[500px] h-[3.5rem]" : "w-[200px] sm:w-[300px] h-[2.5rem]"}`}
+            className={`bg-white/20 ${isLarge ? "h-[3.5rem] w-[300px] sm:w-[500px]" : "h-[2.5rem] w-[200px] sm:w-[300px]"}`}
           />
         ) : concluded ? (
           <h3
-            className={`text-center font-UbuntuMonoBold text-primary ${isLarge ? "text-3xl sm:text-4xl md:text-5xl" : "text-xl sm:text-2xl md:text-3xl"}`}
+            className={`text-center font-Xirod text-white ${isLarge ? "text-xl sm:text-2xl md:text-3xl" : "text-lg sm:text-xl md:text-2xl"}`}
             style={{ minHeight: isLarge ? "3.5rem" : "2.5rem" }}
           >
             Thank you for participating!
           </h3>
         ) : (
           <h3
-            className={`description-text-glow text-primary/70 px-6 text-center font-DSDigital tracking-[0.1em] ${isLarge ? "text-3xl sm:text-4xl md:text-5xl" : "text-lg sm:text-2xl md:text-3xl"}`}
+            className={`description-text-glow px-6 text-center font-DSDigital tracking-[0.1em] text-primary/70 ${isLarge ? "text-3xl sm:text-4xl md:text-5xl" : "text-lg sm:text-2xl md:text-3xl"}`}
             style={{ minHeight: isLarge ? "3.5rem" : "2.5rem" }}
           >
             {description}

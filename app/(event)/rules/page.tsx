@@ -4,18 +4,18 @@ import { formatHourTo12Hour, hackathonDateInfo } from "@/lib/dates";
 
 const RulesPage = () => {
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen">
+    <div className="flex min-h-screen flex-col items-center justify-center">
       <Navbar />
       <main
-        className="flex flex-1 w-[100vw] justify-center items-center text-white pb-10"
+        className="flex w-[100vw] flex-1 items-center justify-center pb-10 text-white"
         id="rules"
         aria-label="Rules Section"
       >
-        <div className="flex flex-col flex-1 w-full justify-center items-center mt-48 mx-8 sm:mx-20 md:mx-64 max-w-[50rem]">
-          <h2 className="font-Xirod text-6xl text-primary pb-10 text-center">Rules</h2>
-          <div className="flex flex-col flex-1 w-full justify-center items-center mt-10">
-            <h3 className="font-Xirod text-2xl pb-5 text-[#EE5000] text-center">The Hackathon Spirit</h3>
-            <p className="text-center pb-4">
+        <div className="mx-8 mt-48 flex w-full max-w-[50rem] flex-1 flex-col items-center justify-center sm:mx-20 md:mx-64">
+          <h2 className="pb-10 text-center font-Xirod text-6xl text-primary">Rules</h2>
+          <div className="mt-10 flex w-full flex-1 flex-col items-center justify-center">
+            <h3 className="pb-5 text-center font-Xirod text-2xl text-[#EE5000]">The Hackathon Spirit</h3>
+            <p className="pb-4 text-center">
               The goal of any hackathon is to encourage participants to learn, build, and share.
             </p>
             <ul style={{ listStyleType: "circle" }} className="ml-3">
@@ -44,8 +44,8 @@ const RulesPage = () => {
               </li>
             </ul>
           </div>
-          <div className="flex flex-col flex-1 w-full justify-center items-center mt-10">
-            <h3 className="font-Xirod text-2xl pb-5 text-[#EE5000] text-center">Competition Rules</h3>
+          <div className="mt-10 flex w-full flex-1 flex-col items-center justify-center">
+            <h3 className="pb-5 text-center font-Xirod text-2xl text-[#EE5000]">Competition Rules</h3>
             <ul style={{ listStyleType: "circle" }} className="list-spacing ml-3">
               <li>Only current undergraduate students are eligible to participate in the competition as hackers. </li>
               <li>Teams are limited to a minimum of one person and a maximum of four people.</li>
@@ -90,7 +90,7 @@ const RulesPage = () => {
               </li>
             </ul>
           </div>
-          <div className="flex flex-col flex-1 w-full justify-center items-center mt-10">
+          <div className="mt-10 flex w-full flex-1 flex-col items-center justify-center">
             <p className="text-center text-white/70">
               These rules are based on the{" "}
               <a

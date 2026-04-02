@@ -7,14 +7,14 @@ const TracksSection = () => {
   return (
     <div
       id="tracks"
-      className="flex flex-col items-center justify-center w-full pt-40 md:pt-20 pb-40 md:pb-20 relative overflow-x-clip"
+      className="relative flex w-full flex-col items-center justify-center overflow-x-clip pb-40 pt-40 md:pb-20 md:pt-20"
     >
       <Image
         src="/logos/pantherhacks/cyborg_pete_orange.svg"
         alt="A cyberpunk-style coffee cup."
         width={100}
         height={100}
-        className="hidden md:block w-40 h-40 absolute top-0 -translate-y-3/4 select-none drop-shadow-[0_0_5px_#FE5501] hover:-rotate-12 transition-all"
+        className="absolute top-0 hidden h-40 w-40 -translate-y-3/4 select-none drop-shadow-[0_0_5px_#FE5501] transition-all hover:-rotate-12 md:block"
         draggable={false}
       />
       <Image
@@ -22,12 +22,12 @@ const TracksSection = () => {
         alt="An circuit wire divider."
         width={100}
         height={100}
-        className="block md:hidden w-64 h-64 sm:w-96 sm:h-96 absolute top-0 -translate-y-1/2 select-none"
+        className="absolute top-0 block h-64 w-64 -translate-y-1/2 select-none sm:h-96 sm:w-96 md:hidden"
         draggable={false}
       />
       <SectionTitle flickerIndices={[1, 4, 5]}>Tracks</SectionTitle>
       <p className="">Learn more about the tracks we offer.</p>
-      <div className="flex flex-col pt-16 pb-16 space-y-20">
+      <div className="flex flex-col space-y-20 pb-16 pt-16">
         <Track
           name="Entertainment"
           description="Create innovative solutions for the entertainment industry, including gaming, streaming, content creation, and immersive experiences. Build a game with a unique twist, design a tool for streamers to engage their audience, develop an app that enhances content creation, or explore new forms of digital entertainment. The possibilities are endless - we welcome all creative ideas that could make an impact in the world of entertainment."
@@ -54,7 +54,7 @@ const TracksSection = () => {
         alt="A cyberpunk-style coffee cup."
         width={100}
         height={100}
-        className="hidden md:block w-40 h-40 absolute md:-translate-x-[14rem] lg:-translate-x-[20rem] bottom-0 translate-y-1/2 select-none drop-shadow-[0_0_10px_#FE5501] hover:-rotate-12 transition-all"
+        className="absolute bottom-0 hidden h-40 w-40 translate-y-1/2 select-none drop-shadow-[0_0_10px_#FE5501] transition-all hover:-rotate-12 md:block md:-translate-x-[14rem] lg:-translate-x-[20rem]"
         draggable={false}
       />
       <Image
@@ -62,7 +62,7 @@ const TracksSection = () => {
         alt="Cyberpunk-style glasses."
         width={100}
         height={100}
-        className="hidden md:block w-72 h-72 absolute md:translate-x-[14rem] lg:translate-x-[20rem] bottom-0 translate-y-1/2 select-none drop-shadow-[0_0_10px_#FE5501] hover:rotate-12 transition-all"
+        className="absolute bottom-0 hidden h-72 w-72 translate-y-1/2 select-none drop-shadow-[0_0_10px_#FE5501] transition-all hover:rotate-12 md:block md:translate-x-[14rem] lg:translate-x-[20rem]"
         draggable={false}
       />
       <Image
@@ -70,7 +70,7 @@ const TracksSection = () => {
         alt="An circuit wire divider."
         width={100}
         height={100}
-        className="block md:hidden w-64 h-64 sm:w-96 sm:h-96 absolute bottom-0 translate-y-1/2 select-none"
+        className="absolute bottom-0 block h-64 w-64 translate-y-1/2 select-none sm:h-96 sm:w-96 md:hidden"
         draggable={false}
       />
     </div>

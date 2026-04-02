@@ -13,7 +13,7 @@ const Heading = () => {
   return (
     <>
       <ParallaxBanner
-        className="h-screen parallax-banner"
+        className="parallax-banner h-screen"
         style={{
           background: `linear-gradient(#0c0a24 0%, #0b0b0b 30%, #000000 100%)`,
         }}
@@ -31,7 +31,7 @@ const Heading = () => {
 
         <ParallaxBannerLayer speed={10}>
           <Image
-            className="select-none absolute h-screen min-w-full w-auto max-w-[5000rem] xl:top-64 top-60 left-1/2 -translate-x-1/2 z-20 grayscale"
+            className="absolute left-1/2 top-60 z-20 h-screen w-auto min-w-full max-w-[5000rem] -translate-x-1/2 select-none grayscale xl:top-64"
             src="/images/main-background/building-background.svg"
             alt="Buildings"
             width={0}
@@ -57,9 +57,9 @@ const Heading = () => {
         </ParallaxBannerLayer> */}
 
         <ParallaxBannerLayer speed={20}>
-          <div className="absolute inset-0 flex flex-col justify-center items-center text-center gap-y-6 z-30">
+          <div className="absolute inset-0 z-30 flex flex-col items-center justify-center gap-y-6 text-center">
             <Image
-              className="w-[min(40em,90vw)] select-none logo-glow"
+              className="logo-glow w-[min(40em,90vw)] select-none"
               src="/logos/pantherhacks/pantherhacks_wordmark_2026.svg"
               alt="PantherHacks 2026"
               width={252}
@@ -68,11 +68,11 @@ const Heading = () => {
               draggable={false}
               unoptimized
             />
-            <h2 className="font-UbuntuMonoBold text-xl sm:text-5xl text-primary cursor-default p-4 rounded-lg">
+            <h2 className="cursor-default rounded-lg p-4 font-UbuntuMonoBold text-xl text-primary sm:text-5xl">
               {hackathonDateInfo.dateString}
             </h2>
-            <Link href="/apply" target="_blank" rel="noopener noreferrer">
-              <SpecialButton className="font-Xirod text-4xl">APPLY NOW</SpecialButton>
+            <Link href="/live" target="_blank" rel="noopener noreferrer">
+              <SpecialButton className="font-Xirod text-4xl">VISIT LIVE PAGE</SpecialButton>
             </Link>
           </div>
         </ParallaxBannerLayer>

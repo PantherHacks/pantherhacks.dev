@@ -10,20 +10,23 @@ export default function Volunteer() {
   redirect(volunteerApplicationLink);
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen">
+    <div className="flex min-h-screen flex-col items-center justify-center bg-black">
       <Navbar />
-      <main className="flex flex-1 w-[100vw]">
-        <div className="flex flex-grow flex-col w-full">
-          <div id="about" className="flex flex-col items-center justify-center w-full py-40">
-            <h2 className="font-Xirod text-6xl text-primary pb-10">Volunteer Application</h2>
-            <p className="mx-8 sm:mx-20 md:mx-24 text-center">
-              Redirecting you to the volunteer application. If this doesn't work, click{" "}
-              <Link href={volunteerApplicationLink} className="underline hover:text-primary transition-colors">
+      <main className="flex w-[100vw] flex-1">
+        <div className="flex w-full flex-grow flex-col">
+          <div id="about" className="flex w-full flex-col items-center justify-center py-40">
+            <h2 className="pb-10 font-Xirod text-6xl text-primary">Volunteer Application</h2>
+            <p className="mx-8 text-center font-UbuntuMono text-white/70 sm:mx-20 md:mx-24">
+              Redirecting you to the volunteer application. If this doesn&apos;t work, click{" "}
+              <Link
+                href={volunteerApplicationLink}
+                className="text-primary underline transition-colors hover:text-white"
+              >
                 here
               </Link>
               .
             </p>
-            <Loader2 className="w-24 h-24 mt-10 animate-spin" />
+            <Loader2 className="mt-10 h-24 w-24 animate-spin text-primary" />
           </div>
         </div>
       </main>

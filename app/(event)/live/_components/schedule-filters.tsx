@@ -1,7 +1,7 @@
 import { Dispatch, FC, SetStateAction } from "react";
 import { CheckCircle, Circle } from "lucide-react";
 
-import { getCalendarEventColors } from "@/app/(event)/_live/_components/schedule-helpers";
+import { getCalendarEventColors } from "@/app/(event)/live/_components/schedule-helpers";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 
@@ -31,19 +31,25 @@ const ScheduleFilters: FC<ScheduleFiltersProps> = ({ activeFilters, setActiveFil
   };
 
   return (
-    <div className="flex flex-row justify-center items-center gap-2 flex-wrap max-w-[30rem]">
+    <div className="flex max-w-[30rem] flex-row flex-wrap items-center justify-center gap-2">
       {activityTypes.map((type) => {
         const isFilterActive = activeFilters.includes(type);
         return (
           <Badge
             key={type}
-            role="button" // Explicitly define as a button
-            aria-pressed={isFilterActive} // Indicate the toggle state
+            role="button"
+            aria-pressed={isFilterActive}
+            style={
+              {
+                "--accent": getCalendarEventColors(type)[4],
+                "--card-bg": getCalendarEventColors(type)[5],
+              } as React.CSSProperties
+            }
             className={cn(
-              "min-h-6 cursor-pointer select-none transition-colors duration-300 ",
+              "min-h-6 cursor-pointer select-none rounded-none font-UbuntuMono tracking-wide transition-all duration-300",
               isFilterActive
-                ? `${getCalendarEventColors(type)[2]} ${getCalendarEventColors(type)[3]} hover:${getCalendarEventColors(type)[2]}/75`
-                : "bg-white/20 hover:bg-white/30"
+                ? `${getCalendarEventColors(type)[0]} text-white`
+                : "border border-white/20 bg-transparent text-white/50 hover:border-[var(--accent)] hover:bg-[var(--card-bg)] hover:text-white"
             )}
             aria-label={`Toggle filter for ${type} events`}
             onClick={() => handleFilterChange(type)}

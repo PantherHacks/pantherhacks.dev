@@ -12,7 +12,7 @@ import FaqsSection from "./faqs-section";
 
 const MainContent = () => {
   return (
-    <div className="flex flex-grow flex-col w-full text-white">
+    <div className="flex w-full flex-grow flex-col text-white">
       <div className="hidden [@media(min-width:750px)]:block">
         <ParallaxProvider>
           <Heading />

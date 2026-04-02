@@ -10,14 +10,14 @@ const FaqsSection = () => {
   return (
     <div
       id="faqs"
-      className="flex flex-col items-center justify-center w-full pb-40 pt-40 md:pt-30 relative overflow-x-clip"
+      className="md:pt-30 relative flex w-full flex-col items-center justify-center overflow-x-clip pb-40 pt-40"
     >
       <Image
         src="/images/artifacts/headphones.svg"
         alt="An orange branch."
         width={100}
         height={100}
-        className="hidden md:block w-40 h-40 absolute md:-translate-x-[16rem] lg:-translate-x-[20rem] top-0 -translate-y-1/2 select-none drop-shadow-[0_0_10px_#FE5501] hover:-rotate-12 transition-all"
+        className="absolute top-0 hidden h-40 w-40 -translate-y-1/2 select-none drop-shadow-[0_0_10px_#FE5501] transition-all hover:-rotate-12 md:block md:-translate-x-[16rem] lg:-translate-x-[20rem]"
         draggable={false}
       />
       <Image
@@ -25,7 +25,7 @@ const FaqsSection = () => {
         alt="An orange branch."
         width={100}
         height={100}
-        className="hidden md:block w-52 h-52 absolute md:translate-x-[16rem] lg:translate-x-[20rem] top-0 -translate-y-1/2 select-none drop-shadow-[0_0_10px_#FE5501] hover:rotate-12 transition-all"
+        className="absolute top-0 hidden h-52 w-52 -translate-y-1/2 select-none drop-shadow-[0_0_10px_#FE5501] transition-all hover:rotate-12 md:block md:translate-x-[16rem] lg:translate-x-[20rem]"
         draggable={false}
       />
       <Image
@@ -33,7 +33,7 @@ const FaqsSection = () => {
         alt="An circuit wire divider."
         width={100}
         height={100}
-        className="block md:hidden w-64 h-64 sm:w-96 sm:h-96 absolute top-0 -translate-y-1/2 select-none"
+        className="absolute top-0 block h-64 w-64 -translate-y-1/2 select-none sm:h-96 sm:w-96 md:hidden"
         draggable={false}
       />
       <SectionTitle
@@ -47,7 +47,7 @@ const FaqsSection = () => {
         FAQS
       </SectionTitle>
       <p className="font-UbuntuMono">Got questions? We got answers.</p>
-      <div className="px-10 pt-8 w-full max-w-2xl">
+      <div className="w-full max-w-2xl px-10 pt-8">
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
             <AccordionTrigger>What is PantherHacks {hackathonDateInfo.year}?</AccordionTrigger>

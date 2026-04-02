@@ -39,18 +39,18 @@ const Navbar = () => {
   return (
     <nav
       ref={navRef}
-      className="navbar-glow mx-[20px] mt-[20px] w-[calc(100vw_-_40px)] fixed top-0 left-0 y z-[49] flex items-center box-border drop-shadow-lg backdrop-blur-sm"
+      className="navbar-glow y fixed left-0 top-0 z-[49] mx-[20px] mt-[20px] box-border flex w-[calc(100vw_-_40px)] items-center drop-shadow-lg backdrop-blur-sm"
     >
-      <div className="hidden [@media(min-width:990px)]:flex justify-between items-center w-full">
+      <div className="hidden w-full items-center justify-between [@media(min-width:990px)]:flex">
         <div className="flex flex-row items-center">
           <div className="flex items-center overflow-hidden">
-            <NavLink href="/" variant={"logo"} className="h-[70px] group" aria-label="Home">
-              <div className="relative w-[50px] h-[50px] transition-transform duration-300 ease-in-out group-hover:scale-110">
+            <NavLink href="/" variant={"logo"} className="group h-[70px]" aria-label="Home">
+              <div className="relative h-[50px] w-[50px] transition-transform duration-300 ease-in-out group-hover:scale-110">
                 <Image
                   src="/logos/pantherhacks/cyborg_pete_white.svg"
                   alt="PantherHacks Mascot"
                   fill
-                  className="transition-opacity duration-300 ease-in-out opacity-100 group-hover:opacity-0 select-none object-contain"
+                  className="select-none object-contain opacity-100 transition-opacity duration-300 ease-in-out group-hover:opacity-0"
                   draggable={false}
                   loading="eager"
                 />
@@ -58,14 +58,14 @@ const Navbar = () => {
                   src="/logos/pantherhacks/cyborg_pete.svg"
                   alt="PantherHacks Mascot"
                   fill
-                  className="transition-opacity scale-110 duration-300 ease-in-out opacity-0 group-hover:opacity-100 select-none object-contain"
+                  className="scale-110 select-none object-contain opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
                   draggable={false}
                   loading="eager"
                 />
               </div>
             </NavLink>
           </div>
-          <div className="flex items-center flex-grow font-Xirod text-white text-lg">
+          <div className="flex flex-grow items-center font-Xirod text-lg text-white">
             <NavLink href="/#about" hoverColor="#FF5500" glowColor="#FDE200">
               About
             </NavLink>
@@ -81,22 +81,21 @@ const Navbar = () => {
             <NavLink href="/#team" hoverColor="#61D7FF" glowColor="#6FB3FE">
               Team
             </NavLink>
-            <NavLink href="/apply" variant="default" target="_blank" rel="noopener noreferrer">
+            {/* <NavLink href="/apply" variant="default" target="_blank" rel="noopener noreferrer">
               APPLY
-            </NavLink>
-            {/* <NavLink
+            </NavLink> */}
+            <NavLink
               href="/live"
-              variant="bold"
-              className="bg-[rgb(75,0,0)] font-Xirod text-xl text-[#fd021d] flex flex-row justify-center items-center gap-2"
+              className="flex flex-row items-center justify-center gap-2 font-Xirod text-xl text-[#fd021d]"
             >
               <div className="flex items-center gap-2">
-                <div className="relative flex justify-center items-center">
-                  <div className="absolute inline-flex w-4 h-4 bg-[#fd021d] rounded-full animate-ping duration-1000"></div>
-                  <div className="relative inline-flex w-6 h-6 bg-[#fd021d] rounded-full"></div>
+                <div className="relative flex items-center justify-center">
+                  <div className="absolute inline-flex h-4 w-4 animate-ping rounded-full bg-[#fd021d] duration-1000"></div>
+                  <div className="relative inline-flex h-6 w-6 rounded-full bg-[#fd021d]"></div>
                 </div>
                 <span className="neon-text transform-gpu">LIVE</span>
               </div>
-            </NavLink> */}
+            </NavLink>
           </div>
         </div>
         <div className="flex items-center justify-center">
@@ -113,7 +112,7 @@ const Navbar = () => {
               alt="GitHub Icon"
               width={0}
               height={0}
-              className="w-6 h-6 select-none icon-neon transform-gpu"
+              className="icon-neon h-6 w-6 transform-gpu select-none"
               unoptimized
               draggable={false}
               loading="eager"
@@ -132,7 +131,7 @@ const Navbar = () => {
               alt="Discord Icon"
               width={0}
               height={0}
-              className="w-6 h-6 select-none icon-neon transform-gpu"
+              className="icon-neon h-6 w-6 transform-gpu select-none"
               unoptimized
               draggable={false}
               loading="eager"
@@ -151,7 +150,7 @@ const Navbar = () => {
               alt="Discord Icon"
               width={0}
               height={0}
-              className="w-6 h-6 select-none icon-neon transform-gpu"
+              className="icon-neon h-6 w-6 transform-gpu select-none"
               unoptimized
               draggable={false}
               loading="eager"
@@ -159,8 +158,8 @@ const Navbar = () => {
           </NavLink>
         </div>
       </div>
-      <div className="flex flex-col w-full [@media(min-width:990px)]:hidden">
-        <div className="flex items-center justify-between w-full overflow-hidden">
+      <div className="flex w-full flex-col [@media(min-width:990px)]:hidden">
+        <div className="flex w-full items-center justify-between overflow-hidden">
           <NavLink href="/" variant={"logo"} className="h-[70px]" aria-label="Home" onClick={handleMobileLinkClick}>
             <Image
               src="/logos/pantherhacks/cyborg_pete_white.svg"
@@ -172,16 +171,16 @@ const Navbar = () => {
               loading="eager"
             />
           </NavLink>
-          <h1 className="hidden sm:block font-Xirod text-2xl text-white">PANTHERHACKS {hackathonDateInfo.year}</h1>
+          <h1 className="hidden font-Xirod text-2xl text-white sm:block">PANTHERHACKS {hackathonDateInfo.year}</h1>
           <Button
-            className="h-[70px] px-[16px] [&_svg]:size-6 bg-transparent hover:bg-transparent nav-link-hover rounded-none"
+            className="nav-link-hover h-[70px] rounded-none bg-transparent px-[16px] hover:bg-transparent [&_svg]:size-6"
             onClick={() => setIsMobileOpen(!isMobileOpen)}
             aria-label="Mobile Navigation Dropdown"
           >
             <Menu />
           </Button>
         </div>
-        <div className={cn("flex flex-col w-full font-Xirod text-white text-lg", isMobileOpen ? "flex" : "hidden")}>
+        <div className={cn("flex w-full flex-col font-Xirod text-lg text-white", isMobileOpen ? "flex" : "hidden")}>
           <NavLink
             variant="mobile"
             href="/#about"
@@ -227,7 +226,7 @@ const Navbar = () => {
           >
             Team
           </NavLink>
-          <NavLink
+          {/* <NavLink
             href="/apply"
             variant={"mobile"}
             onClick={handleMobileLinkClick}
@@ -235,21 +234,20 @@ const Navbar = () => {
             rel="noopener noreferrer"
           >
             APPLY
-          </NavLink>
-          {/* <NavLink
+          </NavLink> */}
+          <NavLink
             href="/live"
-            variant={"mobile_bold"}
-            className="bg-[rgb(75,0,0)] font-Xirod text-xl text-[#fd021d] flex flex-row justify-center items-center gap-2"
+            className="flex flex-row items-center justify-center gap-2 font-Xirod text-xl text-[#fd021d]"
             onClick={handleMobileLinkClick}
           >
             <div className="flex items-center gap-2">
-              <div className="relative flex justify-center items-center">
-                <div className="absolute inline-flex w-4 h-4 bg-[#fd021d] rounded-full animate-ping duration-1000"></div>
-                <div className="relative inline-flex w-6 h-6 bg-[#fd021d] rounded-full"></div>
+              <div className="relative flex items-center justify-center">
+                <div className="absolute inline-flex h-4 w-4 animate-ping rounded-full bg-[#fd021d] duration-1000"></div>
+                <div className="relative inline-flex h-6 w-6 rounded-full bg-[#fd021d]"></div>
               </div>
               <span className="neon-text transform-gpu">LIVE</span>
             </div>
-          </NavLink> */}
+          </NavLink>
           <div className="flex items-center justify-center">
             <NavLink
               href={gitHubLink}
@@ -265,7 +263,7 @@ const Navbar = () => {
                 alt="GitHub Icon"
                 width={0}
                 height={0}
-                className="w-6 h-6 select-none icon-neon transform-gpu"
+                className="icon-neon h-6 w-6 transform-gpu select-none"
                 unoptimized
                 draggable={false}
                 loading="eager"
@@ -285,7 +283,7 @@ const Navbar = () => {
                 alt="Discord Icon"
                 width={0}
                 height={0}
-                className="w-6 h-6 select-none icon-neon transform-gpu"
+                className="icon-neon h-6 w-6 transform-gpu select-none"
                 unoptimized
                 draggable={false}
                 loading="eager"
@@ -305,7 +303,7 @@ const Navbar = () => {
                 alt="Instagram Icon"
                 width={0}
                 height={0}
-                className="w-6 h-6 select-none icon-neon transform-gpu"
+                className="icon-neon h-6 w-6 transform-gpu select-none"
                 unoptimized
                 draggable={false}
                 loading="eager"

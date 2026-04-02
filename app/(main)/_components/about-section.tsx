@@ -4,7 +4,7 @@ import { hackathonDateInfo } from "@/lib/dates";
 
 const AboutSection = () => {
   return (
-    <div id="about" className="flex flex-col items-center justify-center w-full pb-40 md:pt-40">
+    <div id="about" className="flex w-full flex-col items-center justify-center pb-40 md:pt-40">
       <SectionTitle
         color1="#FE5501"
         color2="#4d1900"
@@ -15,7 +15,7 @@ const AboutSection = () => {
       >
         About
       </SectionTitle>
-      <p className="mx-8 sm:mx-20 md:mx-64 text-center max-w-[50rem] pb-10 font-UbuntuMono">
+      <p className="mx-8 max-w-[50rem] pb-10 text-center font-UbuntuMono sm:mx-20 md:mx-64">
         <span className="font-bold text-primary">PantherHacks {hackathonDateInfo.year}</span> is a 48-hour hackathon
         (team-based coding competition) held from{" "}
         <span className="font-bold text-primary">{hackathonDateInfo.dateString}</span>. It will take place in{" "}
