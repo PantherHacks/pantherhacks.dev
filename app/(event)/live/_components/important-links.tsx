@@ -18,7 +18,7 @@ const ImportantLinksSection = () => {
       >
         LINKS
       </SectionTitle>
-      <p className="mx-8 sm:mx-20 md:mx-64 text-center max-w-[50rem] pb-10">
+      <p className="mx-8 sm:mx-20 md:mx-64 text-center max-w-[50rem] pb-10 text-white/70">
         Below you can find important links you may need for PantherHacks {hackathonDateInfo.year}.
       </p>
       <div className="pt-8 pb-4 flex flex-row flex-wrap gap-3 md:gap-6 px-4 sm:px-8 md:px-16 max-w-[60rem] justify-center items-center">
