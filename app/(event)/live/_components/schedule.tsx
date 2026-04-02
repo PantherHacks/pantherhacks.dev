@@ -115,7 +115,7 @@ const ScheduleSection = () => {
   }, [lastRefreshed]);
 
   return (
-    <div id="schedule" className="flex flex-col items-center justify-center w-full py-20">
+    <div id="schedule" className="flex w-full flex-col items-center justify-center py-20">
       <SectionTitle
         color1="#00C896"
         color2="#007A5A"
@@ -126,7 +126,7 @@ const ScheduleSection = () => {
       >
         SCHEDULE
       </SectionTitle>
-      <p className="mx-8 sm:mx-20 md:mx-64 text-center max-w-[50rem] pb-10 font-UbuntuMono text-white/70">
+      <p className="mx-8 max-w-[50rem] pb-10 text-center font-UbuntuMono text-white/70 sm:mx-20 md:mx-64">
         PantherHacks will take place for three days from{" "}
         <span className="font-UbuntuMonoBold text-white">{hackathonDateInfo.dateString}</span>. Below you can find
         information on the schedule of the event.
@@ -139,25 +139,25 @@ const ScheduleSection = () => {
           unoptimized
           priority
           alt="A spinning orange"
-          className="animate-spin duration-1000 w-24 h-24"
+          className="h-24 w-24 animate-spin duration-1000"
         />
       )}
       {!isFetching && calendarEvents.length === 0 && (
-        <p className="font-bold text-lg text-red-600 text-center mx-10">
+        <p className="mx-10 text-center text-lg font-bold text-red-600">
           Failed to load events. Check your connection, refresh the page, and try again!
         </p>
       )}
       {!isFetching && calendarEvents.length > 0 && (
-        <div className="flex flex-col gap-4 justify-center items-center px-10">
+        <div className="flex flex-col items-center justify-center gap-4 px-10">
           <Separator />
           <div className="flex flex-col items-center justify-center gap-y-2">
             <Button
-              className="bg-transparent text-primary border border-primary transition-all duration-200 rounded-none hover:rounded-lg hover:bg-primary/10 cursor-pointer items-center font-UbuntuMono tracking-wider"
+              className="cursor-pointer items-center rounded-none border border-primary bg-transparent font-UbuntuMono tracking-wider text-primary transition-all duration-200 hover:rounded-lg hover:bg-primary/10"
               onClick={fetchCSV}
             >
               <RefreshCcw /> Refresh Schedule
             </Button>
-            <p className="text-xs font-UbuntuMono text-white/40">Last refreshed {timeAgo}</p>
+            <p className="font-UbuntuMono text-xs text-white/40">Last refreshed {timeAgo}</p>
           </div>
           <ScheduleFilters activeFilters={activeFilters} setActiveFilters={setActiveFilters} />
           <div className="flex items-center space-x-2 pt-1">
@@ -166,7 +166,7 @@ const ScheduleSection = () => {
               checked={showPrevEvents}
               onCheckedChange={() => setShowPrevEvents(!showPrevEvents)}
             />
-            <Label htmlFor="show-previous-events" className="font-UbuntuMono text-white/60 cursor-pointer">
+            <Label htmlFor="show-previous-events" className="cursor-pointer font-UbuntuMono text-white/60">
               Show Past Events
             </Label>
           </div>
@@ -219,11 +219,11 @@ const ScheduleSection = () => {
                 <div
                   key={day}
                   aria-label={`Events for ${day}`}
-                  className="w-full flex flex-col justify-center items-center gap-4 pt-4 pb-3"
+                  className="flex w-full flex-col items-center justify-center gap-4 pb-3 pt-4"
                 >
-                  <div className="flex items-center gap-4 w-full">
+                  <div className="flex w-full items-center gap-4">
                     <div className="h-px flex-1 bg-gradient-to-r from-transparent to-white/20" />
-                    <h3 className="font-Xirod text-lg tracking-widest text-white/80 uppercase whitespace-nowrap">
+                    <h3 className="whitespace-nowrap font-Xirod text-lg uppercase tracking-widest text-white/80">
                       {day}
                     </h3>
                     <div className="h-px flex-1 bg-gradient-to-l from-transparent to-white/20" />
@@ -243,17 +243,17 @@ const ScheduleSection = () => {
                     ))
                   ) : // if no events to render
                   originalDailyEvents.length === 0 ? (
-                    <p className="text-white/60 italic text-center">No scheduled events for this day.</p>
+                    <p className="text-center italic text-white/60">No scheduled events for this day.</p>
                   ) : dailyEventsFilteredByType.length === 0 ? ( // if no daily events filtered by type for the day
-                    <p className="text-white/60 italic text-center">
+                    <p className="text-center italic text-white/60">
                       No events matching the selected filters for this day.
                     </p>
                   ) : dailyEventsFilteredByType.length === 0 ? ( // Double check if filters are the cause of no events being shown
-                    <p className="text-white/60 italic text-center">
+                    <p className="text-center italic text-white/60">
                       No events matching the selected filters for this day.
                     </p>
                   ) : (
-                    <p className="text-white/60 italic text-center">No remaining events for this day.</p>
+                    <p className="text-center italic text-white/60">No remaining events for this day.</p>
                   )}
                 </div>
               );
@@ -262,9 +262,9 @@ const ScheduleSection = () => {
             Object.keys(eventsByDay).every((day) => {
               const dailyEvents = eventsByDay[day] || [];
               return dailyEvents.every((event) => event.endTimestamp.getTime() < Date.now());
-            }) && <p className="font-bold text-lg text-center mx-10">There are no more upcoming events.</p>}
+            }) && <p className="mx-10 text-center text-lg font-bold">There are no more upcoming events.</p>}
           <Separator />
-          <p className="text-center font-DSDigital text-[#02FFFF] tracking-[0.2em] uppercase [text-shadow:0_0_6px_#00ff88,0_0_14px_rgba(0,255,136,0.4)]">
+          <p className="text-center font-DSDigital uppercase tracking-[0.2em] text-[#02FFFF] [text-shadow:0_0_6px_#00ff88,0_0_14px_rgba(0,255,136,0.4)]">
             That's all folks!
           </p>
         </div>

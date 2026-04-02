@@ -6,11 +6,11 @@ import "./live.css";
 
 const LiveHeading = () => {
   return (
-    <div id="home" className="flex flex-col flex-1 justify-center items-center mt-48 mx-auto max-w-[50rem]">
+    <div id="home" className="mx-auto mt-48 flex max-w-[50rem] flex-1 flex-col items-center justify-center">
       <div className="flex flex-col items-center justify-center space-y-4 pb-10">
-        <div className="flex flex-col justify-center items-center text-center gap-y-6 z-30">
+        <div className="z-30 flex flex-col items-center justify-center gap-y-6 text-center">
           <Image
-            className="w-[min(40em,90vw)] select-none logo-glow"
+            className="logo-glow w-[min(40em,90vw)] select-none"
             src="/logos/pantherhacks/pantherhacks_wordmark_2026.svg"
             alt="PantherHacks 2026"
             width={252}
@@ -21,7 +21,7 @@ const LiveHeading = () => {
           />
         </div>
       </div>
-      <div className="flex flex-col flex-1 w-full justify-center items-center mt-10">
+      <div className="mt-10 flex w-full flex-1 flex-col items-center justify-center">
         <Countdown dark />
       </div>
     </div>

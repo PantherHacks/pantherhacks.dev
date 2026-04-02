@@ -29,7 +29,7 @@ export default function PrizesGrid() {
   return (
     <div
       ref={gridRef}
-      className="prizes-grid grid grid-cols-[repeat(auto-fill,minmax(min(130px,45%),1fr))] md:grid-cols-4 lg:grid-cols-5 gap-3.5 pb-1 justify-center"
+      className="prizes-grid grid grid-cols-[repeat(auto-fill,minmax(min(130px,45%),1fr))] justify-center gap-3.5 pb-1 md:grid-cols-4 lg:grid-cols-5"
     >
       {prizes.map((prize) => (
         <PrizeCard key={prize.trackName} {...prize} />

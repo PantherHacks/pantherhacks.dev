@@ -28,9 +28,7 @@ const navLinkVariants = cva(
 );
 
 export interface NavLinkProps
-  extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "href">,
-    LinkProps,
-    VariantProps<typeof navLinkVariants> {
+  extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "href">, LinkProps, VariantProps<typeof navLinkVariants> {
   children?: React.ReactNode;
   className?: string;
   hoverColor?: string;
