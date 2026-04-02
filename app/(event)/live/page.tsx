@@ -13,7 +13,7 @@ import ScheduleSection from "./_components/schedule";
 
 const LivePage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center overflow-x-hidden bg-[#01050B] text-white">
+    <div className="flex min-h-screen flex-col items-center justify-center overflow-x-hidden bg-gradient-to-b from-[#00040B] to-[#020E22] text-white">
       <Navbar />
       <main className="flex w-full flex-1 flex-col" id="live-schedule" aria-label="Live Schedule Section">
         <ParallaxProvider>
