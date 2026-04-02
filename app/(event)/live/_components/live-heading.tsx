@@ -10,7 +10,7 @@ const LiveHeading = () => {
     <ParallaxBanner
       className="parallax-banner h-screen"
       style={{
-        background: `linear-gradient(#0c0a24 0%, #0b0b0b 30%, #000000 100%)`,
+        background: `linear-gradient(#020E22 0%, #020E22 30%, #000000 100%)`,
       }}
     >
       <ParallaxBannerLayer speed={10} style={{ zIndex: 1 }}>
