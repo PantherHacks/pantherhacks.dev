@@ -1,5 +1,6 @@
 import { CircleHelp, Code, Hourglass, Scale } from "lucide-react";
 
+import { SectionTitle } from "@/components/section-title";
 import { hackathonDateInfo } from "@/lib/dates";
 import { devpostUrl, discordLink } from "@/lib/links";
 import ImportantLink from "./important-link";
@@ -7,8 +8,17 @@ import ImportantLink from "./important-link";
 const ImportantLinksSection = () => {
   return (
     <div id="important-links" className="flex flex-col items-center justify-center text-center w-full pt-40 py-20">
-      <h2 className="font-TangoSansBold text-4xl sm:text-6xl text-white pb-10 mx-4">Important Links</h2>
-      <p className="mx-8 sm:mx-20 md:mx-64 text-center max-w-[50rem] pb-10">
+      <SectionTitle
+        color1="#FF0000"
+        color2="#CC0000"
+        color3="#FF0000"
+        color4="#CC0000"
+        textShadowColor="#CC0000"
+        flickerIndices={[0, 1, 2, 4]}
+      >
+        LINKS
+      </SectionTitle>
+      <p className="mx-8 sm:mx-20 md:mx-64 text-center max-w-[50rem] pb-10 text-white/70">
         Below you can find important links you may need for PantherHacks {hackathonDateInfo.year}.
       </p>
       <div className="pt-8 pb-4 flex flex-row flex-wrap gap-3 md:gap-6 px-4 sm:px-8 md:px-16 max-w-[60rem] justify-center items-center">

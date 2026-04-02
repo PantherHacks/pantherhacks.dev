@@ -40,6 +40,115 @@
   border-width: 0 3px 3px 0;
 }
 
+.countdown-line {
+  position: absolute;
+  background-color: rgb(255, 85, 0);
+}
+
+.countdown-line.l {
+  top: 0;
+  left: -2px;
+  width: 3px;
+  animation: borderLineL 10s linear infinite;
+}
+
+.countdown-line.t {
+  top: -2px;
+  left: 0;
+  height: 3px;
+  animation: borderLineT 10s linear infinite;
+}
+
+.countdown-line.r {
+  top: 0;
+  right: -2px;
+  width: 3px;
+  animation: borderLineR 10s linear infinite;
+}
+
+.countdown-line.b {
+  bottom: -2px;
+  left: 0;
+  height: 3px;
+  animation: borderLineB 10s linear infinite;
+}
+
+@keyframes borderLineL {
+  0% {
+    top: 0%;
+    height: 0%;
+  }
+  25% {
+    top: 0%;
+    height: 100%;
+  }
+  50% {
+    top: 100%;
+    height: 0%;
+  }
+  100% {
+    top: 0%;
+    height: 0%;
+  }
+}
+
+@keyframes borderLineR {
+  0% {
+    top: 100%;
+    height: 0%;
+  }
+  25% {
+    top: 0%;
+    height: 100%;
+  }
+  50% {
+    top: 0%;
+    height: 0%;
+  }
+  100% {
+    top: 100%;
+    height: 0%;
+  }
+}
+
+@keyframes borderLineB {
+  0% {
+    left: 0%;
+    width: 0%;
+  }
+  50% {
+    left: 0%;
+    width: 0%;
+  }
+  75% {
+    left: 0%;
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 0%;
+  }
+}
+
+@keyframes borderLineT {
+  0% {
+    left: 100%;
+    width: 0%;
+  }
+  50% {
+    left: 100%;
+    width: 0%;
+  }
+  75% {
+    left: 0%;
+    width: 100%;
+  }
+  100% {
+    left: 0%;
+    width: 0%;
+  }
+}
+
 .countdown-glow {
   background: linear-gradient(to bottom, transparent, #ed500080);
 }

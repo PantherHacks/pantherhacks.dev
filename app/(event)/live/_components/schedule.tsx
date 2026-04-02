@@ -3,7 +3,8 @@ import Image from "next/image";
 import { RefreshCcw } from "lucide-react";
 import PublicGoogleSheetsParser from "public-google-sheets-parser";
 
-import ScheduleFilters from "@/app/(event)/_live/_components/schedule-filters";
+import ScheduleFilters from "@/app/(event)/live/_components/schedule-filters";
+import { SectionTitle } from "@/components/section-title";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
@@ -115,11 +116,20 @@ const ScheduleSection = () => {
 
   return (
     <div id="schedule" className="flex flex-col items-center justify-center w-full py-20">
-      <h2 className="font-TangoSansBold text-4xl sm:text-6xl text-white pb-10 mx-4">Schedule</h2>
-      <p className="mx-8 sm:mx-20 md:mx-64 text-center max-w-[50rem] pb-10">
+      <SectionTitle
+        color1="#00C896"
+        color2="#007A5A"
+        color3="#00E8A8"
+        color4="#80FFD4"
+        textShadowColor="#80FFD4"
+        flickerIndices={[0, 2, 4, 7]}
+      >
+        SCHEDULE
+      </SectionTitle>
+      <p className="mx-8 sm:mx-20 md:mx-64 text-center max-w-[50rem] pb-10 font-UbuntuMono text-white/70">
         PantherHacks will take place for three days from{" "}
-        <span className="font-bold">{hackathonDateInfo.dateString}</span>. Below you can find information on the
-        schedule of the event.
+        <span className="font-UbuntuMonoBold text-white">{hackathonDateInfo.dateString}</span>. Below you can find
+        information on the schedule of the event.
       </p>
       {isFetching && (
         <Image
@@ -141,10 +151,13 @@ const ScheduleSection = () => {
         <div className="flex flex-col gap-4 justify-center items-center px-10">
           <Separator />
           <div className="flex flex-col items-center justify-center gap-y-2">
-            <Button className="bg-primary hover:bg-[#83022b] cursor-pointer" onClick={fetchCSV}>
+            <Button
+              className="bg-transparent text-primary border border-primary transition-all duration-200 rounded-none hover:rounded-lg hover:bg-primary/10 cursor-pointer items-center font-UbuntuMono tracking-wider"
+              onClick={fetchCSV}
+            >
               <RefreshCcw /> Refresh Schedule
             </Button>
-            <p className="text-xs ">Last refreshed {timeAgo}</p>
+            <p className="text-xs font-UbuntuMono text-white/40">Last refreshed {timeAgo}</p>
           </div>
           <ScheduleFilters activeFilters={activeFilters} setActiveFilters={setActiveFilters} />
           <div className="flex items-center space-x-2 pt-1">
@@ -153,7 +166,9 @@ const ScheduleSection = () => {
               checked={showPrevEvents}
               onCheckedChange={() => setShowPrevEvents(!showPrevEvents)}
             />
-            <Label htmlFor="show-previous-events">Show Past Events</Label>
+            <Label htmlFor="show-previous-events" className="font-UbuntuMono text-white/60 cursor-pointer">
+              Show Past Events
+            </Label>
           </div>
           <Separator />
           {Object.keys(eventsByDay)
@@ -206,8 +221,13 @@ const ScheduleSection = () => {
                   aria-label={`Events for ${day}`}
                   className="w-full flex flex-col justify-center items-center gap-4 pt-4 pb-3"
                 >
-                  <h3 className="font-bold text-2xl">{day}</h3>
-                  <Separator className="bg-white/20" />
+                  <div className="flex items-center gap-4 w-full">
+                    <div className="h-px flex-1 bg-gradient-to-r from-transparent to-white/20" />
+                    <h3 className="font-Xirod text-lg tracking-widest text-white/80 uppercase whitespace-nowrap">
+                      {day}
+                    </h3>
+                    <div className="h-px flex-1 bg-gradient-to-l from-transparent to-white/20" />
+                  </div>
                   {eventsToRender.length > 0 ? (
                     // show events if there are events to render
                     eventsToRender.map((event, index) => (
@@ -244,7 +264,9 @@ const ScheduleSection = () => {
               return dailyEvents.every((event) => event.endTimestamp.getTime() < Date.now());
             }) && <p className="font-bold text-lg text-center mx-10">There are no more upcoming events.</p>}
           <Separator />
-          <p className="text-center italic font-bold text-lg text-white/80">That's all folks!</p>
+          <p className="text-center font-DSDigital text-[#02FFFF] tracking-[0.2em] uppercase [text-shadow:0_0_6px_#00ff88,0_0_14px_rgba(0,255,136,0.4)]">
+            That's all folks!
+          </p>
         </div>
       )}
     </div>

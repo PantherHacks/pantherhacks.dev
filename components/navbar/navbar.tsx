@@ -81,13 +81,12 @@ const Navbar = () => {
             <NavLink href="/#team" hoverColor="#61D7FF" glowColor="#6FB3FE">
               Team
             </NavLink>
-            <NavLink href="/apply" variant="default" target="_blank" rel="noopener noreferrer">
+            {/* <NavLink href="/apply" variant="default" target="_blank" rel="noopener noreferrer">
               APPLY
-            </NavLink>
-            {/* <NavLink
+            </NavLink> */}
+            <NavLink
               href="/live"
-              variant="bold"
-              className="bg-[rgb(75,0,0)] font-Xirod text-xl text-[#fd021d] flex flex-row justify-center items-center gap-2"
+              className="font-Xirod text-xl text-[#fd021d] flex flex-row justify-center items-center gap-2"
             >
               <div className="flex items-center gap-2">
                 <div className="relative flex justify-center items-center">
@@ -96,7 +95,7 @@ const Navbar = () => {
                 </div>
                 <span className="neon-text transform-gpu">LIVE</span>
               </div>
-            </NavLink> */}
+            </NavLink>
           </div>
         </div>
         <div className="flex items-center justify-center">
@@ -227,7 +226,7 @@ const Navbar = () => {
           >
             Team
           </NavLink>
-          <NavLink
+          {/* <NavLink
             href="/apply"
             variant={"mobile"}
             onClick={handleMobileLinkClick}
@@ -235,11 +234,10 @@ const Navbar = () => {
             rel="noopener noreferrer"
           >
             APPLY
-          </NavLink>
-          {/* <NavLink
+          </NavLink> */}
+          <NavLink
             href="/live"
-            variant={"mobile_bold"}
-            className="bg-[rgb(75,0,0)] font-Xirod text-xl text-[#fd021d] flex flex-row justify-center items-center gap-2"
+            className="font-Xirod text-xl text-[#fd021d] flex flex-row justify-center items-center gap-2"
             onClick={handleMobileLinkClick}
           >
             <div className="flex items-center gap-2">
@@ -249,7 +247,7 @@ const Navbar = () => {
               </div>
               <span className="neon-text transform-gpu">LIVE</span>
             </div>
-          </NavLink> */}
+          </NavLink>
           <div className="flex items-center justify-center">
             <NavLink
               href={gitHubLink}

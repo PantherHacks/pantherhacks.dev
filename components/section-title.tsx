@@ -30,7 +30,7 @@ export const SectionTitle = ({
 
   return (
     <div
-      className={`flex flex-col scale-[85%] xs:scale-[100%] justify-center items-center w-[24rem] md:w-[32rem] mb-14 ${className}`}
+      className={`section-title-container flex flex-col justify-center items-center w-[90vw] max-w-[24rem] md:max-w-[32rem] mb-14 ${className}`}
       style={{
         background: `linear-gradient(180deg, ${color2} 0%, #00000000 50%, ${color2} 100%)`,
       }}
@@ -43,8 +43,9 @@ export const SectionTitle = ({
         }}
       ></div>
       <h2
-        className={`font-Xirod text-6xl mt-2 mb-0 select-none`}
+        className={`font-Xirod mt-2 mb-0 select-none whitespace-nowrap`}
         style={{
+          fontSize: "clamp(1rem, 11cqw, 3.75rem)",
           color: color1,
           textShadow: `0px -2px 2px ${textShadowColor}, -1px 0px 2px ${textShadowColor}, 0px 0px 1px ${textShadowColor}, 0px -0.5px 1px ${textShadowColor}`,
         }}

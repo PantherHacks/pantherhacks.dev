@@ -170,7 +170,7 @@ const CountdownPage = () => {
         run={hackathonEnded}
         width={dimensions.width}
         height={dimensions.height}
-        colors={["#A50034", "#ED024D", "#FF87AD", "#FFFFFF"]}
+        colors={["#EE5000", "#E820AB", "#8837F1", "#5FE002", "#61D7FF"]}
       />
       <Image
         src="/images/main-background/building-background.svg"
@@ -209,7 +209,7 @@ const CountdownPage = () => {
       >
         {isFullscreen ? <Minimize /> : <Maximize />}
       </Button>
-      <div className="z-50 mx-4 sm:mx-0">
+      <div className="flex w-full items-center justify-center z-50 py-4 px-4 sm:px-16 md:px-20">
         <Countdown dark size="large" />
       </div>
       <div

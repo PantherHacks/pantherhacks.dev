@@ -79,24 +79,30 @@ const Countdown: React.FC<CountdownProps> = ({ dark = false, size = "default" })
   const colorClass = dark ? "text-primary" : "text-primary";
 
   return (
-    <div className="countdown-frame">
-      <span className="countdown-corner tl" />
-      <span className="countdown-corner tr" />
-      <span className="countdown-corner bl" />
-      <span className="countdown-corner br" />
+    <div
+      className={`countdown-frame ${isLarge ? "flex flex-1 justify-center items-center backdrop-blur-[4px] w-full max-w-[900px]" : "mx-12 md:mx-16 lg:mx-20 xl:mx-20 max-w-[800px]"}`}
+    >
+      <span className={`countdown-corner tl ${isLarge ? "hidden" : ""}`} />
+      <span className={`countdown-corner tr ${isLarge ? "hidden" : ""}`} />
+      <span className={`countdown-corner bl ${isLarge ? "hidden" : ""}`} />
+      <span className={`countdown-corner br ${isLarge ? "hidden" : ""}`} />
+      <span className={`countdown-line l ${isLarge ? "" : "hidden"}`} />
+      <span className={`countdown-line t ${isLarge ? "" : "hidden"}`} />
+      <span className={`countdown-line r ${isLarge ? "" : "hidden"}`} />
+      <span className={`countdown-line b ${isLarge ? "" : "hidden"}`} />
       <div className="flex flex-col gap-y-2 justify-center items-center">
         {segments === null ? (
           <Skeleton className={`${isLarge ? "w-[350px] sm:w-[550px] h-[4rem]" : "w-[250px] sm:w-[350px] h-[3rem]"}`} />
         ) : concluded ? (
           <h2
-            className={`text-center mx-10 font-DSDigital ${colorClass} ${isLarge ? "text-5xl md:text-6xl lg:text-7xl" : "text-4xl sm:text-6xl md:text-6xl"}`}
+            className={`text-center mx-10 font-Xirod ${colorClass} ${isLarge ? "text-4xl md:text-5xl lg:text-6xl" : "text-2xl sm:text-3xl md:text-4xl"}`}
             style={{ minHeight: isLarge ? "4rem" : "3rem" }}
           >
             {countdownDescriptions.hasEnded}
           </h2>
         ) : (
           <h2
-            className={`font-DSDigital countdown-text-glow ${colorClass} ${isLarge ? "text-5xl sm:text-7xl md:text-[7rem] lg:text-9xl" : "text-4xl sm:text-6xl md:text-6xl"}`}
+            className={`font-DSDigital countdown-text-glow text-center ${colorClass} ${isLarge ? "text-5xl sm:text-7xl md:text-8xl lg:text-9xl" : "text-4xl sm:text-6xl md:text-6xl"}`}
             style={{ minHeight: isLarge ? "4rem" : "3rem" }}
           >
             {segments.map(({ value, unit }, i) => (
@@ -108,14 +114,13 @@ const Countdown: React.FC<CountdownProps> = ({ dark = false, size = "default" })
             ))}
           </h2>
         )}
-        {isLarge && <div className="flex h-16 w-[110%] countdown-glow -translate-y-14 -mb-10"></div>}
         {description === null ? (
           <Skeleton
             className={`bg-white/20 ${isLarge ? "w-[300px] sm:w-[500px] h-[3.5rem]" : "w-[200px] sm:w-[300px] h-[2.5rem]"}`}
           />
         ) : concluded ? (
           <h3
-            className={`text-center font-UbuntuMonoBold text-primary ${isLarge ? "text-3xl sm:text-4xl md:text-5xl" : "text-xl sm:text-2xl md:text-3xl"}`}
+            className={`text-center font-Xirod text-white ${isLarge ? "text-xl sm:text-2xl md:text-3xl" : "text-lg sm:text-xl md:text-2xl"}`}
             style={{ minHeight: isLarge ? "3.5rem" : "2.5rem" }}
           >
             Thank you for participating!
