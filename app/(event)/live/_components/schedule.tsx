@@ -119,9 +119,9 @@ const ScheduleSection = () => {
       <SectionTitle
         color1="#FF0000"
         color2="#CC0000"
-        color3="#FF3333"
-        color4="#FF6666"
-        textShadowColor="#FF4444"
+        color3="#FF0000"
+        color4="#CC0000"
+        textShadowColor="#CC0000"
         flickerIndices={[0, 2, 4, 7]}
       >
         SCHEDULE
