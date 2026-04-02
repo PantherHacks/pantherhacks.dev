@@ -25,10 +25,7 @@ const LiveHeading = () => {
         />
       </ParallaxBannerLayer>
 
-      <div
-        id="home"
-        className="absolute inset-0 z-10 mx-auto flex max-w-[60rem] flex-col items-center justify-center gap-y-8"
-      >
+      <div id="home" className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-y-8">
         <Image
           className="logo-glow w-[min(24em,70vw)] select-none"
           src="/logos/pantherhacks/pantherhacks_wordmark_2026.svg"
@@ -39,7 +36,7 @@ const LiveHeading = () => {
           draggable={false}
           unoptimized
         />
-        <div className="z-50 flex w-full items-center justify-center px-4 py-4 sm:px-16 md:px-20">
+        <div className="z-50 w-[calc(100%-2rem)] py-4 sm:w-[calc(100%-8rem)] md:w-[calc(100%-10rem)]">
           <Countdown dark size="large" />
         </div>
       </div>
