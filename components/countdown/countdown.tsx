@@ -79,7 +79,9 @@ const Countdown: React.FC<CountdownProps> = ({ dark = false, size = "default" })
   const colorClass = dark ? "text-primary" : "text-primary";
 
   return (
-    <div className={`countdown-frame ${isLarge ? "flex flex-1 justify-center items-center backdrop-blur-[4px] w-full max-w-[900px]" : "mx-12 md:mx-16 lg:mx-20 xl:mx-20 max-w-[800px]"}`}>
+    <div
+      className={`countdown-frame ${isLarge ? "flex flex-1 justify-center items-center backdrop-blur-[4px] w-full max-w-[900px]" : "mx-12 md:mx-16 lg:mx-20 xl:mx-20 max-w-[800px]"}`}
+    >
       <span className={`countdown-corner tl ${isLarge ? "hidden" : ""}`} />
       <span className={`countdown-corner tr ${isLarge ? "hidden" : ""}`} />
       <span className={`countdown-corner bl ${isLarge ? "hidden" : ""}`} />
