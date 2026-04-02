@@ -148,7 +148,7 @@ const ScheduleSection = () => {
         </p>
       )}
       {!isFetching && calendarEvents.length > 0 && (
-        <div className="flex flex-col items-center justify-center gap-4 px-10">
+        <div className="flex flex-col items-center justify-center gap-4 px-6 sm:px-10">
           <Separator />
           <div className="flex flex-col items-center justify-center gap-y-2">
             <Button
