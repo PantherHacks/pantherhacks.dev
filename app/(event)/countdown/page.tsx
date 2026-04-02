@@ -170,7 +170,7 @@ const CountdownPage = () => {
         run={hackathonEnded}
         width={dimensions.width}
         height={dimensions.height}
-        colors={["#A50034", "#ED024D", "#FF87AD", "#FFFFFF"]}
+        colors={["#EE5000", "#E820AB", "#8837F1", "#5FE002", "#61D7FF"]}
       />
       <Image
         src="/images/main-background/building-background.svg"
