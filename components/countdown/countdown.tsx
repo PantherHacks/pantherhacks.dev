@@ -95,7 +95,7 @@ const Countdown: React.FC<CountdownProps> = ({ dark = false, size = "default" })
           <Skeleton className={`${isLarge ? "h-[4rem] w-[350px] sm:w-[550px]" : "h-[3rem] w-[250px] sm:w-[350px]"}`} />
         ) : concluded ? (
           <h2
-            className={`mx-10 text-center font-Xirod ${colorClass} ${isLarge ? "text-4xl md:text-5xl lg:text-6xl" : "text-2xl sm:text-3xl md:text-4xl"}`}
+            className={`mx-10 text-center font-Xirod ${colorClass} ${isLarge ? "text-2xl sm:text-4xl md:text-5xl lg:text-6xl" : "text-2xl sm:text-3xl md:text-4xl"}`}
             style={{ minHeight: isLarge ? "4rem" : "3rem" }}
           >
             {countdownDescriptions.hasEnded}
