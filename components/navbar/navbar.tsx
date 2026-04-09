@@ -41,7 +41,7 @@ const Navbar = () => {
       ref={navRef}
       className="navbar-glow y fixed left-0 top-0 z-[49] mx-[20px] mt-[20px] box-border flex w-[calc(100vw_-_40px)] items-center drop-shadow-lg backdrop-blur-sm"
     >
-      <div className="hidden w-full items-center justify-between [@media(min-width:990px)]:flex">
+      <div className="hidden w-full items-center justify-between [@media(min-width:1145px)]:flex">
         <div className="flex flex-row items-center">
           <div className="flex items-center overflow-hidden">
             <NavLink href="/" variant={"logo"} className="group h-[70px]" aria-label="Home">
@@ -161,7 +161,7 @@ const Navbar = () => {
           </NavLink>
         </div>
       </div>
-      <div className="flex w-full flex-col [@media(min-width:990px)]:hidden">
+      <div className="flex w-full flex-col [@media(min-width:1145px)]:hidden">
         <div className="flex w-full items-center justify-between overflow-hidden">
           <NavLink href="/" variant={"logo"} className="h-[70px]" aria-label="Home" onClick={handleMobileLinkClick}>
             <Image
