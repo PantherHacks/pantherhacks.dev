@@ -39,7 +39,7 @@ const MobileHeading = () => {
           unoptimized
         />
         <h2 className="cursor-default font-UbuntuMonoBold text-3xl text-primary">{hackathonDateInfo.dateString}</h2>
-        <Link href="/winners" target="_blank" rel="noopener noreferrer">
+        <Link href="/winners" rel="noopener noreferrer">
           <SpecialButton className="flex flex-row items-center gap-x-4 font-Xirod text-2xl">
             <TrophyIcon className="h-10 w-10" /> VIEW WINNERS
           </SpecialButton>

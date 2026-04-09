@@ -73,7 +73,7 @@ const Heading = () => {
             <h2 className="cursor-default rounded-lg p-4 font-UbuntuMonoBold text-xl text-primary sm:text-5xl">
               {hackathonDateInfo.dateString}
             </h2>
-            <Link href="/winners" target="_blank" rel="noopener noreferrer">
+            <Link href="/winners" rel="noopener noreferrer">
               <SpecialButton className="flex flex-row items-center gap-x-4 font-Xirod text-4xl">
                 <TrophyIcon className="h-10 w-10" /> VIEW WINNERS
               </SpecialButton>
