@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import "./winners.css";
 
-import { hackathonDateInfo } from "@/lib/dates";
+import { ChevronsDownIcon } from "lucide-react";
 
 const WinnersHeading = () => {
   return (
@@ -65,13 +65,14 @@ const WinnersHeading = () => {
           </span>
         </div>
 
-        <p
-          className="font-UbuntuMono text-xs uppercase tracking-[0.25em] text-white/70"
-          style={{ textShadow: "0 0 20px rgba(0,0,0,0.8)" }}
+        <div
+          className="flex animate-pulse flex-row items-center gap-x-2 gap-y-1 font-UbuntuMono text-xs uppercase tracking-[0.2em]"
+          style={{ textShadow: "0 1px 8px rgba(0,0,0,1), 0 0 30px rgba(0,0,0,0.9)" }}
         >
-          PantherHacks {hackathonDateInfo.year} &nbsp;·&nbsp; {hackathonDateInfo.month}, {hackathonDateInfo.startDay}-
-          {hackathonDateInfo.endDay} &nbsp;·&nbsp; Chapman University
-        </p>
+          <ChevronsDownIcon />
+          <p>Scroll for winners</p>
+          <ChevronsDownIcon />
+        </div>
       </div>
 
       <div
