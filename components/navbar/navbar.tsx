@@ -84,6 +84,9 @@ const Navbar = () => {
             {/* <NavLink href="/apply" variant="default" target="_blank" rel="noopener noreferrer">
               APPLY
             </NavLink> */}
+            <NavLink href="/winners" hoverColor="#FFD700" glowColor="#FFC000">
+              Winners
+            </NavLink>
             <NavLink
               href="/live"
               className="flex flex-row items-center justify-center gap-2 font-Xirod text-xl text-[#fd021d]"
@@ -235,6 +238,15 @@ const Navbar = () => {
           >
             APPLY
           </NavLink> */}
+          <NavLink
+            variant="mobile"
+            href="/winners"
+            onClick={handleMobileLinkClick}
+            hoverColor="#FFD700"
+            glowColor="#FFC000"
+          >
+            Winners
+          </NavLink>
           <NavLink
             href="/live"
             className="flex flex-row items-center justify-center gap-2 font-Xirod text-xl text-[#fd021d]"

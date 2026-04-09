@@ -1,0 +1,119 @@
+/* Spinning border — 1st place (gold) */
+@property --gold-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.winner-border-gold {
+  position: relative;
+  z-index: 1;
+}
+
+.winner-border-gold::before,
+.winner-border-gold::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  background-image: conic-gradient(from var(--gold-angle), #00000000, #ffd700, #ffa500, #ffd700);
+  z-index: -2;
+  border-radius: 2px;
+  animation: 3s winner-gold-spin linear infinite;
+}
+
+.winner-border-gold::before {
+  filter: blur(1.5rem);
+  opacity: 0.6;
+}
+
+@keyframes winner-gold-spin {
+  from {
+    --gold-angle: 0deg;
+  }
+  to {
+    --gold-angle: 360deg;
+  }
+}
+
+/* Solid border — 2nd place (cyan) */
+.winner-border-cyan {
+  position: relative;
+  z-index: 1;
+  box-shadow:
+    0 0 0 2px #00d4ff,
+    0 0 18px #00d4ff33;
+}
+
+/* Solid border — 3rd place (orange) */
+.winner-border-orange {
+  position: relative;
+  z-index: 1;
+  box-shadow:
+    0 0 0 2px #fe5501,
+    0 0 18px #fe550133;
+}
+
+/* Neon text */
+.neon-gold {
+  color: #ffd700;
+  text-shadow:
+    0 0 2px #ffd700,
+    0 0 16px #ffc000,
+    0 0 32px #ff8c00;
+}
+
+.neon-cyan {
+  color: #00d4ff;
+  text-shadow:
+    0 0 2px #00d4ff,
+    0 0 16px #00aacc,
+    0 0 32px #007799;
+}
+
+.neon-orange {
+  color: #fe5501;
+  text-shadow:
+    0 0 2px #fe5501,
+    0 0 16px #ff4400,
+    0 0 32px #ff2200;
+}
+
+/* Hero title */
+.winners-hero-title {
+  color: #ffd700;
+  text-shadow:
+    0 0 4px #ffd700,
+    0 0 24px #ffc000,
+    0 0 60px rgba(255, 165, 0, 0.5),
+    0 0 100px rgba(255, 100, 0, 0.3);
+}
+
+/* Star decorations */
+@keyframes star-pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.25);
+  }
+}
+
+.star-pulse {
+  animation: star-pulse 2.4s ease-in-out infinite;
+}
+
+.star-pulse:nth-child(1) {
+  animation-delay: 0s;
+}
+.star-pulse:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.star-pulse:nth-child(4) {
+  animation-delay: 0.8s;
+}
+.star-pulse:nth-child(5) {
+  animation-delay: 1.2s;
+}
