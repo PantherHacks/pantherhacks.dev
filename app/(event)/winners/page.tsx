@@ -29,21 +29,21 @@ const WinnersPage = () => {
           </SectionTitle>
 
           <div className="flex w-full max-w-5xl flex-col gap-6 md:flex-row md:items-end md:justify-center">
-            <div className="w-full md:order-1 md:w-[30%]">
-              <WinnerCard
-                placement="2nd"
-                placementLabel="2nd Place"
-                imagePath={`/images/winners/hackers-choice/${1}.webp`}
-                {...HACKERS_CHOICE_WINNERS.teams[1]}
-              />
-            </div>
-
             <div className="w-full md:order-2 md:w-[38%]">
               <WinnerCard
                 placement="1st"
                 placementLabel="1st Place"
                 imagePath={`/images/winners/hackers-choice/${0}.webp`}
                 {...HACKERS_CHOICE_WINNERS.teams[0]}
+              />
+            </div>
+
+            <div className="w-full md:order-1 md:w-[30%]">
+              <WinnerCard
+                placement="2nd"
+                placementLabel="2nd Place"
+                imagePath={`/images/winners/hackers-choice/${1}.webp`}
+                {...HACKERS_CHOICE_WINNERS.teams[1]}
               />
             </div>
 

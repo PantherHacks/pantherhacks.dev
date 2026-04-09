@@ -7,6 +7,8 @@ import { hackathonDateInfo } from "@/lib/dates";
 import "./mobileheading.css";
 import "./heading.css";
 
+import { TrophyIcon } from "lucide-react";
+
 const MobileHeading = () => {
   return (
     <div
@@ -37,8 +39,10 @@ const MobileHeading = () => {
           unoptimized
         />
         <h2 className="cursor-default font-UbuntuMonoBold text-3xl text-primary">{hackathonDateInfo.dateString}</h2>
-        <Link href="/live" target="_blank" rel="noopener noreferrer">
-          <SpecialButton className="font-Xirod text-2xl">VISIT LIVE PAGE</SpecialButton>
+        <Link href="/winners" target="_blank" rel="noopener noreferrer">
+          <SpecialButton className="flex flex-row items-center gap-x-4 font-Xirod text-2xl">
+            <TrophyIcon className="h-10 w-10" /> VIEW WINNERS
+          </SpecialButton>
         </Link>
       </div>
     </div>

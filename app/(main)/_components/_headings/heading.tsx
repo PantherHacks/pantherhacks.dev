@@ -9,6 +9,8 @@ import { hackathonDateInfo } from "@/lib/dates";
 
 import "./heading.css";
 
+import { TrophyIcon } from "lucide-react";
+
 const Heading = () => {
   return (
     <>
@@ -71,8 +73,10 @@ const Heading = () => {
             <h2 className="cursor-default rounded-lg p-4 font-UbuntuMonoBold text-xl text-primary sm:text-5xl">
               {hackathonDateInfo.dateString}
             </h2>
-            <Link href="/live" target="_blank" rel="noopener noreferrer">
-              <SpecialButton className="font-Xirod text-4xl">VISIT LIVE PAGE</SpecialButton>
+            <Link href="/winners" target="_blank" rel="noopener noreferrer">
+              <SpecialButton className="flex flex-row items-center gap-x-4 font-Xirod text-4xl">
+                <TrophyIcon className="h-10 w-10" /> VIEW WINNERS
+              </SpecialButton>
             </Link>
           </div>
         </ParallaxBannerLayer>

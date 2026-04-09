@@ -59,7 +59,7 @@ const WinnerCard = ({
   const label = placementLabel ?? config.defaultLabel;
 
   return (
-    <div className={`${config.borderClass} h-full w-full transition-transform duration-200 hover:scale-105`}>
+    <div className={`${config.borderClass} h-full w-full transition-transform duration-200 sm:hover:scale-105`}>
       <div
         className="relative flex h-full flex-col overflow-hidden font-UbuntuMono"
         style={{
