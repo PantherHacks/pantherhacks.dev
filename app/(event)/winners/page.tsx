@@ -15,7 +15,7 @@ const WinnersPage = () => {
       <main className="flex w-full flex-1 flex-col">
         <WinnersHeading />
 
-        <section id="hackers-choice" className="flex flex-col items-center px-4 pb-24 pt-16 sm:px-8">
+        <section id="hackers-choice" className="flex scroll-m-40 flex-col items-center px-4 pb-24 pt-16 sm:px-8">
           <SectionTitle
             color1="#FFD700"
             color2="#996600"
@@ -63,7 +63,11 @@ const WinnersPage = () => {
         />
 
         {TRACK_WINNERS.map((categoryWinner) => (
-          <section key={categoryWinner.categoryName} className="flex flex-col items-center px-4 pb-20 pt-12 sm:px-8">
+          <section
+            key={categoryWinner.categoryName}
+            id={categoryWinner.categoryName.toLowerCase()}
+            className="flex scroll-m-40 flex-col items-center px-4 pb-20 pt-12 sm:px-8"
+          >
             <SectionTitle color1="#ffffff" color2="#ffffff" color3="#ffffff" color4="#ffffff" textShadowColor="#ffffff">
               {categoryWinner.categoryName}
             </SectionTitle>

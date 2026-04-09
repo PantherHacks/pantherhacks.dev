@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SiDevpost } from "@icons-pack/react-simple-icons";
-import { ExternalLink, Users } from "lucide-react";
+import { Users } from "lucide-react";
 
 import "./winners.css";
 
