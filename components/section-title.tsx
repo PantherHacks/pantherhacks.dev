@@ -47,7 +47,7 @@ export const SectionTitle = ({
       <h2
         className={`mb-0 mt-2 select-none whitespace-nowrap font-Xirod`}
         style={{
-          fontSize: small ? "clamp(1rem, 11cqw, 2.25rem)" : "clamp(1rem, 11cqw, 3.75rem)",
+          fontSize: small ? "clamp(0.5rem, 7cqw, 2.25rem)" : "clamp(1rem, 11cqw, 3.75rem)",
           color: color1,
           textShadow: `0px -2px 2px ${textShadowColor}, -1px 0px 2px ${textShadowColor}, 0px 0px 1px ${textShadowColor}, 0px -0.5px 1px ${textShadowColor}`,
         }}
