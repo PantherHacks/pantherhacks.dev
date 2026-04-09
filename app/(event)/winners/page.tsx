@@ -69,9 +69,7 @@ const WinnersPage = () => {
             id={categoryWinner.categoryName.toLowerCase()}
             className="flex scroll-m-40 flex-col items-center px-4 pb-20 pt-12 sm:px-8"
           >
-            <SectionTitle small={true}>
-              {categoryWinner.categoryName}
-            </SectionTitle>
+            <SectionTitle small={true}>{categoryWinner.categoryName}</SectionTitle>
 
             <div className="flex w-full max-w-4xl flex-col gap-6 sm:flex-row sm:items-end sm:justify-center">
               <div className="w-full self-stretch sm:w-[48%]">

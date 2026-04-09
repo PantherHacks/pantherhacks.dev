@@ -32,15 +32,15 @@ const WinnersHeading = () => {
           unoptimized
         />
 
-        <div className="flex items-center gap-4 sm:gap-6">
+        <div className="flex select-none items-center gap-4 sm:gap-6">
           <span
-            className="star-pulse font-Xirod text-xl sm:text-2xl"
+            className="star-pulse hidden font-Xirod text-xl sm:text-2xl lg:block"
             style={{ color: "#FFD700", textShadow: "0 0 12px #FFD700" }}
           >
             ★
           </span>
           <span
-            className="star-pulse font-Xirod text-base sm:text-lg"
+            className="star-pulse hidden font-Xirod text-base sm:text-lg lg:block"
             style={{ color: "#FFD700", textShadow: "0 0 10px #FFD700" }}
           >
             ★
@@ -52,13 +52,13 @@ const WinnersHeading = () => {
             WINNERS
           </h1>
           <span
-            className="star-pulse font-Xirod text-base sm:text-lg"
+            className="star-pulse hidden font-Xirod text-base sm:text-lg lg:block"
             style={{ color: "#FFD700", textShadow: "0 0 10px #FFD700" }}
           >
             ★
           </span>
           <span
-            className="star-pulse font-Xirod text-xl sm:text-2xl"
+            className="star-pulse hidden font-Xirod text-xl sm:text-2xl lg:block"
             style={{ color: "#FFD700", textShadow: "0 0 12px #FFD700" }}
           >
             ★
