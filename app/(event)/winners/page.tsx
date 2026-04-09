@@ -1,11 +1,13 @@
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 import { SectionTitle } from "@/components/section-title";
-import { HACKERS_CHOICE_WINNERS } from "@/lib/winners";
+import { HACKERS_CHOICE_WINNERS, TRACK_WINNERS } from "@/lib/winners";
 import WinnerCard from "./_components/winner-card";
 import WinnersHeading from "./_components/winners-heading";
 
 import "./_components/winners.css";
+
+import Image from "next/image";
 
 const WinnersPage = () => {
   return (
@@ -63,40 +65,43 @@ const WinnersPage = () => {
           className="mx-auto mb-8 h-px w-[min(90vw,56rem)]"
           style={{ background: "linear-gradient(to right, transparent, #FF550044, transparent)" }}
         />
-        {/* 
-        {TRACK_WINNERS.map(({ track, icon, titleColors, winner, runnerUp }) => (
-          <section key={track} className="flex flex-col items-center px-4 pb-20 pt-12 sm:px-8">
+
+        {TRACK_WINNERS.map((categoryWinner) => (
+          <section key={categoryWinner.categoryName} className="flex flex-col items-center px-4 pb-20 pt-12 sm:px-8">
             <div className="mb-2 flex items-center gap-3">
               <Image
-                src={icon}
-                alt={`${track} track icon`}
+                src={`/images/tracks//${categoryWinner.categoryName.toLowerCase()}.svg`}
+                alt={`${categoryWinner.categoryName} track icon`}
                 width={36}
                 height={36}
                 className="select-none opacity-80"
-                style={{ filter: `drop-shadow(0 0 6px ${titleColors.color1}88)` }}
               />
             </div>
 
-            <SectionTitle
-              color1={titleColors.color1}
-              color2={titleColors.color2}
-              color3={titleColors.color3}
-              color4={titleColors.color4}
-              textShadowColor={titleColors.textShadowColor}
-            >
-              {track}
+            <SectionTitle color1="#ffffff" color2="#ffffff" color3="#ffffff" color4="#ffffff" textShadowColor="#ffffff">
+              {categoryWinner.categoryName}
             </SectionTitle>
 
             <div className="flex w-full max-w-4xl flex-col gap-6 sm:flex-row sm:items-start sm:justify-center">
               <div className="w-full sm:w-[48%]">
-                <WinnerCard placement="1st" placementLabel="Track Winner" track={`${track} Track`} {...winner} />
+                <WinnerCard
+                  placement="1st"
+                  placementLabel="Track Winner"
+                  imagePath={`/images/winners/${categoryWinner.categoryName}/${0}.webp`}
+                  {...categoryWinner.teams[0]}
+                />
               </div>
               <div className="w-full sm:w-[48%]">
-                <WinnerCard placement="2nd" placementLabel="Runner Up" track={`${track} Track`} {...runnerUp} />
+                <WinnerCard
+                  placement="2nd"
+                  placementLabel="Runner Up"
+                  imagePath={`/images/winners/${categoryWinner.categoryName}/${1}.webp`}
+                  {...categoryWinner.teams[1]}
+                />
               </div>
             </div>
           </section>
-        ))} */}
+        ))}
 
         <div className="h-12" />
       </main>
