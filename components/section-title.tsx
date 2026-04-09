@@ -9,6 +9,7 @@ type Props = {
   color4?: string;
   textShadowColor?: string;
   flickerIndices?: number[];
+  small?: boolean;
 };
 // Deterministic pseudo-random based on seed — same value on server and client.
 const seededRandom = (seed: number) => {
@@ -25,6 +26,7 @@ export const SectionTitle = ({
   color4 = "#E377F5",
   textShadowColor = "#E377F5",
   flickerIndices = [],
+  small = false,
 }: Props) => {
   const letters = children.split("");
 
@@ -45,7 +47,7 @@ export const SectionTitle = ({
       <h2
         className={`mb-0 mt-2 select-none whitespace-nowrap font-Xirod`}
         style={{
-          fontSize: "clamp(1rem, 11cqw, 3.75rem)",
+          fontSize: small ? "clamp(1rem, 11cqw, 2.25rem)" : "clamp(1rem, 11cqw, 3.75rem)",
           color: color1,
           textShadow: `0px -2px 2px ${textShadowColor}, -1px 0px 2px ${textShadowColor}, 0px 0px 1px ${textShadowColor}, 0px -0.5px 1px ${textShadowColor}`,
         }}

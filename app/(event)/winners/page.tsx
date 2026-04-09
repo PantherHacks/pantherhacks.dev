@@ -23,6 +23,7 @@ const WinnersPage = () => {
             color4="#FFE566"
             textShadowColor="#FFE566"
             flickerIndices={[0, 7]}
+            small={true}
           >
             Hacker's Choice
           </SectionTitle>
@@ -68,7 +69,7 @@ const WinnersPage = () => {
             id={categoryWinner.categoryName.toLowerCase()}
             className="flex scroll-m-40 flex-col items-center px-4 pb-20 pt-12 sm:px-8"
           >
-            <SectionTitle color1="#ffffff" color2="#ffffff" color3="#ffffff" color4="#ffffff" textShadowColor="#ffffff">
+            <SectionTitle small={true}>
               {categoryWinner.categoryName}
             </SectionTitle>
 
