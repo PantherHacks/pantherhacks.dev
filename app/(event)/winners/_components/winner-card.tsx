@@ -37,6 +37,7 @@ export type WinnerCardProps = {
   placement: Placement;
   placementLabel?: string;
   track?: string;
+  trackIconPath?: string;
   devpostLink?: string;
 };
 
@@ -46,6 +47,7 @@ const WinnerCard = ({
   placement,
   placementLabel,
   track,
+  trackIconPath,
   projectName,
   devpostLink,
 }: WinnerCardProps) => {
@@ -63,7 +65,6 @@ const WinnerCard = ({
           boxShadow: `inset 0 0 60px rgba(0,0,0,0.5), 0 0 14px ${accent}18`,
         }}
       >
-        {/* Corner brackets */}
         <div
           className="absolute left-0 top-0 z-20 h-5 w-5"
           style={{ borderTop: `2px solid ${accent}`, borderLeft: `2px solid ${accent}` }}
@@ -81,7 +82,6 @@ const WinnerCard = ({
           style={{ borderBottom: `2px solid ${accent}`, borderRight: `2px solid ${accent}` }}
         />
 
-        {/* Team photo */}
         <div className="relative aspect-video w-full overflow-hidden">
           {imagePath ? (
             <Image src={imagePath} alt={`${projectName} team photo`} fill className="object-cover object-center" />
@@ -113,10 +113,15 @@ const WinnerCard = ({
         </div>
 
         <div className="flex flex-col items-center p-5 text-center">
-          {track && (
-            <p className="mb-1.5 text-xs uppercase tracking-[0.22em]" style={{ color: `${accent}aa` }}>
-              {track}
-            </p>
+          {trackIconPath && (
+            <Image
+              src={trackIconPath}
+              alt={track ?? "track icon"}
+              width={40}
+              height={40}
+              unoptimized
+              className="fill-white pb-4 opacity-90"
+            />
           )}
 
           <div

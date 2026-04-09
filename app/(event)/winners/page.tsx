@@ -7,8 +7,6 @@ import WinnersHeading from "./_components/winners-heading";
 
 import "./_components/winners.css";
 
-import Image from "next/image";
-
 const WinnersPage = () => {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center overflow-x-hidden bg-black text-white">
@@ -68,16 +66,6 @@ const WinnersPage = () => {
 
         {TRACK_WINNERS.map((categoryWinner) => (
           <section key={categoryWinner.categoryName} className="flex flex-col items-center px-4 pb-20 pt-12 sm:px-8">
-            <div className="mb-2 flex items-center gap-3">
-              <Image
-                src={`/images/tracks//${categoryWinner.categoryName.toLowerCase()}.svg`}
-                alt={`${categoryWinner.categoryName} track icon`}
-                width={36}
-                height={36}
-                className="select-none opacity-80"
-              />
-            </div>
-
             <SectionTitle color1="#ffffff" color2="#ffffff" color3="#ffffff" color4="#ffffff" textShadowColor="#ffffff">
               {categoryWinner.categoryName}
             </SectionTitle>
@@ -88,6 +76,8 @@ const WinnersPage = () => {
                   placement="1st"
                   placementLabel="Track Winner"
                   imagePath={`/images/winners/${categoryWinner.categoryName}/${0}.webp`}
+                  trackIconPath={`/images/tracks/${categoryWinner.categoryName.toLowerCase()}-white.svg`}
+                  track={categoryWinner.categoryName}
                   {...categoryWinner.teams[0]}
                 />
               </div>
@@ -96,6 +86,8 @@ const WinnersPage = () => {
                   placement="2nd"
                   placementLabel="Runner Up"
                   imagePath={`/images/winners/${categoryWinner.categoryName}/${1}.webp`}
+                  trackIconPath={`/images/tracks/${categoryWinner.categoryName.toLowerCase()}-white.svg`}
+                  track={categoryWinner.categoryName}
                   {...categoryWinner.teams[1]}
                 />
               </div>

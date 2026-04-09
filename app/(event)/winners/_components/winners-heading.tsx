@@ -65,7 +65,10 @@ const WinnersHeading = () => {
           </span>
         </div>
 
-        <p className="font-UbuntuMono text-xs uppercase tracking-[0.25em] text-white/45">
+        <p
+          className="font-UbuntuMono text-xs uppercase tracking-[0.25em] text-white/70"
+          style={{ textShadow: "0 0 20px rgba(0,0,0,0.8)" }}
+        >
           PantherHacks {hackathonDateInfo.year} &nbsp;·&nbsp; {hackathonDateInfo.month}, {hackathonDateInfo.startDay}-
           {hackathonDateInfo.endDay} &nbsp;·&nbsp; Chapman University
         </p>

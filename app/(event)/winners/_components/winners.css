@@ -1,4 +1,3 @@
-/* Spinning border — 1st place (gold) */
 @property --gold-angle {
   syntax: "<angle>";
   initial-value: 0deg;
@@ -35,7 +34,6 @@
   }
 }
 
-/* Solid border — 2nd place (cyan) */
 .winner-border-cyan {
   position: relative;
   z-index: 1;
@@ -44,7 +42,6 @@
     0 0 18px #00d4ff33;
 }
 
-/* Solid border — 3rd place (orange) */
 .winner-border-orange {
   position: relative;
   z-index: 1;
@@ -53,7 +50,6 @@
     0 0 18px #fe550133;
 }
 
-/* Neon text */
 .neon-gold {
   color: #ffd700;
   text-shadow:
@@ -78,7 +74,11 @@
     0 0 32px #ff2200;
 }
 
-/* Hero title */
+.logo-glow {
+  filter: drop-shadow(0 0 12px rgba(255, 120, 30, 0.6)) drop-shadow(0 0 32px rgba(255, 80, 0, 0.4))
+    drop-shadow(0 0 64px rgba(255, 60, 0, 0.2));
+}
+
 .winners-hero-title {
   color: #ffd700;
   text-shadow:
@@ -88,7 +88,6 @@
     0 0 100px rgba(255, 100, 0, 0.3);
 }
 
-/* Star decorations */
 @keyframes star-pulse {
   0%,
   100% {
