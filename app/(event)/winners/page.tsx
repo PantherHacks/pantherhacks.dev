@@ -76,7 +76,7 @@ const WinnersPage = () => {
                 <WinnerCard
                   placement="1st"
                   placementLabel="Track Winner"
-                  imagePath={`/images/winners/${categoryWinner.categoryName}/${0}.webp`}
+                  imagePath={`/images/winners/${categoryWinner.categoryName.toLowerCase()}/${0}.webp`}
                   trackIconPath={`/images/tracks/${categoryWinner.categoryName.toLowerCase()}-white.svg`}
                   track={categoryWinner.categoryName}
                   {...categoryWinner.teams[0]}
@@ -86,7 +86,7 @@ const WinnersPage = () => {
                 <WinnerCard
                   placement="2nd"
                   placementLabel="Runner Up"
-                  imagePath={`/images/winners/${categoryWinner.categoryName}/${1}.webp`}
+                  imagePath={`/images/winners/${categoryWinner.categoryName.toLowerCase()}/${1}.webp`}
                   trackIconPath={`/images/tracks/${categoryWinner.categoryName.toLowerCase()}-white.svg`}
                   track={categoryWinner.categoryName}
                   {...categoryWinner.teams[1]}
