@@ -34,6 +34,7 @@ const WinnersPage = () => {
                 placement="1st"
                 placementLabel="1st Place"
                 imagePath={`/images/winners/hackers-choice/${0}.webp`}
+                trackIconPath="/logos/pantherhacks/cyborg_pete_white.svg"
                 {...HACKERS_CHOICE_WINNERS.teams[0]}
               />
             </div>
@@ -43,6 +44,7 @@ const WinnersPage = () => {
                 placement="2nd"
                 placementLabel="2nd Place"
                 imagePath={`/images/winners/hackers-choice/${1}.webp`}
+                trackIconPath="/logos/pantherhacks/cyborg_pete_white.svg"
                 {...HACKERS_CHOICE_WINNERS.teams[1]}
               />
             </div>
@@ -52,6 +54,7 @@ const WinnersPage = () => {
                 placement="3rd"
                 placementLabel="3rd Place"
                 imagePath={`/images/winners/hackers-choice/${2}.webp`}
+                trackIconPath="/logos/pantherhacks/cyborg_pete_white.svg"
                 {...HACKERS_CHOICE_WINNERS.teams[2]}
               />
             </div>
@@ -64,7 +67,16 @@ const WinnersPage = () => {
             id={categoryWinner.categoryName.toLowerCase()}
             className="flex scroll-m-40 flex-col items-center px-4 pb-20 pt-12 sm:px-8"
           >
-            <SectionTitle small={true}>{categoryWinner.categoryName}</SectionTitle>
+            <SectionTitle
+              color1="#FFD700"
+              color2="#996600"
+              color3="#CC9900"
+              color4="#FFE566"
+              textShadowColor="#FFE566"
+              small={true}
+            >
+              {categoryWinner.categoryName}
+            </SectionTitle>
 
             <div className="flex w-full max-w-4xl flex-col gap-6 sm:flex-row sm:items-end sm:justify-center">
               <div className="w-full self-stretch sm:w-[48%]">
