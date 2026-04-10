@@ -80,7 +80,7 @@ const Countdown: React.FC<CountdownProps> = ({ dark = false, size = "default" })
 
   return (
     <div
-      className={`countdown-frame ${isLarge ? "flex w-full max-w-[900px] flex-1 items-center justify-center backdrop-blur-[4px]" : "mx-12 max-w-[800px] md:mx-16 lg:mx-20 xl:mx-20"}`}
+      className={`countdown-frame ${isLarge ? "flex w-full max-w-[900px] flex-1 items-center justify-center backdrop-blur-[4px]" : "max-w-[min(800px,calc(100vw-2rem))] md:mx-16 lg:mx-20 xl:mx-20"}`}
     >
       <span className={`countdown-corner tl ${isLarge ? "hidden" : ""}`} />
       <span className={`countdown-corner tr ${isLarge ? "hidden" : ""}`} />

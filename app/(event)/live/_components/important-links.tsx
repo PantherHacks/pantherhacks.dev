@@ -1,4 +1,4 @@
-import { CircleHelp, Code, Hourglass, Scale } from "lucide-react";
+import { CircleHelp, Code, Hourglass, Scale, Trophy } from "lucide-react";
 
 import { SectionTitle } from "@/components/section-title";
 import { hackathonDateInfo } from "@/lib/dates";
@@ -27,6 +27,7 @@ const ImportantLinksSection = () => {
         <ImportantLink name="FAQs" url="/#faqs" icon={CircleHelp} />
         <ImportantLink name="Discord" url={discordLink} iconUrl="/icons/discord.svg" />
         <ImportantLink name="Countdown" url="/countdown" icon={Hourglass} />
+        <ImportantLink name="Winners" url="/winners" icon={Trophy} />
       </div>
     </div>
   );
