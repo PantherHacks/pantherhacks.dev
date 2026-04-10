@@ -58,11 +58,6 @@ const WinnersPage = () => {
           </div>
         </section>
 
-        <div
-          className="mx-auto mb-8 h-px w-[min(90vw,56rem)]"
-          style={{ background: "linear-gradient(to right, transparent, #FF550044, transparent)" }}
-        />
-
         {TRACK_WINNERS.map((categoryWinner) => (
           <section
             key={categoryWinner.categoryName}
